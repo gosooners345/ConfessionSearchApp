@@ -3,37 +3,42 @@ using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using LibGArrayList;
+using LibGList;
 using LibGICloneable;
 using LibUtil;
 using Android.App;
 using Android.Content;
 using Java.IO;
 using Android.OS;
+using Android.Util;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Content.Res;
+using System.Text.RegularExpressions;
 
 
 namespace ConfessionSearchApp
 {
   public class Document : IComparable<Document>, ICloneable<Document>
   {
-    int idNumber, matches;
-    string title, proofs, type,docTitle;
+    protected int idNumber, matches;
+   protected string title, proofs, type,docTitle,tags;
     private Document document;
 
     public Document()
     {
-      this.idNumber = 0; this.title = ""; this.proofs = ""; this.type = ""; this.matches = 0;
+      this.idNumber = 0; this.title = ""; this.proofs = ""; this.type = ""; this.matches = 0;this.tags = "";
       this.docTitle = "";
       }
     public Document(string titleValue, int idValue, string proofValue, string typeValue)
     {
       this.idNumber = idValue; this.title = titleValue; this.Proofs = proofValue; this.type = typeValue;
     }
-
+    public string Truncate(string value, int maxLength)
+    {
+      return value?.Substring(0, Math.Min(value.Length, maxLength));
+    }
     public Document(Document sourceDocument)
     {
       this.document = sourceDocument;
@@ -56,7 +61,8 @@ namespace ConfessionSearchApp
       get { return this.matches; }
       set { this.matches = value; }
     }
-    public string proofWrite { get { return this.proofs; } set { this.proofs = value; } }
+    public string Tags{ get{ return this.tags; }set { this.tags = value; } }
+    
     public String Proofs { get { return this.proofs; } set { this.proofs = Formatter(value); } }
     public String Title { get { return this.title; } set { title = value; } }
     public String DocTitle { get{ return this.docTitle; }set { docTitle = value; } }
@@ -77,24 +83,8 @@ namespace ConfessionSearchApp
       }
       return document;
     }
-    public static Document ParseWrite(String fileName)
-    {
-      string[] words;
-      Document document = new Document();
-      words = StringMethods.ParseCsvString(fileName.Trim());
-      document.Type = words[0];
-      switch (words[0].ToUpper())
-      {
-        case "CONFESSION": document = Confession.ParseWrite(fileName); break;
-        case "CATECHISM": document = Catechism.ParseWrite(fileName); break;
-        case "CREED": document = Creed.ParseWrite(fileName); break;
-        default:
-          ProcessError(String.Format("{0} is an invalid " + "Document type value for the Document " + "class Parse method", words[0]));
-          break;
-      }
-      return document;
-    }
-    public string Type  // Define read-only psuedo-write Type property
+   
+    public string Type  
     {
       get
       {
@@ -112,6 +102,8 @@ namespace ConfessionSearchApp
     protected static void ProcessError(string message)
     {
 
+      Log.Error("Error", message);
+      
     }
     public int CompareTo(Document compareDocument)
     {
@@ -125,6 +117,7 @@ namespace ConfessionSearchApp
       return string1.CompareTo(string2);
 
     }
+    
     public Document Clone()
     {
       Document document = null;
@@ -134,20 +127,13 @@ namespace ConfessionSearchApp
         document = ((Catechism)this).Clone();
       return document;
     }
-    public int SearchProof(Document document1, string searchTopic)
-    {
-      if (document1.Proofs.Contains(searchTopic))
-        return this.matches++;
-      else
-        return 0;
-
-    }
     public void Copy(Document sourceDocument) // Copy method
     {
       this.type = sourceDocument.type;
       this.IDNumber = sourceDocument.IDNumber;
       this.Proofs = sourceDocument.Proofs;
       this.title = sourceDocument.title;
+      this.DocTitle = sourceDocument.DocTitle;
     }
     public String Formatter(string stringField)
     {
@@ -165,13 +151,6 @@ namespace ConfessionSearchApp
       stringField = formatter;
       return stringField;
     }
-    public int SearchTitle(Document document, string searchTopic)
-    {
-      if (document.Title.Contains(searchTopic))
-        return this.matches++;
-      else
-        return 0;
-    }
     public static int CompareMatches(Document document1, Document document2)
     {
       string string1, string2;
@@ -186,6 +165,18 @@ namespace ConfessionSearchApp
         return string1.CompareTo(string2);
         }
     }
+    public string getBetween(string strSource, string strStart)
+    {
+      int Start, End;
+      if (strSource.Contains(strStart))//&& strSource.Contains(strEnd))
+      {
+        Start = 0;
+        End = strSource.IndexOf(strStart) + strStart.Length;
+        strSource = strSource.Substring(Start, End - Start)+"...";
+      }
+
+      return strSource;
+    }
   }
   public class Catechism : Document
   {
@@ -197,8 +188,12 @@ namespace ConfessionSearchApp
     public new Catechism Clone() { return new Catechism(this); }
     public string Question { get { return this.question; } set { question = Formatter(value); } }
     public string Answer { get { return this.answer; } set { answer = Formatter(value); } }
-
-    public static new Catechism Parse(string stringValue,bool answers, bool proofs)
+   
+    //public string Truncate(string value, int maxLength)
+    //{
+    //  return value?.Substring(0, Math.Min(value.Length, maxLength));
+    //}
+    public static new Catechism Parse(string stringValue, bool answers, bool proofs)
     {
       string[] words;
       Catechism catechism = new Catechism();
@@ -216,114 +211,175 @@ namespace ConfessionSearchApp
       else
         catechism.Proofs = "";
       catechism.DocTitle = words[6];
+      catechism.Tags = words[7];
       return catechism;
-    }
-    public static new Catechism ParseWrite(string stringValue)
-    {
-      string[] words;
-      Catechism catechism = new Catechism();
-      words = stringValue.Split('~');
-      catechism.Type = words[0];
-      catechism.IDNumber = Int32.Parse(words[1]);
-      catechism.question = words[2];
-      catechism.answer = words[3];
-      catechism.Title = words[4];
-      catechism.proofWrite = words[5];
-      return catechism;
-    }
-    public static Catechism ParseWrite(string[] stringValue)
-    {
-      string[] words;
-      Catechism catechism = new Catechism();
-      words = stringValue;
-      catechism.Type = words[0];
-      catechism.IDNumber = Int32.Parse(words[1]);
-      catechism.question = words[2];
-      catechism.answer = words[3];
-      catechism.Title = words[4];
-      catechism.proofWrite = words[5];
-      return catechism;
-    }
-    public int SearchQuestion(Catechism catechism, string searchTopic)
-    {
-      if (catechism.Question.Contains(searchTopic))
-        return this.Matches++;
-      else
-        return 0;
-    }
-    public int SearchAnswer(Catechism catechism, string searchTopic)
-    {
-      if (catechism.Answer.Contains(searchTopic))
-        return this.Matches++;
-      else
-        return 0;
     }
 
-
+    public string this[string propertyName]
+    {
+      get
+      {
+        string returnValue = "";
+        switch (propertyName.ToUpper())
+        {
+          case "IDNUM": returnValue = this.IDNumber.ToString("d2"); break;
+          case "TITLE": returnValue = this.Title; break;
+          case "QUESTION": returnValue = this.question; break;
+          case "ANSWER": returnValue = this.answer; break;
+          case "DOCTITLE": returnValue = this.DocTitle; break;
+          case "PROOFS": returnValue = this.Proofs; break;
+          case "TAGS": returnValue = this.Tags; break;
+          default: ProcessError("Property Name not valid"); break;
+        }
+        return returnValue;
+      }
+    }
+    public string this[int propertyIndex]
+    {
+      get
+      {
+        string returnValue = "";
+        switch (propertyIndex)
+        {
+          case 0: returnValue = this.IDNumber.ToString("d2"); break;
+          case 1: returnValue = this.DocTitle; break;
+          case 2: returnValue = this.Title; break;
+          case 3: returnValue = this.Question; break;
+          case 4: returnValue = this.Answer; break;
+          case 5: returnValue = this.Proofs; break;
+          case 6: returnValue = this.Tags; break;
+          default: ProcessError("Index was outside of range "); break;
+        }
+        return returnValue;
+      }
+      set
+      {
+      switch(propertyIndex)
+      {
+          case 2:this.Title = value;break;
+          case 3:this.Question = value;break;
+          case 4:this.Answer = value;break;
+          case 5:this.Proofs = value;break;
+          case 6:this.Tags = value; break;
+          default:ProcessError("Index was out of range");break;
+          }
+      }
+    }
+    public void Search(string term, bool truncate)
+    {
+      Regex regex = new Regex(term, RegexOptions.IgnoreCase);
+      Match match;
+      for (int i = 2; i <= 6; i++)
+      {
+        if (regex.IsMatch(this[i], 0))
+          this.Matches++;
+        if (truncate)
+         this[i]=this.getBetween(this[i], term);
+      }
+    }
   }
 
-  public class Confession : Document
-  {
-    string chapter;
-    public Confession() : base() { this.chapter = ""; }
-    public Confession(string chString, int idValue, string titleValue, string proofValue, string typeValue) : base(titleValue, idValue, proofValue, typeValue)
-    { this.Chapter = chString; }
-    public string Chapter { get { return this.chapter; } set { this.chapter = Formatter(value); } }
-    public new Confession Clone() { return new Confession(this); }
-    public Confession(Confession sourceConfession) { this.Copy(sourceConfession); }
-    public void Copy(Confession sourceConfession) { this.chapter = sourceConfession.chapter; }
-    public static new Confession Parse(string stringValue,bool proofs)
+    public class Confession : Document
     {
-      string[] words;
-      Confession confession = new Confession();
-      words = stringValue.Split('~');
-      confession.Type = words[0];
-      confession.IDNumber = Int32.Parse(words[1]);
-      confession.Title = words[2];
-      confession.Chapter = words[3];
-      if (proofs)
-        confession.Proofs = words[4];
-      else
-        confession.Proofs = "";
-      confession.DocTitle = words[5];
-      return confession;
-    }
-    public static new Confession ParseWrite(string stringValue)
-    {
-      string[] words;
-      Confession confession = new Confession();
-      words = stringValue.Split('~');
-      confession.Type = words[0];
-      confession.IDNumber = Int32.Parse(words[1]);
-      confession.Title = words[2];
-      confession.chapter = words[3];
-      confession.proofWrite = words[4];
-      return confession;
-    }
-    public static Confession ParseWrite(string[] stringValue)
-    {
-      string[] words;
-      Confession confession = new Confession();
-      words = stringValue;
-      confession.Type = words[0];
-      confession.IDNumber = Int32.Parse(words[1]);
-      confession.Title = words[2];
-      confession.chapter = words[3];
-      confession.proofWrite = words[4];
-      return confession;
-    }
+      string chapter;
+      public Confession() : base() { this.chapter = ""; }
+      public Confession(string chString, int idValue, string titleValue, string proofValue, string typeValue) : base(titleValue, idValue, proofValue, typeValue)
+      { this.Chapter = chString; }
+      public string Chapter { get { return this.chapter; } set { this.chapter = Formatter(value); } }
+     
+      public string getBetween(string strSource, string strStart, string strEnd)
+      {
+        int Start, End;
+        if (strSource.Contains(strStart) && strSource.Contains(strEnd))
+        {
+          Start = strSource.IndexOf(strStart, 0) + strStart.Length;
+          End = strSource.IndexOf(strEnd, Start) + strEnd.Length;
+          return strSource.Substring(Start, End - Start);
+        }
+        else
+        {
+          return "";
+        }
+      }
+      public new Confession Clone() { return new Confession(this); }
+      public Confession(Confession sourceConfession) { this.Copy(sourceConfession); }
+      public void Copy(Confession sourceConfession) { this.chapter = sourceConfession.chapter; }
+      public static new Confession Parse(string stringValue, bool proofs)
+      {
+        string[] words;
+        Confession confession = new Confession();
+        words = stringValue.Split('~');
+        confession.Type = words[0];
+        confession.IDNumber = Int32.Parse(words[1]);
+        confession.Title = words[2];
+        confession.Chapter = words[3];
+        if (proofs)
+          confession.Proofs = words[4];
+        else
+          confession.Proofs = "";
+        confession.DocTitle = words[5];
+        confession.Tags = words[6];
+        return confession;
+      }
+      public string this[string propertyName]
+      {
+        get
+        {
+          string returnValue = "";
+          switch (propertyName.ToUpper())
+          {
+            case "IDNUM": returnValue = this.IDNumber.ToString("d2"); break;
+            case "TITLE": returnValue = this.Title; break;
+            case "CHAPTER": returnValue = this.Chapter; break;
+            case "DOCTITLE": returnValue = this.DocTitle; break;
+            case "PROOFS": returnValue = this.Proofs; break;
+            case "TAGS": returnValue = this.Tags; break;
+            default: ProcessError("Property Name not valid"); break;
+          }
+          return returnValue;
+        }
+      }
+      public string this[int propertyIndex]
+      {
+        get
+        {
+          string returnValue = "";
+          switch (propertyIndex)
+          {
+            case 0: returnValue = this.IDNumber.ToString("d2"); break;
+            case 1: returnValue = this.DocTitle; break;
+            case 2: returnValue = this.Title; break;
+            case 3: returnValue = this.Chapter; break;
+            case 4: returnValue = this.Proofs; break;
+            case 5: returnValue = this.Tags; break;
+            default: ProcessError("Index was outside of range "); break;
+          }
+          return returnValue;
+        }
+        set
+        {
+        switch (propertyIndex)
+        {
+          case 2: this.Title = value; break;
+          case 3: this.Chapter = value; break;
+          case 4: this.Proofs = value; break;
+          case 5: this.Tags = value; break;
+          default: ProcessError("Index was out of range"); break;
+        }
+      }
+      }
+      public void Search(string term, bool truncate)
+      {
+        Regex regex = new Regex(term, RegexOptions.IgnoreCase);
+        Match match;
 
-    public int SearchChapter(Confession confession, string searchTopic)
-    {
-      if (confession.Chapter.Contains(searchTopic))
-        return this.Matches++;
-      else
-        return 0;
-
+        for (int i = 2; i <= 5; i++)
+        {
+          if (regex.IsMatch(this[i], 0))
+            this.Matches++;
+         }
+      }
     }
-
-
-  }
   public class Creed : Document
   {
     string creedText;
@@ -342,41 +398,26 @@ namespace ConfessionSearchApp
       creed.CreedText = words[1];
       return creed;
     }
-    public static new Creed ParseWrite(string stringField)
-    {
-      String[] words;
-      Creed creed = new Creed();
-      words = StringMethods.ParseCsvString(stringField.Trim());
-      creed.Type = words[0];
-      creed.creedText = words[1];
-      return creed;
-    }
-    public static Creed ParseWrite(string[] stringField)
-    {
-      String[] words;
-      Creed creed = new Creed();
-      words = stringField;
-      creed.Type = words[0];
-      creed.CreedText = words[1];
-      return creed;
-    }
-  }
-  public class DocumentList : GArrayList<Document>
-  {
   
-    private string title;
-    private Document[] items;
+  }
+  public class DocumentList : LibGList<Document>
+  {
+    private string title; private bool truncate;
     public enum OrderEnum { IDOrder, TitleOrder,MatchOrder };
     public DocumentList()
     {
-
-      this.items = new Document[1];
       this.title = "";
     }
-    private DocumentList(int cap) { this.items = new Document[cap]; }
+    private DocumentList(int cap) {  }
     private DocumentList(DocumentList DocumentList) { this.Copy(DocumentList); }
     public void Copy(DocumentList sourceDocument) { this.Clear(); foreach (Document document in sourceDocument) this.Add(document.Clone()); }
+    public bool Truncate{
+    get
+    { return this.truncate; }
+    set
+    { this.truncate = value; }
 
+    }
 
     public string Title { get { return this.title; } set { this.title = value; } }
     public void Fill(string fileName,AssetManager asset,int ID,bool answer,bool proofs)
@@ -430,7 +471,7 @@ namespace ConfessionSearchApp
     }
     protected void ProcessError(string message)
     {
-
+      Log.Error("DocumentList", message);
     }
     public bool BinaryContains(Document document, OrderEnum listOrder)
     {
@@ -449,109 +490,5 @@ namespace ConfessionSearchApp
       }
       return returnValue;
     }
-    
-        //else
-        // ProcessError(String.Format("GArrayList this[] Set index must be between 1 and {0}",this.count));
-      
-    //  public void PrintReport(string fileName)
-    //  {
-    //    StreamWriter docOut;
-    //    int indention = 50;
-    //    docOut = File.CreateText(fileName);
-    //    docOut.WriteLine();
-    //    docOut.WriteLine(("").PadRight(indention) + this.Title);
-    //    docOut.WriteLine();
-    //    docOut.WriteLine();
-    //    if (this.Count > 0)
-    //    {
-    //      for(int i=1;i<=this.Count;i++)
-    //      {
-    //        if (this[i].Type == "CONFESSION")
-    //        {
-    //          Confession confession = (Confession)this[i];
-
-    //          docOut.WriteLine("Chapter {0}: {1}", confession.IDNumber, confession.Title);
-    //          docOut.WriteLine(confession.Chapter);
-
-    //          docOut.WriteLine("Proofs for Chapter {0}:", confession.IDNumber);
-    //          docOut.WriteLine(confession.Proofs);
-    //          docOut.WriteLine();
-
-    //        }
-    //        else if (this[i].Type == "CATECHISM")
-    //        {
-    //          Catechism catechism = (Catechism)this[i];
-    //          docOut.WriteLine("Question {0}  {1}", catechism.IDNumber, catechism.Title);
-    //          docOut.WriteLine("Question: {0}", catechism.Question);
-    //          docOut.WriteLine();
-    //          docOut.WriteLine("Answer: {0}", catechism.Answer);
-    //          docOut.WriteLine("");
-    //          docOut.WriteLine("Proofs:");
-    //          docOut.WriteLine("{0}", catechism.Proofs);
-    //          docOut.WriteLine();
-
-    //        }
-    //        else if (this[i].Type == "CREED")
-    //        {
-    //          Creed creed = (Creed)this[i];
-    //          docOut.WriteLine(creed.CreedText);
-    //        }
-    //      }
-    //    }
-    //    else
-    //      docOut.WriteLine("Report is empty");
-
-
-    //    docOut.Close(); //MessageBox.Show("Report Created");
-    //  }
-    //  public void PrintList(string fileName)
-    //  {
-    //    Confession confession; Catechism catechism;
-    //    StreamWriter docOut = File.CreateText(fileName);
-    //    docOut.WriteLine(this.Title);
-    //    if (this.Count > 0)
-    //    {
-    //      foreach (Document document in this)
-    //      {
-    //        if (document.Type == "CONFESSION")
-    //        {
-    //          confession = (Confession)document;
-    //          docOut.WriteLine("\"{0}\",{1},\"{2}\",\"{3}\",\"{4}\"", confession.Type, confession.IDNumber, confession.Title, confession.Chapter, confession.proofWrite);
-
-    //        }
-    //        else if (document.Type == "CATECHISM")
-    //        {
-    //          catechism = (Catechism)document;
-    //          docOut.WriteLine("\"{0}\",{1},\"{2}\",\"{3}\",\"{4}\",\"{5}\"", catechism.Type, catechism.IDNumber, catechism.Question, catechism.Answer, catechism.Title, catechism.proofWrite);
-    //        }
-    //      }
-    //    }
-    //    docOut.Close();
-    //  }
-    //  public void PrintWeb(string fileName)
-    //  {
-    //    Confession confession; Catechism catechism;
-    //    StreamWriter docOut = File.CreateText(fileName);
-    //    docOut.WriteLine(this.Title);
-    //    if (this.Count > 0)
-    //    {
-    //      foreach (Document document in this)
-    //      {
-    //        if (document.Type == "CONFESSION")
-    //        {
-    //          confession = (Confession)document;
-    //          docOut.WriteLine("{0}~{1}~{2}~{3}~{4}", confession.Type, confession.IDNumber, confession.Title, confession.Chapter, confession.proofWrite);
-
-    //        }
-    //        else if (document.Type == "CATECHISM")
-    //        {
-    //          catechism = (Catechism)document;
-    //          docOut.WriteLine("{0}~{1}~{2}~{3}~{4}~{5}", catechism.Type, catechism.IDNumber, catechism.Question, catechism.Answer, catechism.Title, catechism.proofWrite);
-    //        }
-    //      }
-    //    }
-    //    docOut.Close();
-    //  }
-    //}
   }
 }

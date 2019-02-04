@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="@android:color/background_dark">
+	<TextView
+				android:text="Document Title Here"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:id="@+id/documentTitleLabel" />
+	<TextView
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/confessionChLabel"
+		android:text="ChapterLabel:"
+		android:layout_below="@id/documentTitleLabel" />
+	<TextView
+		android:layout_below="@id/confessionChLabel" 
+				android:text="ChapterTextHere"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:id="@+id/chapterText"
+				android:overScrollMode="ifContentScrolls"
+				android:scrollbars="none|vertical"
+				android:verticalScrollbarPosition="right" />
+	<TextView
+				android:text="Proofs:"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:id="@+id/proofLabel" 
+		android:layout_below="@id/chapterText" />
+	<TextView
+				android:text="Proofs Here"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:id="@+id/proofText"
+		android:layout_below="@id/proofLabel" />
+		<TextView
+				android:text="Matches:"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:id="@+id/matchView"
+	android:layout_below="@id/proofText"/>
+
+	
+</RelativeLayout>

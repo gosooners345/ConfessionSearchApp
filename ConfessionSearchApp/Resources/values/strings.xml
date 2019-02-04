@@ -6,8 +6,48 @@
     <item>Heidelberg Catechism</item>
     <item>Westminster Shorter Catechism</item>
       </string-array>
+  <string name="confession">Confession</string>
+  <string name="creed">Creed</string>
+  <string name="catechism_help">Confession/Catechism Pages:</string>
+  <string name="catechismPgh">
+   To search by topic, hit the topic option.\n
+ To search by question/chapter number, hit the question or chapter option.\n
+ To search without proofs, hit the No Proofs checkbox\n
+ 
+  </string>
+
+  <string name="Search">Search</string>
+  <string name="View_Button">View</string>
+  <string name="confessionPgh">To exclude answers from results, hit the No Answers Checkbox under Search Options</string>
+  <string name="creedPgh">Creeds aren\'t searchable, select a creed and hit view</string>
+  <string name="confession_help">Catechism Page only:</string>
+  <string name="other_pgh">Select a document from the dropdown list to search or view</string>
+    <string name="catechism">Catechism</string>
   <string-array name="confession_list">
     <item>Westminster Confession of Faith 1646</item>
     <item>2nd London Baptist Confession of Faith</item>
+    <item>1618 Belgic Confession Of Faith</item>
+    <item>1658 Savoy Declaration</item>
   </string-array>
+  <string name="action_share">Share this with...</string>
+  <string name="facebook_app_id">301531087243095</string>
+  <string name="error_results">Search Error</string>
+  <string-array name="creed_list">
+    <item>Apostle\'s Creed</item>
+    <item>Nicene Creed</item>
+  <item>Athanasian Creed</item>
+  </string-array>
+  <string name="home_topic">Search again?</string>
+  <string name="exit_screen">Leave App?</string>
+  <string name="home_topic_body">Do you want to perform another search?</string>
+  <string name="exit_screen_body">Do you want to leave the app?</string>
+  <string name="search_results_title">Search Results</string>
+  <string name="intro_message">Welcome to the Reformed Collective Confession Search App!</string>
+  <string name="zero_results">No Results were found for</string>
+  <string name="help_line">For help, click on the help tab below.</string>
+  <string name="creedPageTitle">Creed Viewer</string>
+  <string name="zero_results_title">No Results were found</string>
+  <string name="search_status_sorting">Sorting started</string>
+  <string name="search_execution_begins">Search Execution Begins</string>
+  <string name="app_site">https://play.google.com/store/apps/details?id=com.confessionsearch.release1</string>
 </resources>

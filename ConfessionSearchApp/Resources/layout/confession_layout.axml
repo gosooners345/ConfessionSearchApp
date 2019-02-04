@@ -1,180 +1,189 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:minWidth="25px"
-    android:minHeight="25px"
-    android:orientation="vertical"
-    android:foregroundGravity="fill_horizontal|fill_vertical"
-    android:layoutMode="opticalBounds"
-    android:layoutDirection="ltr"
-    android:gravity="fill"
-    android:id="@+id/relativeLayout1">
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/linearLayout5"
-        android:background="@android:color/background_dark">
-    <!--<RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/radioGroup2">-->
-        <ToggleButton
-            android:text="Home"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/homeBtn"
-            android:onClick="layoutChanged"
-            android:textOff="Home"
-            android:textOn="Home" />
-        <ToggleButton
-            android:text="Catechism"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/catechismBtn"
-            android:onClick="layoutChanged"
-            android:textOff="Catechism"
-            android:textOn="Catechism" />
-        <ToggleButton
-            android:text="Confession"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/confessionBtn"
-            android:onClick="layoutChanged"
-            android:textOff="Confession"
-            android:textOn="Confession" />
-    <!--</RadioGroup>-->
-    </LinearLayout>
+    >
     <TextView
         android:text="Confession Search"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/appTitle"
-        android:layout_gravity="top|center"
-        android:gravity="center" />
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/linearLayout3"
-        android:layout_marginRight="0.0dp">
-        <TextView
-            android:text="Search By:"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/searchByLabel"
-            android:layout_marginLeft="0.0dp" />
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/radioGroup1"
-            android:layout_marginRight="122.0dp">
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checked="true"
-                android:text="Topic"
-                android:id="@+id/topicRadio"
-                android:layout_marginTop="0.7dp"
-                android:onClick="SearchType" />
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Chapter"
-                android:id="@+id/chapterRadio"
-                android:onClick="SearchType" />
-            <RadioButton
-                android:text="View Document"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/viewAllRadio" />
-        </RadioGroup>
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/linearLayout4">
-        <TextView
-            android:text="Confession:"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/confessionLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent" />
-        <Spinner
-            android:id="@+id/spinner1"
-            android:clickable="true"
-            android:dropDownWidth="wrap_content"
-            android:spinnerMode="dropdown"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:layout_weight="5"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true" />
+    <TextView
+        android:id="@+id/searchByLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/linearLayout2">
-        <TextView
-            android:text="Topic:"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/topicLabel"
-            android:gravity="center_vertical" />
-        <EditText
-            android:id="@+id/searchBox"
-            android:layout_width="250.7dp"
-            android:layout_height="match_parent"
-            android:layout_marginRight="0.3dp" />
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="68dp"
+        android:layout_toStartOf="@+id/radioGroup1"
+        android:text="Search By:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <RadioGroup
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/linearLayout1">
-        <TextView
-            android:text="Chapter:"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/radioGroup1"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/appTitle">
+        <RadioButton
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/chapterLabel"
-            android:gravity="center_vertical" />
-        <EditText
-            android:inputType="number"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Topic"
+            android:id="@+id/topicRadio"
+            android:layout_marginTop="0.7dp"
+            android:onClick="SearchType"
+            />
+        <RadioButton
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chapter"
+            android:id="@+id/chapterRadio"
+            android:onClick="SearchType"/>
+        <RadioButton
+            android:text="View Document"
+            android:layout_width="wrap_content"
+            android:onClick="SearchType"
+            android:layout_height="wrap_content"
+            android:id="@+id/viewAllRadio"/>
+    </RadioGroup>
+    <TextView
+        android:id="@+id/confessionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/searchByLabel"
+        android:layout_below="@+id/radioGroup1"
+        android:text="Confession:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGroup1"
+        android:layout_toEndOf="@+id/searchByLabel"
+        android:clickable="true"
+        android:dropDownWidth="wrap_content"
+        android:spinnerMode="dropdown" />
+	<SearchView
+		android:id="@+id/searchView1"
+		android:layout_width="wrap_content"
+		android:layout_below="@+id/confessionLabel"
+		android:layout_centerHorizontal="true"
+		android:imeOptions="normal|actionSearch"
+		android:layout_height="wrap_content"
+		android:layout_alignEnd="@id/spinner1"
+		android:paddingTop="5dp"
+		android:textAlignment="gravity"
+		android:clickable="false"
+		android:contentDescription="Enter Topic/ Question # here" 
+		/>
+    <CheckBox
+        android:id="@+id/proofBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/optionLabel"
+        android:layout_toEndOf="@+id/searchByLabel"
+        android:checked="false"
+        android:text="No Proofs?" />
+    <CheckBox
+        android:id="@+id/truncateCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/proofBox"
+        android:layout_toEndOf="@+id/confessionLabel"
+        android:text="Truncate Results?" />
+    <CheckBox
+        android:id="@+id/searchAllCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/truncateCheck"
+        android:layout_toEndOf="@+id/searchByLabel"
+        android:text="Search All Documents?" />
+	<TextView
+		android:id="@+id/topicLabel"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/confessionLabel"
+		android:layout_toStartOf="@+id/searchView1"
+		android:gravity="center_vertical"
+		android:text="Topic/Number:"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_alignEnd="@id/confessionLabel"
+		android:paddingLeft="35dp"
+        />
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/searchAllCheckBox"
+        android:text="To change search types, hit the search button below"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <TextView
+        android:id="@+id/optionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchView1"
+        android:layout_toEndOf="@+id/searchByLabel"
+        android:text="Search Options:" />
+
+    <TextView
+        android:id="@+id/searchTypeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_toLeftOf="@+id/floatingActionButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="35dp"
+		android:layout_marginRight="5dp"
+        android:text="Search Types" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="15dp"
+        android:clickable="true"
+        app:fabSize="normal"
+		android:layout_marginRight="5dp"
+			android:src="@drawable/baseline_view_list_black_24" 
+
+	></android.support.design.widget.FloatingActionButton>
+
+    <FrameLayout
+        android:id="@+id/frame1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+		android:layout_marginRight="5dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="104dp">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/searchFAB"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/chNumberTextBox"
             android:clickable="true"
-            android:maxLength="2"
-            android:numeric="integer"
-            android:layout_marginBottom="0.0dp" />
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/linearLayout6">
-        <CheckBox
-            android:text="Proofs?"
-            android:id="@+id/proofBox"
-            android:checked="false"
+            app:fabSize="normal"
+            app:srcCompat="?android:attr/actionModeWebSearchDrawable" />
+
+        <TextView
+            android:id="@+id/searchTVFAB"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent" />
-        <CheckBox
-            android:text="Search All Documents?"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/searchAllCheckBox" />
-    </LinearLayout>
-    <Button
-        android:text="Search"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/searchBtn"
-        android:onClick="Search" />
-</LinearLayout>
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="16dp"
+            android:text="Search" />
+
+
+    </FrameLayout>
+</RelativeLayout>

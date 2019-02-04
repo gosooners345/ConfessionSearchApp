@@ -69,20 +69,20 @@
                 android:scrollbars="vertical"
                 android:overScrollMode="ifContentScrolls" />
         </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:minWidth="25px"
-            android:minHeight="25px"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/linearLayout1">
-            <TextView
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/catechismAnswerLabel"
-                android:text="Answer:" />
-        </LinearLayout>
+		<LinearLayout
+			android:orientation="horizontal"
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/linearLayout1">
+			<TextView
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:id="@+id/catechismAnswerLabel"
+				android:text="Answer:" />
+		</LinearLayout>
         <LinearLayout
             android:orientation="horizontal"
             android:minWidth="25px"
@@ -105,20 +105,20 @@
                 android:autoSizeTextType="uniform"
                 android:breakStrategy="simple" />
         </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:minWidth="25px"
-            android:minHeight="25px"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/linearLayout3">
-            <TextView
-                android:text="Proofs:"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/proofLabel" />
-        </LinearLayout>
+		<LinearLayout
+			android:orientation="horizontal"
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/linearLayout3">
+			<TextView
+				android:text="Proofs:"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:id="@+id/proofLabel" />
+		</LinearLayout>
         <LinearLayout
             android:orientation="horizontal"
             android:minWidth="25px"
@@ -139,34 +139,28 @@
                 android:autoSizeTextType="uniform"
                 android:scrollIndicators="right"
                 android:scrollbarAlwaysDrawVerticalTrack="true" />
-            <ScrollView
-                android:minWidth="25px"
-                android:minHeight="25px"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/scrollView1"
-                android:scrollbarAlwaysDrawVerticalTrack="false" />
         </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:minWidth="25px"
-            android:minHeight="25px"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/linearLayout5">
-            <TextView
-                android:text="Match Count:"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/matchLabel" />
-        </LinearLayout>
-        <Button
-            android:text="Go Back Home"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/homeButton"
-            android:typeface="sans"
-            android:onClick="BackHome" />
+		<LinearLayout
+			android:orientation="horizontal"
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/linearLayout5">
+			<TextView
+				android:text="Matches:"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:id="@+id/matchView" />
+		</LinearLayout>
+		<android.support.design.widget.FloatingActionButton
+			android:layout_width="wrap_content"
+			android:id="@+id/shareActionButton"
+			android:layout_height="wrap_content"
+			android:layout_gravity="right"
+			android:actionProviderClass="android.widget.ShareActionProvider"
+			android:tint="@android:color/background_dark" />
     </LinearLayout>
+
 </ScrollView>

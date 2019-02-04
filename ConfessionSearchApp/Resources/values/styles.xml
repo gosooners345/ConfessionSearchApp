@@ -1,12 +1,60 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-      <item name="android:textColorPrimary">#ff7043</item>
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar"><item name="colorPrimary">@color/colorPrimary</item><item name="colorPrimaryDark">@color/colorPrimaryDark</item><item name="colorAccent">@color/colorAccent</item><item name="android:colorButtonNormal">#616161</item><item name="android:colorControlNormal">#fff44336</item><item name="android:colorAccent">#ff9e421d</item>
+    <item name="android:textColorSecondary">#ff0b0b0b</item></style>
+  <style name="Theme.Custom" parent="@style/Theme.AppCompat.Light">
+    <item name="android:colorBackground">#ffffffff</item>
+    <item name="android:windowBackground">?android:attr/colorBackground</item>
+    <item name="android:colorPrimary">#ffffffff</item>
+    <item name="android:colorPrimaryDark">#ffffffff</item>
+    <item name="android:colorAccent">#ffffffff</item>
+    <item name="android:textColorPrimary">#ff000000</item>
+    <item name="android:textColorSecondary">#ff000000</item>
+    <item name="android:colorControlNormal">#ff607d8b</item>
+    <item name="android:colorControlActivated">#ffff6f60</item>
+    <item name="android:colorButtonNormal">#ff546e7a</item>
+  </style>
+  <style name="Theme.Silver" parent="@style/Theme.AppCompat">
+    <item name="android:colorBackground">#ff707070</item>
+    <item name="android:windowBackground">?android:attr/colorBackground</item>
+    <item name="android:colorPrimary">#ff707070</item>
+    <item name="android:colorPrimaryDark">#ff9e9e9e</item>
+    <item name="android:colorAccent">#ff4fb3bf</item>
+    <item name="android:textColorPrimary">#ff718792</item>
+    <item name="android:textColorSecondary">#ff718792</item>
+    <item name="android:colorControlNormal">#ffcfcfcf</item>
+    <item name="android:colorControlActivated">#ff4fb3bf</item>
+    <item name="android:colorButtonNormal">#ffcfcfcf</item>
+  </style>
+  <style name="Theme.Dark" parent="@style/Theme.AppCompat">
+    <item name="android:colorBackground">#FF000000</item>
+    <item name="android:windowBackground">?android:attr/colorBackground</item>
+    <item name="android:colorPrimary">#ff000000</item>
+    <item name="android:colorPrimaryDark">#ff000000</item>
+    <item name="android:colorAccent">#ffff6f60</item>
+    <item name="android:textColorPrimary">#ffff6f60</item>
+    <item name="android:textColorSecondary">#ffff6f60</item>
+    <item name="android:colorControlNormal">#ff707070</item>
+    <item name="android:colorControlActivated">#ffff6f60</item>
+    <item name="android:colorButtonNormal">#ff707070</item>
+  </style>
+  <style name="MyTheme.Splash" parent ="Theme.AppCompat.Light.NoActionBar">
+    <item name="android:windowBackground">@drawable/splash_screen</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowFullscreen">true</item>
+  </style>
+    <style name="Theme.Silver" parent="@style/Theme.AppCompat">
+    <item name="android:colorBackground">#ff707070</item>
+    <item name="android:windowBackground">?android:attr/colorBackground</item>
+    <item name="android:colorPrimary">#ff707070</item>
+    <item name="android:colorPrimaryDark">#ff9e9e9e</item>
+    <item name="android:colorAccent">#ff4fb3bf</item>
+    <item name="android:textColorPrimary">#ff718792</item>
+    <item name="android:textColorSecondary">#ff718792</item>
+    <item name="android:colorControlNormal">#ffcfcfcf</item>
+    <item name="android:colorControlActivated">#ff4fb3bf</item>
+    <item name="android:colorButtonNormal">#ffcfcfcf</item>
+  </style>
   
 </resources>

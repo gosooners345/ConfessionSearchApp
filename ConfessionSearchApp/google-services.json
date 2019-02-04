@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "167935800666",
+    "firebase_url": "https://api-7410858121138277580-592039.firebaseio.com",
+    "project_id": "api-7410858121138277580-592039",
+    "storage_bucket": "api-7410858121138277580-592039.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:167935800666:android:53fd712c4251cf81",
+        "android_client_info": {
+          "package_name": "com.confessionsearchapp.release1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "167935800666-1njc202e9odp1c6vqhi85et7d6bmreji.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxuBIxRa5IpkZ2iHQBXjBZ39l1fkzSwpU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#FF000000"
+    android:measureWithLargestChild="false">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2"
+        android:layout_gravity="center_vertical|center">
+        <TextView
+            android:text="Lorem ipsum"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/titleView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="#ffd50000" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="5px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout4"
+        android:background="#ffd50000" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout3">
+        <TextView
+            android:text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit...."
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/subTitleView"
+            android:textColor="#ffd50000"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="8pt" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="5px"
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffd50000" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:layout_gravity="center">
+        <Button
+            android:text="Yes"
+            android:id="@+id/YesButton"
+            android:layout_width="80.5dp"
+            android:layout_height="match_parent"
+            android:textColor="#ffd50000"
+            android:background="#FF000000"
+            android:layout_marginLeft="13.5dp"
+            android:layout_marginRight="13.5dp" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="5px"
+            android:minHeight="25px"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout5"
+            android:background="@android:color/holo_red_dark" />
+        <Button
+            android:text="No"
+            android:id="@+id/NoButton"
+            android:layout_width="80.5dp"
+            android:layout_height="match_parent"
+            android:textColor="#ffd50000"
+            android:background="#FF000000"
+            android:layout_marginLeft="13.5dp"
+            android:layout_marginRight="17.0dp" />
+    </LinearLayout>
+</LinearLayout>

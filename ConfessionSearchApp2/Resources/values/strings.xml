@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ConfessionSearchApp2</string>
+  <string name="action_settings">Settings</string>
+  <string-array name="catechism_list">
+    <item>Westminster Larger Catechism</item>
+    <item>Heidelberg Catechism</item>
+    <item>Westminster Shorter Catechism</item>
+  </string-array>
+  <string-array name="confession_list">
+    <item>Westminster Confession of Faith 1646</item>
+    <item>2nd London Baptist Confession of Faith</item>
+  </string-array>
+  <string name="home_topic">Search again?</string>
+  <string name="exit_screen">Leave App?</string>
+  <string name="home_topic_body">Do you want to perform another search?</string>
+  <string name="exit_screen_body">Do you want to leave the app?</string>
+</resources>

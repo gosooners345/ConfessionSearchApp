@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5.3dp"
+        android:text="@string/creedPageTitle"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <TextView
+        android:id="@+id/searchByLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/radioGroup1"
+        android:layout_toStartOf="@+id/radioGroup1"
+        android:text="Search By:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        />
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/chNumberTextBox"
+        android:layout_centerHorizontal="true">
+        <RadioButton
+            android:id="@+id/topicRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0.7dp"
+            android:checked="true"
+            android:onClick="SearchType"
+            android:text="Topic"
+            android:textColor="@android:color/holo_red_dark"
+            android:visibility="gone" />
+        <RadioButton
+            android:id="@+id/chapterRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="SearchType"
+            android:text="Chapter"
+            android:textColor="@android:color/holo_red_dark"
+            android:visibility="gone" />
+        <RadioButton
+            android:id="@+id/viewAllRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="SearchType"
+            android:text="View Document"
+            />
+    </RadioGroup>
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="185dp"
+        android:layout_toEndOf="@+id/truncateCheck"
+        android:clickable="true"
+        android:dropDownWidth="wrap_content"
+        android:spinnerMode="dropdown" />
+    <EditText
+        android:id="@+id/searchBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/radioGroup1"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="13dp"
+        android:hint="Enter Search Topic Here"
+        android:imeActionId="2"
+        android:imeOptions="actionGo"
+        android:saveEnabled="true"
+        android:singleLine="true"
+        android:textColor="@android:color/holo_red_dark"
+        android:visibility="invisible" />
+    <EditText
+        android:id="@+id/chNumberTextBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:clickable="true"
+        android:hint="Enter Chapter Number Here"
+        android:imeActionId="2"
+        android:imeOptions="actionGo"
+        android:inputType="number"
+        android:maxLength="2"
+        android:numeric="integer"
+        android:saveEnabled="true"
+        android:singleLine="true"
+        android:visibility="invisible" />
+    <CheckBox
+        android:text="Answers?"
+        android:visibility="gone"
+        android:id="@+id/AnswerBox"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        />
+    <CheckBox
+        android:text="Proofs?"
+        android:visibility="invisible"
+        android:id="@+id/proofBox"
+        android:textColor="@android:color/holo_red_dark"
+        android:checked="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/AnswerBox"
+
+        android:layout_alignParentLeft="false" />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:visibility="invisible"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_height="wrap_content"
+
+        android:layout_toRightOf="@id/proofBox"
+        android:id="@+id/truncateCheck"
+        android:text="Truncate?"/>
+    <CheckBox
+        android:text="Search All?"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:visibility="invisible"
+        android:id="@+id/searchAllCheckBox"
+        android:layout_toRightOf="@id/truncateCheck"/>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/spinner1"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="166dp"
+        android:text="To change search types, hit the search button below"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <TextView
+        android:id="@+id/confessionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/searchByLabel"
+        android:layout_alignTop="@+id/spinner1"
+        android:text="Creed:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+     <TextView
+        android:id="@+id/searchTypeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_toLeftOf="@+id/floatingActionButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="35dp"
+		android:layout_marginRight="5dp"
+        android:text="Search Types" />
+	<android.support.design.widget.FloatingActionButton
+		android:id="@+id/floatingActionButton"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentEnd="true"
+		android:layout_marginBottom="15dp"
+		android:layout_marginRight="5dp"
+		android:clickable="true"
+		app:fabSize="normal"
+				android:src="@drawable/baseline_view_list_black_24" 
+>
+	</android.support.design.widget.FloatingActionButton>
+    <FrameLayout
+        android:id="@+id/frame1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="104dp"
+		android:layout_marginRight="5dp"
+		android:paddingBottom="15dp">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/searchFAB"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            app:fabSize="normal"
+            app:srcCompat="?android:attr/actionModeWebSearchDrawable" />
+
+        <TextView
+            android:id="@+id/searchTVFAB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="16dp"
+            android:text="Search" />
+    </FrameLayout>
+</RelativeLayout>

@@ -2,7 +2,8 @@
 <resources>
     <color name="colorPrimary">#000000</color>
     <color name="colorPrimaryDark">#1B3147</color>
-    <color name="colorAccent">#FF0000</color>
+    <color name="colorAccent">#FF7961</color>
   <color name="on">#FF0000</color>
   <color name="off">#000000</color>
+  <color name="buttonNormal">#616161</color>
 </resources>
