@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfessionSearchApp", "ConfessionSearchApp\ConfessionSearchApp.csproj", "{4640318C-F44E-4E06-8906-06A3BFC8B746}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GArrayListMobile", "GArrayListMobile\GArrayListMobile.csproj", "{2495E37D-B499-415C-819C-0314BF707B1C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4640318C-F44E-4E06-8906-06A3BFC8B746}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4640318C-F44E-4E06-8906-06A3BFC8B746}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4640318C-F44E-4E06-8906-06A3BFC8B746}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4640318C-F44E-4E06-8906-06A3BFC8B746}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4640318C-F44E-4E06-8906-06A3BFC8B746}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4640318C-F44E-4E06-8906-06A3BFC8B746}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2495E37D-B499-415C-819C-0314BF707B1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2495E37D-B499-415C-819C-0314BF707B1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2495E37D-B499-415C-819C-0314BF707B1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2495E37D-B499-415C-819C-0314BF707B1C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FACA5577-9093-43B3-B29D-C0C4FC4E8689}
+	EndGlobalSection
+EndGlobal
