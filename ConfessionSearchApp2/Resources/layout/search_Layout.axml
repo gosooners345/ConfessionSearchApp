@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:layout_marginLeft="5dp"
+	android:orientation="vertical">
+	<TextView
+		android:id="@+id/appTitle"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:layout_centerInParent="true"
+		android:layout_gravity="center_vertical"
+		android:layout_weight="5"
+		android:gravity="center"
+		android:text="Reformed Index Search"
+		android:textAppearance="?android:attr/textAppearanceLarge" />
+	<TextView
+		android:id="@+id/searchByLabel"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignEnd="@+id/confessionLabel"
+		android:layout_alignParentTop="true"
+		android:layout_marginTop="65dp"
+		android:text="Search By:"
+		android:textAppearance="?android:attr/textAppearanceMedium" />
+	<RadioGroup
+		android:id="@+id/radioGroup1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/appTitle"
+		android:layout_centerInParent="true">
+		<RadioButton
+			android:id="@+id/topicRadio"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="0.7dp"
+			android:checked="true"
+			android:onClick="SearchType"
+			android:text="Topic" />
+		<RadioButton
+			android:id="@+id/chapterRadio"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:onClick="SearchType"
+			android:text="Question" />
+		<RadioButton
+			android:id="@+id/viewAllRadio"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:onClick="SearchType"
+			android:text="View Document" />
+	</RadioGroup>
+	<TextView
+		android:id="@+id/confessionLabel"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/spinner1"
+		android:layout_toStartOf="@+id/radioGroup1"
+		android:text="Catechism:"
+		android:textAppearance="?android:attr/textAppearanceMedium" />
+	<Spinner
+		android:id="@+id/spinner2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/spinner1"
+		android:layout_marginBottom="8dp"
+		android:layout_marginLeft="5dp"
+		android:layout_marginTop="5dp"
+		android:layout_toEndOf="@+id/searchByLabel"
+		android:clickable="true"
+		android:dropDownWidth="wrap_content"
+		android:spinnerMode="dropdown" />
+	<SearchView
+		android:id="@+id/searchView1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentEnd="true"
+		android:layout_below="@+id/radioGroup1"
+		android:layout_marginEnd="41dp"
+		android:imeOptions="normal|actionSearch"
+		android:paddingTop="5dp"
+		android:textAlignment="gravity" />
+	<CheckBox
+		android:id="@+id/AnswerBox"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:layout_alignStart="@+id/proofBox"
+		android:layout_marginTop="271dp"
+		android:text="No Answers?" />
+	<CheckBox
+		android:id="@+id/proofBox"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_marginBottom="225dp"
+		android:checked="false"
+		android:text="Proofs?"
+		android:layout_marginTop="15dp"
+		android:layout_centerInParent="false"
+		android:layout_marginLeft="50dp" />
+	<CheckBox
+		android:id="@+id/truncateCheck"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignStart="@+id/proofBox"
+		android:layout_below="@+id/proofBox"
+		android:layout_marginTop="-227dp"
+		android:text="Truncate?" />
+	<TextView
+		android:id="@+id/topicLabel"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentStart="true"
+		android:layout_alignParentTop="true"
+		android:layout_marginStart="11dp"
+		android:layout_marginTop="134dp"
+		android:gravity="center_vertical"
+		android:text="Topic/Number:"
+		android:textAppearance="?android:attr/textAppearanceMedium" />
+	<TextView
+		android:id="@+id/optionLabel"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_above="@+id/AnswerBox"
+		android:layout_marginBottom="-275dp"
+		android:layout_marginTop="5dp"
+		android:layout_toEndOf="@+id/truncateCheck"
+		android:paddingLeft="5dp"
+		android:text="Search Options:" />
+	<FrameLayout
+		android:id="@+id/frame1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentEnd="true"
+		android:layout_marginBottom="104dp"
+		android:layout_marginRight="5dp"
+		android:paddingBottom="15dp">
+		<android.support.design.widget.FloatingActionButton
+			android:id="@+id/searchFAB"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:clickable="true"
+			app:fabSize="normal"
+			app:srcCompat="?android:attr/actionModeWebSearchDrawable" />
+		<TextView
+			android:id="@+id/searchTVFAB"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:elevation="16dp"
+			android:text="Search" />
+	</FrameLayout>
+	<TextView
+		android:id="@+id/typeTVLabel"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_above="@+id/confessionLabel"
+		android:layout_alignEnd="@+id/searchByLabel"
+		android:paddingBottom="5dp"
+		android:text="Document Type:"
+		android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+		android:layout_marginLeft="15dp" />
+	<CheckBox
+		android:id="@+id/searchAllCheckBox"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignStart="@+id/proofBox"
+		android:layout_below="@id/truncateCheck"
+		android:text="Search All Documents?"
+		android:layout_marginBottom="5dp"
+		android:layout_marginTop="355dp" />
+	<Spinner
+		android:id="@+id/spinner1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/searchView1"
+		android:layout_marginBottom="5dp"
+		android:layout_marginTop="10dp"
+		android:layout_toEndOf="@+id/searchByLabel"
+		android:clickable="true"
+		android:dropDownWidth="wrap_content"
+		android:paddingLeft="5dp"
+		android:spinnerMode="dropdown"
+		android:layout_toRightOf="@id/typeTVLabel"
+		android:layout_marginLeft="5dp" />
+</RelativeLayout>

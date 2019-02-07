@@ -2,6 +2,7 @@
 using Android.Content;
 using Android.Content.Res;
 using Android.OS;
+using DocumentClass;
 using Android.Support.Design.Widget;
 using Android.Support.V4.App;
 using Android.Support.V4.View;
@@ -24,331 +25,904 @@ using DialogWindow;
 
 namespace ConfessionSearchApp2
 {
-  [Activity(Label = "@string/app_name", Theme = "@style/Theme.Dark", MainLauncher = true,LaunchMode =Android.Content.PM.LaunchMode.SingleTop)]
-  public class MainActivity : AppCompatActivity
-  {
-    static SearchFragmentActivity searchFragmentActivity;
-    public static int searchInt = 0;
-    public static string searchTerm = "";
-    public static DocumentList documentList=new DocumentList();
-    List<KeyValuePair<string, string>> files;
-    Intent intent;
-    static string fileName = "";
-    public static bool truncate = false;
-    List<string> fileNameList;
-    protected override void OnCreate(Bundle savedInstanceState)
+    [Activity(Label = "@string/app_name", Theme = "", MainLauncher = true, LaunchMode = Android.Content.PM.LaunchMode.SingleTop)]
+    public class MainActivity : AppCompatActivity
     {
-    base.OnCreate(savedInstanceState);
-    SetContentView(Resource.Layout.activity_main);
-    FindViewById<TextView>(Resource.Id.nothing).Text = "Use the switches above to navigate through the app.\r\n Search Catechisms by clicking the Catechism toggle. \r\n Search Confessions by hitting the Confession toggle.\r\n " +
-      "Hit \"Search By Topic\" to search for a topic.\r\n Hit \"Search by chapter/question number\" to search by question or chapter number.\r\n" +
-      "Hit the Proofs Check box to add proofs to your search.\r\n Hit the Answers checkbox to see answers in a catechism search. ";
+        public static System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
+        public int recurCall = 0;
+        string shareList = "";
+        string newLine = "\r\n";
+        private static bool menuOpen;
+        private FloatingActionButton fab, fab1, fab2, fab3, fab4, fab5;
+        private bool confessionOpen, catechismOpen, creedOpen, helpOpen,allOpen;
+        private View view;
+        private static string fileName = "", search = "",type="";
+        SearchFragmentActivity searchFragmentActivity;
+        List<KeyValuePair<string, string>> files,documents;
+        Intent intent;
+        DocumentList documentList, resultList = new DocumentList();
+#pragma warning disable IDE0044 // Add readonly modifier
+        List<string> fileNameList;
+#pragma warning restore IDE0044 // Add readonly modifier
+        //App Loading screen
+        //Add code for new search type adapter
+        protected override void OnCreate(Bundle savedInstanceState)
+        {
+            base.OnCreate(savedInstanceState);
+
+            SetContentView(Resource.Layout.search_Layout); SetTitle(Resource.String.app_name);
+            
+           // SetTheme(Resource.Style.AppTheme);
+            SearchView search = FindViewById<SearchView>(Resource.Id.searchView1);
+            search.SetImeOptions(Android.Views.InputMethods.ImeAction.Go);
+            documents = new List<KeyValuePair<string, string>>
+{
+    new KeyValuePair<string, string>("All","All"),
+    new KeyValuePair<string, string>("Creed","Creed"),
+    new KeyValuePair<string, string>("Confession","Confession"),
+    new KeyValuePair<string, string>("Catechism","Catechism")
      
-    }
-    /// <summary>
-    /// Fills the list with entries
-    /// </summary>
-    /// <param name="documentList">The list</param>
-    /// <param name="ID">Whether to clear the list or not</param>
-    /// <param name="files">Array of files</param>
-    /// <param name="answers">Answers enteries filled if Catechism search is performed</param>
-    /// <param name="proofs">Proofs filled if search is performed</param>
-    /// <param name="asset">App Assets</param>
-    /// <param name="allSearch">Search All files for entry</param>
-    private void Fill(DocumentList documentList,  string[] files, bool answers, bool proofs, AssetManager asset, bool allSearch)
-    {
-      if (files[0] != null || files[0] != "" && allSearch)
-      {
-        foreach (string file1 in files)
-          documentList.Fill(file1, asset, 1, answers, proofs);
-      }
-      else
-        documentList.Fill(fileName, asset, 0, answers, proofs);
-    }
-    [Java.Interop.Export("layoutChanged")]
-    public void layoutChanged(View view)
-    {
-      bool layoutChange = ((ToggleButton)view).Checked;
-      string toast = ((ToggleButton)view).Text;
-      ToggleButton radio = (ToggleButton)view;
-      //Home Layout
-      if (radio == FindViewById<ToggleButton>(Resource.Id.homeBtn))
-      {
+};
 
-        SetContentView(Resource.Layout.activity_main);
-        FindViewById<ToggleButton>(Resource.Id.homeBtn).Checked = true;
-        FindViewById<ToggleButton>(Resource.Id.confessionBtn).Checked = false;
-        FindViewById<ToggleButton>(Resource.Id.settingsBtn).Checked = false;
-        FindViewById<ToggleButton>(Resource.Id.catechismBtn).Checked = false;
-        FindViewById<TextView>(Resource.Id.nothing).Text = "Use the switches above to navigate through the app.\r\n Search Catechisms by clicking the Catechism toggle. \r\n Search Confessions by hitting the Confession toggle.\r\n " +
-       "Hit \"Search By Topic\" to search for a topic.\r\n Hit \"Search by chapter/question number\" to search by question or chapter number.\r\n" +
-       "Hit the Proofs Check box to add proofs to your search.\r\n Hit the Answers checkbox to see answers in a catechism search. ";
-
-      }
-      else if (radio == FindViewById<ToggleButton>(Resource.Id.confessionBtn))
-      {
-        SetContentView(Resource.Layout.confession_layout);
-        Spinner spinner = FindViewById<Spinner>(Resource.Id.spinner1);
-        FindViewById<ToggleButton>(Resource.Id.confessionBtn).Checked = true;
-        FindViewById<ToggleButton>(Resource.Id.homeBtn).Checked = false;
-        FindViewById<ToggleButton>(Resource.Id.settingsBtn).Checked = false;
-
-        FindViewById<ToggleButton>(Resource.Id.catechismBtn).Checked = false;
-        //Set Combo Box Elements
-        files = new List<KeyValuePair<string, string>>
-        {
-        new KeyValuePair<string, string> ("Westminster Confession of Faith 1646","Westminster Confession of Faith 1646"),
-        new KeyValuePair<string, string>("2nd London Baptist Confession of Faith", "2nd London Baptist Confession of Faith")
-        };
-        FindViewById<EditText>(Resource.Id.searchBox).Text = "";
-        List<string> catechismFiles = new List<string>();
-        foreach (var item in files)
-        {
-          catechismFiles.Add(item.Key);
+            LayoutChanged("All");
 
         }
-        spinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner1_ItemSelected);
-        var adapter = ArrayAdapter.CreateFromResource(this, Resource.Array.confession_list, Android.Resource.Layout.SimpleSpinnerItem);
-        adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
-        spinner.Adapter = adapter;
-      }
-      //Catechism Search Layout
-      else if (radio == FindViewById<ToggleButton>(Resource.Id.catechismBtn))
-      {
-        SetContentView(Resource.Layout.catechism_layout); //textbox.Text = "";
-        Spinner spinner = FindViewById<Spinner>(Resource.Id.spinner1);
-        FindViewById<ToggleButton>(Resource.Id.catechismBtn).Checked = true;
-        FindViewById<ToggleButton>(Resource.Id.homeBtn).Checked = false;
-        FindViewById<ToggleButton>(Resource.Id.confessionBtn).Checked = false;
-        FindViewById<ToggleButton>(Resource.Id.settingsBtn).Checked = false;
-        files = new List<KeyValuePair<string, string>>
+        //Close search menu after selection is made
+        //private void CloseFabMenu()
+        //{
+        //    fab4 = FindViewById<FloatingActionButton>(Resource.Id.floatingActionButton4);
+        //    fab1 = FindViewById<FloatingActionButton>(Resource.Id.floatingActionButton1);
+        //    fab2 = FindViewById<FloatingActionButton>(Resource.Id.floatingActionButton2);
+        //    fab3 = FindViewById<FloatingActionButton>(Resource.Id.floatingActionButton3);
+        //    view = FindViewById<View>(Resource.Id.fabMenu);
+        //    menuOpen = false;
+        //    //fab5.Animate().Rotation(0f);
+        //    view.Animate().Alpha(0f);
+        //    fab1.Visibility = ViewStates.Gone;
+        //    fab2.Visibility = ViewStates.Gone;
+        //    fab3.Visibility = ViewStates.Gone;
+        //    fab4.Visibility = ViewStates.Gone;
+        //}
+        //protected override void OnNewIntent(Android.Content.Intent intent)
+        //{
+        //    base.OnNewIntent(intent);
+        //    Push.CheckLaunchedFromNotification(this, intent);
+        //}
+
+        // Open Search Menu
+        //private void Fab_Click(object o, EventArgs e)
+        //{
+        //    TextView text1, text2, text3, text4, text5, text6;
+
+        //    menuOpen = true;
+
+        //    fab = FindViewById<FloatingActionButton>(Resource.Id.floatingActionButton);
+        //    fab.Animate().Rotation(135f);
+        //    SetContentView(Resource.Layout.fabLayout);
+        //    fab5 = FindViewById<FloatingActionButton>(Resource.Id.floatingActionButton5);
+        //    fab5.Click += delegate { Toast.MakeText(this, "Select an option from above", ToastLength.Long).Show(); };
+        //    fab1 = FindViewById<FloatingActionButton>(Resource.Id.floatingActionButton1);
+        //    fab1.Click += CreedLayout;
+        //    fab2 = FindViewById<FloatingActionButton>(Resource.Id.floatingActionButton2);
+        //    fab2.Click += CatechismLayout;
+        //    fab3 = FindViewById<FloatingActionButton>(Resource.Id.floatingActionButton3);
+        //    fab3.Click += ConfessionLayout;
+        //    fab4 = FindViewById<FloatingActionButton>(Resource.Id.floatingActionButton4);
+        //    fab4.Click += HelpLayout;
+        //    fab1.Visibility = ViewStates.Visible;
+        //    fab2.Visibility = ViewStates.Visible;
+        //    fab3.Visibility = ViewStates.Visible;
+        //    fab4.Visibility = ViewStates.Visible;
+
+        //    view = FindViewById<View>(Resource.Id.fabMenu);
+
+        //    view.Animate().Alpha(1f);
+        //    text1 = FindViewById<TextView>(Resource.Id.searchItem);
+        //    text2 = FindViewById<TextView>(Resource.Id.helpItem);
+        //    text3 = FindViewById<TextView>(Resource.Id.creedItem);
+        //    text4 = FindViewById<TextView>(Resource.Id.catechismItem);
+        //    text5 = FindViewById<TextView>(Resource.Id.confessionItem);
+        //    text6 = FindViewById<TextView>(Resource.Id.closeItem);
+        //    text1.Visibility = ViewStates.Visible;
+        //    text2.Visibility = ViewStates.Visible;
+        //    text3.Visibility = ViewStates.Visible;
+        //    text4.Visibility = ViewStates.Visible;
+        //    text5.Visibility = ViewStates.Visible;
+        //    text6.Visibility = ViewStates.Visible;
+        //    text6.Text = "Choose item from above";
+        //    fab5.Visibility = ViewStates.Visible;
+
+        //    ChangeColor(false, Android.Graphics.Color.Black, text1, text2, text3, text4, text5, text6);
+
+
+        //}
+        #region private class in Activity
+        private class FabAnimatorListener : Java.Lang.Object, Animator.IAnimatorListener
+        {
+            View[] viewsToHide;
+
+            public FabAnimatorListener(params View[] viewsToHide)
+            {
+                this.viewsToHide = viewsToHide;
+            }
+
+            public void OnAnimationCancel(Animator animation)
+            {
+            }
+
+            public void OnAnimationEnd(Animator animation)
+            {
+                if (!menuOpen)
+                    foreach (var view in viewsToHide)
+                        view.Visibility = ViewStates.Gone;
+            }
+
+            public void OnAnimationRepeat(Animator animation)
+            {
+            }
+
+            public void OnAnimationStart(Animator animation)
+            {
+            }
+        }
+        #endregion
+        //Catechism Page Layout
+        private void CatechismLayout(object o, EventArgs e)
+        {
+            string type = "CATECHISM";
+             LayoutChanged(type);
+
+
+
+
+        }
+        // Confession Page layout
+        private void ConfessionLayout(object o, EventArgs e)
+        {
+            string type = "CONFESSION";
+             LayoutChanged(type);
+
+
+        }
+
+        //Creed Page layout
+        private void CreedLayout(object o, EventArgs e)
+        {
+            string type = "CREED";
+             LayoutChanged(type);
+        }
+
+        // Help page method
+        private void HelpLayout(object o, EventArgs e)
+        {
+            string type = "HELP";
+             LayoutChanged(type);
+        }
+
+        // Change Document types
+        //Needs changed to adapt to spinner
+        private void LayoutChanged(string type)
+        {
+            switch (type.ToUpper())
+            {
+                case "ALL":
+                    
+                        allOpen = true; confessionOpen = true; catechismOpen = false; creedOpen = false; helpOpen = false;
+                        SetContentView(Resource.Layout.search_Layout);
+                        Spinner spinner = FindViewById<Spinner>(Resource.Id.spinner1), spinner2 = FindViewById<Spinner>(Resource.Id.spinner2);
+                        //Document Type Spinner
+                        documents = new List<KeyValuePair<string, string>>
+{
+    new KeyValuePair<string, string>("All","All"),
+    new KeyValuePair<string, string>("Creed","Creed"),
+    new KeyValuePair<string, string>("Confession","Confession"),
+    new KeyValuePair<string, string>("Catechism","Catechism")
+
+};
+                        List<string> documentTypes = new List<string>();
+                        foreach (var item in documents)
+                            documentTypes.Add(item.Key);
+                        spinner2.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(Spinner2_ItemSelected);
+                        var adapter1 = ArrayAdapter.CreateFromResource(this, Resource.Array.docTypes, Android.Resource.Layout.SimpleSpinnerItem);
+                        adapter1.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+                        spinner2.Adapter = adapter1;
+                        //SearchView Elements
+                        SearchView search = FindViewById<SearchView>(Resource.Id.searchView1);
+                        search.SetImeOptions(Android.Views.InputMethods.ImeAction.Go);
+                        search.QueryTextSubmit += Search_QueryTextSubmit;
+                        //Document loading
+                        files = new List<KeyValuePair<string, string>>
+                    {
+        new KeyValuePair<string, string> ("Westminster Confession of Faith 1646","Westminster Confession of Faith 1646"),
+        new KeyValuePair<string, string>("2nd London Baptist Confession of Faith", "2nd London Baptist Confession of Faith"),
+       new KeyValuePair<string,string>("1618 Belgic Confession Of Faith", "1618 Belgic Confession Of Faith"),
+       new KeyValuePair<string, string>("1658 Savoy Declaration","1658 Savoy Declaration"),
+        new KeyValuePair<string, string> ("Westminster Larger Catechism","Westminster Larger Catechism"),
+        new KeyValuePair<string, string>("Westminster Shorter Catechism", "Westminster Shorter Catechism"),
+        new KeyValuePair<string,string>("Heidelberg Catechism","Heidelberg Catechism"),
+         new KeyValuePair<string, string>("Apostle\'s Creed","Apostle\'s Creed"),
+       new KeyValuePair<string, string>("Nicene Creed", "Nicene Creed"),
+       new KeyValuePair<string, string>("Athanasian Creed","Athanasian Creed")
+                    };
+                        List<string> catechismFiles = new List<string>();
+                        foreach (var item in files)
+                            catechismFiles.Add(item.Key);
+                        spinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(Spinner1_ItemSelected);
+                        var adapter = ArrayAdapter.CreateFromResource(this, Resource.Array.all_docs_list, Android.Resource.Layout.SimpleSpinnerItem);
+                        adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+                        spinner.Adapter = adapter;
+                        FindViewById<RadioButton>(Resource.Id.topicRadio).PerformClick();
+                        FloatingActionButton button = FindViewById<FloatingActionButton>(Resource.Id.searchFAB);
+                        button.Click += delegate { Search(search.Query); };
+                        break;
+                    
+                case "CONFESSION":
+                    
+                        allOpen = false; confessionOpen = true; catechismOpen = false; creedOpen = false; helpOpen = false;
+                        SetContentView(Resource.Layout.search_Layout);
+                        //SearchView elements
+                        search = FindViewById<SearchView>(Resource.Id.searchView1);
+                        search.SetImeOptions(Android.Views.InputMethods.ImeAction.Go);
+                        search.QueryTextSubmit += Search_QueryTextSubmit;
+                        //Spinner elements
+                        spinner = FindViewById<Spinner>(Resource.Id.spinner1);
+                        spinner2 = FindViewById<Spinner>(Resource.Id.spinner2);
+                        documents = new List<KeyValuePair<string, string>>
+{
+    new KeyValuePair<string, string>("All","All"),
+    new KeyValuePair<string, string>("Creed","Creed"),
+    new KeyValuePair<string, string>("Confession","Confession"),
+    new KeyValuePair<string, string>("Catechism","Catechism")
+
+};
+                        spinner2.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(Spinner2_ItemSelected);
+                        adapter1 = ArrayAdapter.CreateFromResource(this, Resource.Array.docTypes, Android.Resource.Layout.SimpleSpinnerItem);
+                        adapter1.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+                        spinner2.Adapter = adapter1;
+                        //Document Spinner loading
+                        files = new List<KeyValuePair<string, string>>
+        {
+        new KeyValuePair<string, string> ("Westminster Confession of Faith 1646","Westminster Confession of Faith 1646"),
+        new KeyValuePair<string, string>("2nd London Baptist Confession of Faith", "2nd London Baptist Confession of Faith"),
+       new KeyValuePair<string,string>("1618 Belgic Confession Of Faith", "1618 Belgic Confession Of Faith"),
+       new KeyValuePair<string, string>("1658 Savoy Declaration","1658 Savoy Declaration")
+        };
+                        catechismFiles = new List<string>();
+                        foreach (var item in files)
+                            catechismFiles.Add(item.Key);
+                        spinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(Spinner1_ItemSelected);
+                        adapter = ArrayAdapter.CreateFromResource(this, Resource.Array.confession_list, Android.Resource.Layout.SimpleSpinnerItem);
+                        adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+                        spinner.Adapter = adapter;
+                        //Ending
+                        FindViewById<RadioButton>(Resource.Id.topicRadio).PerformClick();
+                         button = FindViewById<FloatingActionButton>(Resource.Id.searchFAB);
+                        button.Click += delegate { Search(search.Query); };
+                        break;
+                    
+                case "CATECHISM":
+                    
+                        allOpen = false; catechismOpen = true; confessionOpen = false; creedOpen = false; helpOpen = false;
+                        SetContentView(Resource.Layout.search_Layout);
+                        //SearchView elements
+                        search = FindViewById<SearchView>(Resource.Id.searchView1);
+                        search.SetImeOptions(Android.Views.InputMethods.ImeAction.Go);
+                        search.QueryTextSubmit += Search_QueryTextSubmit;
+                        spinner = FindViewById<Spinner>(Resource.Id.spinner1);
+                        spinner2 = FindViewById<Spinner>(Resource.Id.spinner2);
+                        //Document Type Spinner Loading
+                        documents = new List<KeyValuePair<string, string>>
+{
+    new KeyValuePair<string, string>("All","All"),
+    new KeyValuePair<string, string>("Creed","Creed"),
+    new KeyValuePair<string, string>("Confession","Confession"),
+    new KeyValuePair<string, string>("Catechism","Catechism")
+
+};
+                        documentTypes = new List<string>();
+                        foreach (var item in documents)
+                            documentTypes.Add(item.Key);
+                        spinner2.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(Spinner2_ItemSelected);
+                        adapter1 = ArrayAdapter.CreateFromResource(this, Resource.Array.docTypes, Android.Resource.Layout.SimpleSpinnerItem);
+                        adapter1.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+                        spinner2.Adapter = adapter1;
+                        //Document Spinner Loading
+                        files = new List<KeyValuePair<string, string>>
         {
         new KeyValuePair<string, string> ("Westminster Larger Catechism","Westminster Larger Catechism"),
         new KeyValuePair<string, string>("Westminster Shorter Catechism", "Westminster Shorter Catechism"),
         new KeyValuePair<string,string>("Heidelberg Catechism","Heidelberg Catechism")
         };
-        List<string> catechismFiles = new List<string>();
-        foreach (var item in files)
-        {
-          catechismFiles.Add(item.Key);
+                        catechismFiles = new List<string>();
+                        foreach (var item in files)
+                        {
+                            catechismFiles.Add(item.Key);
+
+                        }
+                        spinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(Spinner1_ItemSelected);
+                        adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleSpinnerItem, catechismFiles);
+                        adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+                        spinner.Adapter = adapter;
+                        //End Code
+                        FindViewById<RadioButton>(Resource.Id.topicRadio).PerformClick();
+                        button = FindViewById<FloatingActionButton>(Resource.Id.searchFAB);
+                        button.Click += delegate { Search(search.Query); };
+                        break;
+                    
+                case "CREED":
+                    
+                        allOpen = false; creedOpen = true; catechismOpen = false; confessionOpen = false; helpOpen = false;
+                        SetContentView(Resource.Layout.search_Layout);
+                        spinner = FindViewById<Spinner>(Resource.Id.spinner1);
+                        spinner2 = FindViewById<Spinner>(Resource.Id.spinner2);
+                        //Doc Type Spinner
+                        documents = new List<KeyValuePair<string, string>>
+{
+    new KeyValuePair<string, string>("All","All"),
+    new KeyValuePair<string, string>("Creed","Creed"),
+    new KeyValuePair<string, string>("Confession","Confession"),
+    new KeyValuePair<string, string>("Catechism","Catechism")
+
+};
+                        documentTypes = new List<string>();
+                        foreach (var item in documents)
+                            documentTypes.Add(item.Key);
+                        spinner2.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(Spinner2_ItemSelected);
+                        adapter1 = ArrayAdapter.CreateFromResource(this, Resource.Array.docTypes, Android.Resource.Layout.SimpleSpinnerItem);
+                        adapter1.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+                        spinner2.Adapter = adapter1;
+                        //Document Spinner
+                        files = new List<KeyValuePair<string, string>>
+       {
+       new KeyValuePair<string, string>("Apostle\'s Creed","Apostle\'s Creed"),
+       new KeyValuePair<string, string>("Nicene Creed", "Nicene Creed"),
+       new KeyValuePair<string, string>("Athanasian Creed","Athanasian Creed")
+       };
+                        catechismFiles = new List<string>();
+                        foreach (var item in files)
+                        {
+                            catechismFiles.Add(item.Key);
+                        }
+                        spinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(Spinner1_ItemSelected);
+                        adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleSpinnerItem, catechismFiles);
+                        adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+                        spinner.Adapter = adapter;
+                        FindViewById<RadioButton>(Resource.Id.topicRadio).PerformClick();
+                        //EndCode
+                        button = FindViewById<FloatingActionButton>(Resource.Id.searchFAB);
+                        search = FindViewById<SearchView>(Resource.Id.searchView1);
+                        search.SetImeOptions(Android.Views.InputMethods.ImeAction.Go);
+                        search.QueryTextSubmit += Search_QueryTextSubmit;
+                        button.Click += delegate { Search(search.Query); };
+                        break;
+
+                              #region MyRegion
+              //  case "HELP":
+                    //                    creedOpen = false; catechismOpen = false; confessionOpen = false; helpOpen = true;
+                    //                    SetContentView(Resource.Layout.main);
+                    //                    FindViewById<TextView>(Resource.Id.appTitle).Text = "Help Page";
+                    //                    FindViewById<TextView>(Resource.Id.searchByLabel).Text = GetString(Resource.String.catechism_help);
+                    //                    FindViewById<TextView>(Resource.Id.catechismPgh).Text = GetString(Resource.String.catechismPgh);
+                    //                    FindViewById<TextView>(Resource.Id.confessionHelp).Text = GetString(Resource.String.confession_help);
+                    //                    FindViewById<TextView>(Resource.Id.confessionPgh).Text = GetString(Resource.String.confessionPgh);
+                    //                    FindViewById<TextView>(Resource.Id.creedHelp).Text = "Creed Help:";
+                    //                    FindViewById<TextView>(Resource.Id.creedPgh).Text = GetString(Resource.String.creedPgh);
+                    //                    FindViewById<TextView>(Resource.Id.otherStuff).Text = "Other Stuff:";
+                    //                    FindViewById<TextView>(Resource.Id.otherPgh).Text = GetString(Resource.String.other_pgh);
+                    //                    fab = FindViewById<FloatingActionButton>(Resource.Id.floatingActionButton);
+                    //                    fab.Click += Fab_Click;
+                    //                    FindViewById<TextView>(Resource.Id.sourceTV).Text = "All documents listed below are public domain, the websites below helped me with collecting them. \nThe formatting on the page was used as a guide to formatting the files needed for the app." +
+
+                    //"    \n\nApostle's Creed: https://reformed.org/documents/apostles_creed.html " +
+                    //"    \n1618 Belgic Confession: https://reformed.org/documents/BelgicConfession.html " +
+                    //    "\n1646 Westminster Confession of Faith: https://reformed.org/documents/wcf_with_proofs/index.html" +
+                    //    "\n1689 London Baptist Confession of Faith: https://reformed.org/documents/baptist_1689.html" +
+                    //    "\n1658 Savoy Declaration of Faith and Order: https://reformed.org/documents/Savoy_Declaration/index.html" +
+                    //   "\nWestminster Shorter Catechism: https://reformed.org/documents/wsc/index.html" +
+                    //   " \nWestminster Larger Catechism: https://reformed.org/documents/wlc_w_proofs/index.html " +
+                    //"    \nHeidelberg Catechism: https://reformed.org/documents/heidelberg.html " +
+                    //    "\nNicean Creed: https://reformed.org/documents/nicene.html " +
+                    //   "\nAthanasian Creed: https://reformed.org/documents/athanasian.html  ";
+
+                    //                    break; 
+#endregion
+
+            }
         }
-        spinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner1_ItemSelected);
-        var adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleSpinnerItem, catechismFiles);
-        adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
-        spinner.Adapter = adapter;
-        FindViewById<EditText>(Resource.Id.searchBox).Text = "";
-      }
-      else if (radio == FindViewById<ToggleButton>(Resource.Id.settingsBtn))
-      {
-        SetContentView(Resource.Layout.settingsLayout);
-        FindViewById<ToggleButton>(Resource.Id.catechismBtn).Checked = false;
-        FindViewById<ToggleButton>(Resource.Id.confessionBtn).Checked = false;
-        FindViewById<ToggleButton>(Resource.Id.homeBtn).Checked = false;
-        FindViewById<ToggleButton>(Resource.Id.settingsBtn).Checked = true;
-      }
+
+        //Search View Text Submit
+        #region MyRegion
+        private void Search_QueryTextSubmit(object sender, SearchView.QueryTextSubmitEventArgs e)
+        {
+            recurCall++;
+            if (recurCall == 1)
+            {
+                string query = e.Query;
+                Search(query);
+            }
+
+        }
+
+        //fill Document list
+        private void Fill(DocumentList documentList, int ID, string[] files, bool answers, bool proofs, AssetManager asset, bool allSearch)
+        {
+            if (files[0] != null || files[0] != "" && allSearch)
+            {
+                foreach (string file1 in files)
+                    this.documentList.Fill(file1, asset, 1, answers, proofs);
+            }
+            else
+                this.documentList.Fill(fileName, asset, 0, answers, proofs);
+
+        }
+        // Search Type Selection
+        [Java.Interop.Export("SearchType")]
+        //Change Search Types
+
+        public void SearchType(View view)
+        {
+            KeyEvent enter = new KeyEvent(KeyEventActions.Down, Keycode.Enter);
+            SearchView searchView = FindViewById<SearchView>(Resource.Id.searchView1);
+            RadioButton radio = ((RadioButton)view);
+            TextView text = FindViewById<TextView>(Resource.Id.searchTVFAB);
+            if (radio == FindViewById<RadioButton>(Resource.Id.topicRadio))
+            {
+                if (radio.Checked)
+                {
+                    searchView.Enabled = true;
+
+                    searchView.SetImeOptions(Android.Views.InputMethods.ImeAction.Go);
+                    searchView.SetInputType(Android.Text.InputTypes.ClassText);
+                    searchView.QueryTextSubmit += Search_QueryTextSubmit;
+                    searchView.SetQueryHint("Search By topic");
+                    text.Text = GetString(Resource.String.Search);
+
+                }
+            }
+            //Chapter/Question Number Search
+            else if (radio == FindViewById<RadioButton>(Resource.Id.chapterRadio))
+            {
+                if (radio.Checked)
+                {
+                    searchView.Enabled = true;
+                    searchView.SetInputType(Android.Text.InputTypes.ClassNumber);
+                    searchView.SetQueryHint("Search By Number...");
+                    text.Text = GetString(Resource.String.Search);
+                }
+            }
+            else if (radio == FindViewById<RadioButton>(Resource.Id.viewAllRadio))
+            {
+                text.Text = GetString(Resource.String.View_Button);
+                if (!creedOpen)
+                {
+                    searchView.SetIconifiedByDefault(true);
+                    searchView.Enabled = false;
+
+                }
+
+            }
+
+        }
+        //Search by topic
+        public void FilterResults(DocumentList documentList, bool truncate, bool answers, bool proofs, bool allDocs, string searchTerm)
+        {
+            resultList.Clear();
+            Log.Info("Filter Results", "Filter has begun processing");
+            //for (int y = 1; y <= documentList.Count; y++)
+            foreach (Document document in documentList)
+            {
+                if (document.Type == "CONFESSION")
+                {
+                    Confession confession = (Confession)document;
+                    confession.Filter(searchTerm, truncate);
+                    if (confession.Matches >= 1)
+                        resultList.Add(confession);
+                }
+                else if (document.Type == "CATECHISM")
+                {
+                    Catechism catechism = (Catechism)document;
+                    catechism.Filter(searchTerm, truncate);
+                    if (catechism.Matches >= 1)
+                        resultList.Add(catechism);
+                }
+            }
+            this.documentList = resultList;
+            this.documentList.MergeSort(DocumentList.OrderEnum.MatchOrder);
+        }
+        //Search By Number
+        public void FilterResults(DocumentList documentList, bool truncate, bool answers, bool proofs, bool allDocs, int searchTerm)
+        {
+            foreach (Document document in documentList)
+                if (document.IDNumber == searchTerm)
+                    resultList.Add(document);
+            this.documentList = resultList;
+            this.documentList.MergeSort();
+        } 
+        #endregion
+        //Search Method
+        //Modify this
+        private void Search(string query)
+        {
+            #region Variable Declaration 
+#pragma warning disable CS0219 // Variable is assigned but its value is never used
+            int docCount = 1;
+#pragma warning restore CS0219 // Variable is assigned but its value is never used
+            bool truncate = false;
+            Log.Info("Search()", String.Format(Resource.String.search_execution_begins + ""));
+            documentList = new DocumentList();
+            RadioButton radio = FindViewById<RadioButton>(Resource.Id.viewAllRadio);
+            this.searchFragmentActivity = new SearchFragmentActivity();
+            AssetManager asset = this.Assets;
+            //string searchTerm = "";
+            bool proofs = true, answers = true, searchAll = false;
+            string[] fileNames=new string[10];
+            CheckBox answerCheck = FindViewById<CheckBox>(Resource.Id.AnswerBox), proofCheck = FindViewById<CheckBox>(Resource.Id.proofBox),
+            searchCheck = FindViewById<CheckBox>(Resource.Id.searchAllCheckBox);
+            Spinner spinner = FindViewById<Spinner>(Resource.Id.spinner1);
+            #endregion
+            spinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(Spinner1_ItemSelected);
+            //Search Options
+            #region Search Options
+            // Modify This section 
+            if (allOpen) {
+                if (radio.Checked == false)
+                {
+                    if (answerCheck.Checked)
+                        answers = false;
+                    else
+                        answers = true;
+                    if (proofCheck.Checked)
+                        proofs = false;
+                    else
+                        proofs = true;
+                    if (searchCheck.Checked)
+                    {
+                        searchAll = true;
+                        fileNames = new[] { "Westminster Confession of Faith 1646.txt", "2nd London Baptist Confession of Faith.txt", "1618 Belgic Confession Of Faith.txt",
+                            "1658 Savoy Declaration.txt", "Westminster Larger Catechism.txt", "Westminster Shorter Catechism.txt", "Heidelberg Catechism.txt","Apostle\'s Creed.txt",
+                            "Nicene Creed.txt", "Athanasian Creed.txt"
+                        };
+                        docCount = 10;
+                    }
+                    else
+                        searchAll = false;
+                }
+                else
+                {
+                    answers = true;
+                    searchAll = false;
+                    docCount = 1; proofs = true;
+                }
+            }
+            else if (catechismOpen)
+            {
+                if (radio.Checked == false)
+                {
+                    if (answerCheck.Checked)
+                        answers = false;
+                    else
+                        answers = true;
+                    if (proofCheck.Checked)
+                        proofs = false;
+                    else
+                        proofs = true;
+                    if (searchCheck.Checked)
+                    {
+                        searchAll = true;
+                        fileNames = new[] { "Westminster Larger Catechism.txt", "Westminster Shorter Catechism.txt", "Heidelberg Catechism.txt" };
+                        docCount = 3;
+                    }
+                    else
+                        searchAll = false;
+                }
+                else
+                {
+                    answers = true;
+                    searchAll = false;
+                    docCount = 1; proofs = true;
+                }
+            }
+            else if (confessionOpen)
+            {
+                if (radio.Checked != true)
+                {
+                    if (proofCheck.Checked)
+                        proofs = false;
+                    else
+                        proofs = true;
+                    if (searchCheck.Checked)
+                    {
+                        searchAll = true;
+                        fileNames = new[] { "Westminster Confession of Faith 1646.txt", "2nd London Baptist Confession of Faith.txt", "1618 Belgic Confession Of Faith.txt", "1658 Savoy Declaration.txt" };
+                        docCount = 4;
+                    }
+                    else
+                        searchAll = false;
+                    docCount = 1;
+                }
+                else
+                {
+                    proofs = true; searchAll = false;
+                    docCount = 1;
+                }
+
+            }
+            else if (creedOpen)
+            {
+                if (searchCheck.Checked)
+                {
+                    searchAll = true;
+                    docCount = 3;
+                    fileNames = new[] { "Apostle\'s Creed.txt", "Nicene Creed.txt", "Athanasian Creed.txt" };
+                }
+                else
+                {
+                    proofs = false; searchAll = false; truncate = false;
+                    docCount = 1;
+                }
+                answers = false;
+            }
+            Fill(this.documentList, 1, fileNames, answers, proofs, asset, searchAll);
+            this.documentList.Truncate = truncate;
+
+            search = query;
+            //Results are truncated to the term if true
+            if (FindViewById<CheckBox>(Resource.Id.truncateCheck).Checked)
+                truncate = true;
+            #endregion
+            Log.Info("Search()", String.Format(Resource.String.search_status_sorting + ""));
+            //If topic is filled
+            if (radio.Checked != true && query != "" && FindViewById<RadioButton>(Resource.Id.topicRadio).Checked)
+            {
+                if (FindViewById<RadioButton>(Resource.Id.topicRadio).Checked)
+                {
+                    stopwatch.Start();
+                    FilterResults(this.documentList, truncate, answers, proofs, searchAll, query);
+                    this.documentList.Reverse();
+                    stopwatch.Stop();
+                }
+            }
+            //if Chapter is filled
+            else if (FindViewById<RadioButton>(Resource.Id.chapterRadio).Checked & query != "")
+            {
+                // int searchInt;
+                //if (Int32.TryParse(searchTerm, out searchInt))
+                int searchInt = Int32.Parse(query);
+                FilterResults(this.documentList, truncate, answers, proofs, searchAll, searchInt);
+
+            }
+            //if View Document is checked
+            else if (FindViewById<RadioButton>(Resource.Id.viewAllRadio).Checked)
+            {
+                if (!FindViewById<CheckBox>(Resource.Id.searchAllCheckBox).Checked)
+                    query = this.documentList.Title;
+                else
+                    query = "View All";
+            }
+            //Display Results
+            Log.Info("Search Method", "Displaying Results");
+            if (documentList.Count > 1)
+            {
+                SetContentView(Resource.Layout.search_results);
+                ViewPager viewPager = FindViewById<ViewPager>(Resource.Id.viewpager);
+                SearchAdapter adapter = new SearchAdapter(SupportFragmentManager, this.documentList, query, truncate);
+                //Sets the final state of application
+                this.searchFragmentActivity.DisplayResults(this.documentList, viewPager, adapter, query, 1, truncate);
+                SetTitle(Resource.String.search_results_title);
+            }
+            //Single result or no results found
+            else
+            {
+                stopwatch.Stop();
+                //If There are no Search Results
+                if (this.documentList.Empty)
+                {
+                    #region Error Logging
+                    Log.Info("Search()", String.Format("No Results were found for {0}", query));
+                    Toast.MakeText(this, String.Format("No results were found for  {0}", query), ToastLength.Long).Show();
+                    #endregion
+                    #region Variable Declaration and Assignment
+
+                    SetContentView(Resource.Layout.errorLayout);
+                    TextView errorMsg = FindViewById<TextView>(Resource.Id.errorTV);
+                    errorMsg.Text = String.Format("No Search Results were found for {0}\r\n\r\n" +
+                        "Go back to home page to search for another topic", query);
+
+
+                    #endregion
+                    #region Dialog Box
+                    Android.App.AlertDialog.Builder alert = new Android.App.AlertDialog.Builder(this);
+                    alert.SetTitle(Resource.String.zero_results_title);
+                    alert.SetMessage(String.Format("No Results were found for {0}.\r\n\r\n" +
+                        "Do you want to go back and search for another topic?", query));
+                    alert.SetPositiveButton("Yes", (senderAlert, args) =>
+                    {
+                        intent = new Intent(this, Class);
+                        searchFragmentActivity = null;
+                        this.OnStop();
+                        this.Finish();
+                        StartActivity(intent);
+                    });
+                    alert.SetNegativeButton("No", (senderAlert, args) => { alert.Dispose(); });
+
+                    Dialog dialog = alert.Create();
+                    dialog.Show();
+                    #endregion
+                    SetTitle(Resource.String.error_results);
+
+                }
+                //If there is only 1 search result  
+                else
+                {
+                    SetTitle(Resource.String.search_results_title);
+                    Document document = this.documentList[this.documentList.Count];
+                    //Display Catechism Results
+                    if (document.Type == "CATECHISM")
+                    {
+
+                        this.SetContentView(Resource.Layout.catechism_Results);
+                        TextView questionBox = FindViewById<TextView>(Resource.Id.chapterText);
+                        TextView answerBox = FindViewById<TextView>(Resource.Id.answerText);
+                        TextView numberBox = FindViewById<TextView>(Resource.Id.confessionChLabel);
+                        TextView proofBox = FindViewById<TextView>(Resource.Id.proofText);
+                        TextView proofView = FindViewById<TextView>(Resource.Id.proofLabel);
+                        TextView docTitleBox = FindViewById<TextView>(Resource.Id.documentTitleLabel);
+                        Catechism catechism = (Catechism)document;
+                        questionBox.Text = catechism.Question;
+                        answerBox.Text = catechism.Answer;
+                        numberBox.Text = String.Format("Question {0}: {1}", catechism.IDNumber.ToString(), catechism.Title);
+                        proofBox.Text = catechism.Proofs;
+                        docTitleBox.Text = catechism.DocTitle;
+                        ChangeColor(true, Android.Graphics.Color.Black, questionBox, answerBox, proofBox, numberBox, docTitleBox);
+                        ChangeColor(false, Android.Graphics.Color.Black, proofView, FindViewById<TextView>(Resource.Id.catechismAnswerLabel));
+                        shareList = docTitleBox.Text + newLine + String.Format("Question {0}:", catechism.IDNumber.ToString("d3")) + newLine + questionBox.Text + newLine + "Answer:" + newLine +
+        answerBox.Text + newLine + "Proofs:" + newLine + proofBox.Text;
+                        FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.shareActionButton);
+                        ChangeColor(fab, Android.Graphics.Color.Black);
+
+                        fab.Click += ShareContent;
+                    }
+                    //Display Confession Results
+                    else if (document.Type == "CONFESSION")
+                    {
+                        SetContentView(Resource.Layout.confession_results);
+                        TextView chapterBox = FindViewById<TextView>(Resource.Id.chapterText);
+                        TextView proofBox = FindViewById<TextView>(Resource.Id.proofText);
+                        TextView chNumbBox = FindViewById<TextView>(Resource.Id.confessionChLabel);
+                        TextView docTitleBox = FindViewById<TextView>(Resource.Id.documentTitleLabel);
+                        Confession confession = (Confession)document;
+                        chapterBox.Text = confession.Chapter;
+                        chNumbBox.Text = String.Format("Chapter {0} : {1}", confession.IDNumber.ToString(), confession.Title);
+                        proofBox.Text = confession.Proofs;
+                        docTitleBox.Text = confession.DocTitle;
+                        TextView proofView = FindViewById<TextView>(Resource.Id.proofLabel);
+                        ChangeColor(true, Android.Graphics.Color.Black, chapterBox, proofBox, chNumbBox, docTitleBox);
+                        ChangeColor(proofView, false, Android.Graphics.Color.Black);
+                        shareList = docTitleBox.Text + newLine + chNumbBox.Text + newLine + chapterBox.Text + newLine + "Proofs" + newLine + proofBox.Text;
+                        FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.shareActionButton);
+                        ChangeColor(fab, Android.Graphics.Color.Black);
+
+                        fab.Click += ShareContent;
+                    }
+                    //Display Creed Results
+                    else if (document.Type == "CREED")
+                    {
+                        SetContentView(Resource.Layout.creed_Results);
+                        Creed creed = (Creed)document;
+                        TextView creedBox = FindViewById<TextView>(Resource.Id.chapterText);
+                        TextView titleBox = FindViewById<TextView>(Resource.Id.documentTitleLabel);
+                        SetTitle(Resource.String.search_results_title);
+                        creedBox.Text = creed.CreedText; titleBox.Text = documentList.Title;
+                        shareList = titleBox.Text + newLine + creed.CreedText;
+                        FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.shareActionButton);
+                        ChangeColor(fab, Android.Graphics.Color.Black);
+                        ChangeColor(true, Android.Graphics.Color.Black, creedBox, titleBox);
+                        fab.Click += ShareContent;
+                    }
+                }
+            }
+            Toast.MakeText(this, String.Format("Search Completed for {0}" + "\r\n" + "{1} ms Passed", query, stopwatch.ElapsedMilliseconds.ToString()), ToastLength.Long).Show();
+        }
+
+        //On Screen Search Button Pressed
+        [Java.Interop.Export("Search")]
+        public void Search(View view)
+        {
+            //Execute Search Method
+            Search("");
+        }
+        // Method for Combobox Item Selected
+        private void Spinner1_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        {
+            Spinner spinner = (Spinner)sender;
+            fileName = String.Format("{0}.txt", spinner.GetItemAtPosition(e.Position));
+        }
+        private void Spinner2_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        {
+            Spinner spinner = (Spinner)sender;
+           type  = String.Format("{0}", spinner.GetItemAtPosition(e.Position));
+            LayoutChanged(type);
+
+        }
+        //Return to home page
+        public void Home()
+        {
+            string TITLE = "Go Home?", MESSAGE = "Do you want to search for another topic?";
+            #region Dialog Box Creation   
+            Android.App.AlertDialog.Builder alert = new Android.App.AlertDialog.Builder(this);
+            alert.SetTitle(TITLE);
+            alert.SetMessage(MESSAGE);
+            alert.SetPositiveButton("Yes", (senderAlert, args) =>
+            {
+                searchFragmentActivity.Finish();
+                Log.Debug("Timer", String.Format("{0} ms passed", stopwatch.ElapsedMilliseconds.ToString()));
+                stopwatch.Reset();
+                intent = new Intent(this, Class);
+                searchFragmentActivity = null;
+                this.OnStop();
+                this.Finish();
+                StartActivity(intent);
+            });
+            alert.SetNegativeButton("No", (senderAlert, args) => { alert.Dispose(); });
+            Dialog dialog = alert.Create();
+            dialog.Show();
+            #endregion
+        }
+        //Overrides back button settings
+        public override void OnBackPressed()
+        {
+            //If results are showing, Go to opening page
+            if (searchFragmentActivity != null)
+                //Home method executed
+                Home();
+            //Exit app
+            else
+            { //Dialog Box Creation
+                string TITLE = "Exit App?", MESSAGE = "Are you sure you want to leave?";
+                Android.App.AlertDialog.Builder alert = new Android.App.AlertDialog.Builder(this);
+                alert.SetTitle(TITLE);
+                alert.SetMessage(MESSAGE);
+                alert.SetPositiveButton("Yes", (senderAlert, args) =>
+                {
+                    Finish();
+                    Toast.MakeText(this, "Don't forget to rate this app if you haven't already", ToastLength.Short).Show(); alert.Dispose();
+                });
+                alert.SetNegativeButton("No", (senderAlert, args) => { alert.Dispose(); });
+                Dialog dialog = alert.Create();
+                dialog.Show();
+            }
+        }
+        //Share Content
+        private void ShareContent(object sender, EventArgs eventArgs)
+        {
+            View view = (View)sender;
+            Intent sendIntent = new Intent();
+            sendIntent.SetAction(Intent.ActionSend);
+            string INTENTNAME = "SHARE";
+            sendIntent.PutExtra(Intent.ExtraText, shareList);
+            sendIntent.SetType("text/plain");
+            StartActivity(Intent.CreateChooser(sendIntent, INTENTNAME));
+        }
+        //Floating Action Button Rendering
+        public void ChangeColor(FloatingActionButton button, Android.Graphics.Color color)
+        {
+            button.SetBackgroundColor(color);
+            button.SetImageResource(Resource.Drawable.abc_ic_menu_share_mtrl_alpha);
+        }
+        public void ChangeColor(TextView view, bool selectable, Android.Graphics.Color color)
+        {
+            view.SetTextColor(color);
+            view.SetTextIsSelectable(selectable);
+        }
+        //TextView Text Color change event
+        public void ChangeColor(bool selectable, Android.Graphics.Color color, params TextView[] views)
+        {
+            foreach (TextView view in views)
+            {
+                view.SetTextColor(color);
+                view.SetTextIsSelectable(selectable);
+            }
+        }
     }
-    /// <summary>
-    /// The Type of Search Performed
-    /// </summary>
-    /// <param name="view"></param>
-    [Java.Interop.Export("SearchType")]
-    public void SearchType(View view)
-    {
-      RadioButton radio = ((RadioButton)view);
-      EditText editText;
-      if (radio == FindViewById<RadioButton>(Resource.Id.topicRadio))
-      {
-        if (radio.Checked)
-        {
-          editText = FindViewById<EditText>(Resource.Id.chNumberTextBox);
-          editText.Enabled = false;
-          editText = FindViewById<EditText>(Resource.Id.searchBox);
-          editText.Enabled = true;
-          editText.Text = "";
-        }
-      }
-      else if (radio == FindViewById<RadioButton>(Resource.Id.chapterRadio))
-      {
-        if (radio.Checked)
-        {
-          editText = FindViewById<EditText>(Resource.Id.chNumberTextBox);
-          editText.Enabled = true;
-          editText.Text = "";
-          editText = FindViewById<EditText>(Resource.Id.searchBox);
-          editText.Enabled = false;
-        }
-      }
-      else if (radio == FindViewById<RadioButton>(Resource.Id.viewAllRadio))
-      {
-        editText = FindViewById<EditText>(Resource.Id.chNumberTextBox);
-        editText.Enabled = false;
-        editText = FindViewById<EditText>(Resource.Id.searchBox);
-        editText.Enabled = false;
-      }
-
-    }
-    /// <summary>
-    /// Search Button Pressed
-    /// </summary>
-    /// <param name="view">Search Button</param>
-    [Java.Interop.Export("Search")]
-    public void Search(View view)
-    {
-      
-      documentList = new DocumentList();
-      #region Variables
-      AssetManager assets = this.Assets;
-      //documentList = new DocumentList();
-      EditText editText;
-      Bundle bundle = new Bundle();
-      ToggleButton catechismToggle = FindViewById<ToggleButton>(Resource.Id.catechismBtn), 
-      confessionToggle = FindViewById<ToggleButton>(Resource.Id.confessionBtn);
-      RadioButton radio = FindViewById<RadioButton>(Resource.Id.viewAllRadio),topicRadio=FindViewById<RadioButton>(Resource.Id.topicRadio),
-      chapterRadio=FindViewById<RadioButton>(Resource.Id.chapterRadio);
-      string[] fileNames = new string[3];
-      bool proofs = true, answers = true, searchAll = false;
-      CheckBox answerCheck = FindViewById<CheckBox>(Resource.Id.AnswerBox), 
-      proofCheck = FindViewById<CheckBox>(Resource.Id.proofBox),searchCheck = FindViewById<CheckBox>(Resource.Id.searchAllCheckBox);
-      Spinner spinner = FindViewById<Spinner>(Resource.Id.spinner1);
-      spinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner1_ItemSelected);
-      #endregion
-      #region Search Types
-      //Sets the Textbox for the search entry to go in
-      if (FindViewById<RadioButton>(Resource.Id.chapterRadio).Checked)
-        editText = FindViewById<EditText>(Resource.Id.chNumberTextBox);
-      else
-        editText = FindViewById<EditText>(Resource.Id.searchBox);
-     
-      //Selects to display answers for catechism and proofs for both
-      if (catechismToggle.Checked)
-      {
-        if (radio.Checked != true)
-        {
-          if (answerCheck.Checked)
-            answers = true;
-          else
-            answers = false;
-          if (proofCheck.Checked)
-            proofs = true;
-          else
-            proofs = false;
-          if (searchCheck.Checked)
-          {
-            searchAll = true;
-            fileNames = new[] { "Westminster Larger Catechism.txt", "Westminster Shorter Catechism.txt", "Heidelberg Catechism.txt" };
-          }
-          else
-            searchAll = false;
-        }
-        else
-        {
-          answers = true;
-          searchAll = false;
-          proofs = true;
-        }
-      }
-      else if (confessionToggle.Checked)
-      {
-        if (radio.Checked != true)
-        {
-          if (proofCheck.Checked)
-            proofs = true;
-          else
-            proofs = false;
-          if (searchCheck.Checked)
-          {
-            searchAll = true;
-            fileNames = new[] { "Westminster Confession of Faith 1646.txt", "2nd London Baptist Confession of Faith.txt" };
-          }
-          else
-            searchAll = false;
-        }
-        else
-        {
-          proofs = true; searchAll = false;
-        }
-      }
-      // Truncate Results?
-      if (FindViewById<CheckBox>(Resource.Id.truncateCheck).Checked)
-      truncate = true;
-      #endregion
-      #region Search Execution
-      //Search Type Performed
-      if (!documentList.Empty)
-        documentList.Clear();
-     
-      Fill(documentList, fileNames, answers, proofs, assets, searchAll);
-      if (chapterRadio.Checked)
-        if (editText.Text != "")
-        {
-          searchInt = Int32.Parse(editText.Text);
-          searchFragmentActivity = new SearchFragmentActivity(searchInt, documentList, truncate);
-          intent = new Intent(this, searchFragmentActivity.Class);
-          this.OnStop();
-          StartActivity(intent);
-        }
-        //Error Code
-        else
-        {
-          Toast.MakeText(this, "Search Results were null", ToastLength.Long).Show();
-        }
-      else if (topicRadio.Checked)
-      {
-        if (editText.Text != "")
-        {
-          searchTerm = editText.Text;
-          searchFragmentActivity = new SearchFragmentActivity(searchTerm, documentList, truncate);
-          intent = new Intent(this, searchFragmentActivity.Class);
-          this.OnStop();
-          StartActivity(intent);
-
-        }
-
-
-        //Error Code
-        else { Toast.MakeText(this, "Fragment was null", ToastLength.Long).Show(); }
-      }
-      else if (FindViewById<RadioButton>(Resource.Id.viewAllRadio).Checked)
-      {
-        searchTerm = "";
-        searchFragmentActivity = new SearchFragmentActivity(searchTerm,documentList,false);
-        intent = new Intent(this, searchFragmentActivity.Class);
-        this.OnPause();
-        StartActivity(intent);
-      }
-      #endregion
-    }
-    
-
-   
-    public override void OnBackPressed()
-    {
-      
-    
-        string TITLE = "Exit App?", MESSAGE = "Are you sure you want to leave?";
-        Bundle dialogBundle = new Bundle();
-        dialogBundle.PutString(TITLE, TITLE);
-        dialogBundle.PutString(MESSAGE, MESSAGE);
-        Android.App.FragmentTransaction ft = FragmentManager.BeginTransaction();
-        Android.App.Fragment prev = FragmentManager.FindFragmentByTag("dialog");
-        if (prev != null)
-        {
-          ft.Remove(prev);
-        }
-        ft.AddToBackStack(null);
-        Button yesButton = new Button(this), noButton = new Button(this);
-        ActivityDialog dialog = ActivityDialog.NewInstance(dialogBundle, yesButton, noButton, TITLE, MESSAGE);
-        yesButton.Click += delegate { Toast.MakeText(this, "Don't forget to rate this app if you haven't already", ToastLength.Short).Show(); dialog.Dismiss(); Finish(); };
-        noButton.Click += delegate { dialog.Dismiss(); this.Recreate(); };
-        dialog.Show(ft, "dialog");
-      
-    }
-
-    private void spinner1_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
-    {
-      Spinner spinner = (Spinner)sender;
-      fileName = String.Format("{0}.txt", spinner.GetItemAtPosition(e.Position));
-    }
-  }
 }
 

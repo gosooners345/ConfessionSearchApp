@@ -462,25 +462,7 @@ namespace DocumentClass
             Log.Debug("Timer", "Timer Started");
             for (int i = 2; i <= 5; i++)
             {
-                //if (this[i].Contains(term))
-                //{
-                //    if (i == 2)
-                //    {
-                //        this.Matches += matchTitle;
-                //    }
-                //    else if (i == 3)
-                //    {
-                //        this.Matches += matchChapter;
-                //    }
-                //    else if (i == 4)
-                //    {
-                //        this.Matches += matchProofs;
-                //    }
-                //    else if (i == 5)
-                //    {
-                //        this.Matches += matchTags;
-                //    }
-                //}
+               
                 #region old code
                 foreach (string word in this[i].Split(' '))
                 {
@@ -512,10 +494,73 @@ namespace DocumentClass
             Creed creed = new Creed();
             words = stringField.Split('~');
             creed.Type = words[0];
-            creed.CreedText = words[1];
+            creed.IDNumber = Int32.Parse(words[1]);
+            creed.CreedText = words[2];
             return creed;
         }
 
+        public string this[string propertyName]
+        {
+            get
+            {
+                string returnValue = "";
+                switch(propertyName.ToUpper())
+                {
+                    case "CREEDTEXT": returnValue = this.CreedText;break;
+
+                }
+                return returnValue;
+            }
+            
+        }
+        public string this[int propertyIndex]
+        {
+            get {
+                string returnValue = "";
+                switch (propertyIndex)
+                {
+                    case 0: returnValue = this.IDNumber.ToString("d2"); break;
+                    case 1: returnValue = this.CreedText; break;
+                    default: ProcessError("Index was outside of range "); break;
+                }
+                return returnValue;
+            }
+            set
+            {
+                switch (propertyIndex)
+                {
+                   
+                    case 1: this.CreedText = value; break;
+                    default: ProcessError("Index was out of range"); break;
+                }
+            }
+        }
+        public void Filter(string term, bool truncate)
+        {
+            Regex regex = new Regex(term, RegexOptions.IgnoreCase);
+            // int matchTitle = 3, matchChapter = 5, matchProofs = 1, matchTags = 3;
+            Log.Info("Filter", "Filtering Creed Results");
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Reset();
+            stopwatch.Start();
+            Log.Debug("Timer", "Timer Started");
+            for (int i = 1; i <= 1; i++)
+            {
+
+                #region old code
+                foreach (string word in this[i].Split(' '))
+                {
+                    if (regex.IsMatch(word))
+                        this.Matches++;
+                }
+                //if (truncate)
+                //  this[i] = this.GetBetween(this[i], term);
+                #endregion
+            }
+            stopwatch.Stop();
+            Log.Debug("Timer", String.Format("{0}ms Passed", stopwatch.ElapsedMilliseconds.ToString()));
+            stopwatch.Reset();
+        }
     }
     //Document List Class
     public class DocumentList : LibGList<Document>
