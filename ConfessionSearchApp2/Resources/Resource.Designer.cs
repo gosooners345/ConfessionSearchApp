@@ -7324,8 +7324,8 @@ namespace ConfessionSearchApp2
 			// aapt resource value: 0x7f080057
 			public const int forever = 2131230807;
 			
-			// aapt resource value: 0x7f0800d4
-			public const int frame1 = 2131230932;
+			// aapt resource value: 0x7f0800d6
+			public const int frame1 = 2131230934;
 			
 			// aapt resource value: 0x7f08000a
 			public const int ghost_view = 2131230730;
@@ -7441,8 +7441,8 @@ namespace ConfessionSearchApp2
 			// aapt resource value: 0x7f0800be
 			public const int notification_main_column_container = 2131230910;
 			
-			// aapt resource value: 0x7f0800d3
-			public const int optionLabel = 2131230931;
+			// aapt resource value: 0x7f0800d4
+			public const int optionLabel = 2131230932;
 			
 			// aapt resource value: 0x7f08004b
 			public const int parallax = 2131230795;
@@ -7516,17 +7516,17 @@ namespace ConfessionSearchApp2
 			// aapt resource value: 0x7f080054
 			public const int scrollable = 2131230804;
 			
-			// aapt resource value: 0x7f0800d8
-			public const int searchAllCheckBox = 2131230936;
+			// aapt resource value: 0x7f0800d9
+			public const int searchAllCheckBox = 2131230937;
 			
 			// aapt resource value: 0x7f0800c9
 			public const int searchByLabel = 2131230921;
 			
-			// aapt resource value: 0x7f0800d5
-			public const int searchFAB = 2131230933;
+			// aapt resource value: 0x7f0800d7
+			public const int searchFAB = 2131230935;
 			
-			// aapt resource value: 0x7f0800d6
-			public const int searchTVFAB = 2131230934;
+			// aapt resource value: 0x7f0800d8
+			public const int searchTVFAB = 2131230936;
 			
 			// aapt resource value: 0x7f0800d0
 			public const int searchView1 = 2131230928;
@@ -7597,11 +7597,11 @@ namespace ConfessionSearchApp2
 			// aapt resource value: 0x7f080063
 			public const int spacer = 2131230819;
 			
-			// aapt resource value: 0x7f0800da
-			public const int spinner1 = 2131230938;
-			
 			// aapt resource value: 0x7f0800db
-			public const int spinner2 = 2131230939;
+			public const int spinner1 = 2131230939;
+			
+			// aapt resource value: 0x7f0800d5
+			public const int spinner2 = 2131230933;
 			
 			// aapt resource value: 0x7f080008
 			public const int split_action_bar = 2131230728;
@@ -7675,8 +7675,8 @@ namespace ConfessionSearchApp2
 			// aapt resource value: 0x7f08006d
 			public const int topPanel = 2131230829;
 			
-			// aapt resource value: 0x7f0800cf
-			public const int topicLabel = 2131230927;
+			// aapt resource value: 0x7f0800d3
+			public const int topicLabel = 2131230931;
 			
 			// aapt resource value: 0x7f0800cb
 			public const int topicRadio = 2131230923;
@@ -7699,11 +7699,11 @@ namespace ConfessionSearchApp2
 			// aapt resource value: 0x7f080013
 			public const int transition_transform = 2131230739;
 			
-			// aapt resource value: 0x7f0800d9
-			public const int truncateCheck = 2131230937;
+			// aapt resource value: 0x7f0800da
+			public const int truncateCheck = 2131230938;
 			
-			// aapt resource value: 0x7f0800d7
-			public const int typeTVLabel = 2131230935;
+			// aapt resource value: 0x7f0800cf
+			public const int typeTVLabel = 2131230927;
 			
 			// aapt resource value: 0x7f08002c
 			public const int uniform = 2131230764;
