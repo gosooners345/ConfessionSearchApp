@@ -25,25 +25,20 @@ using DialogWindow;
 
 namespace ConfessionSearchApp2
 {
-    [Activity(Label = "@string/app_name", Theme = "", MainLauncher = true, LaunchMode = Android.Content.PM.LaunchMode.SingleTop)]
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true, LaunchMode = Android.Content.PM.LaunchMode.SingleTop)]
     public class MainActivity : AppCompatActivity
     {
         public static System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
-        public int recurCall = 0;
+        public int recurCall = 0,recurCall2=0;
         string shareList = "";
         string newLine = "\r\n";
-        private static bool menuOpen;
-        private FloatingActionButton fab, fab1, fab2, fab3, fab4, fab5;
         private bool confessionOpen, catechismOpen, creedOpen, helpOpen,allOpen;
-        private View view;
         private static string fileName = "", search = "",type="";
         SearchFragmentActivity searchFragmentActivity;
         List<KeyValuePair<string, string>> files,documents;
         Intent intent;
         DocumentList documentList, resultList = new DocumentList();
-#pragma warning disable IDE0044 // Add readonly modifier
-        List<string> fileNameList;
-#pragma warning restore IDE0044 // Add readonly modifier
+
         //App Loading screen
         //Add code for new search type adapter
         protected override void OnCreate(Bundle savedInstanceState)
@@ -51,187 +46,28 @@ namespace ConfessionSearchApp2
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.search_Layout); SetTitle(Resource.String.app_name);
-            
-           // SetTheme(Resource.Style.AppTheme);
+            Spinner spinner2 = FindViewById<Spinner>(Resource.Id.spinner1), spinner = FindViewById<Spinner>(Resource.Id.spinner2);
+           SetTheme(Resource.Style.AppTheme);
             SearchView search = FindViewById<SearchView>(Resource.Id.searchView1);
             search.SetImeOptions(Android.Views.InputMethods.ImeAction.Go);
+
+            
             documents = new List<KeyValuePair<string, string>>
 {
     new KeyValuePair<string, string>("All","All"),
     new KeyValuePair<string, string>("Creed","Creed"),
     new KeyValuePair<string, string>("Confession","Confession"),
     new KeyValuePair<string, string>("Catechism","Catechism")
-     
-};
-
-            LayoutChanged("All");
-
-        }
-        //Close search menu after selection is made
-        //private void CloseFabMenu()
-        //{
-        //    fab4 = FindViewById<FloatingActionButton>(Resource.Id.floatingActionButton4);
-        //    fab1 = FindViewById<FloatingActionButton>(Resource.Id.floatingActionButton1);
-        //    fab2 = FindViewById<FloatingActionButton>(Resource.Id.floatingActionButton2);
-        //    fab3 = FindViewById<FloatingActionButton>(Resource.Id.floatingActionButton3);
-        //    view = FindViewById<View>(Resource.Id.fabMenu);
-        //    menuOpen = false;
-        //    //fab5.Animate().Rotation(0f);
-        //    view.Animate().Alpha(0f);
-        //    fab1.Visibility = ViewStates.Gone;
-        //    fab2.Visibility = ViewStates.Gone;
-        //    fab3.Visibility = ViewStates.Gone;
-        //    fab4.Visibility = ViewStates.Gone;
-        //}
-        //protected override void OnNewIntent(Android.Content.Intent intent)
-        //{
-        //    base.OnNewIntent(intent);
-        //    Push.CheckLaunchedFromNotification(this, intent);
-        //}
-
-        // Open Search Menu
-        //private void Fab_Click(object o, EventArgs e)
-        //{
-        //    TextView text1, text2, text3, text4, text5, text6;
-
-        //    menuOpen = true;
-
-        //    fab = FindViewById<FloatingActionButton>(Resource.Id.floatingActionButton);
-        //    fab.Animate().Rotation(135f);
-        //    SetContentView(Resource.Layout.fabLayout);
-        //    fab5 = FindViewById<FloatingActionButton>(Resource.Id.floatingActionButton5);
-        //    fab5.Click += delegate { Toast.MakeText(this, "Select an option from above", ToastLength.Long).Show(); };
-        //    fab1 = FindViewById<FloatingActionButton>(Resource.Id.floatingActionButton1);
-        //    fab1.Click += CreedLayout;
-        //    fab2 = FindViewById<FloatingActionButton>(Resource.Id.floatingActionButton2);
-        //    fab2.Click += CatechismLayout;
-        //    fab3 = FindViewById<FloatingActionButton>(Resource.Id.floatingActionButton3);
-        //    fab3.Click += ConfessionLayout;
-        //    fab4 = FindViewById<FloatingActionButton>(Resource.Id.floatingActionButton4);
-        //    fab4.Click += HelpLayout;
-        //    fab1.Visibility = ViewStates.Visible;
-        //    fab2.Visibility = ViewStates.Visible;
-        //    fab3.Visibility = ViewStates.Visible;
-        //    fab4.Visibility = ViewStates.Visible;
-
-        //    view = FindViewById<View>(Resource.Id.fabMenu);
-
-        //    view.Animate().Alpha(1f);
-        //    text1 = FindViewById<TextView>(Resource.Id.searchItem);
-        //    text2 = FindViewById<TextView>(Resource.Id.helpItem);
-        //    text3 = FindViewById<TextView>(Resource.Id.creedItem);
-        //    text4 = FindViewById<TextView>(Resource.Id.catechismItem);
-        //    text5 = FindViewById<TextView>(Resource.Id.confessionItem);
-        //    text6 = FindViewById<TextView>(Resource.Id.closeItem);
-        //    text1.Visibility = ViewStates.Visible;
-        //    text2.Visibility = ViewStates.Visible;
-        //    text3.Visibility = ViewStates.Visible;
-        //    text4.Visibility = ViewStates.Visible;
-        //    text5.Visibility = ViewStates.Visible;
-        //    text6.Visibility = ViewStates.Visible;
-        //    text6.Text = "Choose item from above";
-        //    fab5.Visibility = ViewStates.Visible;
-
-        //    ChangeColor(false, Android.Graphics.Color.Black, text1, text2, text3, text4, text5, text6);
-
-
-        //}
-        #region private class in Activity
-        private class FabAnimatorListener : Java.Lang.Object, Animator.IAnimatorListener
-        {
-            View[] viewsToHide;
-
-            public FabAnimatorListener(params View[] viewsToHide)
-            {
-                this.viewsToHide = viewsToHide;
-            }
-
-            public void OnAnimationCancel(Animator animation)
-            {
-            }
-
-            public void OnAnimationEnd(Animator animation)
-            {
-                if (!menuOpen)
-                    foreach (var view in viewsToHide)
-                        view.Visibility = ViewStates.Gone;
-            }
-
-            public void OnAnimationRepeat(Animator animation)
-            {
-            }
-
-            public void OnAnimationStart(Animator animation)
-            {
-            }
-        }
-        #endregion
-        //Catechism Page Layout
-        private void CatechismLayout(object o, EventArgs e)
-        {
-            string type = "CATECHISM";
-             LayoutChanged(type);
-
-
-
-
-        }
-        // Confession Page layout
-        private void ConfessionLayout(object o, EventArgs e)
-        {
-            string type = "CONFESSION";
-             LayoutChanged(type);
-
-
-        }
-
-        //Creed Page layout
-        private void CreedLayout(object o, EventArgs e)
-        {
-            string type = "CREED";
-             LayoutChanged(type);
-        }
-
-        // Help page method
-        private void HelpLayout(object o, EventArgs e)
-        {
-            string type = "HELP";
-             LayoutChanged(type);
-        }
-
-        // Change Document types
-        //Needs changed to adapt to spinner
-        private void LayoutChanged(string type)
-        {
-            switch (type.ToUpper())
-            {
-                case "ALL":
-                    
-                        allOpen = true; confessionOpen = true; catechismOpen = false; creedOpen = false; helpOpen = false;
-                        SetContentView(Resource.Layout.search_Layout);
-                        Spinner spinner = FindViewById<Spinner>(Resource.Id.spinner1), spinner2 = FindViewById<Spinner>(Resource.Id.spinner2);
-                        //Document Type Spinner
-                        documents = new List<KeyValuePair<string, string>>
-{
-    new KeyValuePair<string, string>("All","All"),
-    new KeyValuePair<string, string>("Creed","Creed"),
-    new KeyValuePair<string, string>("Confession","Confession"),
-    new KeyValuePair<string, string>("Catechism","Catechism")
 
 };
-                        List<string> documentTypes = new List<string>();
-                        foreach (var item in documents)
-                            documentTypes.Add(item.Key);
-                        spinner2.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(Spinner2_ItemSelected);
-                        var adapter1 = ArrayAdapter.CreateFromResource(this, Resource.Array.docTypes, Android.Resource.Layout.SimpleSpinnerItem);
-                        adapter1.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
-                        spinner2.Adapter = adapter1;
-                        //SearchView Elements
-                        SearchView search = FindViewById<SearchView>(Resource.Id.searchView1);
-                        search.SetImeOptions(Android.Views.InputMethods.ImeAction.Go);
-                        search.QueryTextSubmit += Search_QueryTextSubmit;
-                        //Document loading
-                        files = new List<KeyValuePair<string, string>>
+            List<string> documentTypes = new List<string>();
+            foreach (var item in documents)
+                documentTypes.Add(item.Key);
+            spinner2.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(Spinner2_ItemSelected);
+            var adapter1 = ArrayAdapter.CreateFromResource(this, Resource.Array.docTypes, Android.Resource.Layout.SimpleSpinnerItem);
+            adapter1.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+            spinner2.Adapter = adapter1;
+            files = new List<KeyValuePair<string, string>>
                     {
         new KeyValuePair<string, string> ("Westminster Confession of Faith 1646","Westminster Confession of Faith 1646"),
         new KeyValuePair<string, string>("2nd London Baptist Confession of Faith", "2nd London Baptist Confession of Faith"),
@@ -244,192 +80,49 @@ namespace ConfessionSearchApp2
        new KeyValuePair<string, string>("Nicene Creed", "Nicene Creed"),
        new KeyValuePair<string, string>("Athanasian Creed","Athanasian Creed")
                     };
-                        List<string> catechismFiles = new List<string>();
-                        foreach (var item in files)
-                            catechismFiles.Add(item.Key);
-                        spinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(Spinner1_ItemSelected);
-                        var adapter = ArrayAdapter.CreateFromResource(this, Resource.Array.all_docs_list, Android.Resource.Layout.SimpleSpinnerItem);
-                        adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
-                        spinner.Adapter = adapter;
-                        FindViewById<RadioButton>(Resource.Id.topicRadio).PerformClick();
-                        FloatingActionButton button = FindViewById<FloatingActionButton>(Resource.Id.searchFAB);
-                        button.Click += delegate { Search(search.Query); };
-                        break;
-                    
-                case "CONFESSION":
-                    
-                        allOpen = false; confessionOpen = true; catechismOpen = false; creedOpen = false; helpOpen = false;
-                        SetContentView(Resource.Layout.search_Layout);
-                        //SearchView elements
-                        search = FindViewById<SearchView>(Resource.Id.searchView1);
-                        search.SetImeOptions(Android.Views.InputMethods.ImeAction.Go);
-                        search.QueryTextSubmit += Search_QueryTextSubmit;
-                        //Spinner elements
-                        spinner = FindViewById<Spinner>(Resource.Id.spinner1);
-                        spinner2 = FindViewById<Spinner>(Resource.Id.spinner2);
-                        documents = new List<KeyValuePair<string, string>>
-{
-    new KeyValuePair<string, string>("All","All"),
-    new KeyValuePair<string, string>("Creed","Creed"),
-    new KeyValuePair<string, string>("Confession","Confession"),
-    new KeyValuePair<string, string>("Catechism","Catechism")
+            List<string> catechismFiles = new List<string>();
+            foreach (var item in files)
+                catechismFiles.Add(item.Key);
+            spinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(Spinner1_ItemSelected);
+            var adapter = ArrayAdapter.CreateFromResource(this, Resource.Array.all_docs_list, Android.Resource.Layout.SimpleSpinnerItem);
+            adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+            spinner.Adapter = adapter;
+            FindViewById<RadioButton>(Resource.Id.topicRadio).PerformClick();
+            FloatingActionButton button = FindViewById<FloatingActionButton>(Resource.Id.searchFAB);
+            button.Click += delegate { Search(search.Query); };
 
-};
-                        spinner2.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(Spinner2_ItemSelected);
-                        adapter1 = ArrayAdapter.CreateFromResource(this, Resource.Array.docTypes, Android.Resource.Layout.SimpleSpinnerItem);
-                        adapter1.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
-                        spinner2.Adapter = adapter1;
-                        //Document Spinner loading
-                        files = new List<KeyValuePair<string, string>>
-        {
-        new KeyValuePair<string, string> ("Westminster Confession of Faith 1646","Westminster Confession of Faith 1646"),
-        new KeyValuePair<string, string>("2nd London Baptist Confession of Faith", "2nd London Baptist Confession of Faith"),
-       new KeyValuePair<string,string>("1618 Belgic Confession Of Faith", "1618 Belgic Confession Of Faith"),
-       new KeyValuePair<string, string>("1658 Savoy Declaration","1658 Savoy Declaration")
-        };
-                        catechismFiles = new List<string>();
-                        foreach (var item in files)
-                            catechismFiles.Add(item.Key);
-                        spinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(Spinner1_ItemSelected);
-                        adapter = ArrayAdapter.CreateFromResource(this, Resource.Array.confession_list, Android.Resource.Layout.SimpleSpinnerItem);
-                        adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
-                        spinner.Adapter = adapter;
-                        //Ending
-                        FindViewById<RadioButton>(Resource.Id.topicRadio).PerformClick();
-                         button = FindViewById<FloatingActionButton>(Resource.Id.searchFAB);
-                        button.Click += delegate { Search(search.Query); };
-                        break;
-                    
-                case "CATECHISM":
-                    
-                        allOpen = false; catechismOpen = true; confessionOpen = false; creedOpen = false; helpOpen = false;
-                        SetContentView(Resource.Layout.search_Layout);
-                        //SearchView elements
-                        search = FindViewById<SearchView>(Resource.Id.searchView1);
-                        search.SetImeOptions(Android.Views.InputMethods.ImeAction.Go);
-                        search.QueryTextSubmit += Search_QueryTextSubmit;
-                        spinner = FindViewById<Spinner>(Resource.Id.spinner1);
-                        spinner2 = FindViewById<Spinner>(Resource.Id.spinner2);
-                        //Document Type Spinner Loading
-                        documents = new List<KeyValuePair<string, string>>
-{
-    new KeyValuePair<string, string>("All","All"),
-    new KeyValuePair<string, string>("Creed","Creed"),
-    new KeyValuePair<string, string>("Confession","Confession"),
-    new KeyValuePair<string, string>("Catechism","Catechism")
 
-};
-                        documentTypes = new List<string>();
-                        foreach (var item in documents)
-                            documentTypes.Add(item.Key);
-                        spinner2.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(Spinner2_ItemSelected);
-                        adapter1 = ArrayAdapter.CreateFromResource(this, Resource.Array.docTypes, Android.Resource.Layout.SimpleSpinnerItem);
-                        adapter1.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
-                        spinner2.Adapter = adapter1;
-                        //Document Spinner Loading
-                        files = new List<KeyValuePair<string, string>>
-        {
-        new KeyValuePair<string, string> ("Westminster Larger Catechism","Westminster Larger Catechism"),
-        new KeyValuePair<string, string>("Westminster Shorter Catechism", "Westminster Shorter Catechism"),
-        new KeyValuePair<string,string>("Heidelberg Catechism","Heidelberg Catechism")
-        };
-                        catechismFiles = new List<string>();
-                        foreach (var item in files)
-                        {
-                            catechismFiles.Add(item.Key);
-
-                        }
-                        spinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(Spinner1_ItemSelected);
-                        adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleSpinnerItem, catechismFiles);
-                        adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
-                        spinner.Adapter = adapter;
-                        //End Code
-                        FindViewById<RadioButton>(Resource.Id.topicRadio).PerformClick();
-                        button = FindViewById<FloatingActionButton>(Resource.Id.searchFAB);
-                        button.Click += delegate { Search(search.Query); };
-                        break;
-                    
-                case "CREED":
-                    
-                        allOpen = false; creedOpen = true; catechismOpen = false; confessionOpen = false; helpOpen = false;
-                        SetContentView(Resource.Layout.search_Layout);
-                        spinner = FindViewById<Spinner>(Resource.Id.spinner1);
-                        spinner2 = FindViewById<Spinner>(Resource.Id.spinner2);
-                        //Doc Type Spinner
-                        documents = new List<KeyValuePair<string, string>>
-{
-    new KeyValuePair<string, string>("All","All"),
-    new KeyValuePair<string, string>("Creed","Creed"),
-    new KeyValuePair<string, string>("Confession","Confession"),
-    new KeyValuePair<string, string>("Catechism","Catechism")
-
-};
-                        documentTypes = new List<string>();
-                        foreach (var item in documents)
-                            documentTypes.Add(item.Key);
-                        spinner2.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(Spinner2_ItemSelected);
-                        adapter1 = ArrayAdapter.CreateFromResource(this, Resource.Array.docTypes, Android.Resource.Layout.SimpleSpinnerItem);
-                        adapter1.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
-                        spinner2.Adapter = adapter1;
-                        //Document Spinner
-                        files = new List<KeyValuePair<string, string>>
-       {
-       new KeyValuePair<string, string>("Apostle\'s Creed","Apostle\'s Creed"),
-       new KeyValuePair<string, string>("Nicene Creed", "Nicene Creed"),
-       new KeyValuePair<string, string>("Athanasian Creed","Athanasian Creed")
-       };
-                        catechismFiles = new List<string>();
-                        foreach (var item in files)
-                        {
-                            catechismFiles.Add(item.Key);
-                        }
-                        spinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(Spinner1_ItemSelected);
-                        adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleSpinnerItem, catechismFiles);
-                        adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
-                        spinner.Adapter = adapter;
-                        FindViewById<RadioButton>(Resource.Id.topicRadio).PerformClick();
-                        //EndCode
-                        button = FindViewById<FloatingActionButton>(Resource.Id.searchFAB);
-                        search = FindViewById<SearchView>(Resource.Id.searchView1);
-                        search.SetImeOptions(Android.Views.InputMethods.ImeAction.Go);
-                        search.QueryTextSubmit += Search_QueryTextSubmit;
-                        button.Click += delegate { Search(search.Query); };
-                        break;
-
-                              #region MyRegion
-              //  case "HELP":
-                    //                    creedOpen = false; catechismOpen = false; confessionOpen = false; helpOpen = true;
-                    //                    SetContentView(Resource.Layout.main);
-                    //                    FindViewById<TextView>(Resource.Id.appTitle).Text = "Help Page";
-                    //                    FindViewById<TextView>(Resource.Id.searchByLabel).Text = GetString(Resource.String.catechism_help);
-                    //                    FindViewById<TextView>(Resource.Id.catechismPgh).Text = GetString(Resource.String.catechismPgh);
-                    //                    FindViewById<TextView>(Resource.Id.confessionHelp).Text = GetString(Resource.String.confession_help);
-                    //                    FindViewById<TextView>(Resource.Id.confessionPgh).Text = GetString(Resource.String.confessionPgh);
-                    //                    FindViewById<TextView>(Resource.Id.creedHelp).Text = "Creed Help:";
-                    //                    FindViewById<TextView>(Resource.Id.creedPgh).Text = GetString(Resource.String.creedPgh);
-                    //                    FindViewById<TextView>(Resource.Id.otherStuff).Text = "Other Stuff:";
-                    //                    FindViewById<TextView>(Resource.Id.otherPgh).Text = GetString(Resource.String.other_pgh);
-                    //                    fab = FindViewById<FloatingActionButton>(Resource.Id.floatingActionButton);
-                    //                    fab.Click += Fab_Click;
-                    //                    FindViewById<TextView>(Resource.Id.sourceTV).Text = "All documents listed below are public domain, the websites below helped me with collecting them. \nThe formatting on the page was used as a guide to formatting the files needed for the app." +
-
-                    //"    \n\nApostle's Creed: https://reformed.org/documents/apostles_creed.html " +
-                    //"    \n1618 Belgic Confession: https://reformed.org/documents/BelgicConfession.html " +
-                    //    "\n1646 Westminster Confession of Faith: https://reformed.org/documents/wcf_with_proofs/index.html" +
-                    //    "\n1689 London Baptist Confession of Faith: https://reformed.org/documents/baptist_1689.html" +
-                    //    "\n1658 Savoy Declaration of Faith and Order: https://reformed.org/documents/Savoy_Declaration/index.html" +
-                    //   "\nWestminster Shorter Catechism: https://reformed.org/documents/wsc/index.html" +
-                    //   " \nWestminster Larger Catechism: https://reformed.org/documents/wlc_w_proofs/index.html " +
-                    //"    \nHeidelberg Catechism: https://reformed.org/documents/heidelberg.html " +
-                    //    "\nNicean Creed: https://reformed.org/documents/nicene.html " +
-                    //   "\nAthanasian Creed: https://reformed.org/documents/athanasian.html  ";
-
-                    //                    break; 
-#endregion
-
-            }
         }
+#region MyRegion
+//              //  case "HELP":
+//                    //                    creedOpen = false; catechismOpen = false; confessionOpen = false; helpOpen = true;
+//                    //                    SetContentView(Resource.Layout.main);
+//                    //                    FindViewById<TextView>(Resource.Id.appTitle).Text = "Help Page";
+//                    //                    FindViewById<TextView>(Resource.Id.searchByLabel).Text = GetString(Resource.String.catechism_help);
+//                    //                    FindViewById<TextView>(Resource.Id.catechismPgh).Text = GetString(Resource.String.catechismPgh);
+//                    //                    FindViewById<TextView>(Resource.Id.confessionHelp).Text = GetString(Resource.String.confession_help);
+//                    //                    FindViewById<TextView>(Resource.Id.confessionPgh).Text = GetString(Resource.String.confessionPgh);
+//                    //                    FindViewById<TextView>(Resource.Id.creedHelp).Text = "Creed Help:";
+//                    //                    FindViewById<TextView>(Resource.Id.creedPgh).Text = GetString(Resource.String.creedPgh);
+//                    //                    FindViewById<TextView>(Resource.Id.otherStuff).Text = "Other Stuff:";
+//                    //                    FindViewById<TextView>(Resource.Id.otherPgh).Text = GetString(Resource.String.other_pgh);
+//                    //                    fab = FindViewById<FloatingActionButton>(Resource.Id.floatingActionButton);
+//                    //                    fab.Click += Fab_Click;
+//                    //                    FindViewById<TextView>(Resource.Id.sourceTV).Text = "All documents listed below are public domain, the websites below helped me with collecting them. \nThe formatting on the page was used as a guide to formatting the files needed for the app." +
 
+//                    //"    \n\nApostle's Creed: https://reformed.org/documents/apostles_creed.html " +
+//                    //"    \n1618 Belgic Confession: https://reformed.org/documents/BelgicConfession.html " +
+//                    //    "\n1646 Westminster Confession of Faith: https://reformed.org/documents/wcf_with_proofs/index.html" +
+//                    //    "\n1689 London Baptist Confession of Faith: https://reformed.org/documents/baptist_1689.html" +
+//                    //    "\n1658 Savoy Declaration of Faith and Order: https://reformed.org/documents/Savoy_Declaration/index.html" +
+//                    //   "\nWestminster Shorter Catechism: https://reformed.org/documents/wsc/index.html" +
+//                    //   " \nWestminster Larger Catechism: https://reformed.org/documents/wlc_w_proofs/index.html " +
+//                    //"    \nHeidelberg Catechism: https://reformed.org/documents/heidelberg.html " +
+//                    //    "\nNicean Creed: https://reformed.org/documents/nicene.html " +
+//                    //   "\nAthanasian Creed: https://reformed.org/documents/athanasian.html  ";
+
+//                    //                    break; 
+#endregion
         //Search View Text Submit
         #region MyRegion
         private void Search_QueryTextSubmit(object sender, SearchView.QueryTextSubmitEventArgs e)
@@ -539,8 +232,10 @@ namespace ConfessionSearchApp2
             this.documentList.MergeSort();
         } 
         #endregion
-        //Search Method
-        //Modify this
+     /// <summary>
+     /// Search Method
+     /// </summary>
+     /// <param name="query"> Search Term</param>
         private void Search(string query)
         {
             #region Variable Declaration 
@@ -560,7 +255,9 @@ namespace ConfessionSearchApp2
             searchCheck = FindViewById<CheckBox>(Resource.Id.searchAllCheckBox);
             Spinner spinner = FindViewById<Spinner>(Resource.Id.spinner1);
             #endregion
+            Spinner spinner2 = FindViewById<Spinner>(Resource.Id.spinner2);
             spinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(Spinner1_ItemSelected);
+            spinner2.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(Spinner2_ItemSelected);
             //Search Options
             #region Search Options
             // Modify This section 
@@ -779,7 +476,6 @@ namespace ConfessionSearchApp2
         answerBox.Text + newLine + "Proofs:" + newLine + proofBox.Text;
                         FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.shareActionButton);
                         ChangeColor(fab, Android.Graphics.Color.Black);
-
                         fab.Click += ShareContent;
                     }
                     //Display Confession Results
@@ -823,14 +519,6 @@ namespace ConfessionSearchApp2
             }
             Toast.MakeText(this, String.Format("Search Completed for {0}" + "\r\n" + "{1} ms Passed", query, stopwatch.ElapsedMilliseconds.ToString()), ToastLength.Long).Show();
         }
-
-        //On Screen Search Button Pressed
-        [Java.Interop.Export("Search")]
-        public void Search(View view)
-        {
-            //Execute Search Method
-            Search("");
-        }
         // Method for Combobox Item Selected
         private void Spinner1_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
         {
@@ -840,9 +528,95 @@ namespace ConfessionSearchApp2
         private void Spinner2_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
         {
             Spinner spinner = (Spinner)sender;
-           type  = String.Format("{0}", spinner.GetItemAtPosition(e.Position));
-            LayoutChanged(type);
+            type = String.Format("{0}", spinner.GetItemAtPosition(e.Position));
+            switch(type.ToUpper())
+            {
+                case "ALL":
+                    allOpen = true; confessionOpen = false; catechismOpen = false; creedOpen = false; helpOpen = false;
+                    Spinner spinnerz = FindViewById<Spinner>(Resource.Id.spinner2);
+                    files = new List<KeyValuePair<string, string>>
+                    {
+        new KeyValuePair<string, string> ("Westminster Confession of Faith 1646","Westminster Confession of Faith 1646"),
+        new KeyValuePair<string, string>("2nd London Baptist Confession of Faith", "2nd London Baptist Confession of Faith"),
+       new KeyValuePair<string,string>("1618 Belgic Confession Of Faith", "1618 Belgic Confession Of Faith"),
+       new KeyValuePair<string, string>("1658 Savoy Declaration","1658 Savoy Declaration"),
+        new KeyValuePair<string, string> ("Westminster Larger Catechism","Westminster Larger Catechism"),
+        new KeyValuePair<string, string>("Westminster Shorter Catechism", "Westminster Shorter Catechism"),
+        new KeyValuePair<string,string>("Heidelberg Catechism","Heidelberg Catechism"),
+         new KeyValuePair<string, string>("Apostle\'s Creed","Apostle\'s Creed"),
+       new KeyValuePair<string, string>("Nicene Creed", "Nicene Creed"),
+       new KeyValuePair<string, string>("Athanasian Creed","Athanasian Creed")
+                    };
+                    List<string> catechismFiles = new List<string>();
+                    foreach (var item in files)
+                        catechismFiles.Add(item.Key);
+                    spinnerz.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(Spinner1_ItemSelected);
+                    var adapter = ArrayAdapter.CreateFromResource(this, Resource.Array.all_docs_list, Android.Resource.Layout.SimpleSpinnerItem);
+                    adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+                    spinnerz.Adapter = adapter;
+                    break;
+                case "CATECHISM":
+                    allOpen = false; catechismOpen = true; confessionOpen = false; creedOpen = false; helpOpen = false;
+                    spinnerz = FindViewById<Spinner>(Resource.Id.spinner2);
+                    files = new List<KeyValuePair<string, string>>
+        {
+        new KeyValuePair<string, string> ("Westminster Larger Catechism","Westminster Larger Catechism"),
+        new KeyValuePair<string, string>("Westminster Shorter Catechism", "Westminster Shorter Catechism"),
+        new KeyValuePair<string,string>("Heidelberg Catechism","Heidelberg Catechism")
+        };
+                    catechismFiles = new List<string>();
+                    foreach (var item in files)
+                    {
+                        catechismFiles.Add(item.Key);
 
+                    }
+                    spinnerz.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(Spinner1_ItemSelected);
+                     adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleSpinnerItem, catechismFiles);
+                    adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+                    spinnerz.Adapter = adapter;
+                    break;
+                case "CONFESSION":
+                    allOpen = false; confessionOpen = true; catechismOpen = false; creedOpen = false; helpOpen = false;
+                    spinnerz = FindViewById<Spinner>(Resource.Id.spinner2);
+                    files = new List<KeyValuePair<string, string>>
+        {
+        new KeyValuePair<string, string> ("Westminster Confession of Faith 1646","Westminster Confession of Faith 1646"),
+        new KeyValuePair<string, string>("2nd London Baptist Confession of Faith", "2nd London Baptist Confession of Faith"),
+       new KeyValuePair<string,string>("1618 Belgic Confession Of Faith", "1618 Belgic Confession Of Faith"),
+       new KeyValuePair<string, string>("1658 Savoy Declaration","1658 Savoy Declaration")
+        };
+                     catechismFiles = new List<string>();
+                    foreach (var item in files)
+                        catechismFiles.Add(item.Key);
+                    spinnerz.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(Spinner1_ItemSelected);
+                     adapter = ArrayAdapter.CreateFromResource(this, Resource.Array.confession_list, Android.Resource.Layout.SimpleSpinnerItem);
+                    adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+                    spinnerz.Adapter = adapter;
+                    break;
+                case "CREED":
+                    allOpen = false; creedOpen = true; catechismOpen = false; confessionOpen = false; helpOpen = false;
+                    spinnerz = FindViewById<Spinner>(Resource.Id.spinner2);
+                    files = new List<KeyValuePair<string, string>>
+       {
+       new KeyValuePair<string, string>("Apostle\'s Creed","Apostle\'s Creed"),
+       new KeyValuePair<string, string>("Nicene Creed", "Nicene Creed"),
+       new KeyValuePair<string, string>("Athanasian Creed","Athanasian Creed")
+       };
+                     catechismFiles = new List<string>();
+                    foreach (var item in files)
+                    {
+                        catechismFiles.Add(item.Key);
+                    }
+                    spinnerz.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(Spinner1_ItemSelected);
+                     adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleSpinnerItem, catechismFiles);
+                    adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+                    spinnerz.Adapter = adapter;
+
+
+                    break;
+            }
+            Toast.MakeText(this, type, ToastLength.Short).Show();
+      
         }
         //Return to home page
         public void Home()

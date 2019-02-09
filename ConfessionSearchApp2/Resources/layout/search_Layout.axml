@@ -21,11 +21,13 @@
 		android:id="@+id/searchByLabel"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_alignEnd="@+id/confessionLabel"
+		android:layout_alignParentStart="true"
 		android:layout_alignParentTop="true"
-		android:layout_marginTop="65dp"
+		android:layout_marginTop="64dp"
 		android:text="Search By:"
-		android:textAppearance="?android:attr/textAppearanceMedium" />
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_marginRight="15dp"
+		android:layout_marginLeft="10dp" />
 	<RadioGroup
 		android:id="@+id/radioGroup1"
 		android:layout_width="wrap_content"
@@ -57,78 +59,46 @@
 		android:id="@+id/confessionLabel"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_below="@+id/spinner1"
-		android:layout_toStartOf="@+id/radioGroup1"
-		android:text="Catechism:"
+		android:layout_alignStart="@+id/topicLabel"
+		android:layout_centerVertical="true"
+		android:text="Document:"
 		android:textAppearance="?android:attr/textAppearanceMedium" />
-	<Spinner
-		android:id="@+id/spinner2"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_below="@+id/spinner1"
-		android:layout_marginBottom="8dp"
-		android:layout_marginLeft="5dp"
-		android:layout_marginTop="5dp"
-		android:layout_toEndOf="@+id/searchByLabel"
-		android:clickable="true"
-		android:dropDownWidth="wrap_content"
-		android:spinnerMode="dropdown" />
 	<SearchView
 		android:id="@+id/searchView1"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_alignParentEnd="true"
 		android:layout_below="@+id/radioGroup1"
-		android:layout_marginEnd="41dp"
 		android:imeOptions="normal|actionSearch"
+		android:paddingLeft="5dp"
 		android:paddingTop="5dp"
 		android:textAlignment="gravity" />
-	<CheckBox
-		android:id="@+id/AnswerBox"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_alignParentTop="true"
-		android:layout_alignStart="@+id/proofBox"
-		android:layout_marginTop="271dp"
-		android:text="No Answers?" />
 	<CheckBox
 		android:id="@+id/proofBox"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_alignParentBottom="true"
-		android:layout_marginBottom="225dp"
+		android:layout_below="@+id/AnswerBox"
+		android:layout_marginTop="-199dp"
 		android:checked="false"
 		android:text="Proofs?"
-		android:layout_marginTop="15dp"
-		android:layout_centerInParent="false"
-		android:layout_marginLeft="50dp" />
-	<CheckBox
-		android:id="@+id/truncateCheck"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_alignStart="@+id/proofBox"
-		android:layout_below="@+id/proofBox"
-		android:layout_marginTop="-227dp"
-		android:text="Truncate?" />
+		android:layout_alignStart="@id/AnswerBox" />
 	<TextView
 		android:id="@+id/topicLabel"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_alignParentStart="true"
-		android:layout_alignParentTop="true"
-		android:layout_marginStart="11dp"
-		android:layout_marginTop="134dp"
+		android:layout_width="94dp"
+		android:layout_height="60dp"
+		android:layout_alignEnd="@+id/searchByLabel"
+		android:layout_below="@+id/radioGroup1"
 		android:gravity="center_vertical"
 		android:text="Topic/Number:"
-		android:textAppearance="?android:attr/textAppearanceMedium" />
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_alignStart="@id/searchByLabel" />
 	<TextView
 		android:id="@+id/optionLabel"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_above="@+id/AnswerBox"
-		android:layout_marginBottom="-275dp"
-		android:layout_marginTop="5dp"
-		android:layout_toEndOf="@+id/truncateCheck"
+		android:layout_alignParentBottom="true"
+		android:layout_centerHorizontal="true"
+		android:layout_marginBottom="242dp"
 		android:paddingLeft="5dp"
 		android:text="Search Options:" />
 	<FrameLayout
@@ -157,35 +127,64 @@
 	</FrameLayout>
 	<TextView
 		android:id="@+id/typeTVLabel"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_above="@+id/confessionLabel"
-		android:layout_alignEnd="@+id/searchByLabel"
+		android:layout_width="96dp"
+		android:layout_height="60dp"
+		android:layout_alignParentTop="false"
+		android:layout_marginEnd="-6dp"
+		android:layout_marginTop="198dp"
 		android:paddingBottom="5dp"
 		android:text="Document Type:"
-		android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+		android:textAppearance="?android:attr/textAppearanceMedium"
 		android:layout_marginLeft="15dp" />
 	<CheckBox
 		android:id="@+id/searchAllCheckBox"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_alignStart="@+id/proofBox"
-		android:layout_below="@id/truncateCheck"
-		android:text="Search All Documents?"
-		android:layout_marginBottom="5dp"
-		android:layout_marginTop="355dp" />
+		android:layout_below="@+id/truncateCheck"
+		android:text="Search All Documents?" />
 	<Spinner
 		android:id="@+id/spinner1"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_below="@+id/searchView1"
-		android:layout_marginBottom="5dp"
-		android:layout_marginTop="10dp"
-		android:layout_toEndOf="@+id/searchByLabel"
+		android:layout_alignParentTop="false"
+		
+		android:layout_marginTop="217dp"
 		android:clickable="true"
 		android:dropDownWidth="wrap_content"
 		android:paddingLeft="5dp"
 		android:spinnerMode="dropdown"
-		android:layout_toRightOf="@id/typeTVLabel"
-		android:layout_marginLeft="5dp" />
+		android:layout_alignParentEnd="true" />
+	<CheckBox
+		android:id="@+id/AnswerBox"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentStart="true"
+		android:layout_marginBottom="199dp"
+		android:layout_marginStart="50dp"
+		android:paddingTop="5dp"
+		android:text="No Answers?" />
+	<CheckBox
+		android:id="@+id/truncateCheck"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_above="@id/truncateCheck"
+		android:layout_below="@+id/proofBox"
+		android:layout_marginLeft="50dp"
+		android:text="Truncate?" />
+	<Spinner
+		android:id="@+id/spinner2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerInParent="false"
+		android:clickable="true"
+		android:dropDownWidth="wrap_content"
+		android:spinnerMode="dropdown"
+		android:layout_marginLeft="25dp"
+android:layout_marginTop="15dp"
+		
+	
+		android:layout_alignParentEnd="true"
+		android:layout_below="@id/spinner1" />
 </RelativeLayout>
