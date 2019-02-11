@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:orientation="vertical"  
+    android:layout_width="match_parent"  
+    android:layout_height="match_parent">  
+    <EditText  
+        android:hint="Enter your Name"  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"  
+        android:id="@+id/edtName"/>  
+    <EditText  
+        android:hint="Enter your Department"  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"  
+        android:id="@+id/edtDepart" />  
+    <EditText  
+        android:hint="Enter your Email"  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"  
+        android:id="@+id/edtEmail"/>  
+    <LinearLayout  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"  
+        android:orientation="horizontal">  
+        <Button  
+            android:id="@+id/btnAdd"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="Add"  
+            android:layout_weight="1"/>  
+        <Button  
+            android:id="@+id/btnEdit"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="Update"  
+            android:layout_weight="1"/>  
+        <Button  
+            android:id="@+id/btnRemove"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="Remove"  
+            android:layout_weight="1"/>  
+    </LinearLayout>  
+    <ListView  
+        android:minWidth="25px"  
+        android:minHeight="25px"  
+        android:layout_width="match_parent"  
+        android:layout_height="match_parent"  
+        android:id="@+id/listView"/>  
+</LinearLayout>  

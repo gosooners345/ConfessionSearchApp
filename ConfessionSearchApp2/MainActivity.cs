@@ -42,8 +42,7 @@ namespace ConfessionSearchApp2
         List<KeyValuePair<string, string>> files,documents;
         Intent intent;
         DocumentList documentList, resultList = new DocumentList();
-       // string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "ReformedDocsDB.db3");
-        //SQLiteConnection db = new SQLiteConnection();
+       
         //App Loading screen
         //Add code for new search type adapter
         protected override void OnCreate(Bundle savedInstanceState)
