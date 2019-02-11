@@ -8,6 +8,7 @@ using Android.Support.V4.App;
 using Android.Support.V4.View;
 using Android.Support.V7.App;
 using Android.Support.V7.RecyclerView;
+using SQLite;
 using Android.Support.V7.AppCompat;
 using Android.Util;
 using Android.Views;
@@ -25,6 +26,9 @@ using DialogWindow;
 
 namespace ConfessionSearchApp2
 {
+    
+
+
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true, LaunchMode = Android.Content.PM.LaunchMode.SingleTop)]
     public class MainActivity : AppCompatActivity
     {
@@ -38,7 +42,8 @@ namespace ConfessionSearchApp2
         List<KeyValuePair<string, string>> files,documents;
         Intent intent;
         DocumentList documentList, resultList = new DocumentList();
-
+       // string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "ReformedDocsDB.db3");
+        //SQLiteConnection db = new SQLiteConnection();
         //App Loading screen
         //Add code for new search type adapter
         protected override void OnCreate(Bundle savedInstanceState)

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
+using SQLite;
 using System.Text.RegularExpressions;
 using Android.Content.Res;
 using Android.Util;
@@ -32,11 +33,12 @@ namespace DocumentClass
         {
             return value?.Substring(0, Math.Min(value.Length, maxLength));
         }
+
         public Document(Document sourceDocument)
         {
             this.document = sourceDocument;
         }
-
+        
         public int IDNumber
         {
             get
@@ -58,7 +60,7 @@ namespace DocumentClass
         }
         public string Tags { get { return this.tags; } set { this.tags = value; } }
 
-        public String Proofs { get { return this.proofs; } set { this.proofs = Formatter(value); } }
+        public string Proofs { get { return this.proofs; } set { this.proofs = Formatter(value); } }
         public String Title { get { return this.title; } set { title = value; } }
         public String DocTitle { get { return this.docTitle; } set { docTitle = value; } }
         public static Document Parse(String fileName, bool answers, bool proofs)
