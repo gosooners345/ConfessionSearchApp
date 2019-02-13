@@ -243,9 +243,8 @@ namespace ConfessionSearchApp2
         private void Search(string query)
         {
             #region Variable Declaration 
-#pragma warning disable CS0219 // Variable is assigned but its value is never used
+
             int docCount = 1;
-#pragma warning restore CS0219 // Variable is assigned but its value is never used
             bool truncate = false;
             Log.Info("Search()", String.Format(Resource.String.search_execution_begins + ""));
             documentList = new DocumentList();
@@ -386,8 +385,7 @@ namespace ConfessionSearchApp2
             //if Chapter is filled
             else if (FindViewById<RadioButton>(Resource.Id.chapterRadio).Checked & query != "")
             {
-                // int searchInt;
-                //if (Int32.TryParse(searchTerm, out searchInt))
+             
                 int searchInt = Int32.Parse(query);
                 FilterResults(this.documentList, truncate, answers, proofs, searchAll, searchInt);
 

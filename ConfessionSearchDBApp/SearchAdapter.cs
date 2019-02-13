@@ -18,7 +18,8 @@ using Android.Support.V4.View;
 using Xamarin.Android;
 //using DocumentClass;
 using Android.Support.Design.Widget;
-
+using static ConfessionSearchDBApp.Main.MainActivity;
+using ConfessionSearchDBApp.Main;
 
 namespace ConfessionSearchDBApp
 {
@@ -29,7 +30,7 @@ namespace ConfessionSearchDBApp
         public SearchAdapter adapter;
         public string shareList;// = new List<string>();
                                 //Android.Widget.ShareActionProvider actionProvider;
-        public List<Document> documentList = new DocumentList();
+        public List<Document> documentList = new List<Document>();
         string files;
         public int index;
         public SearchFragmentActivity() { }
@@ -40,7 +41,7 @@ namespace ConfessionSearchDBApp
 
         }
         //Search feed for Fragments
-        public void DisplayResults(DocumentList sourcedocumentList, ViewPager view, SearchAdapter search, string searchTerm, int count, bool truncate)
+        public void DisplayResults(List<Document> sourcedocumentList, ViewPager view, SearchAdapter search, string searchTerm, int count, bool truncate)
         {
             //Syncs the document List objects together
             documentList = sourcedocumentList;
@@ -58,7 +59,7 @@ namespace ConfessionSearchDBApp
     //Search Adapter for ViewPager
     class SearchAdapter : FragmentStatePagerAdapter
     {
-        public DocumentList documentList = new DocumentList(), documentList1 = new DocumentList();
+        public List<Document> documentList = new List<Document>();//, documentList1 = new DocumentList();
         private int docPosition = 0;
         private string term = "";
         private bool truncate = false;
@@ -70,7 +71,7 @@ namespace ConfessionSearchDBApp
         /// <param name="documents"></param>
         /// <param name="searchTerm"></param>
         /// <param name="truncate"></param>
-        public SearchAdapter(Android.Support.V4.App.FragmentManager fm, DocumentList documents, string searchTerm, bool truncate) : base(fm)
+        public SearchAdapter(Android.Support.V4.App.FragmentManager fm, List<Document> documents, string searchTerm, bool truncate) : base(fm)
         {
             documentList = documents;
             this.truncate = truncate;
@@ -80,14 +81,15 @@ namespace ConfessionSearchDBApp
         //Required for Fragment adapter
         public override int Count { get { return documentList.Count; } }
         //Fetches the fragment for display
+        //Get this working on this weekend
         public override Android.Support.V4.App.Fragment GetItem(int position)
         {
             Android.Support.V4.App.Fragment frg;
             if (docPosition > 0)
                 position = position + 1;
             string docTitle = "";
-            if (documentList.Title == "Results" || documentList.Title == "")
-                docTitle = documentList[position].DocTitle;
+            if (documentList. == "Results" || documentList.Title == "")
+                docTitle = documentList.Title;//[position].DocTitle;
             else
                 docTitle = documentList.Title;
             if (documentList[position].Type == "CONFESSION")
@@ -124,6 +126,7 @@ namespace ConfessionSearchDBApp
         }
     }
     //Fragment class for results
+    //This weekend
     class SearchResultFragment : Android.Support.V4.App.Fragment
     {
         //required variables for fragment class
