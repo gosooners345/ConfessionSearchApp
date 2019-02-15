@@ -26,1524 +26,6 @@ namespace ConfessionSearchDBApp
 		
 		public static void UpdateIdValues()
 		{
-			global::LibGList.Resource.Animation.abc_fade_in = global::ConfessionSearchDBApp.Resource.Animation.abc_fade_in;
-			global::LibGList.Resource.Animation.abc_fade_out = global::ConfessionSearchDBApp.Resource.Animation.abc_fade_out;
-			global::LibGList.Resource.Animation.abc_grow_fade_in_from_bottom = global::ConfessionSearchDBApp.Resource.Animation.abc_grow_fade_in_from_bottom;
-			global::LibGList.Resource.Animation.abc_popup_enter = global::ConfessionSearchDBApp.Resource.Animation.abc_popup_enter;
-			global::LibGList.Resource.Animation.abc_popup_exit = global::ConfessionSearchDBApp.Resource.Animation.abc_popup_exit;
-			global::LibGList.Resource.Animation.abc_shrink_fade_out_from_bottom = global::ConfessionSearchDBApp.Resource.Animation.abc_shrink_fade_out_from_bottom;
-			global::LibGList.Resource.Animation.abc_slide_in_bottom = global::ConfessionSearchDBApp.Resource.Animation.abc_slide_in_bottom;
-			global::LibGList.Resource.Animation.abc_slide_in_top = global::ConfessionSearchDBApp.Resource.Animation.abc_slide_in_top;
-			global::LibGList.Resource.Animation.abc_slide_out_bottom = global::ConfessionSearchDBApp.Resource.Animation.abc_slide_out_bottom;
-			global::LibGList.Resource.Animation.abc_slide_out_top = global::ConfessionSearchDBApp.Resource.Animation.abc_slide_out_top;
-			global::LibGList.Resource.Animation.tooltip_enter = global::ConfessionSearchDBApp.Resource.Animation.tooltip_enter;
-			global::LibGList.Resource.Animation.tooltip_exit = global::ConfessionSearchDBApp.Resource.Animation.tooltip_exit;
-			global::LibGList.Resource.Attribute.actionBarDivider = global::ConfessionSearchDBApp.Resource.Attribute.actionBarDivider;
-			global::LibGList.Resource.Attribute.actionBarItemBackground = global::ConfessionSearchDBApp.Resource.Attribute.actionBarItemBackground;
-			global::LibGList.Resource.Attribute.actionBarPopupTheme = global::ConfessionSearchDBApp.Resource.Attribute.actionBarPopupTheme;
-			global::LibGList.Resource.Attribute.actionBarSize = global::ConfessionSearchDBApp.Resource.Attribute.actionBarSize;
-			global::LibGList.Resource.Attribute.actionBarSplitStyle = global::ConfessionSearchDBApp.Resource.Attribute.actionBarSplitStyle;
-			global::LibGList.Resource.Attribute.actionBarStyle = global::ConfessionSearchDBApp.Resource.Attribute.actionBarStyle;
-			global::LibGList.Resource.Attribute.actionBarTabBarStyle = global::ConfessionSearchDBApp.Resource.Attribute.actionBarTabBarStyle;
-			global::LibGList.Resource.Attribute.actionBarTabStyle = global::ConfessionSearchDBApp.Resource.Attribute.actionBarTabStyle;
-			global::LibGList.Resource.Attribute.actionBarTabTextStyle = global::ConfessionSearchDBApp.Resource.Attribute.actionBarTabTextStyle;
-			global::LibGList.Resource.Attribute.actionBarTheme = global::ConfessionSearchDBApp.Resource.Attribute.actionBarTheme;
-			global::LibGList.Resource.Attribute.actionBarWidgetTheme = global::ConfessionSearchDBApp.Resource.Attribute.actionBarWidgetTheme;
-			global::LibGList.Resource.Attribute.actionButtonStyle = global::ConfessionSearchDBApp.Resource.Attribute.actionButtonStyle;
-			global::LibGList.Resource.Attribute.actionDropDownStyle = global::ConfessionSearchDBApp.Resource.Attribute.actionDropDownStyle;
-			global::LibGList.Resource.Attribute.actionLayout = global::ConfessionSearchDBApp.Resource.Attribute.actionLayout;
-			global::LibGList.Resource.Attribute.actionMenuTextAppearance = global::ConfessionSearchDBApp.Resource.Attribute.actionMenuTextAppearance;
-			global::LibGList.Resource.Attribute.actionMenuTextColor = global::ConfessionSearchDBApp.Resource.Attribute.actionMenuTextColor;
-			global::LibGList.Resource.Attribute.actionModeBackground = global::ConfessionSearchDBApp.Resource.Attribute.actionModeBackground;
-			global::LibGList.Resource.Attribute.actionModeCloseButtonStyle = global::ConfessionSearchDBApp.Resource.Attribute.actionModeCloseButtonStyle;
-			global::LibGList.Resource.Attribute.actionModeCloseDrawable = global::ConfessionSearchDBApp.Resource.Attribute.actionModeCloseDrawable;
-			global::LibGList.Resource.Attribute.actionModeCopyDrawable = global::ConfessionSearchDBApp.Resource.Attribute.actionModeCopyDrawable;
-			global::LibGList.Resource.Attribute.actionModeCutDrawable = global::ConfessionSearchDBApp.Resource.Attribute.actionModeCutDrawable;
-			global::LibGList.Resource.Attribute.actionModeFindDrawable = global::ConfessionSearchDBApp.Resource.Attribute.actionModeFindDrawable;
-			global::LibGList.Resource.Attribute.actionModePasteDrawable = global::ConfessionSearchDBApp.Resource.Attribute.actionModePasteDrawable;
-			global::LibGList.Resource.Attribute.actionModePopupWindowStyle = global::ConfessionSearchDBApp.Resource.Attribute.actionModePopupWindowStyle;
-			global::LibGList.Resource.Attribute.actionModeSelectAllDrawable = global::ConfessionSearchDBApp.Resource.Attribute.actionModeSelectAllDrawable;
-			global::LibGList.Resource.Attribute.actionModeShareDrawable = global::ConfessionSearchDBApp.Resource.Attribute.actionModeShareDrawable;
-			global::LibGList.Resource.Attribute.actionModeSplitBackground = global::ConfessionSearchDBApp.Resource.Attribute.actionModeSplitBackground;
-			global::LibGList.Resource.Attribute.actionModeStyle = global::ConfessionSearchDBApp.Resource.Attribute.actionModeStyle;
-			global::LibGList.Resource.Attribute.actionModeWebSearchDrawable = global::ConfessionSearchDBApp.Resource.Attribute.actionModeWebSearchDrawable;
-			global::LibGList.Resource.Attribute.actionOverflowButtonStyle = global::ConfessionSearchDBApp.Resource.Attribute.actionOverflowButtonStyle;
-			global::LibGList.Resource.Attribute.actionOverflowMenuStyle = global::ConfessionSearchDBApp.Resource.Attribute.actionOverflowMenuStyle;
-			global::LibGList.Resource.Attribute.actionProviderClass = global::ConfessionSearchDBApp.Resource.Attribute.actionProviderClass;
-			global::LibGList.Resource.Attribute.actionViewClass = global::ConfessionSearchDBApp.Resource.Attribute.actionViewClass;
-			global::LibGList.Resource.Attribute.activityChooserViewStyle = global::ConfessionSearchDBApp.Resource.Attribute.activityChooserViewStyle;
-			global::LibGList.Resource.Attribute.alertDialogButtonGroupStyle = global::ConfessionSearchDBApp.Resource.Attribute.alertDialogButtonGroupStyle;
-			global::LibGList.Resource.Attribute.alertDialogCenterButtons = global::ConfessionSearchDBApp.Resource.Attribute.alertDialogCenterButtons;
-			global::LibGList.Resource.Attribute.alertDialogStyle = global::ConfessionSearchDBApp.Resource.Attribute.alertDialogStyle;
-			global::LibGList.Resource.Attribute.alertDialogTheme = global::ConfessionSearchDBApp.Resource.Attribute.alertDialogTheme;
-			global::LibGList.Resource.Attribute.allowStacking = global::ConfessionSearchDBApp.Resource.Attribute.allowStacking;
-			global::LibGList.Resource.Attribute.alpha = global::ConfessionSearchDBApp.Resource.Attribute.alpha;
-			global::LibGList.Resource.Attribute.alphabeticModifiers = global::ConfessionSearchDBApp.Resource.Attribute.alphabeticModifiers;
-			global::LibGList.Resource.Attribute.arrowHeadLength = global::ConfessionSearchDBApp.Resource.Attribute.arrowHeadLength;
-			global::LibGList.Resource.Attribute.arrowShaftLength = global::ConfessionSearchDBApp.Resource.Attribute.arrowShaftLength;
-			global::LibGList.Resource.Attribute.autoCompleteTextViewStyle = global::ConfessionSearchDBApp.Resource.Attribute.autoCompleteTextViewStyle;
-			global::LibGList.Resource.Attribute.autoSizeMaxTextSize = global::ConfessionSearchDBApp.Resource.Attribute.autoSizeMaxTextSize;
-			global::LibGList.Resource.Attribute.autoSizeMinTextSize = global::ConfessionSearchDBApp.Resource.Attribute.autoSizeMinTextSize;
-			global::LibGList.Resource.Attribute.autoSizePresetSizes = global::ConfessionSearchDBApp.Resource.Attribute.autoSizePresetSizes;
-			global::LibGList.Resource.Attribute.autoSizeStepGranularity = global::ConfessionSearchDBApp.Resource.Attribute.autoSizeStepGranularity;
-			global::LibGList.Resource.Attribute.autoSizeTextType = global::ConfessionSearchDBApp.Resource.Attribute.autoSizeTextType;
-			global::LibGList.Resource.Attribute.background = global::ConfessionSearchDBApp.Resource.Attribute.background;
-			global::LibGList.Resource.Attribute.backgroundSplit = global::ConfessionSearchDBApp.Resource.Attribute.backgroundSplit;
-			global::LibGList.Resource.Attribute.backgroundStacked = global::ConfessionSearchDBApp.Resource.Attribute.backgroundStacked;
-			global::LibGList.Resource.Attribute.backgroundTint = global::ConfessionSearchDBApp.Resource.Attribute.backgroundTint;
-			global::LibGList.Resource.Attribute.backgroundTintMode = global::ConfessionSearchDBApp.Resource.Attribute.backgroundTintMode;
-			global::LibGList.Resource.Attribute.barLength = global::ConfessionSearchDBApp.Resource.Attribute.barLength;
-			global::LibGList.Resource.Attribute.borderlessButtonStyle = global::ConfessionSearchDBApp.Resource.Attribute.borderlessButtonStyle;
-			global::LibGList.Resource.Attribute.buttonBarButtonStyle = global::ConfessionSearchDBApp.Resource.Attribute.buttonBarButtonStyle;
-			global::LibGList.Resource.Attribute.buttonBarNegativeButtonStyle = global::ConfessionSearchDBApp.Resource.Attribute.buttonBarNegativeButtonStyle;
-			global::LibGList.Resource.Attribute.buttonBarNeutralButtonStyle = global::ConfessionSearchDBApp.Resource.Attribute.buttonBarNeutralButtonStyle;
-			global::LibGList.Resource.Attribute.buttonBarPositiveButtonStyle = global::ConfessionSearchDBApp.Resource.Attribute.buttonBarPositiveButtonStyle;
-			global::LibGList.Resource.Attribute.buttonBarStyle = global::ConfessionSearchDBApp.Resource.Attribute.buttonBarStyle;
-			global::LibGList.Resource.Attribute.buttonGravity = global::ConfessionSearchDBApp.Resource.Attribute.buttonGravity;
-			global::LibGList.Resource.Attribute.buttonPanelSideLayout = global::ConfessionSearchDBApp.Resource.Attribute.buttonPanelSideLayout;
-			global::LibGList.Resource.Attribute.buttonStyle = global::ConfessionSearchDBApp.Resource.Attribute.buttonStyle;
-			global::LibGList.Resource.Attribute.buttonStyleSmall = global::ConfessionSearchDBApp.Resource.Attribute.buttonStyleSmall;
-			global::LibGList.Resource.Attribute.buttonTint = global::ConfessionSearchDBApp.Resource.Attribute.buttonTint;
-			global::LibGList.Resource.Attribute.buttonTintMode = global::ConfessionSearchDBApp.Resource.Attribute.buttonTintMode;
-			global::LibGList.Resource.Attribute.checkboxStyle = global::ConfessionSearchDBApp.Resource.Attribute.checkboxStyle;
-			global::LibGList.Resource.Attribute.checkedTextViewStyle = global::ConfessionSearchDBApp.Resource.Attribute.checkedTextViewStyle;
-			global::LibGList.Resource.Attribute.closeIcon = global::ConfessionSearchDBApp.Resource.Attribute.closeIcon;
-			global::LibGList.Resource.Attribute.closeItemLayout = global::ConfessionSearchDBApp.Resource.Attribute.closeItemLayout;
-			global::LibGList.Resource.Attribute.collapseContentDescription = global::ConfessionSearchDBApp.Resource.Attribute.collapseContentDescription;
-			global::LibGList.Resource.Attribute.collapseIcon = global::ConfessionSearchDBApp.Resource.Attribute.collapseIcon;
-			global::LibGList.Resource.Attribute.color = global::ConfessionSearchDBApp.Resource.Attribute.color;
-			global::LibGList.Resource.Attribute.colorAccent = global::ConfessionSearchDBApp.Resource.Attribute.colorAccent;
-			global::LibGList.Resource.Attribute.colorBackgroundFloating = global::ConfessionSearchDBApp.Resource.Attribute.colorBackgroundFloating;
-			global::LibGList.Resource.Attribute.colorButtonNormal = global::ConfessionSearchDBApp.Resource.Attribute.colorButtonNormal;
-			global::LibGList.Resource.Attribute.colorControlActivated = global::ConfessionSearchDBApp.Resource.Attribute.colorControlActivated;
-			global::LibGList.Resource.Attribute.colorControlHighlight = global::ConfessionSearchDBApp.Resource.Attribute.colorControlHighlight;
-			global::LibGList.Resource.Attribute.colorControlNormal = global::ConfessionSearchDBApp.Resource.Attribute.colorControlNormal;
-			global::LibGList.Resource.Attribute.colorError = global::ConfessionSearchDBApp.Resource.Attribute.colorError;
-			global::LibGList.Resource.Attribute.colorPrimary = global::ConfessionSearchDBApp.Resource.Attribute.colorPrimary;
-			global::LibGList.Resource.Attribute.colorPrimaryDark = global::ConfessionSearchDBApp.Resource.Attribute.colorPrimaryDark;
-			global::LibGList.Resource.Attribute.colorSwitchThumbNormal = global::ConfessionSearchDBApp.Resource.Attribute.colorSwitchThumbNormal;
-			global::LibGList.Resource.Attribute.commitIcon = global::ConfessionSearchDBApp.Resource.Attribute.commitIcon;
-			global::LibGList.Resource.Attribute.contentDescription = global::ConfessionSearchDBApp.Resource.Attribute.contentDescription;
-			global::LibGList.Resource.Attribute.contentInsetEnd = global::ConfessionSearchDBApp.Resource.Attribute.contentInsetEnd;
-			global::LibGList.Resource.Attribute.contentInsetEndWithActions = global::ConfessionSearchDBApp.Resource.Attribute.contentInsetEndWithActions;
-			global::LibGList.Resource.Attribute.contentInsetLeft = global::ConfessionSearchDBApp.Resource.Attribute.contentInsetLeft;
-			global::LibGList.Resource.Attribute.contentInsetRight = global::ConfessionSearchDBApp.Resource.Attribute.contentInsetRight;
-			global::LibGList.Resource.Attribute.contentInsetStart = global::ConfessionSearchDBApp.Resource.Attribute.contentInsetStart;
-			global::LibGList.Resource.Attribute.contentInsetStartWithNavigation = global::ConfessionSearchDBApp.Resource.Attribute.contentInsetStartWithNavigation;
-			global::LibGList.Resource.Attribute.controlBackground = global::ConfessionSearchDBApp.Resource.Attribute.controlBackground;
-			global::LibGList.Resource.Attribute.customNavigationLayout = global::ConfessionSearchDBApp.Resource.Attribute.customNavigationLayout;
-			global::LibGList.Resource.Attribute.defaultQueryHint = global::ConfessionSearchDBApp.Resource.Attribute.defaultQueryHint;
-			global::LibGList.Resource.Attribute.dialogPreferredPadding = global::ConfessionSearchDBApp.Resource.Attribute.dialogPreferredPadding;
-			global::LibGList.Resource.Attribute.dialogTheme = global::ConfessionSearchDBApp.Resource.Attribute.dialogTheme;
-			global::LibGList.Resource.Attribute.displayOptions = global::ConfessionSearchDBApp.Resource.Attribute.displayOptions;
-			global::LibGList.Resource.Attribute.divider = global::ConfessionSearchDBApp.Resource.Attribute.divider;
-			global::LibGList.Resource.Attribute.dividerHorizontal = global::ConfessionSearchDBApp.Resource.Attribute.dividerHorizontal;
-			global::LibGList.Resource.Attribute.dividerPadding = global::ConfessionSearchDBApp.Resource.Attribute.dividerPadding;
-			global::LibGList.Resource.Attribute.dividerVertical = global::ConfessionSearchDBApp.Resource.Attribute.dividerVertical;
-			global::LibGList.Resource.Attribute.drawableSize = global::ConfessionSearchDBApp.Resource.Attribute.drawableSize;
-			global::LibGList.Resource.Attribute.drawerArrowStyle = global::ConfessionSearchDBApp.Resource.Attribute.drawerArrowStyle;
-			global::LibGList.Resource.Attribute.dropDownListViewStyle = global::ConfessionSearchDBApp.Resource.Attribute.dropDownListViewStyle;
-			global::LibGList.Resource.Attribute.dropdownListPreferredItemHeight = global::ConfessionSearchDBApp.Resource.Attribute.dropdownListPreferredItemHeight;
-			global::LibGList.Resource.Attribute.editTextBackground = global::ConfessionSearchDBApp.Resource.Attribute.editTextBackground;
-			global::LibGList.Resource.Attribute.editTextColor = global::ConfessionSearchDBApp.Resource.Attribute.editTextColor;
-			global::LibGList.Resource.Attribute.editTextStyle = global::ConfessionSearchDBApp.Resource.Attribute.editTextStyle;
-			global::LibGList.Resource.Attribute.elevation = global::ConfessionSearchDBApp.Resource.Attribute.elevation;
-			global::LibGList.Resource.Attribute.expandActivityOverflowButtonDrawable = global::ConfessionSearchDBApp.Resource.Attribute.expandActivityOverflowButtonDrawable;
-			global::LibGList.Resource.Attribute.font = global::ConfessionSearchDBApp.Resource.Attribute.font;
-			global::LibGList.Resource.Attribute.fontFamily = global::ConfessionSearchDBApp.Resource.Attribute.fontFamily;
-			global::LibGList.Resource.Attribute.fontProviderAuthority = global::ConfessionSearchDBApp.Resource.Attribute.fontProviderAuthority;
-			global::LibGList.Resource.Attribute.fontProviderCerts = global::ConfessionSearchDBApp.Resource.Attribute.fontProviderCerts;
-			global::LibGList.Resource.Attribute.fontProviderFetchStrategy = global::ConfessionSearchDBApp.Resource.Attribute.fontProviderFetchStrategy;
-			global::LibGList.Resource.Attribute.fontProviderFetchTimeout = global::ConfessionSearchDBApp.Resource.Attribute.fontProviderFetchTimeout;
-			global::LibGList.Resource.Attribute.fontProviderPackage = global::ConfessionSearchDBApp.Resource.Attribute.fontProviderPackage;
-			global::LibGList.Resource.Attribute.fontProviderQuery = global::ConfessionSearchDBApp.Resource.Attribute.fontProviderQuery;
-			global::LibGList.Resource.Attribute.fontStyle = global::ConfessionSearchDBApp.Resource.Attribute.fontStyle;
-			global::LibGList.Resource.Attribute.fontWeight = global::ConfessionSearchDBApp.Resource.Attribute.fontWeight;
-			global::LibGList.Resource.Attribute.gapBetweenBars = global::ConfessionSearchDBApp.Resource.Attribute.gapBetweenBars;
-			global::LibGList.Resource.Attribute.goIcon = global::ConfessionSearchDBApp.Resource.Attribute.goIcon;
-			global::LibGList.Resource.Attribute.height = global::ConfessionSearchDBApp.Resource.Attribute.height;
-			global::LibGList.Resource.Attribute.hideOnContentScroll = global::ConfessionSearchDBApp.Resource.Attribute.hideOnContentScroll;
-			global::LibGList.Resource.Attribute.homeAsUpIndicator = global::ConfessionSearchDBApp.Resource.Attribute.homeAsUpIndicator;
-			global::LibGList.Resource.Attribute.homeLayout = global::ConfessionSearchDBApp.Resource.Attribute.homeLayout;
-			global::LibGList.Resource.Attribute.icon = global::ConfessionSearchDBApp.Resource.Attribute.icon;
-			global::LibGList.Resource.Attribute.iconTint = global::ConfessionSearchDBApp.Resource.Attribute.iconTint;
-			global::LibGList.Resource.Attribute.iconTintMode = global::ConfessionSearchDBApp.Resource.Attribute.iconTintMode;
-			global::LibGList.Resource.Attribute.iconifiedByDefault = global::ConfessionSearchDBApp.Resource.Attribute.iconifiedByDefault;
-			global::LibGList.Resource.Attribute.imageButtonStyle = global::ConfessionSearchDBApp.Resource.Attribute.imageButtonStyle;
-			global::LibGList.Resource.Attribute.indeterminateProgressStyle = global::ConfessionSearchDBApp.Resource.Attribute.indeterminateProgressStyle;
-			global::LibGList.Resource.Attribute.initialActivityCount = global::ConfessionSearchDBApp.Resource.Attribute.initialActivityCount;
-			global::LibGList.Resource.Attribute.isLightTheme = global::ConfessionSearchDBApp.Resource.Attribute.isLightTheme;
-			global::LibGList.Resource.Attribute.itemPadding = global::ConfessionSearchDBApp.Resource.Attribute.itemPadding;
-			global::LibGList.Resource.Attribute.layout = global::ConfessionSearchDBApp.Resource.Attribute.layout;
-			global::LibGList.Resource.Attribute.listChoiceBackgroundIndicator = global::ConfessionSearchDBApp.Resource.Attribute.listChoiceBackgroundIndicator;
-			global::LibGList.Resource.Attribute.listDividerAlertDialog = global::ConfessionSearchDBApp.Resource.Attribute.listDividerAlertDialog;
-			global::LibGList.Resource.Attribute.listItemLayout = global::ConfessionSearchDBApp.Resource.Attribute.listItemLayout;
-			global::LibGList.Resource.Attribute.listLayout = global::ConfessionSearchDBApp.Resource.Attribute.listLayout;
-			global::LibGList.Resource.Attribute.listMenuViewStyle = global::ConfessionSearchDBApp.Resource.Attribute.listMenuViewStyle;
-			global::LibGList.Resource.Attribute.listPopupWindowStyle = global::ConfessionSearchDBApp.Resource.Attribute.listPopupWindowStyle;
-			global::LibGList.Resource.Attribute.listPreferredItemHeight = global::ConfessionSearchDBApp.Resource.Attribute.listPreferredItemHeight;
-			global::LibGList.Resource.Attribute.listPreferredItemHeightLarge = global::ConfessionSearchDBApp.Resource.Attribute.listPreferredItemHeightLarge;
-			global::LibGList.Resource.Attribute.listPreferredItemHeightSmall = global::ConfessionSearchDBApp.Resource.Attribute.listPreferredItemHeightSmall;
-			global::LibGList.Resource.Attribute.listPreferredItemPaddingLeft = global::ConfessionSearchDBApp.Resource.Attribute.listPreferredItemPaddingLeft;
-			global::LibGList.Resource.Attribute.listPreferredItemPaddingRight = global::ConfessionSearchDBApp.Resource.Attribute.listPreferredItemPaddingRight;
-			global::LibGList.Resource.Attribute.logo = global::ConfessionSearchDBApp.Resource.Attribute.logo;
-			global::LibGList.Resource.Attribute.logoDescription = global::ConfessionSearchDBApp.Resource.Attribute.logoDescription;
-			global::LibGList.Resource.Attribute.maxButtonHeight = global::ConfessionSearchDBApp.Resource.Attribute.maxButtonHeight;
-			global::LibGList.Resource.Attribute.measureWithLargestChild = global::ConfessionSearchDBApp.Resource.Attribute.measureWithLargestChild;
-			global::LibGList.Resource.Attribute.multiChoiceItemLayout = global::ConfessionSearchDBApp.Resource.Attribute.multiChoiceItemLayout;
-			global::LibGList.Resource.Attribute.navigationContentDescription = global::ConfessionSearchDBApp.Resource.Attribute.navigationContentDescription;
-			global::LibGList.Resource.Attribute.navigationIcon = global::ConfessionSearchDBApp.Resource.Attribute.navigationIcon;
-			global::LibGList.Resource.Attribute.navigationMode = global::ConfessionSearchDBApp.Resource.Attribute.navigationMode;
-			global::LibGList.Resource.Attribute.numericModifiers = global::ConfessionSearchDBApp.Resource.Attribute.numericModifiers;
-			global::LibGList.Resource.Attribute.overlapAnchor = global::ConfessionSearchDBApp.Resource.Attribute.overlapAnchor;
-			global::LibGList.Resource.Attribute.paddingBottomNoButtons = global::ConfessionSearchDBApp.Resource.Attribute.paddingBottomNoButtons;
-			global::LibGList.Resource.Attribute.paddingEnd = global::ConfessionSearchDBApp.Resource.Attribute.paddingEnd;
-			global::LibGList.Resource.Attribute.paddingStart = global::ConfessionSearchDBApp.Resource.Attribute.paddingStart;
-			global::LibGList.Resource.Attribute.paddingTopNoTitle = global::ConfessionSearchDBApp.Resource.Attribute.paddingTopNoTitle;
-			global::LibGList.Resource.Attribute.panelBackground = global::ConfessionSearchDBApp.Resource.Attribute.panelBackground;
-			global::LibGList.Resource.Attribute.panelMenuListTheme = global::ConfessionSearchDBApp.Resource.Attribute.panelMenuListTheme;
-			global::LibGList.Resource.Attribute.panelMenuListWidth = global::ConfessionSearchDBApp.Resource.Attribute.panelMenuListWidth;
-			global::LibGList.Resource.Attribute.popupMenuStyle = global::ConfessionSearchDBApp.Resource.Attribute.popupMenuStyle;
-			global::LibGList.Resource.Attribute.popupTheme = global::ConfessionSearchDBApp.Resource.Attribute.popupTheme;
-			global::LibGList.Resource.Attribute.popupWindowStyle = global::ConfessionSearchDBApp.Resource.Attribute.popupWindowStyle;
-			global::LibGList.Resource.Attribute.preserveIconSpacing = global::ConfessionSearchDBApp.Resource.Attribute.preserveIconSpacing;
-			global::LibGList.Resource.Attribute.progressBarPadding = global::ConfessionSearchDBApp.Resource.Attribute.progressBarPadding;
-			global::LibGList.Resource.Attribute.progressBarStyle = global::ConfessionSearchDBApp.Resource.Attribute.progressBarStyle;
-			global::LibGList.Resource.Attribute.queryBackground = global::ConfessionSearchDBApp.Resource.Attribute.queryBackground;
-			global::LibGList.Resource.Attribute.queryHint = global::ConfessionSearchDBApp.Resource.Attribute.queryHint;
-			global::LibGList.Resource.Attribute.radioButtonStyle = global::ConfessionSearchDBApp.Resource.Attribute.radioButtonStyle;
-			global::LibGList.Resource.Attribute.ratingBarStyle = global::ConfessionSearchDBApp.Resource.Attribute.ratingBarStyle;
-			global::LibGList.Resource.Attribute.ratingBarStyleIndicator = global::ConfessionSearchDBApp.Resource.Attribute.ratingBarStyleIndicator;
-			global::LibGList.Resource.Attribute.ratingBarStyleSmall = global::ConfessionSearchDBApp.Resource.Attribute.ratingBarStyleSmall;
-			global::LibGList.Resource.Attribute.searchHintIcon = global::ConfessionSearchDBApp.Resource.Attribute.searchHintIcon;
-			global::LibGList.Resource.Attribute.searchIcon = global::ConfessionSearchDBApp.Resource.Attribute.searchIcon;
-			global::LibGList.Resource.Attribute.searchViewStyle = global::ConfessionSearchDBApp.Resource.Attribute.searchViewStyle;
-			global::LibGList.Resource.Attribute.seekBarStyle = global::ConfessionSearchDBApp.Resource.Attribute.seekBarStyle;
-			global::LibGList.Resource.Attribute.selectableItemBackground = global::ConfessionSearchDBApp.Resource.Attribute.selectableItemBackground;
-			global::LibGList.Resource.Attribute.selectableItemBackgroundBorderless = global::ConfessionSearchDBApp.Resource.Attribute.selectableItemBackgroundBorderless;
-			global::LibGList.Resource.Attribute.showAsAction = global::ConfessionSearchDBApp.Resource.Attribute.showAsAction;
-			global::LibGList.Resource.Attribute.showDividers = global::ConfessionSearchDBApp.Resource.Attribute.showDividers;
-			global::LibGList.Resource.Attribute.showText = global::ConfessionSearchDBApp.Resource.Attribute.showText;
-			global::LibGList.Resource.Attribute.showTitle = global::ConfessionSearchDBApp.Resource.Attribute.showTitle;
-			global::LibGList.Resource.Attribute.singleChoiceItemLayout = global::ConfessionSearchDBApp.Resource.Attribute.singleChoiceItemLayout;
-			global::LibGList.Resource.Attribute.spinBars = global::ConfessionSearchDBApp.Resource.Attribute.spinBars;
-			global::LibGList.Resource.Attribute.spinnerDropDownItemStyle = global::ConfessionSearchDBApp.Resource.Attribute.spinnerDropDownItemStyle;
-			global::LibGList.Resource.Attribute.spinnerStyle = global::ConfessionSearchDBApp.Resource.Attribute.spinnerStyle;
-			global::LibGList.Resource.Attribute.splitTrack = global::ConfessionSearchDBApp.Resource.Attribute.splitTrack;
-			global::LibGList.Resource.Attribute.srcCompat = global::ConfessionSearchDBApp.Resource.Attribute.srcCompat;
-			global::LibGList.Resource.Attribute.state_above_anchor = global::ConfessionSearchDBApp.Resource.Attribute.state_above_anchor;
-			global::LibGList.Resource.Attribute.subMenuArrow = global::ConfessionSearchDBApp.Resource.Attribute.subMenuArrow;
-			global::LibGList.Resource.Attribute.submitBackground = global::ConfessionSearchDBApp.Resource.Attribute.submitBackground;
-			global::LibGList.Resource.Attribute.subtitle = global::ConfessionSearchDBApp.Resource.Attribute.subtitle;
-			global::LibGList.Resource.Attribute.subtitleTextAppearance = global::ConfessionSearchDBApp.Resource.Attribute.subtitleTextAppearance;
-			global::LibGList.Resource.Attribute.subtitleTextColor = global::ConfessionSearchDBApp.Resource.Attribute.subtitleTextColor;
-			global::LibGList.Resource.Attribute.subtitleTextStyle = global::ConfessionSearchDBApp.Resource.Attribute.subtitleTextStyle;
-			global::LibGList.Resource.Attribute.suggestionRowLayout = global::ConfessionSearchDBApp.Resource.Attribute.suggestionRowLayout;
-			global::LibGList.Resource.Attribute.switchMinWidth = global::ConfessionSearchDBApp.Resource.Attribute.switchMinWidth;
-			global::LibGList.Resource.Attribute.switchPadding = global::ConfessionSearchDBApp.Resource.Attribute.switchPadding;
-			global::LibGList.Resource.Attribute.switchStyle = global::ConfessionSearchDBApp.Resource.Attribute.switchStyle;
-			global::LibGList.Resource.Attribute.switchTextAppearance = global::ConfessionSearchDBApp.Resource.Attribute.switchTextAppearance;
-			global::LibGList.Resource.Attribute.textAllCaps = global::ConfessionSearchDBApp.Resource.Attribute.textAllCaps;
-			global::LibGList.Resource.Attribute.textAppearanceLargePopupMenu = global::ConfessionSearchDBApp.Resource.Attribute.textAppearanceLargePopupMenu;
-			global::LibGList.Resource.Attribute.textAppearanceListItem = global::ConfessionSearchDBApp.Resource.Attribute.textAppearanceListItem;
-			global::LibGList.Resource.Attribute.textAppearanceListItemSecondary = global::ConfessionSearchDBApp.Resource.Attribute.textAppearanceListItemSecondary;
-			global::LibGList.Resource.Attribute.textAppearanceListItemSmall = global::ConfessionSearchDBApp.Resource.Attribute.textAppearanceListItemSmall;
-			global::LibGList.Resource.Attribute.textAppearancePopupMenuHeader = global::ConfessionSearchDBApp.Resource.Attribute.textAppearancePopupMenuHeader;
-			global::LibGList.Resource.Attribute.textAppearanceSearchResultSubtitle = global::ConfessionSearchDBApp.Resource.Attribute.textAppearanceSearchResultSubtitle;
-			global::LibGList.Resource.Attribute.textAppearanceSearchResultTitle = global::ConfessionSearchDBApp.Resource.Attribute.textAppearanceSearchResultTitle;
-			global::LibGList.Resource.Attribute.textAppearanceSmallPopupMenu = global::ConfessionSearchDBApp.Resource.Attribute.textAppearanceSmallPopupMenu;
-			global::LibGList.Resource.Attribute.textColorAlertDialogListItem = global::ConfessionSearchDBApp.Resource.Attribute.textColorAlertDialogListItem;
-			global::LibGList.Resource.Attribute.textColorSearchUrl = global::ConfessionSearchDBApp.Resource.Attribute.textColorSearchUrl;
-			global::LibGList.Resource.Attribute.theme = global::ConfessionSearchDBApp.Resource.Attribute.theme;
-			global::LibGList.Resource.Attribute.thickness = global::ConfessionSearchDBApp.Resource.Attribute.thickness;
-			global::LibGList.Resource.Attribute.thumbTextPadding = global::ConfessionSearchDBApp.Resource.Attribute.thumbTextPadding;
-			global::LibGList.Resource.Attribute.thumbTint = global::ConfessionSearchDBApp.Resource.Attribute.thumbTint;
-			global::LibGList.Resource.Attribute.thumbTintMode = global::ConfessionSearchDBApp.Resource.Attribute.thumbTintMode;
-			global::LibGList.Resource.Attribute.tickMark = global::ConfessionSearchDBApp.Resource.Attribute.tickMark;
-			global::LibGList.Resource.Attribute.tickMarkTint = global::ConfessionSearchDBApp.Resource.Attribute.tickMarkTint;
-			global::LibGList.Resource.Attribute.tickMarkTintMode = global::ConfessionSearchDBApp.Resource.Attribute.tickMarkTintMode;
-			global::LibGList.Resource.Attribute.tint = global::ConfessionSearchDBApp.Resource.Attribute.tint;
-			global::LibGList.Resource.Attribute.tintMode = global::ConfessionSearchDBApp.Resource.Attribute.tintMode;
-			global::LibGList.Resource.Attribute.title = global::ConfessionSearchDBApp.Resource.Attribute.title;
-			global::LibGList.Resource.Attribute.titleMargin = global::ConfessionSearchDBApp.Resource.Attribute.titleMargin;
-			global::LibGList.Resource.Attribute.titleMarginBottom = global::ConfessionSearchDBApp.Resource.Attribute.titleMarginBottom;
-			global::LibGList.Resource.Attribute.titleMarginEnd = global::ConfessionSearchDBApp.Resource.Attribute.titleMarginEnd;
-			global::LibGList.Resource.Attribute.titleMarginStart = global::ConfessionSearchDBApp.Resource.Attribute.titleMarginStart;
-			global::LibGList.Resource.Attribute.titleMarginTop = global::ConfessionSearchDBApp.Resource.Attribute.titleMarginTop;
-			global::LibGList.Resource.Attribute.titleMargins = global::ConfessionSearchDBApp.Resource.Attribute.titleMargins;
-			global::LibGList.Resource.Attribute.titleTextAppearance = global::ConfessionSearchDBApp.Resource.Attribute.titleTextAppearance;
-			global::LibGList.Resource.Attribute.titleTextColor = global::ConfessionSearchDBApp.Resource.Attribute.titleTextColor;
-			global::LibGList.Resource.Attribute.titleTextStyle = global::ConfessionSearchDBApp.Resource.Attribute.titleTextStyle;
-			global::LibGList.Resource.Attribute.toolbarNavigationButtonStyle = global::ConfessionSearchDBApp.Resource.Attribute.toolbarNavigationButtonStyle;
-			global::LibGList.Resource.Attribute.toolbarStyle = global::ConfessionSearchDBApp.Resource.Attribute.toolbarStyle;
-			global::LibGList.Resource.Attribute.tooltipForegroundColor = global::ConfessionSearchDBApp.Resource.Attribute.tooltipForegroundColor;
-			global::LibGList.Resource.Attribute.tooltipFrameBackground = global::ConfessionSearchDBApp.Resource.Attribute.tooltipFrameBackground;
-			global::LibGList.Resource.Attribute.tooltipText = global::ConfessionSearchDBApp.Resource.Attribute.tooltipText;
-			global::LibGList.Resource.Attribute.track = global::ConfessionSearchDBApp.Resource.Attribute.track;
-			global::LibGList.Resource.Attribute.trackTint = global::ConfessionSearchDBApp.Resource.Attribute.trackTint;
-			global::LibGList.Resource.Attribute.trackTintMode = global::ConfessionSearchDBApp.Resource.Attribute.trackTintMode;
-			global::LibGList.Resource.Attribute.voiceIcon = global::ConfessionSearchDBApp.Resource.Attribute.voiceIcon;
-			global::LibGList.Resource.Attribute.windowActionBar = global::ConfessionSearchDBApp.Resource.Attribute.windowActionBar;
-			global::LibGList.Resource.Attribute.windowActionBarOverlay = global::ConfessionSearchDBApp.Resource.Attribute.windowActionBarOverlay;
-			global::LibGList.Resource.Attribute.windowActionModeOverlay = global::ConfessionSearchDBApp.Resource.Attribute.windowActionModeOverlay;
-			global::LibGList.Resource.Attribute.windowFixedHeightMajor = global::ConfessionSearchDBApp.Resource.Attribute.windowFixedHeightMajor;
-			global::LibGList.Resource.Attribute.windowFixedHeightMinor = global::ConfessionSearchDBApp.Resource.Attribute.windowFixedHeightMinor;
-			global::LibGList.Resource.Attribute.windowFixedWidthMajor = global::ConfessionSearchDBApp.Resource.Attribute.windowFixedWidthMajor;
-			global::LibGList.Resource.Attribute.windowFixedWidthMinor = global::ConfessionSearchDBApp.Resource.Attribute.windowFixedWidthMinor;
-			global::LibGList.Resource.Attribute.windowMinWidthMajor = global::ConfessionSearchDBApp.Resource.Attribute.windowMinWidthMajor;
-			global::LibGList.Resource.Attribute.windowMinWidthMinor = global::ConfessionSearchDBApp.Resource.Attribute.windowMinWidthMinor;
-			global::LibGList.Resource.Attribute.windowNoTitle = global::ConfessionSearchDBApp.Resource.Attribute.windowNoTitle;
-			global::LibGList.Resource.Boolean.abc_action_bar_embed_tabs = global::ConfessionSearchDBApp.Resource.Boolean.abc_action_bar_embed_tabs;
-			global::LibGList.Resource.Boolean.abc_allow_stacked_button_bar = global::ConfessionSearchDBApp.Resource.Boolean.abc_allow_stacked_button_bar;
-			global::LibGList.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::ConfessionSearchDBApp.Resource.Boolean.abc_config_actionMenuItemAllCaps;
-			global::LibGList.Resource.Boolean.abc_config_closeDialogWhenTouchOutside = global::ConfessionSearchDBApp.Resource.Boolean.abc_config_closeDialogWhenTouchOutside;
-			global::LibGList.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent = global::ConfessionSearchDBApp.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent;
-			global::LibGList.Resource.Color.abc_background_cache_hint_selector_material_dark = global::ConfessionSearchDBApp.Resource.Color.abc_background_cache_hint_selector_material_dark;
-			global::LibGList.Resource.Color.abc_background_cache_hint_selector_material_light = global::ConfessionSearchDBApp.Resource.Color.abc_background_cache_hint_selector_material_light;
-			global::LibGList.Resource.Color.abc_btn_colored_borderless_text_material = global::ConfessionSearchDBApp.Resource.Color.abc_btn_colored_borderless_text_material;
-			global::LibGList.Resource.Color.abc_btn_colored_text_material = global::ConfessionSearchDBApp.Resource.Color.abc_btn_colored_text_material;
-			global::LibGList.Resource.Color.abc_color_highlight_material = global::ConfessionSearchDBApp.Resource.Color.abc_color_highlight_material;
-			global::LibGList.Resource.Color.abc_hint_foreground_material_dark = global::ConfessionSearchDBApp.Resource.Color.abc_hint_foreground_material_dark;
-			global::LibGList.Resource.Color.abc_hint_foreground_material_light = global::ConfessionSearchDBApp.Resource.Color.abc_hint_foreground_material_light;
-			global::LibGList.Resource.Color.abc_input_method_navigation_guard = global::ConfessionSearchDBApp.Resource.Color.abc_input_method_navigation_guard;
-			global::LibGList.Resource.Color.abc_primary_text_disable_only_material_dark = global::ConfessionSearchDBApp.Resource.Color.abc_primary_text_disable_only_material_dark;
-			global::LibGList.Resource.Color.abc_primary_text_disable_only_material_light = global::ConfessionSearchDBApp.Resource.Color.abc_primary_text_disable_only_material_light;
-			global::LibGList.Resource.Color.abc_primary_text_material_dark = global::ConfessionSearchDBApp.Resource.Color.abc_primary_text_material_dark;
-			global::LibGList.Resource.Color.abc_primary_text_material_light = global::ConfessionSearchDBApp.Resource.Color.abc_primary_text_material_light;
-			global::LibGList.Resource.Color.abc_search_url_text = global::ConfessionSearchDBApp.Resource.Color.abc_search_url_text;
-			global::LibGList.Resource.Color.abc_search_url_text_normal = global::ConfessionSearchDBApp.Resource.Color.abc_search_url_text_normal;
-			global::LibGList.Resource.Color.abc_search_url_text_pressed = global::ConfessionSearchDBApp.Resource.Color.abc_search_url_text_pressed;
-			global::LibGList.Resource.Color.abc_search_url_text_selected = global::ConfessionSearchDBApp.Resource.Color.abc_search_url_text_selected;
-			global::LibGList.Resource.Color.abc_secondary_text_material_dark = global::ConfessionSearchDBApp.Resource.Color.abc_secondary_text_material_dark;
-			global::LibGList.Resource.Color.abc_secondary_text_material_light = global::ConfessionSearchDBApp.Resource.Color.abc_secondary_text_material_light;
-			global::LibGList.Resource.Color.abc_tint_btn_checkable = global::ConfessionSearchDBApp.Resource.Color.abc_tint_btn_checkable;
-			global::LibGList.Resource.Color.abc_tint_default = global::ConfessionSearchDBApp.Resource.Color.abc_tint_default;
-			global::LibGList.Resource.Color.abc_tint_edittext = global::ConfessionSearchDBApp.Resource.Color.abc_tint_edittext;
-			global::LibGList.Resource.Color.abc_tint_seek_thumb = global::ConfessionSearchDBApp.Resource.Color.abc_tint_seek_thumb;
-			global::LibGList.Resource.Color.abc_tint_spinner = global::ConfessionSearchDBApp.Resource.Color.abc_tint_spinner;
-			global::LibGList.Resource.Color.abc_tint_switch_track = global::ConfessionSearchDBApp.Resource.Color.abc_tint_switch_track;
-			global::LibGList.Resource.Color.accent_material_dark = global::ConfessionSearchDBApp.Resource.Color.accent_material_dark;
-			global::LibGList.Resource.Color.accent_material_light = global::ConfessionSearchDBApp.Resource.Color.accent_material_light;
-			global::LibGList.Resource.Color.background_floating_material_dark = global::ConfessionSearchDBApp.Resource.Color.background_floating_material_dark;
-			global::LibGList.Resource.Color.background_floating_material_light = global::ConfessionSearchDBApp.Resource.Color.background_floating_material_light;
-			global::LibGList.Resource.Color.background_material_dark = global::ConfessionSearchDBApp.Resource.Color.background_material_dark;
-			global::LibGList.Resource.Color.background_material_light = global::ConfessionSearchDBApp.Resource.Color.background_material_light;
-			global::LibGList.Resource.Color.bright_foreground_disabled_material_dark = global::ConfessionSearchDBApp.Resource.Color.bright_foreground_disabled_material_dark;
-			global::LibGList.Resource.Color.bright_foreground_disabled_material_light = global::ConfessionSearchDBApp.Resource.Color.bright_foreground_disabled_material_light;
-			global::LibGList.Resource.Color.bright_foreground_inverse_material_dark = global::ConfessionSearchDBApp.Resource.Color.bright_foreground_inverse_material_dark;
-			global::LibGList.Resource.Color.bright_foreground_inverse_material_light = global::ConfessionSearchDBApp.Resource.Color.bright_foreground_inverse_material_light;
-			global::LibGList.Resource.Color.bright_foreground_material_dark = global::ConfessionSearchDBApp.Resource.Color.bright_foreground_material_dark;
-			global::LibGList.Resource.Color.bright_foreground_material_light = global::ConfessionSearchDBApp.Resource.Color.bright_foreground_material_light;
-			global::LibGList.Resource.Color.button_material_dark = global::ConfessionSearchDBApp.Resource.Color.button_material_dark;
-			global::LibGList.Resource.Color.button_material_light = global::ConfessionSearchDBApp.Resource.Color.button_material_light;
-			global::LibGList.Resource.Color.dim_foreground_disabled_material_dark = global::ConfessionSearchDBApp.Resource.Color.dim_foreground_disabled_material_dark;
-			global::LibGList.Resource.Color.dim_foreground_disabled_material_light = global::ConfessionSearchDBApp.Resource.Color.dim_foreground_disabled_material_light;
-			global::LibGList.Resource.Color.dim_foreground_material_dark = global::ConfessionSearchDBApp.Resource.Color.dim_foreground_material_dark;
-			global::LibGList.Resource.Color.dim_foreground_material_light = global::ConfessionSearchDBApp.Resource.Color.dim_foreground_material_light;
-			global::LibGList.Resource.Color.error_color_material = global::ConfessionSearchDBApp.Resource.Color.error_color_material;
-			global::LibGList.Resource.Color.foreground_material_dark = global::ConfessionSearchDBApp.Resource.Color.foreground_material_dark;
-			global::LibGList.Resource.Color.foreground_material_light = global::ConfessionSearchDBApp.Resource.Color.foreground_material_light;
-			global::LibGList.Resource.Color.highlighted_text_material_dark = global::ConfessionSearchDBApp.Resource.Color.highlighted_text_material_dark;
-			global::LibGList.Resource.Color.highlighted_text_material_light = global::ConfessionSearchDBApp.Resource.Color.highlighted_text_material_light;
-			global::LibGList.Resource.Color.material_blue_grey_800 = global::ConfessionSearchDBApp.Resource.Color.material_blue_grey_800;
-			global::LibGList.Resource.Color.material_blue_grey_900 = global::ConfessionSearchDBApp.Resource.Color.material_blue_grey_900;
-			global::LibGList.Resource.Color.material_blue_grey_950 = global::ConfessionSearchDBApp.Resource.Color.material_blue_grey_950;
-			global::LibGList.Resource.Color.material_deep_teal_200 = global::ConfessionSearchDBApp.Resource.Color.material_deep_teal_200;
-			global::LibGList.Resource.Color.material_deep_teal_500 = global::ConfessionSearchDBApp.Resource.Color.material_deep_teal_500;
-			global::LibGList.Resource.Color.material_grey_100 = global::ConfessionSearchDBApp.Resource.Color.material_grey_100;
-			global::LibGList.Resource.Color.material_grey_300 = global::ConfessionSearchDBApp.Resource.Color.material_grey_300;
-			global::LibGList.Resource.Color.material_grey_50 = global::ConfessionSearchDBApp.Resource.Color.material_grey_50;
-			global::LibGList.Resource.Color.material_grey_600 = global::ConfessionSearchDBApp.Resource.Color.material_grey_600;
-			global::LibGList.Resource.Color.material_grey_800 = global::ConfessionSearchDBApp.Resource.Color.material_grey_800;
-			global::LibGList.Resource.Color.material_grey_850 = global::ConfessionSearchDBApp.Resource.Color.material_grey_850;
-			global::LibGList.Resource.Color.material_grey_900 = global::ConfessionSearchDBApp.Resource.Color.material_grey_900;
-			global::LibGList.Resource.Color.notification_action_color_filter = global::ConfessionSearchDBApp.Resource.Color.notification_action_color_filter;
-			global::LibGList.Resource.Color.notification_icon_bg_color = global::ConfessionSearchDBApp.Resource.Color.notification_icon_bg_color;
-			global::LibGList.Resource.Color.notification_material_background_media_default_color = global::ConfessionSearchDBApp.Resource.Color.notification_material_background_media_default_color;
-			global::LibGList.Resource.Color.primary_dark_material_dark = global::ConfessionSearchDBApp.Resource.Color.primary_dark_material_dark;
-			global::LibGList.Resource.Color.primary_dark_material_light = global::ConfessionSearchDBApp.Resource.Color.primary_dark_material_light;
-			global::LibGList.Resource.Color.primary_material_dark = global::ConfessionSearchDBApp.Resource.Color.primary_material_dark;
-			global::LibGList.Resource.Color.primary_material_light = global::ConfessionSearchDBApp.Resource.Color.primary_material_light;
-			global::LibGList.Resource.Color.primary_text_default_material_dark = global::ConfessionSearchDBApp.Resource.Color.primary_text_default_material_dark;
-			global::LibGList.Resource.Color.primary_text_default_material_light = global::ConfessionSearchDBApp.Resource.Color.primary_text_default_material_light;
-			global::LibGList.Resource.Color.primary_text_disabled_material_dark = global::ConfessionSearchDBApp.Resource.Color.primary_text_disabled_material_dark;
-			global::LibGList.Resource.Color.primary_text_disabled_material_light = global::ConfessionSearchDBApp.Resource.Color.primary_text_disabled_material_light;
-			global::LibGList.Resource.Color.ripple_material_dark = global::ConfessionSearchDBApp.Resource.Color.ripple_material_dark;
-			global::LibGList.Resource.Color.ripple_material_light = global::ConfessionSearchDBApp.Resource.Color.ripple_material_light;
-			global::LibGList.Resource.Color.secondary_text_default_material_dark = global::ConfessionSearchDBApp.Resource.Color.secondary_text_default_material_dark;
-			global::LibGList.Resource.Color.secondary_text_default_material_light = global::ConfessionSearchDBApp.Resource.Color.secondary_text_default_material_light;
-			global::LibGList.Resource.Color.secondary_text_disabled_material_dark = global::ConfessionSearchDBApp.Resource.Color.secondary_text_disabled_material_dark;
-			global::LibGList.Resource.Color.secondary_text_disabled_material_light = global::ConfessionSearchDBApp.Resource.Color.secondary_text_disabled_material_light;
-			global::LibGList.Resource.Color.switch_thumb_disabled_material_dark = global::ConfessionSearchDBApp.Resource.Color.switch_thumb_disabled_material_dark;
-			global::LibGList.Resource.Color.switch_thumb_disabled_material_light = global::ConfessionSearchDBApp.Resource.Color.switch_thumb_disabled_material_light;
-			global::LibGList.Resource.Color.switch_thumb_material_dark = global::ConfessionSearchDBApp.Resource.Color.switch_thumb_material_dark;
-			global::LibGList.Resource.Color.switch_thumb_material_light = global::ConfessionSearchDBApp.Resource.Color.switch_thumb_material_light;
-			global::LibGList.Resource.Color.switch_thumb_normal_material_dark = global::ConfessionSearchDBApp.Resource.Color.switch_thumb_normal_material_dark;
-			global::LibGList.Resource.Color.switch_thumb_normal_material_light = global::ConfessionSearchDBApp.Resource.Color.switch_thumb_normal_material_light;
-			global::LibGList.Resource.Color.tooltip_background_dark = global::ConfessionSearchDBApp.Resource.Color.tooltip_background_dark;
-			global::LibGList.Resource.Color.tooltip_background_light = global::ConfessionSearchDBApp.Resource.Color.tooltip_background_light;
-			global::LibGList.Resource.Dimension.abc_action_bar_content_inset_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_action_bar_content_inset_material;
-			global::LibGList.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::ConfessionSearchDBApp.Resource.Dimension.abc_action_bar_content_inset_with_nav;
-			global::LibGList.Resource.Dimension.abc_action_bar_default_height_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_action_bar_default_height_material;
-			global::LibGList.Resource.Dimension.abc_action_bar_default_padding_end_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_action_bar_default_padding_end_material;
-			global::LibGList.Resource.Dimension.abc_action_bar_default_padding_start_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_action_bar_default_padding_start_material;
-			global::LibGList.Resource.Dimension.abc_action_bar_elevation_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_action_bar_elevation_material;
-			global::LibGList.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
-			global::LibGList.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
-			global::LibGList.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
-			global::LibGList.Resource.Dimension.abc_action_bar_progress_bar_size = global::ConfessionSearchDBApp.Resource.Dimension.abc_action_bar_progress_bar_size;
-			global::LibGList.Resource.Dimension.abc_action_bar_stacked_max_height = global::ConfessionSearchDBApp.Resource.Dimension.abc_action_bar_stacked_max_height;
-			global::LibGList.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::ConfessionSearchDBApp.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
-			global::LibGList.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
-			global::LibGList.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
-			global::LibGList.Resource.Dimension.abc_action_button_min_height_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_action_button_min_height_material;
-			global::LibGList.Resource.Dimension.abc_action_button_min_width_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_action_button_min_width_material;
-			global::LibGList.Resource.Dimension.abc_action_button_min_width_overflow_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_action_button_min_width_overflow_material;
-			global::LibGList.Resource.Dimension.abc_alert_dialog_button_bar_height = global::ConfessionSearchDBApp.Resource.Dimension.abc_alert_dialog_button_bar_height;
-			global::LibGList.Resource.Dimension.abc_button_inset_horizontal_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_button_inset_horizontal_material;
-			global::LibGList.Resource.Dimension.abc_button_inset_vertical_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_button_inset_vertical_material;
-			global::LibGList.Resource.Dimension.abc_button_padding_horizontal_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_button_padding_horizontal_material;
-			global::LibGList.Resource.Dimension.abc_button_padding_vertical_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_button_padding_vertical_material;
-			global::LibGList.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::ConfessionSearchDBApp.Resource.Dimension.abc_cascading_menus_min_smallest_width;
-			global::LibGList.Resource.Dimension.abc_config_prefDialogWidth = global::ConfessionSearchDBApp.Resource.Dimension.abc_config_prefDialogWidth;
-			global::LibGList.Resource.Dimension.abc_control_corner_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_control_corner_material;
-			global::LibGList.Resource.Dimension.abc_control_inset_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_control_inset_material;
-			global::LibGList.Resource.Dimension.abc_control_padding_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_control_padding_material;
-			global::LibGList.Resource.Dimension.abc_dialog_fixed_height_major = global::ConfessionSearchDBApp.Resource.Dimension.abc_dialog_fixed_height_major;
-			global::LibGList.Resource.Dimension.abc_dialog_fixed_height_minor = global::ConfessionSearchDBApp.Resource.Dimension.abc_dialog_fixed_height_minor;
-			global::LibGList.Resource.Dimension.abc_dialog_fixed_width_major = global::ConfessionSearchDBApp.Resource.Dimension.abc_dialog_fixed_width_major;
-			global::LibGList.Resource.Dimension.abc_dialog_fixed_width_minor = global::ConfessionSearchDBApp.Resource.Dimension.abc_dialog_fixed_width_minor;
-			global::LibGList.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::ConfessionSearchDBApp.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
-			global::LibGList.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::ConfessionSearchDBApp.Resource.Dimension.abc_dialog_list_padding_top_no_title;
-			global::LibGList.Resource.Dimension.abc_dialog_min_width_major = global::ConfessionSearchDBApp.Resource.Dimension.abc_dialog_min_width_major;
-			global::LibGList.Resource.Dimension.abc_dialog_min_width_minor = global::ConfessionSearchDBApp.Resource.Dimension.abc_dialog_min_width_minor;
-			global::LibGList.Resource.Dimension.abc_dialog_padding_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_dialog_padding_material;
-			global::LibGList.Resource.Dimension.abc_dialog_padding_top_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_dialog_padding_top_material;
-			global::LibGList.Resource.Dimension.abc_dialog_title_divider_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_dialog_title_divider_material;
-			global::LibGList.Resource.Dimension.abc_disabled_alpha_material_dark = global::ConfessionSearchDBApp.Resource.Dimension.abc_disabled_alpha_material_dark;
-			global::LibGList.Resource.Dimension.abc_disabled_alpha_material_light = global::ConfessionSearchDBApp.Resource.Dimension.abc_disabled_alpha_material_light;
-			global::LibGList.Resource.Dimension.abc_dropdownitem_icon_width = global::ConfessionSearchDBApp.Resource.Dimension.abc_dropdownitem_icon_width;
-			global::LibGList.Resource.Dimension.abc_dropdownitem_text_padding_left = global::ConfessionSearchDBApp.Resource.Dimension.abc_dropdownitem_text_padding_left;
-			global::LibGList.Resource.Dimension.abc_dropdownitem_text_padding_right = global::ConfessionSearchDBApp.Resource.Dimension.abc_dropdownitem_text_padding_right;
-			global::LibGList.Resource.Dimension.abc_edit_text_inset_bottom_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_edit_text_inset_bottom_material;
-			global::LibGList.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_edit_text_inset_horizontal_material;
-			global::LibGList.Resource.Dimension.abc_edit_text_inset_top_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_edit_text_inset_top_material;
-			global::LibGList.Resource.Dimension.abc_floating_window_z = global::ConfessionSearchDBApp.Resource.Dimension.abc_floating_window_z;
-			global::LibGList.Resource.Dimension.abc_list_item_padding_horizontal_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_list_item_padding_horizontal_material;
-			global::LibGList.Resource.Dimension.abc_panel_menu_list_width = global::ConfessionSearchDBApp.Resource.Dimension.abc_panel_menu_list_width;
-			global::LibGList.Resource.Dimension.abc_progress_bar_height_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_progress_bar_height_material;
-			global::LibGList.Resource.Dimension.abc_search_view_preferred_height = global::ConfessionSearchDBApp.Resource.Dimension.abc_search_view_preferred_height;
-			global::LibGList.Resource.Dimension.abc_search_view_preferred_width = global::ConfessionSearchDBApp.Resource.Dimension.abc_search_view_preferred_width;
-			global::LibGList.Resource.Dimension.abc_seekbar_track_background_height_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_seekbar_track_background_height_material;
-			global::LibGList.Resource.Dimension.abc_seekbar_track_progress_height_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_seekbar_track_progress_height_material;
-			global::LibGList.Resource.Dimension.abc_select_dialog_padding_start_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_select_dialog_padding_start_material;
-			global::LibGList.Resource.Dimension.abc_switch_padding = global::ConfessionSearchDBApp.Resource.Dimension.abc_switch_padding;
-			global::LibGList.Resource.Dimension.abc_text_size_body_1_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_text_size_body_1_material;
-			global::LibGList.Resource.Dimension.abc_text_size_body_2_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_text_size_body_2_material;
-			global::LibGList.Resource.Dimension.abc_text_size_button_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_text_size_button_material;
-			global::LibGList.Resource.Dimension.abc_text_size_caption_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_text_size_caption_material;
-			global::LibGList.Resource.Dimension.abc_text_size_display_1_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_text_size_display_1_material;
-			global::LibGList.Resource.Dimension.abc_text_size_display_2_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_text_size_display_2_material;
-			global::LibGList.Resource.Dimension.abc_text_size_display_3_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_text_size_display_3_material;
-			global::LibGList.Resource.Dimension.abc_text_size_display_4_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_text_size_display_4_material;
-			global::LibGList.Resource.Dimension.abc_text_size_headline_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_text_size_headline_material;
-			global::LibGList.Resource.Dimension.abc_text_size_large_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_text_size_large_material;
-			global::LibGList.Resource.Dimension.abc_text_size_medium_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_text_size_medium_material;
-			global::LibGList.Resource.Dimension.abc_text_size_menu_header_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_text_size_menu_header_material;
-			global::LibGList.Resource.Dimension.abc_text_size_menu_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_text_size_menu_material;
-			global::LibGList.Resource.Dimension.abc_text_size_small_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_text_size_small_material;
-			global::LibGList.Resource.Dimension.abc_text_size_subhead_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_text_size_subhead_material;
-			global::LibGList.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::ConfessionSearchDBApp.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
-			global::LibGList.Resource.Dimension.abc_text_size_title_material = global::ConfessionSearchDBApp.Resource.Dimension.abc_text_size_title_material;
-			global::LibGList.Resource.Dimension.abc_text_size_title_material_toolbar = global::ConfessionSearchDBApp.Resource.Dimension.abc_text_size_title_material_toolbar;
-			global::LibGList.Resource.Dimension.compat_button_inset_horizontal_material = global::ConfessionSearchDBApp.Resource.Dimension.compat_button_inset_horizontal_material;
-			global::LibGList.Resource.Dimension.compat_button_inset_vertical_material = global::ConfessionSearchDBApp.Resource.Dimension.compat_button_inset_vertical_material;
-			global::LibGList.Resource.Dimension.compat_button_padding_horizontal_material = global::ConfessionSearchDBApp.Resource.Dimension.compat_button_padding_horizontal_material;
-			global::LibGList.Resource.Dimension.compat_button_padding_vertical_material = global::ConfessionSearchDBApp.Resource.Dimension.compat_button_padding_vertical_material;
-			global::LibGList.Resource.Dimension.compat_control_corner_material = global::ConfessionSearchDBApp.Resource.Dimension.compat_control_corner_material;
-			global::LibGList.Resource.Dimension.disabled_alpha_material_dark = global::ConfessionSearchDBApp.Resource.Dimension.disabled_alpha_material_dark;
-			global::LibGList.Resource.Dimension.disabled_alpha_material_light = global::ConfessionSearchDBApp.Resource.Dimension.disabled_alpha_material_light;
-			global::LibGList.Resource.Dimension.highlight_alpha_material_colored = global::ConfessionSearchDBApp.Resource.Dimension.highlight_alpha_material_colored;
-			global::LibGList.Resource.Dimension.highlight_alpha_material_dark = global::ConfessionSearchDBApp.Resource.Dimension.highlight_alpha_material_dark;
-			global::LibGList.Resource.Dimension.highlight_alpha_material_light = global::ConfessionSearchDBApp.Resource.Dimension.highlight_alpha_material_light;
-			global::LibGList.Resource.Dimension.hint_alpha_material_dark = global::ConfessionSearchDBApp.Resource.Dimension.hint_alpha_material_dark;
-			global::LibGList.Resource.Dimension.hint_alpha_material_light = global::ConfessionSearchDBApp.Resource.Dimension.hint_alpha_material_light;
-			global::LibGList.Resource.Dimension.hint_pressed_alpha_material_dark = global::ConfessionSearchDBApp.Resource.Dimension.hint_pressed_alpha_material_dark;
-			global::LibGList.Resource.Dimension.hint_pressed_alpha_material_light = global::ConfessionSearchDBApp.Resource.Dimension.hint_pressed_alpha_material_light;
-			global::LibGList.Resource.Dimension.notification_action_icon_size = global::ConfessionSearchDBApp.Resource.Dimension.notification_action_icon_size;
-			global::LibGList.Resource.Dimension.notification_action_text_size = global::ConfessionSearchDBApp.Resource.Dimension.notification_action_text_size;
-			global::LibGList.Resource.Dimension.notification_big_circle_margin = global::ConfessionSearchDBApp.Resource.Dimension.notification_big_circle_margin;
-			global::LibGList.Resource.Dimension.notification_content_margin_start = global::ConfessionSearchDBApp.Resource.Dimension.notification_content_margin_start;
-			global::LibGList.Resource.Dimension.notification_large_icon_height = global::ConfessionSearchDBApp.Resource.Dimension.notification_large_icon_height;
-			global::LibGList.Resource.Dimension.notification_large_icon_width = global::ConfessionSearchDBApp.Resource.Dimension.notification_large_icon_width;
-			global::LibGList.Resource.Dimension.notification_main_column_padding_top = global::ConfessionSearchDBApp.Resource.Dimension.notification_main_column_padding_top;
-			global::LibGList.Resource.Dimension.notification_media_narrow_margin = global::ConfessionSearchDBApp.Resource.Dimension.notification_media_narrow_margin;
-			global::LibGList.Resource.Dimension.notification_right_icon_size = global::ConfessionSearchDBApp.Resource.Dimension.notification_right_icon_size;
-			global::LibGList.Resource.Dimension.notification_right_side_padding_top = global::ConfessionSearchDBApp.Resource.Dimension.notification_right_side_padding_top;
-			global::LibGList.Resource.Dimension.notification_small_icon_background_padding = global::ConfessionSearchDBApp.Resource.Dimension.notification_small_icon_background_padding;
-			global::LibGList.Resource.Dimension.notification_small_icon_size_as_large = global::ConfessionSearchDBApp.Resource.Dimension.notification_small_icon_size_as_large;
-			global::LibGList.Resource.Dimension.notification_subtext_size = global::ConfessionSearchDBApp.Resource.Dimension.notification_subtext_size;
-			global::LibGList.Resource.Dimension.notification_top_pad = global::ConfessionSearchDBApp.Resource.Dimension.notification_top_pad;
-			global::LibGList.Resource.Dimension.notification_top_pad_large_text = global::ConfessionSearchDBApp.Resource.Dimension.notification_top_pad_large_text;
-			global::LibGList.Resource.Dimension.tooltip_corner_radius = global::ConfessionSearchDBApp.Resource.Dimension.tooltip_corner_radius;
-			global::LibGList.Resource.Dimension.tooltip_horizontal_padding = global::ConfessionSearchDBApp.Resource.Dimension.tooltip_horizontal_padding;
-			global::LibGList.Resource.Dimension.tooltip_margin = global::ConfessionSearchDBApp.Resource.Dimension.tooltip_margin;
-			global::LibGList.Resource.Dimension.tooltip_precise_anchor_extra_offset = global::ConfessionSearchDBApp.Resource.Dimension.tooltip_precise_anchor_extra_offset;
-			global::LibGList.Resource.Dimension.tooltip_precise_anchor_threshold = global::ConfessionSearchDBApp.Resource.Dimension.tooltip_precise_anchor_threshold;
-			global::LibGList.Resource.Dimension.tooltip_vertical_padding = global::ConfessionSearchDBApp.Resource.Dimension.tooltip_vertical_padding;
-			global::LibGList.Resource.Dimension.tooltip_y_offset_non_touch = global::ConfessionSearchDBApp.Resource.Dimension.tooltip_y_offset_non_touch;
-			global::LibGList.Resource.Dimension.tooltip_y_offset_touch = global::ConfessionSearchDBApp.Resource.Dimension.tooltip_y_offset_touch;
-			global::LibGList.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::ConfessionSearchDBApp.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
-			global::LibGList.Resource.Drawable.abc_action_bar_item_background_material = global::ConfessionSearchDBApp.Resource.Drawable.abc_action_bar_item_background_material;
-			global::LibGList.Resource.Drawable.abc_btn_borderless_material = global::ConfessionSearchDBApp.Resource.Drawable.abc_btn_borderless_material;
-			global::LibGList.Resource.Drawable.abc_btn_check_material = global::ConfessionSearchDBApp.Resource.Drawable.abc_btn_check_material;
-			global::LibGList.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::ConfessionSearchDBApp.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
-			global::LibGList.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::ConfessionSearchDBApp.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
-			global::LibGList.Resource.Drawable.abc_btn_colored_material = global::ConfessionSearchDBApp.Resource.Drawable.abc_btn_colored_material;
-			global::LibGList.Resource.Drawable.abc_btn_default_mtrl_shape = global::ConfessionSearchDBApp.Resource.Drawable.abc_btn_default_mtrl_shape;
-			global::LibGList.Resource.Drawable.abc_btn_radio_material = global::ConfessionSearchDBApp.Resource.Drawable.abc_btn_radio_material;
-			global::LibGList.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::ConfessionSearchDBApp.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
-			global::LibGList.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::ConfessionSearchDBApp.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
-			global::LibGList.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::ConfessionSearchDBApp.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
-			global::LibGList.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::ConfessionSearchDBApp.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
-			global::LibGList.Resource.Drawable.abc_cab_background_internal_bg = global::ConfessionSearchDBApp.Resource.Drawable.abc_cab_background_internal_bg;
-			global::LibGList.Resource.Drawable.abc_cab_background_top_material = global::ConfessionSearchDBApp.Resource.Drawable.abc_cab_background_top_material;
-			global::LibGList.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::ConfessionSearchDBApp.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
-			global::LibGList.Resource.Drawable.abc_control_background_material = global::ConfessionSearchDBApp.Resource.Drawable.abc_control_background_material;
-			global::LibGList.Resource.Drawable.abc_dialog_material_background = global::ConfessionSearchDBApp.Resource.Drawable.abc_dialog_material_background;
-			global::LibGList.Resource.Drawable.abc_edit_text_material = global::ConfessionSearchDBApp.Resource.Drawable.abc_edit_text_material;
-			global::LibGList.Resource.Drawable.abc_ic_ab_back_material = global::ConfessionSearchDBApp.Resource.Drawable.abc_ic_ab_back_material;
-			global::LibGList.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::ConfessionSearchDBApp.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
-			global::LibGList.Resource.Drawable.abc_ic_clear_material = global::ConfessionSearchDBApp.Resource.Drawable.abc_ic_clear_material;
-			global::LibGList.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::ConfessionSearchDBApp.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
-			global::LibGList.Resource.Drawable.abc_ic_go_search_api_material = global::ConfessionSearchDBApp.Resource.Drawable.abc_ic_go_search_api_material;
-			global::LibGList.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::ConfessionSearchDBApp.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
-			global::LibGList.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::ConfessionSearchDBApp.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
-			global::LibGList.Resource.Drawable.abc_ic_menu_overflow_material = global::ConfessionSearchDBApp.Resource.Drawable.abc_ic_menu_overflow_material;
-			global::LibGList.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::ConfessionSearchDBApp.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
-			global::LibGList.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::ConfessionSearchDBApp.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
-			global::LibGList.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::ConfessionSearchDBApp.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
-			global::LibGList.Resource.Drawable.abc_ic_search_api_material = global::ConfessionSearchDBApp.Resource.Drawable.abc_ic_search_api_material;
-			global::LibGList.Resource.Drawable.abc_ic_star_black_16dp = global::ConfessionSearchDBApp.Resource.Drawable.abc_ic_star_black_16dp;
-			global::LibGList.Resource.Drawable.abc_ic_star_black_36dp = global::ConfessionSearchDBApp.Resource.Drawable.abc_ic_star_black_36dp;
-			global::LibGList.Resource.Drawable.abc_ic_star_black_48dp = global::ConfessionSearchDBApp.Resource.Drawable.abc_ic_star_black_48dp;
-			global::LibGList.Resource.Drawable.abc_ic_star_half_black_16dp = global::ConfessionSearchDBApp.Resource.Drawable.abc_ic_star_half_black_16dp;
-			global::LibGList.Resource.Drawable.abc_ic_star_half_black_36dp = global::ConfessionSearchDBApp.Resource.Drawable.abc_ic_star_half_black_36dp;
-			global::LibGList.Resource.Drawable.abc_ic_star_half_black_48dp = global::ConfessionSearchDBApp.Resource.Drawable.abc_ic_star_half_black_48dp;
-			global::LibGList.Resource.Drawable.abc_ic_voice_search_api_material = global::ConfessionSearchDBApp.Resource.Drawable.abc_ic_voice_search_api_material;
-			global::LibGList.Resource.Drawable.abc_item_background_holo_dark = global::ConfessionSearchDBApp.Resource.Drawable.abc_item_background_holo_dark;
-			global::LibGList.Resource.Drawable.abc_item_background_holo_light = global::ConfessionSearchDBApp.Resource.Drawable.abc_item_background_holo_light;
-			global::LibGList.Resource.Drawable.abc_list_divider_mtrl_alpha = global::ConfessionSearchDBApp.Resource.Drawable.abc_list_divider_mtrl_alpha;
-			global::LibGList.Resource.Drawable.abc_list_focused_holo = global::ConfessionSearchDBApp.Resource.Drawable.abc_list_focused_holo;
-			global::LibGList.Resource.Drawable.abc_list_longpressed_holo = global::ConfessionSearchDBApp.Resource.Drawable.abc_list_longpressed_holo;
-			global::LibGList.Resource.Drawable.abc_list_pressed_holo_dark = global::ConfessionSearchDBApp.Resource.Drawable.abc_list_pressed_holo_dark;
-			global::LibGList.Resource.Drawable.abc_list_pressed_holo_light = global::ConfessionSearchDBApp.Resource.Drawable.abc_list_pressed_holo_light;
-			global::LibGList.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::ConfessionSearchDBApp.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
-			global::LibGList.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::ConfessionSearchDBApp.Resource.Drawable.abc_list_selector_background_transition_holo_light;
-			global::LibGList.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::ConfessionSearchDBApp.Resource.Drawable.abc_list_selector_disabled_holo_dark;
-			global::LibGList.Resource.Drawable.abc_list_selector_disabled_holo_light = global::ConfessionSearchDBApp.Resource.Drawable.abc_list_selector_disabled_holo_light;
-			global::LibGList.Resource.Drawable.abc_list_selector_holo_dark = global::ConfessionSearchDBApp.Resource.Drawable.abc_list_selector_holo_dark;
-			global::LibGList.Resource.Drawable.abc_list_selector_holo_light = global::ConfessionSearchDBApp.Resource.Drawable.abc_list_selector_holo_light;
-			global::LibGList.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::ConfessionSearchDBApp.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
-			global::LibGList.Resource.Drawable.abc_popup_background_mtrl_mult = global::ConfessionSearchDBApp.Resource.Drawable.abc_popup_background_mtrl_mult;
-			global::LibGList.Resource.Drawable.abc_ratingbar_indicator_material = global::ConfessionSearchDBApp.Resource.Drawable.abc_ratingbar_indicator_material;
-			global::LibGList.Resource.Drawable.abc_ratingbar_material = global::ConfessionSearchDBApp.Resource.Drawable.abc_ratingbar_material;
-			global::LibGList.Resource.Drawable.abc_ratingbar_small_material = global::ConfessionSearchDBApp.Resource.Drawable.abc_ratingbar_small_material;
-			global::LibGList.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::ConfessionSearchDBApp.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
-			global::LibGList.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::ConfessionSearchDBApp.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
-			global::LibGList.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::ConfessionSearchDBApp.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
-			global::LibGList.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::ConfessionSearchDBApp.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
-			global::LibGList.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::ConfessionSearchDBApp.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
-			global::LibGList.Resource.Drawable.abc_seekbar_thumb_material = global::ConfessionSearchDBApp.Resource.Drawable.abc_seekbar_thumb_material;
-			global::LibGList.Resource.Drawable.abc_seekbar_tick_mark_material = global::ConfessionSearchDBApp.Resource.Drawable.abc_seekbar_tick_mark_material;
-			global::LibGList.Resource.Drawable.abc_seekbar_track_material = global::ConfessionSearchDBApp.Resource.Drawable.abc_seekbar_track_material;
-			global::LibGList.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::ConfessionSearchDBApp.Resource.Drawable.abc_spinner_mtrl_am_alpha;
-			global::LibGList.Resource.Drawable.abc_spinner_textfield_background_material = global::ConfessionSearchDBApp.Resource.Drawable.abc_spinner_textfield_background_material;
-			global::LibGList.Resource.Drawable.abc_switch_thumb_material = global::ConfessionSearchDBApp.Resource.Drawable.abc_switch_thumb_material;
-			global::LibGList.Resource.Drawable.abc_switch_track_mtrl_alpha = global::ConfessionSearchDBApp.Resource.Drawable.abc_switch_track_mtrl_alpha;
-			global::LibGList.Resource.Drawable.abc_tab_indicator_material = global::ConfessionSearchDBApp.Resource.Drawable.abc_tab_indicator_material;
-			global::LibGList.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::ConfessionSearchDBApp.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
-			global::LibGList.Resource.Drawable.abc_text_cursor_material = global::ConfessionSearchDBApp.Resource.Drawable.abc_text_cursor_material;
-			global::LibGList.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::ConfessionSearchDBApp.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
-			global::LibGList.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::ConfessionSearchDBApp.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
-			global::LibGList.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark = global::ConfessionSearchDBApp.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark;
-			global::LibGList.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::ConfessionSearchDBApp.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
-			global::LibGList.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::ConfessionSearchDBApp.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
-			global::LibGList.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::ConfessionSearchDBApp.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
-			global::LibGList.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::ConfessionSearchDBApp.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
-			global::LibGList.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::ConfessionSearchDBApp.Resource.Drawable.abc_textfield_default_mtrl_alpha;
-			global::LibGList.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::ConfessionSearchDBApp.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
-			global::LibGList.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::ConfessionSearchDBApp.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
-			global::LibGList.Resource.Drawable.abc_textfield_search_material = global::ConfessionSearchDBApp.Resource.Drawable.abc_textfield_search_material;
-			global::LibGList.Resource.Drawable.abc_vector_test = global::ConfessionSearchDBApp.Resource.Drawable.abc_vector_test;
-			global::LibGList.Resource.Drawable.notification_action_background = global::ConfessionSearchDBApp.Resource.Drawable.notification_action_background;
-			global::LibGList.Resource.Drawable.notification_bg = global::ConfessionSearchDBApp.Resource.Drawable.notification_bg;
-			global::LibGList.Resource.Drawable.notification_bg_low = global::ConfessionSearchDBApp.Resource.Drawable.notification_bg_low;
-			global::LibGList.Resource.Drawable.notification_bg_low_normal = global::ConfessionSearchDBApp.Resource.Drawable.notification_bg_low_normal;
-			global::LibGList.Resource.Drawable.notification_bg_low_pressed = global::ConfessionSearchDBApp.Resource.Drawable.notification_bg_low_pressed;
-			global::LibGList.Resource.Drawable.notification_bg_normal = global::ConfessionSearchDBApp.Resource.Drawable.notification_bg_normal;
-			global::LibGList.Resource.Drawable.notification_bg_normal_pressed = global::ConfessionSearchDBApp.Resource.Drawable.notification_bg_normal_pressed;
-			global::LibGList.Resource.Drawable.notification_icon_background = global::ConfessionSearchDBApp.Resource.Drawable.notification_icon_background;
-			global::LibGList.Resource.Drawable.notification_template_icon_bg = global::ConfessionSearchDBApp.Resource.Drawable.notification_template_icon_bg;
-			global::LibGList.Resource.Drawable.notification_template_icon_low_bg = global::ConfessionSearchDBApp.Resource.Drawable.notification_template_icon_low_bg;
-			global::LibGList.Resource.Drawable.notification_tile_bg = global::ConfessionSearchDBApp.Resource.Drawable.notification_tile_bg;
-			global::LibGList.Resource.Drawable.notify_panel_notification_icon_bg = global::ConfessionSearchDBApp.Resource.Drawable.notify_panel_notification_icon_bg;
-			global::LibGList.Resource.Drawable.tooltip_frame_dark = global::ConfessionSearchDBApp.Resource.Drawable.tooltip_frame_dark;
-			global::LibGList.Resource.Drawable.tooltip_frame_light = global::ConfessionSearchDBApp.Resource.Drawable.tooltip_frame_light;
-			global::LibGList.Resource.Id.ALT = global::ConfessionSearchDBApp.Resource.Id.ALT;
-			global::LibGList.Resource.Id.CTRL = global::ConfessionSearchDBApp.Resource.Id.CTRL;
-			global::LibGList.Resource.Id.FUNCTION = global::ConfessionSearchDBApp.Resource.Id.FUNCTION;
-			global::LibGList.Resource.Id.META = global::ConfessionSearchDBApp.Resource.Id.META;
-			global::LibGList.Resource.Id.SHIFT = global::ConfessionSearchDBApp.Resource.Id.SHIFT;
-			global::LibGList.Resource.Id.SYM = global::ConfessionSearchDBApp.Resource.Id.SYM;
-			global::LibGList.Resource.Id.action0 = global::ConfessionSearchDBApp.Resource.Id.action0;
-			global::LibGList.Resource.Id.action_bar = global::ConfessionSearchDBApp.Resource.Id.action_bar;
-			global::LibGList.Resource.Id.action_bar_activity_content = global::ConfessionSearchDBApp.Resource.Id.action_bar_activity_content;
-			global::LibGList.Resource.Id.action_bar_container = global::ConfessionSearchDBApp.Resource.Id.action_bar_container;
-			global::LibGList.Resource.Id.action_bar_root = global::ConfessionSearchDBApp.Resource.Id.action_bar_root;
-			global::LibGList.Resource.Id.action_bar_spinner = global::ConfessionSearchDBApp.Resource.Id.action_bar_spinner;
-			global::LibGList.Resource.Id.action_bar_subtitle = global::ConfessionSearchDBApp.Resource.Id.action_bar_subtitle;
-			global::LibGList.Resource.Id.action_bar_title = global::ConfessionSearchDBApp.Resource.Id.action_bar_title;
-			global::LibGList.Resource.Id.action_container = global::ConfessionSearchDBApp.Resource.Id.action_container;
-			global::LibGList.Resource.Id.action_context_bar = global::ConfessionSearchDBApp.Resource.Id.action_context_bar;
-			global::LibGList.Resource.Id.action_divider = global::ConfessionSearchDBApp.Resource.Id.action_divider;
-			global::LibGList.Resource.Id.action_image = global::ConfessionSearchDBApp.Resource.Id.action_image;
-			global::LibGList.Resource.Id.action_menu_divider = global::ConfessionSearchDBApp.Resource.Id.action_menu_divider;
-			global::LibGList.Resource.Id.action_menu_presenter = global::ConfessionSearchDBApp.Resource.Id.action_menu_presenter;
-			global::LibGList.Resource.Id.action_mode_bar = global::ConfessionSearchDBApp.Resource.Id.action_mode_bar;
-			global::LibGList.Resource.Id.action_mode_bar_stub = global::ConfessionSearchDBApp.Resource.Id.action_mode_bar_stub;
-			global::LibGList.Resource.Id.action_mode_close_button = global::ConfessionSearchDBApp.Resource.Id.action_mode_close_button;
-			global::LibGList.Resource.Id.action_text = global::ConfessionSearchDBApp.Resource.Id.action_text;
-			global::LibGList.Resource.Id.actions = global::ConfessionSearchDBApp.Resource.Id.actions;
-			global::LibGList.Resource.Id.activity_chooser_view_content = global::ConfessionSearchDBApp.Resource.Id.activity_chooser_view_content;
-			global::LibGList.Resource.Id.add = global::ConfessionSearchDBApp.Resource.Id.add;
-			global::LibGList.Resource.Id.alertTitle = global::ConfessionSearchDBApp.Resource.Id.alertTitle;
-			global::LibGList.Resource.Id.always = global::ConfessionSearchDBApp.Resource.Id.always;
-			global::LibGList.Resource.Id.async = global::ConfessionSearchDBApp.Resource.Id.async;
-			global::LibGList.Resource.Id.beginning = global::ConfessionSearchDBApp.Resource.Id.beginning;
-			global::LibGList.Resource.Id.blocking = global::ConfessionSearchDBApp.Resource.Id.blocking;
-			global::LibGList.Resource.Id.bottom = global::ConfessionSearchDBApp.Resource.Id.bottom;
-			global::LibGList.Resource.Id.buttonPanel = global::ConfessionSearchDBApp.Resource.Id.buttonPanel;
-			global::LibGList.Resource.Id.cancel_action = global::ConfessionSearchDBApp.Resource.Id.cancel_action;
-			global::LibGList.Resource.Id.checkbox = global::ConfessionSearchDBApp.Resource.Id.checkbox;
-			global::LibGList.Resource.Id.chronometer = global::ConfessionSearchDBApp.Resource.Id.chronometer;
-			global::LibGList.Resource.Id.collapseActionView = global::ConfessionSearchDBApp.Resource.Id.collapseActionView;
-			global::LibGList.Resource.Id.contentPanel = global::ConfessionSearchDBApp.Resource.Id.contentPanel;
-			global::LibGList.Resource.Id.custom = global::ConfessionSearchDBApp.Resource.Id.custom;
-			global::LibGList.Resource.Id.customPanel = global::ConfessionSearchDBApp.Resource.Id.customPanel;
-			global::LibGList.Resource.Id.decor_content_parent = global::ConfessionSearchDBApp.Resource.Id.decor_content_parent;
-			global::LibGList.Resource.Id.default_activity_button = global::ConfessionSearchDBApp.Resource.Id.default_activity_button;
-			global::LibGList.Resource.Id.disableHome = global::ConfessionSearchDBApp.Resource.Id.disableHome;
-			global::LibGList.Resource.Id.edit_query = global::ConfessionSearchDBApp.Resource.Id.edit_query;
-			global::LibGList.Resource.Id.end = global::ConfessionSearchDBApp.Resource.Id.end;
-			global::LibGList.Resource.Id.end_padder = global::ConfessionSearchDBApp.Resource.Id.end_padder;
-			global::LibGList.Resource.Id.expand_activities_button = global::ConfessionSearchDBApp.Resource.Id.expand_activities_button;
-			global::LibGList.Resource.Id.expanded_menu = global::ConfessionSearchDBApp.Resource.Id.expanded_menu;
-			global::LibGList.Resource.Id.forever = global::ConfessionSearchDBApp.Resource.Id.forever;
-			global::LibGList.Resource.Id.home = global::ConfessionSearchDBApp.Resource.Id.home;
-			global::LibGList.Resource.Id.homeAsUp = global::ConfessionSearchDBApp.Resource.Id.homeAsUp;
-			global::LibGList.Resource.Id.icon = global::ConfessionSearchDBApp.Resource.Id.icon;
-			global::LibGList.Resource.Id.icon_group = global::ConfessionSearchDBApp.Resource.Id.icon_group;
-			global::LibGList.Resource.Id.ifRoom = global::ConfessionSearchDBApp.Resource.Id.ifRoom;
-			global::LibGList.Resource.Id.image = global::ConfessionSearchDBApp.Resource.Id.image;
-			global::LibGList.Resource.Id.info = global::ConfessionSearchDBApp.Resource.Id.info;
-			global::LibGList.Resource.Id.italic = global::ConfessionSearchDBApp.Resource.Id.italic;
-			global::LibGList.Resource.Id.line1 = global::ConfessionSearchDBApp.Resource.Id.line1;
-			global::LibGList.Resource.Id.line3 = global::ConfessionSearchDBApp.Resource.Id.line3;
-			global::LibGList.Resource.Id.listMode = global::ConfessionSearchDBApp.Resource.Id.listMode;
-			global::LibGList.Resource.Id.list_item = global::ConfessionSearchDBApp.Resource.Id.list_item;
-			global::LibGList.Resource.Id.media_actions = global::ConfessionSearchDBApp.Resource.Id.media_actions;
-			global::LibGList.Resource.Id.message = global::ConfessionSearchDBApp.Resource.Id.message;
-			global::LibGList.Resource.Id.middle = global::ConfessionSearchDBApp.Resource.Id.middle;
-			global::LibGList.Resource.Id.multiply = global::ConfessionSearchDBApp.Resource.Id.multiply;
-			global::LibGList.Resource.Id.never = global::ConfessionSearchDBApp.Resource.Id.never;
-			global::LibGList.Resource.Id.none = global::ConfessionSearchDBApp.Resource.Id.none;
-			global::LibGList.Resource.Id.normal = global::ConfessionSearchDBApp.Resource.Id.normal;
-			global::LibGList.Resource.Id.notification_background = global::ConfessionSearchDBApp.Resource.Id.notification_background;
-			global::LibGList.Resource.Id.notification_main_column = global::ConfessionSearchDBApp.Resource.Id.notification_main_column;
-			global::LibGList.Resource.Id.notification_main_column_container = global::ConfessionSearchDBApp.Resource.Id.notification_main_column_container;
-			global::LibGList.Resource.Id.parentPanel = global::ConfessionSearchDBApp.Resource.Id.parentPanel;
-			global::LibGList.Resource.Id.progress_circular = global::ConfessionSearchDBApp.Resource.Id.progress_circular;
-			global::LibGList.Resource.Id.progress_horizontal = global::ConfessionSearchDBApp.Resource.Id.progress_horizontal;
-			global::LibGList.Resource.Id.radio = global::ConfessionSearchDBApp.Resource.Id.radio;
-			global::LibGList.Resource.Id.right_icon = global::ConfessionSearchDBApp.Resource.Id.right_icon;
-			global::LibGList.Resource.Id.right_side = global::ConfessionSearchDBApp.Resource.Id.right_side;
-			global::LibGList.Resource.Id.screen = global::ConfessionSearchDBApp.Resource.Id.screen;
-			global::LibGList.Resource.Id.scrollIndicatorDown = global::ConfessionSearchDBApp.Resource.Id.scrollIndicatorDown;
-			global::LibGList.Resource.Id.scrollIndicatorUp = global::ConfessionSearchDBApp.Resource.Id.scrollIndicatorUp;
-			global::LibGList.Resource.Id.scrollView = global::ConfessionSearchDBApp.Resource.Id.scrollView;
-			global::LibGList.Resource.Id.search_badge = global::ConfessionSearchDBApp.Resource.Id.search_badge;
-			global::LibGList.Resource.Id.search_bar = global::ConfessionSearchDBApp.Resource.Id.search_bar;
-			global::LibGList.Resource.Id.search_button = global::ConfessionSearchDBApp.Resource.Id.search_button;
-			global::LibGList.Resource.Id.search_close_btn = global::ConfessionSearchDBApp.Resource.Id.search_close_btn;
-			global::LibGList.Resource.Id.search_edit_frame = global::ConfessionSearchDBApp.Resource.Id.search_edit_frame;
-			global::LibGList.Resource.Id.search_go_btn = global::ConfessionSearchDBApp.Resource.Id.search_go_btn;
-			global::LibGList.Resource.Id.search_mag_icon = global::ConfessionSearchDBApp.Resource.Id.search_mag_icon;
-			global::LibGList.Resource.Id.search_plate = global::ConfessionSearchDBApp.Resource.Id.search_plate;
-			global::LibGList.Resource.Id.search_src_text = global::ConfessionSearchDBApp.Resource.Id.search_src_text;
-			global::LibGList.Resource.Id.search_voice_btn = global::ConfessionSearchDBApp.Resource.Id.search_voice_btn;
-			global::LibGList.Resource.Id.select_dialog_listview = global::ConfessionSearchDBApp.Resource.Id.select_dialog_listview;
-			global::LibGList.Resource.Id.shortcut = global::ConfessionSearchDBApp.Resource.Id.shortcut;
-			global::LibGList.Resource.Id.showCustom = global::ConfessionSearchDBApp.Resource.Id.showCustom;
-			global::LibGList.Resource.Id.showHome = global::ConfessionSearchDBApp.Resource.Id.showHome;
-			global::LibGList.Resource.Id.showTitle = global::ConfessionSearchDBApp.Resource.Id.showTitle;
-			global::LibGList.Resource.Id.spacer = global::ConfessionSearchDBApp.Resource.Id.spacer;
-			global::LibGList.Resource.Id.split_action_bar = global::ConfessionSearchDBApp.Resource.Id.split_action_bar;
-			global::LibGList.Resource.Id.src_atop = global::ConfessionSearchDBApp.Resource.Id.src_atop;
-			global::LibGList.Resource.Id.src_in = global::ConfessionSearchDBApp.Resource.Id.src_in;
-			global::LibGList.Resource.Id.src_over = global::ConfessionSearchDBApp.Resource.Id.src_over;
-			global::LibGList.Resource.Id.status_bar_latest_event_content = global::ConfessionSearchDBApp.Resource.Id.status_bar_latest_event_content;
-			global::LibGList.Resource.Id.submenuarrow = global::ConfessionSearchDBApp.Resource.Id.submenuarrow;
-			global::LibGList.Resource.Id.submit_area = global::ConfessionSearchDBApp.Resource.Id.submit_area;
-			global::LibGList.Resource.Id.tabMode = global::ConfessionSearchDBApp.Resource.Id.tabMode;
-			global::LibGList.Resource.Id.text = global::ConfessionSearchDBApp.Resource.Id.text;
-			global::LibGList.Resource.Id.text2 = global::ConfessionSearchDBApp.Resource.Id.text2;
-			global::LibGList.Resource.Id.textSpacerNoButtons = global::ConfessionSearchDBApp.Resource.Id.textSpacerNoButtons;
-			global::LibGList.Resource.Id.textSpacerNoTitle = global::ConfessionSearchDBApp.Resource.Id.textSpacerNoTitle;
-			global::LibGList.Resource.Id.time = global::ConfessionSearchDBApp.Resource.Id.time;
-			global::LibGList.Resource.Id.title = global::ConfessionSearchDBApp.Resource.Id.title;
-			global::LibGList.Resource.Id.titleDividerNoCustom = global::ConfessionSearchDBApp.Resource.Id.titleDividerNoCustom;
-			global::LibGList.Resource.Id.title_template = global::ConfessionSearchDBApp.Resource.Id.title_template;
-			global::LibGList.Resource.Id.top = global::ConfessionSearchDBApp.Resource.Id.top;
-			global::LibGList.Resource.Id.topPanel = global::ConfessionSearchDBApp.Resource.Id.topPanel;
-			global::LibGList.Resource.Id.uniform = global::ConfessionSearchDBApp.Resource.Id.uniform;
-			global::LibGList.Resource.Id.up = global::ConfessionSearchDBApp.Resource.Id.up;
-			global::LibGList.Resource.Id.useLogo = global::ConfessionSearchDBApp.Resource.Id.useLogo;
-			global::LibGList.Resource.Id.withText = global::ConfessionSearchDBApp.Resource.Id.withText;
-			global::LibGList.Resource.Id.wrap_content = global::ConfessionSearchDBApp.Resource.Id.wrap_content;
-			global::LibGList.Resource.Integer.abc_config_activityDefaultDur = global::ConfessionSearchDBApp.Resource.Integer.abc_config_activityDefaultDur;
-			global::LibGList.Resource.Integer.abc_config_activityShortDur = global::ConfessionSearchDBApp.Resource.Integer.abc_config_activityShortDur;
-			global::LibGList.Resource.Integer.cancel_button_image_alpha = global::ConfessionSearchDBApp.Resource.Integer.cancel_button_image_alpha;
-			global::LibGList.Resource.Integer.config_tooltipAnimTime = global::ConfessionSearchDBApp.Resource.Integer.config_tooltipAnimTime;
-			global::LibGList.Resource.Integer.status_bar_notification_info_maxnum = global::ConfessionSearchDBApp.Resource.Integer.status_bar_notification_info_maxnum;
-			global::LibGList.Resource.Layout.abc_action_bar_title_item = global::ConfessionSearchDBApp.Resource.Layout.abc_action_bar_title_item;
-			global::LibGList.Resource.Layout.abc_action_bar_up_container = global::ConfessionSearchDBApp.Resource.Layout.abc_action_bar_up_container;
-			global::LibGList.Resource.Layout.abc_action_menu_item_layout = global::ConfessionSearchDBApp.Resource.Layout.abc_action_menu_item_layout;
-			global::LibGList.Resource.Layout.abc_action_menu_layout = global::ConfessionSearchDBApp.Resource.Layout.abc_action_menu_layout;
-			global::LibGList.Resource.Layout.abc_action_mode_bar = global::ConfessionSearchDBApp.Resource.Layout.abc_action_mode_bar;
-			global::LibGList.Resource.Layout.abc_action_mode_close_item_material = global::ConfessionSearchDBApp.Resource.Layout.abc_action_mode_close_item_material;
-			global::LibGList.Resource.Layout.abc_activity_chooser_view = global::ConfessionSearchDBApp.Resource.Layout.abc_activity_chooser_view;
-			global::LibGList.Resource.Layout.abc_activity_chooser_view_list_item = global::ConfessionSearchDBApp.Resource.Layout.abc_activity_chooser_view_list_item;
-			global::LibGList.Resource.Layout.abc_alert_dialog_button_bar_material = global::ConfessionSearchDBApp.Resource.Layout.abc_alert_dialog_button_bar_material;
-			global::LibGList.Resource.Layout.abc_alert_dialog_material = global::ConfessionSearchDBApp.Resource.Layout.abc_alert_dialog_material;
-			global::LibGList.Resource.Layout.abc_alert_dialog_title_material = global::ConfessionSearchDBApp.Resource.Layout.abc_alert_dialog_title_material;
-			global::LibGList.Resource.Layout.abc_dialog_title_material = global::ConfessionSearchDBApp.Resource.Layout.abc_dialog_title_material;
-			global::LibGList.Resource.Layout.abc_expanded_menu_layout = global::ConfessionSearchDBApp.Resource.Layout.abc_expanded_menu_layout;
-			global::LibGList.Resource.Layout.abc_list_menu_item_checkbox = global::ConfessionSearchDBApp.Resource.Layout.abc_list_menu_item_checkbox;
-			global::LibGList.Resource.Layout.abc_list_menu_item_icon = global::ConfessionSearchDBApp.Resource.Layout.abc_list_menu_item_icon;
-			global::LibGList.Resource.Layout.abc_list_menu_item_layout = global::ConfessionSearchDBApp.Resource.Layout.abc_list_menu_item_layout;
-			global::LibGList.Resource.Layout.abc_list_menu_item_radio = global::ConfessionSearchDBApp.Resource.Layout.abc_list_menu_item_radio;
-			global::LibGList.Resource.Layout.abc_popup_menu_header_item_layout = global::ConfessionSearchDBApp.Resource.Layout.abc_popup_menu_header_item_layout;
-			global::LibGList.Resource.Layout.abc_popup_menu_item_layout = global::ConfessionSearchDBApp.Resource.Layout.abc_popup_menu_item_layout;
-			global::LibGList.Resource.Layout.abc_screen_content_include = global::ConfessionSearchDBApp.Resource.Layout.abc_screen_content_include;
-			global::LibGList.Resource.Layout.abc_screen_simple = global::ConfessionSearchDBApp.Resource.Layout.abc_screen_simple;
-			global::LibGList.Resource.Layout.abc_screen_simple_overlay_action_mode = global::ConfessionSearchDBApp.Resource.Layout.abc_screen_simple_overlay_action_mode;
-			global::LibGList.Resource.Layout.abc_screen_toolbar = global::ConfessionSearchDBApp.Resource.Layout.abc_screen_toolbar;
-			global::LibGList.Resource.Layout.abc_search_dropdown_item_icons_2line = global::ConfessionSearchDBApp.Resource.Layout.abc_search_dropdown_item_icons_2line;
-			global::LibGList.Resource.Layout.abc_search_view = global::ConfessionSearchDBApp.Resource.Layout.abc_search_view;
-			global::LibGList.Resource.Layout.abc_select_dialog_material = global::ConfessionSearchDBApp.Resource.Layout.abc_select_dialog_material;
-			global::LibGList.Resource.Layout.notification_action = global::ConfessionSearchDBApp.Resource.Layout.notification_action;
-			global::LibGList.Resource.Layout.notification_action_tombstone = global::ConfessionSearchDBApp.Resource.Layout.notification_action_tombstone;
-			global::LibGList.Resource.Layout.notification_media_action = global::ConfessionSearchDBApp.Resource.Layout.notification_media_action;
-			global::LibGList.Resource.Layout.notification_media_cancel_action = global::ConfessionSearchDBApp.Resource.Layout.notification_media_cancel_action;
-			global::LibGList.Resource.Layout.notification_template_big_media = global::ConfessionSearchDBApp.Resource.Layout.notification_template_big_media;
-			global::LibGList.Resource.Layout.notification_template_big_media_custom = global::ConfessionSearchDBApp.Resource.Layout.notification_template_big_media_custom;
-			global::LibGList.Resource.Layout.notification_template_big_media_narrow = global::ConfessionSearchDBApp.Resource.Layout.notification_template_big_media_narrow;
-			global::LibGList.Resource.Layout.notification_template_big_media_narrow_custom = global::ConfessionSearchDBApp.Resource.Layout.notification_template_big_media_narrow_custom;
-			global::LibGList.Resource.Layout.notification_template_custom_big = global::ConfessionSearchDBApp.Resource.Layout.notification_template_custom_big;
-			global::LibGList.Resource.Layout.notification_template_icon_group = global::ConfessionSearchDBApp.Resource.Layout.notification_template_icon_group;
-			global::LibGList.Resource.Layout.notification_template_lines_media = global::ConfessionSearchDBApp.Resource.Layout.notification_template_lines_media;
-			global::LibGList.Resource.Layout.notification_template_media = global::ConfessionSearchDBApp.Resource.Layout.notification_template_media;
-			global::LibGList.Resource.Layout.notification_template_media_custom = global::ConfessionSearchDBApp.Resource.Layout.notification_template_media_custom;
-			global::LibGList.Resource.Layout.notification_template_part_chronometer = global::ConfessionSearchDBApp.Resource.Layout.notification_template_part_chronometer;
-			global::LibGList.Resource.Layout.notification_template_part_time = global::ConfessionSearchDBApp.Resource.Layout.notification_template_part_time;
-			global::LibGList.Resource.Layout.select_dialog_item_material = global::ConfessionSearchDBApp.Resource.Layout.select_dialog_item_material;
-			global::LibGList.Resource.Layout.select_dialog_multichoice_material = global::ConfessionSearchDBApp.Resource.Layout.select_dialog_multichoice_material;
-			global::LibGList.Resource.Layout.select_dialog_singlechoice_material = global::ConfessionSearchDBApp.Resource.Layout.select_dialog_singlechoice_material;
-			global::LibGList.Resource.Layout.support_simple_spinner_dropdown_item = global::ConfessionSearchDBApp.Resource.Layout.support_simple_spinner_dropdown_item;
-			global::LibGList.Resource.Layout.tooltip = global::ConfessionSearchDBApp.Resource.Layout.tooltip;
-			global::LibGList.Resource.String.abc_action_bar_home_description = global::ConfessionSearchDBApp.Resource.String.abc_action_bar_home_description;
-			global::LibGList.Resource.String.abc_action_bar_up_description = global::ConfessionSearchDBApp.Resource.String.abc_action_bar_up_description;
-			global::LibGList.Resource.String.abc_action_menu_overflow_description = global::ConfessionSearchDBApp.Resource.String.abc_action_menu_overflow_description;
-			global::LibGList.Resource.String.abc_action_mode_done = global::ConfessionSearchDBApp.Resource.String.abc_action_mode_done;
-			global::LibGList.Resource.String.abc_activity_chooser_view_see_all = global::ConfessionSearchDBApp.Resource.String.abc_activity_chooser_view_see_all;
-			global::LibGList.Resource.String.abc_activitychooserview_choose_application = global::ConfessionSearchDBApp.Resource.String.abc_activitychooserview_choose_application;
-			global::LibGList.Resource.String.abc_capital_off = global::ConfessionSearchDBApp.Resource.String.abc_capital_off;
-			global::LibGList.Resource.String.abc_capital_on = global::ConfessionSearchDBApp.Resource.String.abc_capital_on;
-			global::LibGList.Resource.String.abc_font_family_body_1_material = global::ConfessionSearchDBApp.Resource.String.abc_font_family_body_1_material;
-			global::LibGList.Resource.String.abc_font_family_body_2_material = global::ConfessionSearchDBApp.Resource.String.abc_font_family_body_2_material;
-			global::LibGList.Resource.String.abc_font_family_button_material = global::ConfessionSearchDBApp.Resource.String.abc_font_family_button_material;
-			global::LibGList.Resource.String.abc_font_family_caption_material = global::ConfessionSearchDBApp.Resource.String.abc_font_family_caption_material;
-			global::LibGList.Resource.String.abc_font_family_display_1_material = global::ConfessionSearchDBApp.Resource.String.abc_font_family_display_1_material;
-			global::LibGList.Resource.String.abc_font_family_display_2_material = global::ConfessionSearchDBApp.Resource.String.abc_font_family_display_2_material;
-			global::LibGList.Resource.String.abc_font_family_display_3_material = global::ConfessionSearchDBApp.Resource.String.abc_font_family_display_3_material;
-			global::LibGList.Resource.String.abc_font_family_display_4_material = global::ConfessionSearchDBApp.Resource.String.abc_font_family_display_4_material;
-			global::LibGList.Resource.String.abc_font_family_headline_material = global::ConfessionSearchDBApp.Resource.String.abc_font_family_headline_material;
-			global::LibGList.Resource.String.abc_font_family_menu_material = global::ConfessionSearchDBApp.Resource.String.abc_font_family_menu_material;
-			global::LibGList.Resource.String.abc_font_family_subhead_material = global::ConfessionSearchDBApp.Resource.String.abc_font_family_subhead_material;
-			global::LibGList.Resource.String.abc_font_family_title_material = global::ConfessionSearchDBApp.Resource.String.abc_font_family_title_material;
-			global::LibGList.Resource.String.abc_search_hint = global::ConfessionSearchDBApp.Resource.String.abc_search_hint;
-			global::LibGList.Resource.String.abc_searchview_description_clear = global::ConfessionSearchDBApp.Resource.String.abc_searchview_description_clear;
-			global::LibGList.Resource.String.abc_searchview_description_query = global::ConfessionSearchDBApp.Resource.String.abc_searchview_description_query;
-			global::LibGList.Resource.String.abc_searchview_description_search = global::ConfessionSearchDBApp.Resource.String.abc_searchview_description_search;
-			global::LibGList.Resource.String.abc_searchview_description_submit = global::ConfessionSearchDBApp.Resource.String.abc_searchview_description_submit;
-			global::LibGList.Resource.String.abc_searchview_description_voice = global::ConfessionSearchDBApp.Resource.String.abc_searchview_description_voice;
-			global::LibGList.Resource.String.abc_shareactionprovider_share_with = global::ConfessionSearchDBApp.Resource.String.abc_shareactionprovider_share_with;
-			global::LibGList.Resource.String.abc_shareactionprovider_share_with_application = global::ConfessionSearchDBApp.Resource.String.abc_shareactionprovider_share_with_application;
-			global::LibGList.Resource.String.abc_toolbar_collapse_description = global::ConfessionSearchDBApp.Resource.String.abc_toolbar_collapse_description;
-			global::LibGList.Resource.String.app_name = global::ConfessionSearchDBApp.Resource.String.app_name;
-			global::LibGList.Resource.String.hello = global::ConfessionSearchDBApp.Resource.String.hello;
-			global::LibGList.Resource.String.search_menu_title = global::ConfessionSearchDBApp.Resource.String.search_menu_title;
-			global::LibGList.Resource.String.status_bar_notification_info_overflow = global::ConfessionSearchDBApp.Resource.String.status_bar_notification_info_overflow;
-			global::LibGList.Resource.Style.AlertDialog_AppCompat = global::ConfessionSearchDBApp.Resource.Style.AlertDialog_AppCompat;
-			global::LibGList.Resource.Style.AlertDialog_AppCompat_Light = global::ConfessionSearchDBApp.Resource.Style.AlertDialog_AppCompat_Light;
-			global::LibGList.Resource.Style.Animation_AppCompat_Dialog = global::ConfessionSearchDBApp.Resource.Style.Animation_AppCompat_Dialog;
-			global::LibGList.Resource.Style.Animation_AppCompat_DropDownUp = global::ConfessionSearchDBApp.Resource.Style.Animation_AppCompat_DropDownUp;
-			global::LibGList.Resource.Style.Animation_AppCompat_Tooltip = global::ConfessionSearchDBApp.Resource.Style.Animation_AppCompat_Tooltip;
-			global::LibGList.Resource.Style.Base_AlertDialog_AppCompat = global::ConfessionSearchDBApp.Resource.Style.Base_AlertDialog_AppCompat;
-			global::LibGList.Resource.Style.Base_AlertDialog_AppCompat_Light = global::ConfessionSearchDBApp.Resource.Style.Base_AlertDialog_AppCompat_Light;
-			global::LibGList.Resource.Style.Base_Animation_AppCompat_Dialog = global::ConfessionSearchDBApp.Resource.Style.Base_Animation_AppCompat_Dialog;
-			global::LibGList.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::ConfessionSearchDBApp.Resource.Style.Base_Animation_AppCompat_DropDownUp;
-			global::LibGList.Resource.Style.Base_Animation_AppCompat_Tooltip = global::ConfessionSearchDBApp.Resource.Style.Base_Animation_AppCompat_Tooltip;
-			global::LibGList.Resource.Style.Base_DialogWindowTitle_AppCompat = global::ConfessionSearchDBApp.Resource.Style.Base_DialogWindowTitle_AppCompat;
-			global::LibGList.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::ConfessionSearchDBApp.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Body1;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Body2;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Button = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Button;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Caption;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Display1;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Display2;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Display3;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Display4;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Headline;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Large = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Large;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Medium;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Menu;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Small = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Small;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Title = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Title;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Tooltip = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Tooltip;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
-			global::LibGList.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
-			global::LibGList.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
-			global::LibGList.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
-			global::LibGList.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::ConfessionSearchDBApp.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
-			global::LibGList.Resource.Style.Base_Theme_AppCompat = global::ConfessionSearchDBApp.Resource.Style.Base_Theme_AppCompat;
-			global::LibGList.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::ConfessionSearchDBApp.Resource.Style.Base_Theme_AppCompat_CompactMenu;
-			global::LibGList.Resource.Style.Base_Theme_AppCompat_Dialog = global::ConfessionSearchDBApp.Resource.Style.Base_Theme_AppCompat_Dialog;
-			global::LibGList.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::ConfessionSearchDBApp.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
-			global::LibGList.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::ConfessionSearchDBApp.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
-			global::LibGList.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::ConfessionSearchDBApp.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
-			global::LibGList.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::ConfessionSearchDBApp.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
-			global::LibGList.Resource.Style.Base_Theme_AppCompat_Light = global::ConfessionSearchDBApp.Resource.Style.Base_Theme_AppCompat_Light;
-			global::LibGList.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::ConfessionSearchDBApp.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
-			global::LibGList.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::ConfessionSearchDBApp.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
-			global::LibGList.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::ConfessionSearchDBApp.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
-			global::LibGList.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::ConfessionSearchDBApp.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
-			global::LibGList.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::ConfessionSearchDBApp.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
-			global::LibGList.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::ConfessionSearchDBApp.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
-			global::LibGList.Resource.Style.Base_ThemeOverlay_AppCompat = global::ConfessionSearchDBApp.Resource.Style.Base_ThemeOverlay_AppCompat;
-			global::LibGList.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::ConfessionSearchDBApp.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
-			global::LibGList.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::ConfessionSearchDBApp.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
-			global::LibGList.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::ConfessionSearchDBApp.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
-			global::LibGList.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::ConfessionSearchDBApp.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
-			global::LibGList.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::ConfessionSearchDBApp.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
-			global::LibGList.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::ConfessionSearchDBApp.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
-			global::LibGList.Resource.Style.Base_V11_Theme_AppCompat_Dialog = global::ConfessionSearchDBApp.Resource.Style.Base_V11_Theme_AppCompat_Dialog;
-			global::LibGList.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog = global::ConfessionSearchDBApp.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog;
-			global::LibGList.Resource.Style.Base_V11_ThemeOverlay_AppCompat_Dialog = global::ConfessionSearchDBApp.Resource.Style.Base_V11_ThemeOverlay_AppCompat_Dialog;
-			global::LibGList.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView = global::ConfessionSearchDBApp.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView;
-			global::LibGList.Resource.Style.Base_V12_Widget_AppCompat_EditText = global::ConfessionSearchDBApp.Resource.Style.Base_V12_Widget_AppCompat_EditText;
-			global::LibGList.Resource.Style.Base_V21_Theme_AppCompat = global::ConfessionSearchDBApp.Resource.Style.Base_V21_Theme_AppCompat;
-			global::LibGList.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::ConfessionSearchDBApp.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
-			global::LibGList.Resource.Style.Base_V21_Theme_AppCompat_Light = global::ConfessionSearchDBApp.Resource.Style.Base_V21_Theme_AppCompat_Light;
-			global::LibGList.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::ConfessionSearchDBApp.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
-			global::LibGList.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::ConfessionSearchDBApp.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
-			global::LibGList.Resource.Style.Base_V22_Theme_AppCompat = global::ConfessionSearchDBApp.Resource.Style.Base_V22_Theme_AppCompat;
-			global::LibGList.Resource.Style.Base_V22_Theme_AppCompat_Light = global::ConfessionSearchDBApp.Resource.Style.Base_V22_Theme_AppCompat_Light;
-			global::LibGList.Resource.Style.Base_V23_Theme_AppCompat = global::ConfessionSearchDBApp.Resource.Style.Base_V23_Theme_AppCompat;
-			global::LibGList.Resource.Style.Base_V23_Theme_AppCompat_Light = global::ConfessionSearchDBApp.Resource.Style.Base_V23_Theme_AppCompat_Light;
-			global::LibGList.Resource.Style.Base_V26_Theme_AppCompat = global::ConfessionSearchDBApp.Resource.Style.Base_V26_Theme_AppCompat;
-			global::LibGList.Resource.Style.Base_V26_Theme_AppCompat_Light = global::ConfessionSearchDBApp.Resource.Style.Base_V26_Theme_AppCompat_Light;
-			global::LibGList.Resource.Style.Base_V26_Widget_AppCompat_Toolbar = global::ConfessionSearchDBApp.Resource.Style.Base_V26_Widget_AppCompat_Toolbar;
-			global::LibGList.Resource.Style.Base_V7_Theme_AppCompat = global::ConfessionSearchDBApp.Resource.Style.Base_V7_Theme_AppCompat;
-			global::LibGList.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::ConfessionSearchDBApp.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
-			global::LibGList.Resource.Style.Base_V7_Theme_AppCompat_Light = global::ConfessionSearchDBApp.Resource.Style.Base_V7_Theme_AppCompat_Light;
-			global::LibGList.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::ConfessionSearchDBApp.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
-			global::LibGList.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::ConfessionSearchDBApp.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
-			global::LibGList.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::ConfessionSearchDBApp.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
-			global::LibGList.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::ConfessionSearchDBApp.Resource.Style.Base_V7_Widget_AppCompat_EditText;
-			global::LibGList.Resource.Style.Base_V7_Widget_AppCompat_Toolbar = global::ConfessionSearchDBApp.Resource.Style.Base_V7_Widget_AppCompat_Toolbar;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_ActionBar = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_ActionBar;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_ActionButton = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_ActionButton;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_ActionMode = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_ActionMode;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_Button = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_Button;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_Button_Colored;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_Button_Small = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_Button_Small;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_ButtonBar;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_EditText = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_EditText;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_ImageButton = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_ImageButton;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_ListMenuView;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_ListView = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_ListView;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_PopupMenu;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_PopupWindow;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_ProgressBar;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_RatingBar = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_RatingBar;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_SearchView = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_SearchView;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_SeekBar = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_SeekBar;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_Spinner = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_Spinner;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_Toolbar = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_Toolbar;
-			global::LibGList.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::ConfessionSearchDBApp.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
-			global::LibGList.Resource.Style.Platform_AppCompat = global::ConfessionSearchDBApp.Resource.Style.Platform_AppCompat;
-			global::LibGList.Resource.Style.Platform_AppCompat_Light = global::ConfessionSearchDBApp.Resource.Style.Platform_AppCompat_Light;
-			global::LibGList.Resource.Style.Platform_ThemeOverlay_AppCompat = global::ConfessionSearchDBApp.Resource.Style.Platform_ThemeOverlay_AppCompat;
-			global::LibGList.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::ConfessionSearchDBApp.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
-			global::LibGList.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::ConfessionSearchDBApp.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
-			global::LibGList.Resource.Style.Platform_V11_AppCompat = global::ConfessionSearchDBApp.Resource.Style.Platform_V11_AppCompat;
-			global::LibGList.Resource.Style.Platform_V11_AppCompat_Light = global::ConfessionSearchDBApp.Resource.Style.Platform_V11_AppCompat_Light;
-			global::LibGList.Resource.Style.Platform_V14_AppCompat = global::ConfessionSearchDBApp.Resource.Style.Platform_V14_AppCompat;
-			global::LibGList.Resource.Style.Platform_V14_AppCompat_Light = global::ConfessionSearchDBApp.Resource.Style.Platform_V14_AppCompat_Light;
-			global::LibGList.Resource.Style.Platform_V21_AppCompat = global::ConfessionSearchDBApp.Resource.Style.Platform_V21_AppCompat;
-			global::LibGList.Resource.Style.Platform_V21_AppCompat_Light = global::ConfessionSearchDBApp.Resource.Style.Platform_V21_AppCompat_Light;
-			global::LibGList.Resource.Style.Platform_V25_AppCompat = global::ConfessionSearchDBApp.Resource.Style.Platform_V25_AppCompat;
-			global::LibGList.Resource.Style.Platform_V25_AppCompat_Light = global::ConfessionSearchDBApp.Resource.Style.Platform_V25_AppCompat_Light;
-			global::LibGList.Resource.Style.Platform_Widget_AppCompat_Spinner = global::ConfessionSearchDBApp.Resource.Style.Platform_Widget_AppCompat_Spinner;
-			global::LibGList.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::ConfessionSearchDBApp.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
-			global::LibGList.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::ConfessionSearchDBApp.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
-			global::LibGList.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::ConfessionSearchDBApp.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
-			global::LibGList.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::ConfessionSearchDBApp.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
-			global::LibGList.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::ConfessionSearchDBApp.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
-			global::LibGList.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::ConfessionSearchDBApp.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
-			global::LibGList.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::ConfessionSearchDBApp.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
-			global::LibGList.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::ConfessionSearchDBApp.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
-			global::LibGList.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::ConfessionSearchDBApp.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
-			global::LibGList.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::ConfessionSearchDBApp.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
-			global::LibGList.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::ConfessionSearchDBApp.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
-			global::LibGList.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::ConfessionSearchDBApp.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
-			global::LibGList.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::ConfessionSearchDBApp.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
-			global::LibGList.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::ConfessionSearchDBApp.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Body1 = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Body1;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Body2 = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Body2;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Button = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Button;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Caption = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Caption;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Display1 = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Display1;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Display2 = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Display2;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Display3 = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Display3;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Display4 = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Display4;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Headline = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Headline;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Inverse = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Inverse;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Large = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Large;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Medium = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Medium;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Menu = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Menu;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Small = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Small;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Subhead = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Subhead;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Title = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Title;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Tooltip = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Tooltip;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Widget_Button;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
-			global::LibGList.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
-			global::LibGList.Resource.Style.TextAppearance_Compat_Notification = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_Compat_Notification;
-			global::LibGList.Resource.Style.TextAppearance_Compat_Notification_Info = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_Compat_Notification_Info;
-			global::LibGList.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
-			global::LibGList.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_Compat_Notification_Line2;
-			global::LibGList.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
-			global::LibGList.Resource.Style.TextAppearance_Compat_Notification_Media = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_Compat_Notification_Media;
-			global::LibGList.Resource.Style.TextAppearance_Compat_Notification_Time = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_Compat_Notification_Time;
-			global::LibGList.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
-			global::LibGList.Resource.Style.TextAppearance_Compat_Notification_Title = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_Compat_Notification_Title;
-			global::LibGList.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
-			global::LibGList.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
-			global::LibGList.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
-			global::LibGList.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::ConfessionSearchDBApp.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
-			global::LibGList.Resource.Style.Theme_AppCompat = global::ConfessionSearchDBApp.Resource.Style.Theme_AppCompat;
-			global::LibGList.Resource.Style.Theme_AppCompat_CompactMenu = global::ConfessionSearchDBApp.Resource.Style.Theme_AppCompat_CompactMenu;
-			global::LibGList.Resource.Style.Theme_AppCompat_DayNight = global::ConfessionSearchDBApp.Resource.Style.Theme_AppCompat_DayNight;
-			global::LibGList.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::ConfessionSearchDBApp.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
-			global::LibGList.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::ConfessionSearchDBApp.Resource.Style.Theme_AppCompat_DayNight_Dialog;
-			global::LibGList.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::ConfessionSearchDBApp.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
-			global::LibGList.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::ConfessionSearchDBApp.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
-			global::LibGList.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::ConfessionSearchDBApp.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
-			global::LibGList.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::ConfessionSearchDBApp.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
-			global::LibGList.Resource.Style.Theme_AppCompat_Dialog = global::ConfessionSearchDBApp.Resource.Style.Theme_AppCompat_Dialog;
-			global::LibGList.Resource.Style.Theme_AppCompat_Dialog_Alert = global::ConfessionSearchDBApp.Resource.Style.Theme_AppCompat_Dialog_Alert;
-			global::LibGList.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::ConfessionSearchDBApp.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
-			global::LibGList.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::ConfessionSearchDBApp.Resource.Style.Theme_AppCompat_DialogWhenLarge;
-			global::LibGList.Resource.Style.Theme_AppCompat_Light = global::ConfessionSearchDBApp.Resource.Style.Theme_AppCompat_Light;
-			global::LibGList.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::ConfessionSearchDBApp.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
-			global::LibGList.Resource.Style.Theme_AppCompat_Light_Dialog = global::ConfessionSearchDBApp.Resource.Style.Theme_AppCompat_Light_Dialog;
-			global::LibGList.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::ConfessionSearchDBApp.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
-			global::LibGList.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::ConfessionSearchDBApp.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
-			global::LibGList.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::ConfessionSearchDBApp.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
-			global::LibGList.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::ConfessionSearchDBApp.Resource.Style.Theme_AppCompat_Light_NoActionBar;
-			global::LibGList.Resource.Style.Theme_AppCompat_NoActionBar = global::ConfessionSearchDBApp.Resource.Style.Theme_AppCompat_NoActionBar;
-			global::LibGList.Resource.Style.ThemeOverlay_AppCompat = global::ConfessionSearchDBApp.Resource.Style.ThemeOverlay_AppCompat;
-			global::LibGList.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::ConfessionSearchDBApp.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
-			global::LibGList.Resource.Style.ThemeOverlay_AppCompat_Dark = global::ConfessionSearchDBApp.Resource.Style.ThemeOverlay_AppCompat_Dark;
-			global::LibGList.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::ConfessionSearchDBApp.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
-			global::LibGList.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::ConfessionSearchDBApp.Resource.Style.ThemeOverlay_AppCompat_Dialog;
-			global::LibGList.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::ConfessionSearchDBApp.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
-			global::LibGList.Resource.Style.ThemeOverlay_AppCompat_Light = global::ConfessionSearchDBApp.Resource.Style.ThemeOverlay_AppCompat_Light;
-			global::LibGList.Resource.Style.Widget_AppCompat_ActionBar = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_ActionBar;
-			global::LibGList.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_ActionBar_Solid;
-			global::LibGList.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
-			global::LibGList.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_ActionBar_TabText;
-			global::LibGList.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_ActionBar_TabView;
-			global::LibGList.Resource.Style.Widget_AppCompat_ActionButton = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_ActionButton;
-			global::LibGList.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
-			global::LibGList.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
-			global::LibGList.Resource.Style.Widget_AppCompat_ActionMode = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_ActionMode;
-			global::LibGList.Resource.Style.Widget_AppCompat_ActivityChooserView = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_ActivityChooserView;
-			global::LibGList.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
-			global::LibGList.Resource.Style.Widget_AppCompat_Button = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_Button;
-			global::LibGList.Resource.Style.Widget_AppCompat_Button_Borderless = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_Button_Borderless;
-			global::LibGList.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
-			global::LibGList.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
-			global::LibGList.Resource.Style.Widget_AppCompat_Button_Colored = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_Button_Colored;
-			global::LibGList.Resource.Style.Widget_AppCompat_Button_Small = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_Button_Small;
-			global::LibGList.Resource.Style.Widget_AppCompat_ButtonBar = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_ButtonBar;
-			global::LibGList.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
-			global::LibGList.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
-			global::LibGList.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
-			global::LibGList.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
-			global::LibGList.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
-			global::LibGList.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
-			global::LibGList.Resource.Style.Widget_AppCompat_EditText = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_EditText;
-			global::LibGList.Resource.Style.Widget_AppCompat_ImageButton = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_ImageButton;
-			global::LibGList.Resource.Style.Widget_AppCompat_Light_ActionBar = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_Light_ActionBar;
-			global::LibGList.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
-			global::LibGList.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
-			global::LibGList.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
-			global::LibGList.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
-			global::LibGList.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
-			global::LibGList.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
-			global::LibGList.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
-			global::LibGList.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
-			global::LibGList.Resource.Style.Widget_AppCompat_Light_ActionButton = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_Light_ActionButton;
-			global::LibGList.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
-			global::LibGList.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
-			global::LibGList.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
-			global::LibGList.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
-			global::LibGList.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
-			global::LibGList.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
-			global::LibGList.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
-			global::LibGList.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
-			global::LibGList.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_Light_PopupMenu;
-			global::LibGList.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
-			global::LibGList.Resource.Style.Widget_AppCompat_Light_SearchView = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_Light_SearchView;
-			global::LibGList.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
-			global::LibGList.Resource.Style.Widget_AppCompat_ListMenuView = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_ListMenuView;
-			global::LibGList.Resource.Style.Widget_AppCompat_ListPopupWindow = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_ListPopupWindow;
-			global::LibGList.Resource.Style.Widget_AppCompat_ListView = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_ListView;
-			global::LibGList.Resource.Style.Widget_AppCompat_ListView_DropDown = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_ListView_DropDown;
-			global::LibGList.Resource.Style.Widget_AppCompat_ListView_Menu = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_ListView_Menu;
-			global::LibGList.Resource.Style.Widget_AppCompat_PopupMenu = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_PopupMenu;
-			global::LibGList.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
-			global::LibGList.Resource.Style.Widget_AppCompat_PopupWindow = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_PopupWindow;
-			global::LibGList.Resource.Style.Widget_AppCompat_ProgressBar = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_ProgressBar;
-			global::LibGList.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
-			global::LibGList.Resource.Style.Widget_AppCompat_RatingBar = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_RatingBar;
-			global::LibGList.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
-			global::LibGList.Resource.Style.Widget_AppCompat_RatingBar_Small = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_RatingBar_Small;
-			global::LibGList.Resource.Style.Widget_AppCompat_SearchView = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_SearchView;
-			global::LibGList.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
-			global::LibGList.Resource.Style.Widget_AppCompat_SeekBar = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_SeekBar;
-			global::LibGList.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
-			global::LibGList.Resource.Style.Widget_AppCompat_Spinner = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_Spinner;
-			global::LibGList.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_Spinner_DropDown;
-			global::LibGList.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
-			global::LibGList.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_Spinner_Underlined;
-			global::LibGList.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
-			global::LibGList.Resource.Style.Widget_AppCompat_Toolbar = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_Toolbar;
-			global::LibGList.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::ConfessionSearchDBApp.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
-			global::LibGList.Resource.Style.Widget_Compat_NotificationActionContainer = global::ConfessionSearchDBApp.Resource.Style.Widget_Compat_NotificationActionContainer;
-			global::LibGList.Resource.Style.Widget_Compat_NotificationActionText = global::ConfessionSearchDBApp.Resource.Style.Widget_Compat_NotificationActionText;
-			global::LibGList.Resource.Styleable.ActionBar = global::ConfessionSearchDBApp.Resource.Styleable.ActionBar;
-			global::LibGList.Resource.Styleable.ActionBar_background = global::ConfessionSearchDBApp.Resource.Styleable.ActionBar_background;
-			global::LibGList.Resource.Styleable.ActionBar_backgroundSplit = global::ConfessionSearchDBApp.Resource.Styleable.ActionBar_backgroundSplit;
-			global::LibGList.Resource.Styleable.ActionBar_backgroundStacked = global::ConfessionSearchDBApp.Resource.Styleable.ActionBar_backgroundStacked;
-			global::LibGList.Resource.Styleable.ActionBar_contentInsetEnd = global::ConfessionSearchDBApp.Resource.Styleable.ActionBar_contentInsetEnd;
-			global::LibGList.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::ConfessionSearchDBApp.Resource.Styleable.ActionBar_contentInsetEndWithActions;
-			global::LibGList.Resource.Styleable.ActionBar_contentInsetLeft = global::ConfessionSearchDBApp.Resource.Styleable.ActionBar_contentInsetLeft;
-			global::LibGList.Resource.Styleable.ActionBar_contentInsetRight = global::ConfessionSearchDBApp.Resource.Styleable.ActionBar_contentInsetRight;
-			global::LibGList.Resource.Styleable.ActionBar_contentInsetStart = global::ConfessionSearchDBApp.Resource.Styleable.ActionBar_contentInsetStart;
-			global::LibGList.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::ConfessionSearchDBApp.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
-			global::LibGList.Resource.Styleable.ActionBar_customNavigationLayout = global::ConfessionSearchDBApp.Resource.Styleable.ActionBar_customNavigationLayout;
-			global::LibGList.Resource.Styleable.ActionBar_displayOptions = global::ConfessionSearchDBApp.Resource.Styleable.ActionBar_displayOptions;
-			global::LibGList.Resource.Styleable.ActionBar_divider = global::ConfessionSearchDBApp.Resource.Styleable.ActionBar_divider;
-			global::LibGList.Resource.Styleable.ActionBar_elevation = global::ConfessionSearchDBApp.Resource.Styleable.ActionBar_elevation;
-			global::LibGList.Resource.Styleable.ActionBar_height = global::ConfessionSearchDBApp.Resource.Styleable.ActionBar_height;
-			global::LibGList.Resource.Styleable.ActionBar_hideOnContentScroll = global::ConfessionSearchDBApp.Resource.Styleable.ActionBar_hideOnContentScroll;
-			global::LibGList.Resource.Styleable.ActionBar_homeAsUpIndicator = global::ConfessionSearchDBApp.Resource.Styleable.ActionBar_homeAsUpIndicator;
-			global::LibGList.Resource.Styleable.ActionBar_homeLayout = global::ConfessionSearchDBApp.Resource.Styleable.ActionBar_homeLayout;
-			global::LibGList.Resource.Styleable.ActionBar_icon = global::ConfessionSearchDBApp.Resource.Styleable.ActionBar_icon;
-			global::LibGList.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::ConfessionSearchDBApp.Resource.Styleable.ActionBar_indeterminateProgressStyle;
-			global::LibGList.Resource.Styleable.ActionBar_itemPadding = global::ConfessionSearchDBApp.Resource.Styleable.ActionBar_itemPadding;
-			global::LibGList.Resource.Styleable.ActionBar_logo = global::ConfessionSearchDBApp.Resource.Styleable.ActionBar_logo;
-			global::LibGList.Resource.Styleable.ActionBar_navigationMode = global::ConfessionSearchDBApp.Resource.Styleable.ActionBar_navigationMode;
-			global::LibGList.Resource.Styleable.ActionBar_popupTheme = global::ConfessionSearchDBApp.Resource.Styleable.ActionBar_popupTheme;
-			global::LibGList.Resource.Styleable.ActionBar_progressBarPadding = global::ConfessionSearchDBApp.Resource.Styleable.ActionBar_progressBarPadding;
-			global::LibGList.Resource.Styleable.ActionBar_progressBarStyle = global::ConfessionSearchDBApp.Resource.Styleable.ActionBar_progressBarStyle;
-			global::LibGList.Resource.Styleable.ActionBar_subtitle = global::ConfessionSearchDBApp.Resource.Styleable.ActionBar_subtitle;
-			global::LibGList.Resource.Styleable.ActionBar_subtitleTextStyle = global::ConfessionSearchDBApp.Resource.Styleable.ActionBar_subtitleTextStyle;
-			global::LibGList.Resource.Styleable.ActionBar_title = global::ConfessionSearchDBApp.Resource.Styleable.ActionBar_title;
-			global::LibGList.Resource.Styleable.ActionBar_titleTextStyle = global::ConfessionSearchDBApp.Resource.Styleable.ActionBar_titleTextStyle;
-			global::LibGList.Resource.Styleable.ActionBarLayout = global::ConfessionSearchDBApp.Resource.Styleable.ActionBarLayout;
-			global::LibGList.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::ConfessionSearchDBApp.Resource.Styleable.ActionBarLayout_android_layout_gravity;
-			global::LibGList.Resource.Styleable.ActionMenuItemView = global::ConfessionSearchDBApp.Resource.Styleable.ActionMenuItemView;
-			global::LibGList.Resource.Styleable.ActionMenuItemView_android_minWidth = global::ConfessionSearchDBApp.Resource.Styleable.ActionMenuItemView_android_minWidth;
-			global::LibGList.Resource.Styleable.ActionMenuView = global::ConfessionSearchDBApp.Resource.Styleable.ActionMenuView;
-			global::LibGList.Resource.Styleable.ActionMode = global::ConfessionSearchDBApp.Resource.Styleable.ActionMode;
-			global::LibGList.Resource.Styleable.ActionMode_background = global::ConfessionSearchDBApp.Resource.Styleable.ActionMode_background;
-			global::LibGList.Resource.Styleable.ActionMode_backgroundSplit = global::ConfessionSearchDBApp.Resource.Styleable.ActionMode_backgroundSplit;
-			global::LibGList.Resource.Styleable.ActionMode_closeItemLayout = global::ConfessionSearchDBApp.Resource.Styleable.ActionMode_closeItemLayout;
-			global::LibGList.Resource.Styleable.ActionMode_height = global::ConfessionSearchDBApp.Resource.Styleable.ActionMode_height;
-			global::LibGList.Resource.Styleable.ActionMode_subtitleTextStyle = global::ConfessionSearchDBApp.Resource.Styleable.ActionMode_subtitleTextStyle;
-			global::LibGList.Resource.Styleable.ActionMode_titleTextStyle = global::ConfessionSearchDBApp.Resource.Styleable.ActionMode_titleTextStyle;
-			global::LibGList.Resource.Styleable.ActivityChooserView = global::ConfessionSearchDBApp.Resource.Styleable.ActivityChooserView;
-			global::LibGList.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::ConfessionSearchDBApp.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
-			global::LibGList.Resource.Styleable.ActivityChooserView_initialActivityCount = global::ConfessionSearchDBApp.Resource.Styleable.ActivityChooserView_initialActivityCount;
-			global::LibGList.Resource.Styleable.AlertDialog = global::ConfessionSearchDBApp.Resource.Styleable.AlertDialog;
-			global::LibGList.Resource.Styleable.AlertDialog_android_layout = global::ConfessionSearchDBApp.Resource.Styleable.AlertDialog_android_layout;
-			global::LibGList.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::ConfessionSearchDBApp.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
-			global::LibGList.Resource.Styleable.AlertDialog_listItemLayout = global::ConfessionSearchDBApp.Resource.Styleable.AlertDialog_listItemLayout;
-			global::LibGList.Resource.Styleable.AlertDialog_listLayout = global::ConfessionSearchDBApp.Resource.Styleable.AlertDialog_listLayout;
-			global::LibGList.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::ConfessionSearchDBApp.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
-			global::LibGList.Resource.Styleable.AlertDialog_showTitle = global::ConfessionSearchDBApp.Resource.Styleable.AlertDialog_showTitle;
-			global::LibGList.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::ConfessionSearchDBApp.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
-			global::LibGList.Resource.Styleable.AppCompatImageView = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatImageView;
-			global::LibGList.Resource.Styleable.AppCompatImageView_android_src = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatImageView_android_src;
-			global::LibGList.Resource.Styleable.AppCompatImageView_srcCompat = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatImageView_srcCompat;
-			global::LibGList.Resource.Styleable.AppCompatImageView_tint = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatImageView_tint;
-			global::LibGList.Resource.Styleable.AppCompatImageView_tintMode = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatImageView_tintMode;
-			global::LibGList.Resource.Styleable.AppCompatSeekBar = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatSeekBar;
-			global::LibGList.Resource.Styleable.AppCompatSeekBar_android_thumb = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatSeekBar_android_thumb;
-			global::LibGList.Resource.Styleable.AppCompatSeekBar_tickMark = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatSeekBar_tickMark;
-			global::LibGList.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
-			global::LibGList.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
-			global::LibGList.Resource.Styleable.AppCompatTextHelper = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTextHelper;
-			global::LibGList.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
-			global::LibGList.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
-			global::LibGList.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
-			global::LibGList.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
-			global::LibGList.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
-			global::LibGList.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
-			global::LibGList.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
-			global::LibGList.Resource.Styleable.AppCompatTextView = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTextView;
-			global::LibGList.Resource.Styleable.AppCompatTextView_android_textAppearance = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTextView_android_textAppearance;
-			global::LibGList.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize;
-			global::LibGList.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize;
-			global::LibGList.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
-			global::LibGList.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
-			global::LibGList.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTextView_autoSizeTextType;
-			global::LibGList.Resource.Styleable.AppCompatTextView_fontFamily = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTextView_fontFamily;
-			global::LibGList.Resource.Styleable.AppCompatTextView_textAllCaps = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTextView_textAllCaps;
-			global::LibGList.Resource.Styleable.AppCompatTheme = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme;
-			global::LibGList.Resource.Styleable.AppCompatTheme_actionBarDivider = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_actionBarDivider;
-			global::LibGList.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
-			global::LibGList.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
-			global::LibGList.Resource.Styleable.AppCompatTheme_actionBarSize = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_actionBarSize;
-			global::LibGList.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_actionBarStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_actionBarStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_actionBarTheme = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_actionBarTheme;
-			global::LibGList.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
-			global::LibGList.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_actionButtonStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
-			global::LibGList.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
-			global::LibGList.Resource.Styleable.AppCompatTheme_actionModeBackground = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_actionModeBackground;
-			global::LibGList.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
-			global::LibGList.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
-			global::LibGList.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
-			global::LibGList.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
-			global::LibGList.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
-			global::LibGList.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
-			global::LibGList.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
-			global::LibGList.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
-			global::LibGList.Resource.Styleable.AppCompatTheme_actionModeStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_actionModeStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
-			global::LibGList.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
-			global::LibGList.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_alertDialogStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_alertDialogTheme;
-			global::LibGList.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
-			global::LibGList.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_buttonBarStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_buttonStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_buttonStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
-			global::LibGList.Resource.Styleable.AppCompatTheme_checkboxStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_checkboxStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_colorAccent = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_colorAccent;
-			global::LibGList.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
-			global::LibGList.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_colorButtonNormal;
-			global::LibGList.Resource.Styleable.AppCompatTheme_colorControlActivated = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_colorControlActivated;
-			global::LibGList.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_colorControlHighlight;
-			global::LibGList.Resource.Styleable.AppCompatTheme_colorControlNormal = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_colorControlNormal;
-			global::LibGList.Resource.Styleable.AppCompatTheme_colorError = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_colorError;
-			global::LibGList.Resource.Styleable.AppCompatTheme_colorPrimary = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_colorPrimary;
-			global::LibGList.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
-			global::LibGList.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
-			global::LibGList.Resource.Styleable.AppCompatTheme_controlBackground = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_controlBackground;
-			global::LibGList.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
-			global::LibGList.Resource.Styleable.AppCompatTheme_dialogTheme = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_dialogTheme;
-			global::LibGList.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_dividerHorizontal;
-			global::LibGList.Resource.Styleable.AppCompatTheme_dividerVertical = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_dividerVertical;
-			global::LibGList.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
-			global::LibGList.Resource.Styleable.AppCompatTheme_editTextBackground = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_editTextBackground;
-			global::LibGList.Resource.Styleable.AppCompatTheme_editTextColor = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_editTextColor;
-			global::LibGList.Resource.Styleable.AppCompatTheme_editTextStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_editTextStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
-			global::LibGList.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_imageButtonStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
-			global::LibGList.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
-			global::LibGList.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
-			global::LibGList.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
-			global::LibGList.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
-			global::LibGList.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
-			global::LibGList.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
-			global::LibGList.Resource.Styleable.AppCompatTheme_panelBackground = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_panelBackground;
-			global::LibGList.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
-			global::LibGList.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
-			global::LibGList.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_popupMenuStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_popupWindowStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_radioButtonStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_ratingBarStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
-			global::LibGList.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
-			global::LibGList.Resource.Styleable.AppCompatTheme_searchViewStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_searchViewStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_seekBarStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_seekBarStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_selectableItemBackground;
-			global::LibGList.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
-			global::LibGList.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_spinnerStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_spinnerStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_switchStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_switchStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
-			global::LibGList.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
-			global::LibGList.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
-			global::LibGList.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
-			global::LibGList.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
-			global::LibGList.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
-			global::LibGList.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
-			global::LibGList.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
-			global::LibGList.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_toolbarStyle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_toolbarStyle;
-			global::LibGList.Resource.Styleable.AppCompatTheme_tooltipForegroundColor = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_tooltipForegroundColor;
-			global::LibGList.Resource.Styleable.AppCompatTheme_tooltipFrameBackground = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_tooltipFrameBackground;
-			global::LibGList.Resource.Styleable.AppCompatTheme_windowActionBar = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_windowActionBar;
-			global::LibGList.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
-			global::LibGList.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
-			global::LibGList.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
-			global::LibGList.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
-			global::LibGList.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
-			global::LibGList.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
-			global::LibGList.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
-			global::LibGList.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
-			global::LibGList.Resource.Styleable.AppCompatTheme_windowNoTitle = global::ConfessionSearchDBApp.Resource.Styleable.AppCompatTheme_windowNoTitle;
-			global::LibGList.Resource.Styleable.ButtonBarLayout = global::ConfessionSearchDBApp.Resource.Styleable.ButtonBarLayout;
-			global::LibGList.Resource.Styleable.ButtonBarLayout_allowStacking = global::ConfessionSearchDBApp.Resource.Styleable.ButtonBarLayout_allowStacking;
-			global::LibGList.Resource.Styleable.ColorStateListItem = global::ConfessionSearchDBApp.Resource.Styleable.ColorStateListItem;
-			global::LibGList.Resource.Styleable.ColorStateListItem_alpha = global::ConfessionSearchDBApp.Resource.Styleable.ColorStateListItem_alpha;
-			global::LibGList.Resource.Styleable.ColorStateListItem_android_alpha = global::ConfessionSearchDBApp.Resource.Styleable.ColorStateListItem_android_alpha;
-			global::LibGList.Resource.Styleable.ColorStateListItem_android_color = global::ConfessionSearchDBApp.Resource.Styleable.ColorStateListItem_android_color;
-			global::LibGList.Resource.Styleable.CompoundButton = global::ConfessionSearchDBApp.Resource.Styleable.CompoundButton;
-			global::LibGList.Resource.Styleable.CompoundButton_android_button = global::ConfessionSearchDBApp.Resource.Styleable.CompoundButton_android_button;
-			global::LibGList.Resource.Styleable.CompoundButton_buttonTint = global::ConfessionSearchDBApp.Resource.Styleable.CompoundButton_buttonTint;
-			global::LibGList.Resource.Styleable.CompoundButton_buttonTintMode = global::ConfessionSearchDBApp.Resource.Styleable.CompoundButton_buttonTintMode;
-			global::LibGList.Resource.Styleable.DrawerArrowToggle = global::ConfessionSearchDBApp.Resource.Styleable.DrawerArrowToggle;
-			global::LibGList.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::ConfessionSearchDBApp.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
-			global::LibGList.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::ConfessionSearchDBApp.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
-			global::LibGList.Resource.Styleable.DrawerArrowToggle_barLength = global::ConfessionSearchDBApp.Resource.Styleable.DrawerArrowToggle_barLength;
-			global::LibGList.Resource.Styleable.DrawerArrowToggle_color = global::ConfessionSearchDBApp.Resource.Styleable.DrawerArrowToggle_color;
-			global::LibGList.Resource.Styleable.DrawerArrowToggle_drawableSize = global::ConfessionSearchDBApp.Resource.Styleable.DrawerArrowToggle_drawableSize;
-			global::LibGList.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::ConfessionSearchDBApp.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
-			global::LibGList.Resource.Styleable.DrawerArrowToggle_spinBars = global::ConfessionSearchDBApp.Resource.Styleable.DrawerArrowToggle_spinBars;
-			global::LibGList.Resource.Styleable.DrawerArrowToggle_thickness = global::ConfessionSearchDBApp.Resource.Styleable.DrawerArrowToggle_thickness;
-			global::LibGList.Resource.Styleable.FontFamily = global::ConfessionSearchDBApp.Resource.Styleable.FontFamily;
-			global::LibGList.Resource.Styleable.FontFamily_fontProviderAuthority = global::ConfessionSearchDBApp.Resource.Styleable.FontFamily_fontProviderAuthority;
-			global::LibGList.Resource.Styleable.FontFamily_fontProviderCerts = global::ConfessionSearchDBApp.Resource.Styleable.FontFamily_fontProviderCerts;
-			global::LibGList.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::ConfessionSearchDBApp.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
-			global::LibGList.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::ConfessionSearchDBApp.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
-			global::LibGList.Resource.Styleable.FontFamily_fontProviderPackage = global::ConfessionSearchDBApp.Resource.Styleable.FontFamily_fontProviderPackage;
-			global::LibGList.Resource.Styleable.FontFamily_fontProviderQuery = global::ConfessionSearchDBApp.Resource.Styleable.FontFamily_fontProviderQuery;
-			global::LibGList.Resource.Styleable.FontFamilyFont = global::ConfessionSearchDBApp.Resource.Styleable.FontFamilyFont;
-			global::LibGList.Resource.Styleable.FontFamilyFont_font = global::ConfessionSearchDBApp.Resource.Styleable.FontFamilyFont_font;
-			global::LibGList.Resource.Styleable.FontFamilyFont_fontStyle = global::ConfessionSearchDBApp.Resource.Styleable.FontFamilyFont_fontStyle;
-			global::LibGList.Resource.Styleable.FontFamilyFont_fontWeight = global::ConfessionSearchDBApp.Resource.Styleable.FontFamilyFont_fontWeight;
-			global::LibGList.Resource.Styleable.LinearLayoutCompat = global::ConfessionSearchDBApp.Resource.Styleable.LinearLayoutCompat;
-			global::LibGList.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::ConfessionSearchDBApp.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
-			global::LibGList.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::ConfessionSearchDBApp.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
-			global::LibGList.Resource.Styleable.LinearLayoutCompat_android_gravity = global::ConfessionSearchDBApp.Resource.Styleable.LinearLayoutCompat_android_gravity;
-			global::LibGList.Resource.Styleable.LinearLayoutCompat_android_orientation = global::ConfessionSearchDBApp.Resource.Styleable.LinearLayoutCompat_android_orientation;
-			global::LibGList.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::ConfessionSearchDBApp.Resource.Styleable.LinearLayoutCompat_android_weightSum;
-			global::LibGList.Resource.Styleable.LinearLayoutCompat_divider = global::ConfessionSearchDBApp.Resource.Styleable.LinearLayoutCompat_divider;
-			global::LibGList.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::ConfessionSearchDBApp.Resource.Styleable.LinearLayoutCompat_dividerPadding;
-			global::LibGList.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::ConfessionSearchDBApp.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
-			global::LibGList.Resource.Styleable.LinearLayoutCompat_showDividers = global::ConfessionSearchDBApp.Resource.Styleable.LinearLayoutCompat_showDividers;
-			global::LibGList.Resource.Styleable.LinearLayoutCompat_Layout = global::ConfessionSearchDBApp.Resource.Styleable.LinearLayoutCompat_Layout;
-			global::LibGList.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::ConfessionSearchDBApp.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
-			global::LibGList.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::ConfessionSearchDBApp.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
-			global::LibGList.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::ConfessionSearchDBApp.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
-			global::LibGList.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::ConfessionSearchDBApp.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
-			global::LibGList.Resource.Styleable.ListPopupWindow = global::ConfessionSearchDBApp.Resource.Styleable.ListPopupWindow;
-			global::LibGList.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::ConfessionSearchDBApp.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
-			global::LibGList.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::ConfessionSearchDBApp.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
-			global::LibGList.Resource.Styleable.MenuGroup = global::ConfessionSearchDBApp.Resource.Styleable.MenuGroup;
-			global::LibGList.Resource.Styleable.MenuGroup_android_checkableBehavior = global::ConfessionSearchDBApp.Resource.Styleable.MenuGroup_android_checkableBehavior;
-			global::LibGList.Resource.Styleable.MenuGroup_android_enabled = global::ConfessionSearchDBApp.Resource.Styleable.MenuGroup_android_enabled;
-			global::LibGList.Resource.Styleable.MenuGroup_android_id = global::ConfessionSearchDBApp.Resource.Styleable.MenuGroup_android_id;
-			global::LibGList.Resource.Styleable.MenuGroup_android_menuCategory = global::ConfessionSearchDBApp.Resource.Styleable.MenuGroup_android_menuCategory;
-			global::LibGList.Resource.Styleable.MenuGroup_android_orderInCategory = global::ConfessionSearchDBApp.Resource.Styleable.MenuGroup_android_orderInCategory;
-			global::LibGList.Resource.Styleable.MenuGroup_android_visible = global::ConfessionSearchDBApp.Resource.Styleable.MenuGroup_android_visible;
-			global::LibGList.Resource.Styleable.MenuItem = global::ConfessionSearchDBApp.Resource.Styleable.MenuItem;
-			global::LibGList.Resource.Styleable.MenuItem_actionLayout = global::ConfessionSearchDBApp.Resource.Styleable.MenuItem_actionLayout;
-			global::LibGList.Resource.Styleable.MenuItem_actionProviderClass = global::ConfessionSearchDBApp.Resource.Styleable.MenuItem_actionProviderClass;
-			global::LibGList.Resource.Styleable.MenuItem_actionViewClass = global::ConfessionSearchDBApp.Resource.Styleable.MenuItem_actionViewClass;
-			global::LibGList.Resource.Styleable.MenuItem_alphabeticModifiers = global::ConfessionSearchDBApp.Resource.Styleable.MenuItem_alphabeticModifiers;
-			global::LibGList.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::ConfessionSearchDBApp.Resource.Styleable.MenuItem_android_alphabeticShortcut;
-			global::LibGList.Resource.Styleable.MenuItem_android_checkable = global::ConfessionSearchDBApp.Resource.Styleable.MenuItem_android_checkable;
-			global::LibGList.Resource.Styleable.MenuItem_android_checked = global::ConfessionSearchDBApp.Resource.Styleable.MenuItem_android_checked;
-			global::LibGList.Resource.Styleable.MenuItem_android_enabled = global::ConfessionSearchDBApp.Resource.Styleable.MenuItem_android_enabled;
-			global::LibGList.Resource.Styleable.MenuItem_android_icon = global::ConfessionSearchDBApp.Resource.Styleable.MenuItem_android_icon;
-			global::LibGList.Resource.Styleable.MenuItem_android_id = global::ConfessionSearchDBApp.Resource.Styleable.MenuItem_android_id;
-			global::LibGList.Resource.Styleable.MenuItem_android_menuCategory = global::ConfessionSearchDBApp.Resource.Styleable.MenuItem_android_menuCategory;
-			global::LibGList.Resource.Styleable.MenuItem_android_numericShortcut = global::ConfessionSearchDBApp.Resource.Styleable.MenuItem_android_numericShortcut;
-			global::LibGList.Resource.Styleable.MenuItem_android_onClick = global::ConfessionSearchDBApp.Resource.Styleable.MenuItem_android_onClick;
-			global::LibGList.Resource.Styleable.MenuItem_android_orderInCategory = global::ConfessionSearchDBApp.Resource.Styleable.MenuItem_android_orderInCategory;
-			global::LibGList.Resource.Styleable.MenuItem_android_title = global::ConfessionSearchDBApp.Resource.Styleable.MenuItem_android_title;
-			global::LibGList.Resource.Styleable.MenuItem_android_titleCondensed = global::ConfessionSearchDBApp.Resource.Styleable.MenuItem_android_titleCondensed;
-			global::LibGList.Resource.Styleable.MenuItem_android_visible = global::ConfessionSearchDBApp.Resource.Styleable.MenuItem_android_visible;
-			global::LibGList.Resource.Styleable.MenuItem_contentDescription = global::ConfessionSearchDBApp.Resource.Styleable.MenuItem_contentDescription;
-			global::LibGList.Resource.Styleable.MenuItem_iconTint = global::ConfessionSearchDBApp.Resource.Styleable.MenuItem_iconTint;
-			global::LibGList.Resource.Styleable.MenuItem_iconTintMode = global::ConfessionSearchDBApp.Resource.Styleable.MenuItem_iconTintMode;
-			global::LibGList.Resource.Styleable.MenuItem_numericModifiers = global::ConfessionSearchDBApp.Resource.Styleable.MenuItem_numericModifiers;
-			global::LibGList.Resource.Styleable.MenuItem_showAsAction = global::ConfessionSearchDBApp.Resource.Styleable.MenuItem_showAsAction;
-			global::LibGList.Resource.Styleable.MenuItem_tooltipText = global::ConfessionSearchDBApp.Resource.Styleable.MenuItem_tooltipText;
-			global::LibGList.Resource.Styleable.MenuView = global::ConfessionSearchDBApp.Resource.Styleable.MenuView;
-			global::LibGList.Resource.Styleable.MenuView_android_headerBackground = global::ConfessionSearchDBApp.Resource.Styleable.MenuView_android_headerBackground;
-			global::LibGList.Resource.Styleable.MenuView_android_horizontalDivider = global::ConfessionSearchDBApp.Resource.Styleable.MenuView_android_horizontalDivider;
-			global::LibGList.Resource.Styleable.MenuView_android_itemBackground = global::ConfessionSearchDBApp.Resource.Styleable.MenuView_android_itemBackground;
-			global::LibGList.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::ConfessionSearchDBApp.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
-			global::LibGList.Resource.Styleable.MenuView_android_itemTextAppearance = global::ConfessionSearchDBApp.Resource.Styleable.MenuView_android_itemTextAppearance;
-			global::LibGList.Resource.Styleable.MenuView_android_verticalDivider = global::ConfessionSearchDBApp.Resource.Styleable.MenuView_android_verticalDivider;
-			global::LibGList.Resource.Styleable.MenuView_android_windowAnimationStyle = global::ConfessionSearchDBApp.Resource.Styleable.MenuView_android_windowAnimationStyle;
-			global::LibGList.Resource.Styleable.MenuView_preserveIconSpacing = global::ConfessionSearchDBApp.Resource.Styleable.MenuView_preserveIconSpacing;
-			global::LibGList.Resource.Styleable.MenuView_subMenuArrow = global::ConfessionSearchDBApp.Resource.Styleable.MenuView_subMenuArrow;
-			global::LibGList.Resource.Styleable.PopupWindow = global::ConfessionSearchDBApp.Resource.Styleable.PopupWindow;
-			global::LibGList.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::ConfessionSearchDBApp.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
-			global::LibGList.Resource.Styleable.PopupWindow_android_popupBackground = global::ConfessionSearchDBApp.Resource.Styleable.PopupWindow_android_popupBackground;
-			global::LibGList.Resource.Styleable.PopupWindow_overlapAnchor = global::ConfessionSearchDBApp.Resource.Styleable.PopupWindow_overlapAnchor;
-			global::LibGList.Resource.Styleable.PopupWindowBackgroundState = global::ConfessionSearchDBApp.Resource.Styleable.PopupWindowBackgroundState;
-			global::LibGList.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::ConfessionSearchDBApp.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
-			global::LibGList.Resource.Styleable.RecycleListView = global::ConfessionSearchDBApp.Resource.Styleable.RecycleListView;
-			global::LibGList.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::ConfessionSearchDBApp.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
-			global::LibGList.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::ConfessionSearchDBApp.Resource.Styleable.RecycleListView_paddingTopNoTitle;
-			global::LibGList.Resource.Styleable.SearchView = global::ConfessionSearchDBApp.Resource.Styleable.SearchView;
-			global::LibGList.Resource.Styleable.SearchView_android_focusable = global::ConfessionSearchDBApp.Resource.Styleable.SearchView_android_focusable;
-			global::LibGList.Resource.Styleable.SearchView_android_imeOptions = global::ConfessionSearchDBApp.Resource.Styleable.SearchView_android_imeOptions;
-			global::LibGList.Resource.Styleable.SearchView_android_inputType = global::ConfessionSearchDBApp.Resource.Styleable.SearchView_android_inputType;
-			global::LibGList.Resource.Styleable.SearchView_android_maxWidth = global::ConfessionSearchDBApp.Resource.Styleable.SearchView_android_maxWidth;
-			global::LibGList.Resource.Styleable.SearchView_closeIcon = global::ConfessionSearchDBApp.Resource.Styleable.SearchView_closeIcon;
-			global::LibGList.Resource.Styleable.SearchView_commitIcon = global::ConfessionSearchDBApp.Resource.Styleable.SearchView_commitIcon;
-			global::LibGList.Resource.Styleable.SearchView_defaultQueryHint = global::ConfessionSearchDBApp.Resource.Styleable.SearchView_defaultQueryHint;
-			global::LibGList.Resource.Styleable.SearchView_goIcon = global::ConfessionSearchDBApp.Resource.Styleable.SearchView_goIcon;
-			global::LibGList.Resource.Styleable.SearchView_iconifiedByDefault = global::ConfessionSearchDBApp.Resource.Styleable.SearchView_iconifiedByDefault;
-			global::LibGList.Resource.Styleable.SearchView_layout = global::ConfessionSearchDBApp.Resource.Styleable.SearchView_layout;
-			global::LibGList.Resource.Styleable.SearchView_queryBackground = global::ConfessionSearchDBApp.Resource.Styleable.SearchView_queryBackground;
-			global::LibGList.Resource.Styleable.SearchView_queryHint = global::ConfessionSearchDBApp.Resource.Styleable.SearchView_queryHint;
-			global::LibGList.Resource.Styleable.SearchView_searchHintIcon = global::ConfessionSearchDBApp.Resource.Styleable.SearchView_searchHintIcon;
-			global::LibGList.Resource.Styleable.SearchView_searchIcon = global::ConfessionSearchDBApp.Resource.Styleable.SearchView_searchIcon;
-			global::LibGList.Resource.Styleable.SearchView_submitBackground = global::ConfessionSearchDBApp.Resource.Styleable.SearchView_submitBackground;
-			global::LibGList.Resource.Styleable.SearchView_suggestionRowLayout = global::ConfessionSearchDBApp.Resource.Styleable.SearchView_suggestionRowLayout;
-			global::LibGList.Resource.Styleable.SearchView_voiceIcon = global::ConfessionSearchDBApp.Resource.Styleable.SearchView_voiceIcon;
-			global::LibGList.Resource.Styleable.Spinner = global::ConfessionSearchDBApp.Resource.Styleable.Spinner;
-			global::LibGList.Resource.Styleable.Spinner_android_dropDownWidth = global::ConfessionSearchDBApp.Resource.Styleable.Spinner_android_dropDownWidth;
-			global::LibGList.Resource.Styleable.Spinner_android_entries = global::ConfessionSearchDBApp.Resource.Styleable.Spinner_android_entries;
-			global::LibGList.Resource.Styleable.Spinner_android_popupBackground = global::ConfessionSearchDBApp.Resource.Styleable.Spinner_android_popupBackground;
-			global::LibGList.Resource.Styleable.Spinner_android_prompt = global::ConfessionSearchDBApp.Resource.Styleable.Spinner_android_prompt;
-			global::LibGList.Resource.Styleable.Spinner_popupTheme = global::ConfessionSearchDBApp.Resource.Styleable.Spinner_popupTheme;
-			global::LibGList.Resource.Styleable.SwitchCompat = global::ConfessionSearchDBApp.Resource.Styleable.SwitchCompat;
-			global::LibGList.Resource.Styleable.SwitchCompat_android_textOff = global::ConfessionSearchDBApp.Resource.Styleable.SwitchCompat_android_textOff;
-			global::LibGList.Resource.Styleable.SwitchCompat_android_textOn = global::ConfessionSearchDBApp.Resource.Styleable.SwitchCompat_android_textOn;
-			global::LibGList.Resource.Styleable.SwitchCompat_android_thumb = global::ConfessionSearchDBApp.Resource.Styleable.SwitchCompat_android_thumb;
-			global::LibGList.Resource.Styleable.SwitchCompat_showText = global::ConfessionSearchDBApp.Resource.Styleable.SwitchCompat_showText;
-			global::LibGList.Resource.Styleable.SwitchCompat_splitTrack = global::ConfessionSearchDBApp.Resource.Styleable.SwitchCompat_splitTrack;
-			global::LibGList.Resource.Styleable.SwitchCompat_switchMinWidth = global::ConfessionSearchDBApp.Resource.Styleable.SwitchCompat_switchMinWidth;
-			global::LibGList.Resource.Styleable.SwitchCompat_switchPadding = global::ConfessionSearchDBApp.Resource.Styleable.SwitchCompat_switchPadding;
-			global::LibGList.Resource.Styleable.SwitchCompat_switchTextAppearance = global::ConfessionSearchDBApp.Resource.Styleable.SwitchCompat_switchTextAppearance;
-			global::LibGList.Resource.Styleable.SwitchCompat_thumbTextPadding = global::ConfessionSearchDBApp.Resource.Styleable.SwitchCompat_thumbTextPadding;
-			global::LibGList.Resource.Styleable.SwitchCompat_thumbTint = global::ConfessionSearchDBApp.Resource.Styleable.SwitchCompat_thumbTint;
-			global::LibGList.Resource.Styleable.SwitchCompat_thumbTintMode = global::ConfessionSearchDBApp.Resource.Styleable.SwitchCompat_thumbTintMode;
-			global::LibGList.Resource.Styleable.SwitchCompat_track = global::ConfessionSearchDBApp.Resource.Styleable.SwitchCompat_track;
-			global::LibGList.Resource.Styleable.SwitchCompat_trackTint = global::ConfessionSearchDBApp.Resource.Styleable.SwitchCompat_trackTint;
-			global::LibGList.Resource.Styleable.SwitchCompat_trackTintMode = global::ConfessionSearchDBApp.Resource.Styleable.SwitchCompat_trackTintMode;
-			global::LibGList.Resource.Styleable.TextAppearance = global::ConfessionSearchDBApp.Resource.Styleable.TextAppearance;
-			global::LibGList.Resource.Styleable.TextAppearance_android_fontFamily = global::ConfessionSearchDBApp.Resource.Styleable.TextAppearance_android_fontFamily;
-			global::LibGList.Resource.Styleable.TextAppearance_android_shadowColor = global::ConfessionSearchDBApp.Resource.Styleable.TextAppearance_android_shadowColor;
-			global::LibGList.Resource.Styleable.TextAppearance_android_shadowDx = global::ConfessionSearchDBApp.Resource.Styleable.TextAppearance_android_shadowDx;
-			global::LibGList.Resource.Styleable.TextAppearance_android_shadowDy = global::ConfessionSearchDBApp.Resource.Styleable.TextAppearance_android_shadowDy;
-			global::LibGList.Resource.Styleable.TextAppearance_android_shadowRadius = global::ConfessionSearchDBApp.Resource.Styleable.TextAppearance_android_shadowRadius;
-			global::LibGList.Resource.Styleable.TextAppearance_android_textColor = global::ConfessionSearchDBApp.Resource.Styleable.TextAppearance_android_textColor;
-			global::LibGList.Resource.Styleable.TextAppearance_android_textColorHint = global::ConfessionSearchDBApp.Resource.Styleable.TextAppearance_android_textColorHint;
-			global::LibGList.Resource.Styleable.TextAppearance_android_textColorLink = global::ConfessionSearchDBApp.Resource.Styleable.TextAppearance_android_textColorLink;
-			global::LibGList.Resource.Styleable.TextAppearance_android_textSize = global::ConfessionSearchDBApp.Resource.Styleable.TextAppearance_android_textSize;
-			global::LibGList.Resource.Styleable.TextAppearance_android_textStyle = global::ConfessionSearchDBApp.Resource.Styleable.TextAppearance_android_textStyle;
-			global::LibGList.Resource.Styleable.TextAppearance_android_typeface = global::ConfessionSearchDBApp.Resource.Styleable.TextAppearance_android_typeface;
-			global::LibGList.Resource.Styleable.TextAppearance_fontFamily = global::ConfessionSearchDBApp.Resource.Styleable.TextAppearance_fontFamily;
-			global::LibGList.Resource.Styleable.TextAppearance_textAllCaps = global::ConfessionSearchDBApp.Resource.Styleable.TextAppearance_textAllCaps;
-			global::LibGList.Resource.Styleable.Toolbar = global::ConfessionSearchDBApp.Resource.Styleable.Toolbar;
-			global::LibGList.Resource.Styleable.Toolbar_android_gravity = global::ConfessionSearchDBApp.Resource.Styleable.Toolbar_android_gravity;
-			global::LibGList.Resource.Styleable.Toolbar_android_minHeight = global::ConfessionSearchDBApp.Resource.Styleable.Toolbar_android_minHeight;
-			global::LibGList.Resource.Styleable.Toolbar_buttonGravity = global::ConfessionSearchDBApp.Resource.Styleable.Toolbar_buttonGravity;
-			global::LibGList.Resource.Styleable.Toolbar_collapseContentDescription = global::ConfessionSearchDBApp.Resource.Styleable.Toolbar_collapseContentDescription;
-			global::LibGList.Resource.Styleable.Toolbar_collapseIcon = global::ConfessionSearchDBApp.Resource.Styleable.Toolbar_collapseIcon;
-			global::LibGList.Resource.Styleable.Toolbar_contentInsetEnd = global::ConfessionSearchDBApp.Resource.Styleable.Toolbar_contentInsetEnd;
-			global::LibGList.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::ConfessionSearchDBApp.Resource.Styleable.Toolbar_contentInsetEndWithActions;
-			global::LibGList.Resource.Styleable.Toolbar_contentInsetLeft = global::ConfessionSearchDBApp.Resource.Styleable.Toolbar_contentInsetLeft;
-			global::LibGList.Resource.Styleable.Toolbar_contentInsetRight = global::ConfessionSearchDBApp.Resource.Styleable.Toolbar_contentInsetRight;
-			global::LibGList.Resource.Styleable.Toolbar_contentInsetStart = global::ConfessionSearchDBApp.Resource.Styleable.Toolbar_contentInsetStart;
-			global::LibGList.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::ConfessionSearchDBApp.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
-			global::LibGList.Resource.Styleable.Toolbar_logo = global::ConfessionSearchDBApp.Resource.Styleable.Toolbar_logo;
-			global::LibGList.Resource.Styleable.Toolbar_logoDescription = global::ConfessionSearchDBApp.Resource.Styleable.Toolbar_logoDescription;
-			global::LibGList.Resource.Styleable.Toolbar_maxButtonHeight = global::ConfessionSearchDBApp.Resource.Styleable.Toolbar_maxButtonHeight;
-			global::LibGList.Resource.Styleable.Toolbar_navigationContentDescription = global::ConfessionSearchDBApp.Resource.Styleable.Toolbar_navigationContentDescription;
-			global::LibGList.Resource.Styleable.Toolbar_navigationIcon = global::ConfessionSearchDBApp.Resource.Styleable.Toolbar_navigationIcon;
-			global::LibGList.Resource.Styleable.Toolbar_popupTheme = global::ConfessionSearchDBApp.Resource.Styleable.Toolbar_popupTheme;
-			global::LibGList.Resource.Styleable.Toolbar_subtitle = global::ConfessionSearchDBApp.Resource.Styleable.Toolbar_subtitle;
-			global::LibGList.Resource.Styleable.Toolbar_subtitleTextAppearance = global::ConfessionSearchDBApp.Resource.Styleable.Toolbar_subtitleTextAppearance;
-			global::LibGList.Resource.Styleable.Toolbar_subtitleTextColor = global::ConfessionSearchDBApp.Resource.Styleable.Toolbar_subtitleTextColor;
-			global::LibGList.Resource.Styleable.Toolbar_title = global::ConfessionSearchDBApp.Resource.Styleable.Toolbar_title;
-			global::LibGList.Resource.Styleable.Toolbar_titleMargin = global::ConfessionSearchDBApp.Resource.Styleable.Toolbar_titleMargin;
-			global::LibGList.Resource.Styleable.Toolbar_titleMarginBottom = global::ConfessionSearchDBApp.Resource.Styleable.Toolbar_titleMarginBottom;
-			global::LibGList.Resource.Styleable.Toolbar_titleMarginEnd = global::ConfessionSearchDBApp.Resource.Styleable.Toolbar_titleMarginEnd;
-			global::LibGList.Resource.Styleable.Toolbar_titleMarginStart = global::ConfessionSearchDBApp.Resource.Styleable.Toolbar_titleMarginStart;
-			global::LibGList.Resource.Styleable.Toolbar_titleMarginTop = global::ConfessionSearchDBApp.Resource.Styleable.Toolbar_titleMarginTop;
-			global::LibGList.Resource.Styleable.Toolbar_titleMargins = global::ConfessionSearchDBApp.Resource.Styleable.Toolbar_titleMargins;
-			global::LibGList.Resource.Styleable.Toolbar_titleTextAppearance = global::ConfessionSearchDBApp.Resource.Styleable.Toolbar_titleTextAppearance;
-			global::LibGList.Resource.Styleable.Toolbar_titleTextColor = global::ConfessionSearchDBApp.Resource.Styleable.Toolbar_titleTextColor;
-			global::LibGList.Resource.Styleable.View = global::ConfessionSearchDBApp.Resource.Styleable.View;
-			global::LibGList.Resource.Styleable.View_android_focusable = global::ConfessionSearchDBApp.Resource.Styleable.View_android_focusable;
-			global::LibGList.Resource.Styleable.View_android_theme = global::ConfessionSearchDBApp.Resource.Styleable.View_android_theme;
-			global::LibGList.Resource.Styleable.View_paddingEnd = global::ConfessionSearchDBApp.Resource.Styleable.View_paddingEnd;
-			global::LibGList.Resource.Styleable.View_paddingStart = global::ConfessionSearchDBApp.Resource.Styleable.View_paddingStart;
-			global::LibGList.Resource.Styleable.View_theme = global::ConfessionSearchDBApp.Resource.Styleable.View_theme;
-			global::LibGList.Resource.Styleable.ViewBackgroundHelper = global::ConfessionSearchDBApp.Resource.Styleable.ViewBackgroundHelper;
-			global::LibGList.Resource.Styleable.ViewBackgroundHelper_android_background = global::ConfessionSearchDBApp.Resource.Styleable.ViewBackgroundHelper_android_background;
-			global::LibGList.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::ConfessionSearchDBApp.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
-			global::LibGList.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::ConfessionSearchDBApp.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
-			global::LibGList.Resource.Styleable.ViewStubCompat = global::ConfessionSearchDBApp.Resource.Styleable.ViewStubCompat;
-			global::LibGList.Resource.Styleable.ViewStubCompat_android_id = global::ConfessionSearchDBApp.Resource.Styleable.ViewStubCompat_android_id;
-			global::LibGList.Resource.Styleable.ViewStubCompat_android_inflatedId = global::ConfessionSearchDBApp.Resource.Styleable.ViewStubCompat_android_inflatedId;
-			global::LibGList.Resource.Styleable.ViewStubCompat_android_layout = global::ConfessionSearchDBApp.Resource.Styleable.ViewStubCompat_android_layout;
 		}
 		
 		public partial class Animation
@@ -3743,91 +2225,175 @@ namespace ConfessionSearchDBApp
 			public const int abc_vector_test = 2130837586;
 			
 			// aapt resource value: 0x7f020053
-			public const int avd_hide_password = 2130837587;
-			
-			// aapt resource value: 0x7f02006a
-			public const int avd_hide_password_1 = 2130837610;
-			
-			// aapt resource value: 0x7f02006b
-			public const int avd_hide_password_2 = 2130837611;
-			
-			// aapt resource value: 0x7f02006c
-			public const int avd_hide_password_3 = 2130837612;
+			public const int app_BGpic = 2130837587;
 			
 			// aapt resource value: 0x7f020054
-			public const int avd_show_password = 2130837588;
+			public const int avd_hide_password = 2130837588;
 			
-			// aapt resource value: 0x7f02006d
-			public const int avd_show_password_1 = 2130837613;
+			// aapt resource value: 0x7f020086
+			public const int avd_hide_password_1 = 2130837638;
 			
-			// aapt resource value: 0x7f02006e
-			public const int avd_show_password_2 = 2130837614;
+			// aapt resource value: 0x7f020087
+			public const int avd_hide_password_2 = 2130837639;
 			
-			// aapt resource value: 0x7f02006f
-			public const int avd_show_password_3 = 2130837615;
+			// aapt resource value: 0x7f020088
+			public const int avd_hide_password_3 = 2130837640;
 			
 			// aapt resource value: 0x7f020055
-			public const int design_bottom_navigation_item_background = 2130837589;
+			public const int avd_show_password = 2130837589;
+			
+			// aapt resource value: 0x7f020089
+			public const int avd_show_password_1 = 2130837641;
+			
+			// aapt resource value: 0x7f02008a
+			public const int avd_show_password_2 = 2130837642;
+			
+			// aapt resource value: 0x7f02008b
+			public const int avd_show_password_3 = 2130837643;
 			
 			// aapt resource value: 0x7f020056
-			public const int design_fab_background = 2130837590;
+			public const int baseline_view_list_black_18 = 2130837590;
 			
 			// aapt resource value: 0x7f020057
-			public const int design_ic_visibility = 2130837591;
+			public const int baseline_view_list_black_24 = 2130837591;
 			
 			// aapt resource value: 0x7f020058
-			public const int design_ic_visibility_off = 2130837592;
+			public const int baseline_view_list_black_36 = 2130837592;
 			
 			// aapt resource value: 0x7f020059
-			public const int design_password_eye = 2130837593;
+			public const int baseline_view_list_black_48 = 2130837593;
 			
 			// aapt resource value: 0x7f02005a
-			public const int design_snackbar_background = 2130837594;
+			public const int checkbox_checked = 2130837594;
 			
 			// aapt resource value: 0x7f02005b
-			public const int navigation_empty_icon = 2130837595;
+			public const int checkbox_select = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
-			public const int notification_action_background = 2130837596;
+			public const int checkbox_unchecked = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public const int notification_bg = 2130837597;
+			public const int design_bottom_navigation_item_background = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public const int notification_bg_low = 2130837598;
+			public const int design_fab_background = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
-			public const int notification_bg_low_normal = 2130837599;
+			public const int design_ic_visibility = 2130837599;
 			
 			// aapt resource value: 0x7f020060
-			public const int notification_bg_low_pressed = 2130837600;
+			public const int design_ic_visibility_off = 2130837600;
 			
 			// aapt resource value: 0x7f020061
-			public const int notification_bg_normal = 2130837601;
+			public const int design_password_eye = 2130837601;
 			
 			// aapt resource value: 0x7f020062
-			public const int notification_bg_normal_pressed = 2130837602;
+			public const int design_snackbar_background = 2130837602;
 			
 			// aapt resource value: 0x7f020063
-			public const int notification_icon_background = 2130837603;
-			
-			// aapt resource value: 0x7f020068
-			public const int notification_template_icon_bg = 2130837608;
-			
-			// aapt resource value: 0x7f020069
-			public const int notification_template_icon_low_bg = 2130837609;
+			public const int ic_attachment_black_24dp = 2130837603;
 			
 			// aapt resource value: 0x7f020064
-			public const int notification_tile_bg = 2130837604;
+			public const int ic_attachment_white_24dp = 2130837604;
 			
 			// aapt resource value: 0x7f020065
-			public const int notify_panel_notification_icon_bg = 2130837605;
+			public const int ic_home_white_24 = 2130837605;
 			
 			// aapt resource value: 0x7f020066
-			public const int tooltip_frame_dark = 2130837606;
+			public const int ic_radio_button_unchecked_black_24dp = 2130837606;
 			
 			// aapt resource value: 0x7f020067
-			public const int tooltip_frame_light = 2130837607;
+			public const int listpic = 2130837607;
+			
+			// aapt resource value: 0x7f020068
+			public const int navigation_empty_icon = 2130837608;
+			
+			// aapt resource value: 0x7f020069
+			public const int notification_action_background = 2130837609;
+			
+			// aapt resource value: 0x7f02006a
+			public const int notification_bg = 2130837610;
+			
+			// aapt resource value: 0x7f02006b
+			public const int notification_bg_low = 2130837611;
+			
+			// aapt resource value: 0x7f02006c
+			public const int notification_bg_low_normal = 2130837612;
+			
+			// aapt resource value: 0x7f02006d
+			public const int notification_bg_low_pressed = 2130837613;
+			
+			// aapt resource value: 0x7f02006e
+			public const int notification_bg_normal = 2130837614;
+			
+			// aapt resource value: 0x7f02006f
+			public const int notification_bg_normal_pressed = 2130837615;
+			
+			// aapt resource value: 0x7f020070
+			public const int notification_icon_background = 2130837616;
+			
+			// aapt resource value: 0x7f020084
+			public const int notification_template_icon_bg = 2130837636;
+			
+			// aapt resource value: 0x7f020085
+			public const int notification_template_icon_low_bg = 2130837637;
+			
+			// aapt resource value: 0x7f020071
+			public const int notification_tile_bg = 2130837617;
+			
+			// aapt resource value: 0x7f020072
+			public const int notify_panel_notification_icon_bg = 2130837618;
+			
+			// aapt resource value: 0x7f020073
+			public const int radio_checked = 2130837619;
+			
+			// aapt resource value: 0x7f020074
+			public const int radio_select = 2130837620;
+			
+			// aapt resource value: 0x7f020075
+			public const int radio_unchecked = 2130837621;
+			
+			// aapt resource value: 0x7f020076
+			public const int round_search_24 = 2130837622;
+			
+			// aapt resource value: 0x7f020077
+			public const int round_search_black_18 = 2130837623;
+			
+			// aapt resource value: 0x7f020078
+			public const int round_search_black_24 = 2130837624;
+			
+			// aapt resource value: 0x7f020079
+			public const int round_search_black_36 = 2130837625;
+			
+			// aapt resource value: 0x7f02007a
+			public const int round_search_black_48 = 2130837626;
+			
+			// aapt resource value: 0x7f02007b
+			public const int sharp_warning_24 = 2130837627;
+			
+			// aapt resource value: 0x7f02007c
+			public const int sharp_warning_black_18 = 2130837628;
+			
+			// aapt resource value: 0x7f02007d
+			public const int sharp_warning_black_24 = 2130837629;
+			
+			// aapt resource value: 0x7f02007e
+			public const int sharp_warning_black_36 = 2130837630;
+			
+			// aapt resource value: 0x7f02007f
+			public const int sharp_warning_black_48 = 2130837631;
+			
+			// aapt resource value: 0x7f020080
+			public const int splash_pic = 2130837632;
+			
+			// aapt resource value: 0x7f020081
+			public const int splash_screen = 2130837633;
+			
+			// aapt resource value: 0x7f020082
+			public const int tooltip_frame_dark = 2130837634;
+			
+			// aapt resource value: 0x7f020083
+			public const int tooltip_frame_light = 2130837635;
 			
 			static Drawable()
 			{
@@ -3863,8 +2429,11 @@ namespace ConfessionSearchDBApp
 			// aapt resource value: 0x7f080037
 			public const int SYM = 2131230775;
 			
-			// aapt resource value: 0x7f0800b0
-			public const int action0 = 2131230896;
+			// aapt resource value: 0x7f0800a3
+			public const int TextLayout = 2131230883;
+			
+			// aapt resource value: 0x7f0800bf
+			public const int action0 = 2131230911;
 			
 			// aapt resource value: 0x7f08007c
 			public const int action_bar = 2131230844;
@@ -3887,17 +2456,17 @@ namespace ConfessionSearchDBApp
 			// aapt resource value: 0x7f08005a
 			public const int action_bar_title = 2131230810;
 			
-			// aapt resource value: 0x7f0800ad
-			public const int action_container = 2131230893;
+			// aapt resource value: 0x7f0800bc
+			public const int action_container = 2131230908;
 			
 			// aapt resource value: 0x7f08007d
 			public const int action_context_bar = 2131230845;
 			
-			// aapt resource value: 0x7f0800b4
-			public const int action_divider = 2131230900;
+			// aapt resource value: 0x7f0800c3
+			public const int action_divider = 2131230915;
 			
-			// aapt resource value: 0x7f0800ae
-			public const int action_image = 2131230894;
+			// aapt resource value: 0x7f0800bd
+			public const int action_image = 2131230909;
 			
 			// aapt resource value: 0x7f080003
 			public const int action_menu_divider = 2131230723;
@@ -3914,11 +2483,11 @@ namespace ConfessionSearchDBApp
 			// aapt resource value: 0x7f08005c
 			public const int action_mode_close_button = 2131230812;
 			
-			// aapt resource value: 0x7f0800af
-			public const int action_text = 2131230895;
+			// aapt resource value: 0x7f0800be
+			public const int action_text = 2131230910;
 			
-			// aapt resource value: 0x7f0800bd
-			public const int actions = 2131230909;
+			// aapt resource value: 0x7f0800cc
+			public const int actions = 2131230924;
 			
 			// aapt resource value: 0x7f08005d
 			public const int activity_chooser_view_content = 2131230813;
@@ -3956,8 +2525,8 @@ namespace ConfessionSearchDBApp
 			// aapt resource value: 0x7f080063
 			public const int buttonPanel = 2131230819;
 			
-			// aapt resource value: 0x7f0800b1
-			public const int cancel_action = 2131230897;
+			// aapt resource value: 0x7f0800c0
+			public const int cancel_action = 2131230912;
 			
 			// aapt resource value: 0x7f080045
 			public const int center = 2131230789;
@@ -3971,11 +2540,14 @@ namespace ConfessionSearchDBApp
 			// aapt resource value: 0x7f08008f
 			public const int chapterRadio = 2131230863;
 			
+			// aapt resource value: 0x7f0800a4
+			public const int chapterText = 2131230884;
+			
 			// aapt resource value: 0x7f080073
 			public const int checkbox = 2131230835;
 			
-			// aapt resource value: 0x7f0800b9
-			public const int chronometer = 2131230905;
+			// aapt resource value: 0x7f0800c8
+			public const int chronometer = 2131230920;
 			
 			// aapt resource value: 0x7f08004e
 			public const int clip_horizontal = 2131230798;
@@ -3986,17 +2558,20 @@ namespace ConfessionSearchDBApp
 			// aapt resource value: 0x7f080039
 			public const int collapseActionView = 2131230777;
 			
+			// aapt resource value: 0x7f0800a2
+			public const int confessionChLabel = 2131230882;
+			
 			// aapt resource value: 0x7f080091
 			public const int confessionLabel = 2131230865;
 			
-			// aapt resource value: 0x7f0800a1
-			public const int container = 2131230881;
+			// aapt resource value: 0x7f0800ae
+			public const int container = 2131230894;
 			
 			// aapt resource value: 0x7f080066
 			public const int contentPanel = 2131230822;
 			
-			// aapt resource value: 0x7f0800a2
-			public const int coordinator = 2131230882;
+			// aapt resource value: 0x7f0800af
+			public const int coordinator = 2131230895;
 			
 			// aapt resource value: 0x7f08006d
 			public const int custom = 2131230829;
@@ -4010,23 +2585,26 @@ namespace ConfessionSearchDBApp
 			// aapt resource value: 0x7f080060
 			public const int default_activity_button = 2131230816;
 			
-			// aapt resource value: 0x7f0800a4
-			public const int design_bottom_sheet = 2131230884;
+			// aapt resource value: 0x7f0800b1
+			public const int design_bottom_sheet = 2131230897;
 			
-			// aapt resource value: 0x7f0800ab
-			public const int design_menu_item_action_area = 2131230891;
+			// aapt resource value: 0x7f0800b8
+			public const int design_menu_item_action_area = 2131230904;
 			
-			// aapt resource value: 0x7f0800aa
-			public const int design_menu_item_action_area_stub = 2131230890;
+			// aapt resource value: 0x7f0800b7
+			public const int design_menu_item_action_area_stub = 2131230903;
 			
-			// aapt resource value: 0x7f0800a9
-			public const int design_menu_item_text = 2131230889;
+			// aapt resource value: 0x7f0800b6
+			public const int design_menu_item_text = 2131230902;
 			
-			// aapt resource value: 0x7f0800a8
-			public const int design_navigation_view = 2131230888;
+			// aapt resource value: 0x7f0800b5
+			public const int design_navigation_view = 2131230901;
 			
 			// aapt resource value: 0x7f080020
 			public const int disableHome = 2131230752;
+			
+			// aapt resource value: 0x7f0800a0
+			public const int documentTitleLabel = 2131230880;
 			
 			// aapt resource value: 0x7f08007e
 			public const int edit_query = 2131230846;
@@ -4034,14 +2612,17 @@ namespace ConfessionSearchDBApp
 			// aapt resource value: 0x7f080030
 			public const int end = 2131230768;
 			
-			// aapt resource value: 0x7f0800bf
-			public const int end_padder = 2131230911;
+			// aapt resource value: 0x7f0800ce
+			public const int end_padder = 2131230926;
 			
 			// aapt resource value: 0x7f08003f
 			public const int enterAlways = 2131230783;
 			
 			// aapt resource value: 0x7f080040
 			public const int enterAlwaysCollapsed = 2131230784;
+			
+			// aapt resource value: 0x7f0800bb
+			public const int errorTV = 2131230907;
 			
 			// aapt resource value: 0x7f080041
 			public const int exitUntilCollapsed = 2131230785;
@@ -4082,8 +2663,8 @@ namespace ConfessionSearchDBApp
 			// aapt resource value: 0x7f080062
 			public const int icon = 2131230818;
 			
-			// aapt resource value: 0x7f0800be
-			public const int icon_group = 2131230910;
+			// aapt resource value: 0x7f0800cd
+			public const int icon_group = 2131230925;
 			
 			// aapt resource value: 0x7f08003a
 			public const int ifRoom = 2131230778;
@@ -4091,8 +2672,8 @@ namespace ConfessionSearchDBApp
 			// aapt resource value: 0x7f08005f
 			public const int image = 2131230815;
 			
-			// aapt resource value: 0x7f0800ba
-			public const int info = 2131230906;
+			// aapt resource value: 0x7f0800c9
+			public const int info = 2131230921;
 			
 			// aapt resource value: 0x7f080059
 			public const int italic = 2131230809;
@@ -4100,8 +2681,8 @@ namespace ConfessionSearchDBApp
 			// aapt resource value: 0x7f080000
 			public const int item_touch_helper_previous_elevation = 2131230720;
 			
-			// aapt resource value: 0x7f0800a0
-			public const int largeLabel = 2131230880;
+			// aapt resource value: 0x7f0800ad
+			public const int largeLabel = 2131230893;
 			
 			// aapt resource value: 0x7f080049
 			public const int left = 2131230793;
@@ -4112,20 +2693,38 @@ namespace ConfessionSearchDBApp
 			// aapt resource value: 0x7f080018
 			public const int line3 = 2131230744;
 			
+			// aapt resource value: 0x7f0800a1
+			public const int linearLayout1 = 2131230881;
+			
+			// aapt resource value: 0x7f08009f
+			public const int linearLayout2 = 2131230879;
+			
+			// aapt resource value: 0x7f0800a5
+			public const int linearLayout3 = 2131230885;
+			
+			// aapt resource value: 0x7f0800a7
+			public const int linearLayout4 = 2131230887;
+			
+			// aapt resource value: 0x7f0800a9
+			public const int linearLayout5 = 2131230889;
+			
 			// aapt resource value: 0x7f08001d
 			public const int listMode = 2131230749;
 			
 			// aapt resource value: 0x7f080061
 			public const int list_item = 2131230817;
 			
+			// aapt resource value: 0x7f0800d2
+			public const int masked = 2131230930;
+			
+			// aapt resource value: 0x7f0800aa
+			public const int matchView = 2131230890;
+			
 			// aapt resource value: 0x7f0800c2
-			public const int masked = 2131230914;
+			public const int media_actions = 2131230914;
 			
-			// aapt resource value: 0x7f0800b3
-			public const int media_actions = 2131230899;
-			
-			// aapt resource value: 0x7f0800c0
-			public const int message = 2131230912;
+			// aapt resource value: 0x7f0800d0
+			public const int message = 2131230928;
 			
 			// aapt resource value: 0x7f080031
 			public const int middle = 2131230769;
@@ -4136,8 +2735,8 @@ namespace ConfessionSearchDBApp
 			// aapt resource value: 0x7f080028
 			public const int multiply = 2131230760;
 			
-			// aapt resource value: 0x7f0800a7
-			public const int navigation_header_container = 2131230887;
+			// aapt resource value: 0x7f0800b4
+			public const int navigation_header_container = 2131230900;
 			
 			// aapt resource value: 0x7f08003b
 			public const int never = 2131230779;
@@ -4148,14 +2747,14 @@ namespace ConfessionSearchDBApp
 			// aapt resource value: 0x7f08001e
 			public const int normal = 2131230750;
 			
-			// aapt resource value: 0x7f0800bc
-			public const int notification_background = 2131230908;
+			// aapt resource value: 0x7f0800cb
+			public const int notification_background = 2131230923;
 			
-			// aapt resource value: 0x7f0800b6
-			public const int notification_main_column = 2131230902;
+			// aapt resource value: 0x7f0800c5
+			public const int notification_main_column = 2131230917;
 			
-			// aapt resource value: 0x7f0800b5
-			public const int notification_main_column_container = 2131230901;
+			// aapt resource value: 0x7f0800c4
+			public const int notification_main_column_container = 2131230916;
 			
 			// aapt resource value: 0x7f080097
 			public const int optionLabel = 2131230871;
@@ -4181,6 +2780,12 @@ namespace ConfessionSearchDBApp
 			// aapt resource value: 0x7f080094
 			public const int proofBox = 2131230868;
 			
+			// aapt resource value: 0x7f0800a6
+			public const int proofLabel = 2131230886;
+			
+			// aapt resource value: 0x7f0800a8
+			public const int proofText = 2131230888;
+			
 			// aapt resource value: 0x7f080075
 			public const int radio = 2131230837;
 			
@@ -4190,11 +2795,11 @@ namespace ConfessionSearchDBApp
 			// aapt resource value: 0x7f08004a
 			public const int right = 2131230794;
 			
-			// aapt resource value: 0x7f0800bb
-			public const int right_icon = 2131230907;
+			// aapt resource value: 0x7f0800ca
+			public const int right_icon = 2131230922;
 			
-			// aapt resource value: 0x7f0800b7
-			public const int right_side = 2131230903;
+			// aapt resource value: 0x7f0800c6
+			public const int right_side = 2131230918;
 			
 			// aapt resource value: 0x7f08000c
 			public const int save_image_matrix = 2131230732;
@@ -4271,6 +2876,9 @@ namespace ConfessionSearchDBApp
 			// aapt resource value: 0x7f08008a
 			public const int select_dialog_listview = 2131230858;
 			
+			// aapt resource value: 0x7f0800ab
+			public const int shareActionButton = 2131230891;
+			
 			// aapt resource value: 0x7f080074
 			public const int shortcut = 2131230836;
 			
@@ -4283,14 +2891,14 @@ namespace ConfessionSearchDBApp
 			// aapt resource value: 0x7f080025
 			public const int showTitle = 2131230757;
 			
-			// aapt resource value: 0x7f08009f
-			public const int smallLabel = 2131230879;
+			// aapt resource value: 0x7f0800ac
+			public const int smallLabel = 2131230892;
 			
-			// aapt resource value: 0x7f0800a6
-			public const int snackbar_action = 2131230886;
+			// aapt resource value: 0x7f0800b3
+			public const int snackbar_action = 2131230899;
 			
-			// aapt resource value: 0x7f0800a5
-			public const int snackbar_text = 2131230885;
+			// aapt resource value: 0x7f0800b2
+			public const int snackbar_text = 2131230898;
 			
 			// aapt resource value: 0x7f080043
 			public const int snap = 2131230787;
@@ -4319,8 +2927,8 @@ namespace ConfessionSearchDBApp
 			// aapt resource value: 0x7f08004b
 			public const int start = 2131230795;
 			
-			// aapt resource value: 0x7f0800b2
-			public const int status_bar_latest_event_content = 2131230898;
+			// aapt resource value: 0x7f0800c1
+			public const int status_bar_latest_event_content = 2131230913;
 			
 			// aapt resource value: 0x7f080076
 			public const int submenuarrow = 2131230838;
@@ -4346,8 +2954,8 @@ namespace ConfessionSearchDBApp
 			// aapt resource value: 0x7f080069
 			public const int textSpacerNoTitle = 2131230825;
 			
-			// aapt resource value: 0x7f0800ac
-			public const int text_input_password_toggle = 2131230892;
+			// aapt resource value: 0x7f0800b9
+			public const int text_input_password_toggle = 2131230905;
 			
 			// aapt resource value: 0x7f080014
 			public const int textinput_counter = 2131230740;
@@ -4355,8 +2963,8 @@ namespace ConfessionSearchDBApp
 			// aapt resource value: 0x7f080015
 			public const int textinput_error = 2131230741;
 			
-			// aapt resource value: 0x7f0800b8
-			public const int time = 2131230904;
+			// aapt resource value: 0x7f0800c7
+			public const int time = 2131230919;
 			
 			// aapt resource value: 0x7f08001c
 			public const int title = 2131230748;
@@ -4379,8 +2987,8 @@ namespace ConfessionSearchDBApp
 			// aapt resource value: 0x7f08008e
 			public const int topicRadio = 2131230862;
 			
-			// aapt resource value: 0x7f0800a3
-			public const int touch_outside = 2131230883;
+			// aapt resource value: 0x7f0800b0
+			public const int touch_outside = 2131230896;
 			
 			// aapt resource value: 0x7f08000f
 			public const int transition_current_scene = 2131230735;
@@ -4418,8 +3026,14 @@ namespace ConfessionSearchDBApp
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f0800c1
-			public const int visible = 2131230913;
+			// aapt resource value: 0x7f0800cf
+			public const int viewpager = 2131230927;
+			
+			// aapt resource value: 0x7f0800d1
+			public const int visible = 2131230929;
+			
+			// aapt resource value: 0x7f0800ba
+			public const int warningIV = 2131230906;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;
@@ -4565,106 +3179,118 @@ namespace ConfessionSearchDBApp
 			public const int activity_main = 2130968602;
 			
 			// aapt resource value: 0x7f04001b
-			public const int design_bottom_navigation_item = 2130968603;
+			public const int confession_results = 2130968603;
 			
 			// aapt resource value: 0x7f04001c
-			public const int design_bottom_sheet_dialog = 2130968604;
+			public const int design_bottom_navigation_item = 2130968604;
 			
 			// aapt resource value: 0x7f04001d
-			public const int design_layout_snackbar = 2130968605;
+			public const int design_bottom_sheet_dialog = 2130968605;
 			
 			// aapt resource value: 0x7f04001e
-			public const int design_layout_snackbar_include = 2130968606;
+			public const int design_layout_snackbar = 2130968606;
 			
 			// aapt resource value: 0x7f04001f
-			public const int design_layout_tab_icon = 2130968607;
+			public const int design_layout_snackbar_include = 2130968607;
 			
 			// aapt resource value: 0x7f040020
-			public const int design_layout_tab_text = 2130968608;
+			public const int design_layout_tab_icon = 2130968608;
 			
 			// aapt resource value: 0x7f040021
-			public const int design_menu_item_action_area = 2130968609;
+			public const int design_layout_tab_text = 2130968609;
 			
 			// aapt resource value: 0x7f040022
-			public const int design_navigation_item = 2130968610;
+			public const int design_menu_item_action_area = 2130968610;
 			
 			// aapt resource value: 0x7f040023
-			public const int design_navigation_item_header = 2130968611;
+			public const int design_navigation_item = 2130968611;
 			
 			// aapt resource value: 0x7f040024
-			public const int design_navigation_item_separator = 2130968612;
+			public const int design_navigation_item_header = 2130968612;
 			
 			// aapt resource value: 0x7f040025
-			public const int design_navigation_item_subheader = 2130968613;
+			public const int design_navigation_item_separator = 2130968613;
 			
 			// aapt resource value: 0x7f040026
-			public const int design_navigation_menu = 2130968614;
+			public const int design_navigation_item_subheader = 2130968614;
 			
 			// aapt resource value: 0x7f040027
-			public const int design_navigation_menu_item = 2130968615;
+			public const int design_navigation_menu = 2130968615;
 			
 			// aapt resource value: 0x7f040028
-			public const int design_text_input_password_icon = 2130968616;
+			public const int design_navigation_menu_item = 2130968616;
 			
 			// aapt resource value: 0x7f040029
-			public const int notification_action = 2130968617;
+			public const int design_text_input_password_icon = 2130968617;
 			
 			// aapt resource value: 0x7f04002a
-			public const int notification_action_tombstone = 2130968618;
+			public const int errorLayout = 2130968618;
 			
 			// aapt resource value: 0x7f04002b
-			public const int notification_media_action = 2130968619;
+			public const int NoResults = 2130968619;
 			
 			// aapt resource value: 0x7f04002c
-			public const int notification_media_cancel_action = 2130968620;
+			public const int notification_action = 2130968620;
 			
 			// aapt resource value: 0x7f04002d
-			public const int notification_template_big_media = 2130968621;
+			public const int notification_action_tombstone = 2130968621;
 			
 			// aapt resource value: 0x7f04002e
-			public const int notification_template_big_media_custom = 2130968622;
+			public const int notification_media_action = 2130968622;
 			
 			// aapt resource value: 0x7f04002f
-			public const int notification_template_big_media_narrow = 2130968623;
+			public const int notification_media_cancel_action = 2130968623;
 			
 			// aapt resource value: 0x7f040030
-			public const int notification_template_big_media_narrow_custom = 2130968624;
+			public const int notification_template_big_media = 2130968624;
 			
 			// aapt resource value: 0x7f040031
-			public const int notification_template_custom_big = 2130968625;
+			public const int notification_template_big_media_custom = 2130968625;
 			
 			// aapt resource value: 0x7f040032
-			public const int notification_template_icon_group = 2130968626;
+			public const int notification_template_big_media_narrow = 2130968626;
 			
 			// aapt resource value: 0x7f040033
-			public const int notification_template_lines_media = 2130968627;
+			public const int notification_template_big_media_narrow_custom = 2130968627;
 			
 			// aapt resource value: 0x7f040034
-			public const int notification_template_media = 2130968628;
+			public const int notification_template_custom_big = 2130968628;
 			
 			// aapt resource value: 0x7f040035
-			public const int notification_template_media_custom = 2130968629;
+			public const int notification_template_icon_group = 2130968629;
 			
 			// aapt resource value: 0x7f040036
-			public const int notification_template_part_chronometer = 2130968630;
+			public const int notification_template_lines_media = 2130968630;
 			
 			// aapt resource value: 0x7f040037
-			public const int notification_template_part_time = 2130968631;
+			public const int notification_template_media = 2130968631;
 			
 			// aapt resource value: 0x7f040038
-			public const int select_dialog_item_material = 2130968632;
+			public const int notification_template_media_custom = 2130968632;
 			
 			// aapt resource value: 0x7f040039
-			public const int select_dialog_multichoice_material = 2130968633;
+			public const int notification_template_part_chronometer = 2130968633;
 			
 			// aapt resource value: 0x7f04003a
-			public const int select_dialog_singlechoice_material = 2130968634;
+			public const int notification_template_part_time = 2130968634;
 			
 			// aapt resource value: 0x7f04003b
-			public const int support_simple_spinner_dropdown_item = 2130968635;
+			public const int search_results = 2130968635;
 			
 			// aapt resource value: 0x7f04003c
-			public const int tooltip = 2130968636;
+			public const int select_dialog_item_material = 2130968636;
+			
+			// aapt resource value: 0x7f04003d
+			public const int select_dialog_multichoice_material = 2130968637;
+			
+			// aapt resource value: 0x7f04003e
+			public const int select_dialog_singlechoice_material = 2130968638;
+			
+			// aapt resource value: 0x7f04003f
+			public const int support_simple_spinner_dropdown_item = 2130968639;
+			
+			// aapt resource value: 0x7f040040
+			public const int tooltip = 2130968640;
 			
 			static Layout()
 			{
@@ -4788,11 +3414,11 @@ namespace ConfessionSearchDBApp
 			// aapt resource value: 0x7f090010
 			public const int abc_toolbar_collapse_description = 2131296272;
 			
-			// aapt resource value: 0x7f090029
-			public const int action_settings = 2131296297;
-			
 			// aapt resource value: 0x7f090028
-			public const int app_name = 2131296296;
+			public const int action_settings = 2131296296;
+			
+			// aapt resource value: 0x7f090027
+			public const int app_name = 2131296295;
 			
 			// aapt resource value: 0x7f09001e
 			public const int appbar_scrolling_view_behavior = 2131296286;
@@ -4802,9 +3428,6 @@ namespace ConfessionSearchDBApp
 			
 			// aapt resource value: 0x7f090020
 			public const int character_counter_pattern = 2131296288;
-			
-			// aapt resource value: 0x7f090027
-			public const int hello = 2131296295;
 			
 			// aapt resource value: 0x7f090021
 			public const int password_toggle_content_description = 2131296289;

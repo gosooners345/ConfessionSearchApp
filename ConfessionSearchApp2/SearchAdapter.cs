@@ -16,11 +16,11 @@ using Android.Views;
 using Android.Widget;
 using Android.Support.V4.View;
 using Xamarin.Android;
-//using DocumentClass;
+using DocumentClass;
 using Android.Support.Design.Widget;
 
 
-namespace ConfessionSearchDBApp
+namespace ConfessionSearchApp2
 {
     [Activity(Label = "PageTwo", Theme = "@style/AppTheme", AllowEmbedded = false, ParentActivity = typeof(MainActivity))]
     class SearchFragmentActivity : AppCompatActivity
@@ -29,7 +29,7 @@ namespace ConfessionSearchDBApp
         public SearchAdapter adapter;
         public string shareList;// = new List<string>();
                                 //Android.Widget.ShareActionProvider actionProvider;
-        public List<Document> documentList = new DocumentList();
+        public DocumentList documentList = new DocumentList();
         string files;
         public int index;
         public SearchFragmentActivity() { }

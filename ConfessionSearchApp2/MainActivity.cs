@@ -25,10 +25,7 @@ using DialogWindow;
 
 
 namespace ConfessionSearchApp2
-{
-    
-
-
+{ //670 Lines of Code
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true, LaunchMode = Android.Content.PM.LaunchMode.SingleTop)]
     public class MainActivity : AppCompatActivity
     {
@@ -152,10 +149,8 @@ namespace ConfessionSearchApp2
                 this.documentList.Fill(fileName, asset, 0, answers, proofs);
 
         }
-        // Search Type Selection
+        // Search Type Selection 43 lines of code
         [Java.Interop.Export("SearchType")]
-        //Change Search Types
-
         public void SearchType(View view)
         {
             KeyEvent enter = new KeyEvent(KeyEventActions.Down, Keycode.Enter);
@@ -234,12 +229,13 @@ namespace ConfessionSearchApp2
                     resultList.Add(document);
             this.documentList = resultList;
             this.documentList.MergeSort();
-        } 
+        }
         #endregion
-     /// <summary>
-     /// Search Method
-     /// </summary>
-     /// <param name="query"> Search Term</param>
+        /// <summary>
+        /// Search Method
+        /// </summary>
+        /// <param name="query"> Search Term</param>
+        //281 lines of code
         private void Search(string query)
         {
             #region Variable Declaration 
@@ -527,6 +523,7 @@ namespace ConfessionSearchApp2
             Spinner spinner = (Spinner)sender;
             fileName = String.Format("{0}.txt", spinner.GetItemAtPosition(e.Position));
         }
+        //93 Lines of code
         private void Spinner2_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
         {
             Spinner spinner = (Spinner)sender;
