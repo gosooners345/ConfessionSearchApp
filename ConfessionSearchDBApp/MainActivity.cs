@@ -104,7 +104,7 @@ base.OnCreate(savedInstanceState);
             else
             {
                 ActivityCompat.RequestPermissions(this, permissions, 1); this.Recreate();
-                // Camera permission is not granted. If necessary display rationale & request.
+                
             }
             FindViewById<FloatingActionButton>(Resource.Id.searchFAB).Click +=delegate { Search(FindViewById<SearchView>(Resource.Id.searchView1).Query); };
         }
@@ -327,7 +327,8 @@ base.OnCreate(savedInstanceState);
                 {
                     DocumentTitle docTitle = new DocumentTitle();
                     docTitle.DocumentID = searchFields[x].DocumentID;
-                    if (!r[x].DocumentID.Equals(docTitle.DocumentID))
+                    for(int y=0;y<r.Count;y++)
+                    if (!r[y].DocumentID.Equals(docTitle.DocumentID))
                     {
                         foreach (DocumentTitle doc in r)
                             if (doc.DocumentID == docTitle.DocumentID)
@@ -337,7 +338,8 @@ base.OnCreate(savedInstanceState);
                     }
                     else
                     {
-                        docTitle.Title = r[x].CompareIDs(docTitle.DocumentID);
+                        docTitle.Title = r[y].CompareIDs(docTitle.DocumentID);
+                    }
                         searchFields[x].DocumentName = docTitle.Title;
                         Document document = new Document();
                         document.ChName = searchFields[x].ChName;
@@ -348,7 +350,7 @@ base.OnCreate(savedInstanceState);
                         document.ChProofs = Formatter(searchFields[x].ChProofs);
                         document.Tags = searchFields[x].Tags;
                         documentList.Add(document);
-                    }
+                    
                 }
                 if (FindViewById<CheckBox>(Resource.Id.truncateCheck).Checked)
                     truncate = true;
@@ -447,9 +449,9 @@ base.OnCreate(savedInstanceState);
         }
 
 
-        public void FilterResults(List<Document> list, bool truncate, bool answers, bool proofs, bool allDocs, string searchTerm)
+        public void FilterResults(DocumentList list, bool truncate, bool answers, bool proofs, bool allDocs, string searchTerm)
         {
-            List<Document> resultList = new List<Document>();
+            DocumentList resultList = new DocumentList();
             Log.Info("Filter", "Filtering Confession Results");
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Reset();
@@ -465,29 +467,26 @@ base.OnCreate(savedInstanceState);
                 searchEntries[1] = document.DocumentText;
                 searchEntries[2] = document.ChProofs;
                 searchEntries[3] = document.Tags;
-                #region old code
-                #endregion
+                
                 foreach (string word in searchEntries) //this[i].Split(' '))
                 {
-                    if (regex.IsMatch(word))
+                    string[] pieces = word.Split(' ');
+                    foreach(string chunks in pieces)
+                    if (regex.IsMatch(chunks))
                         document.Matches++;
 
                 }
-                if (document.Matches > 1)
+                if (document.Matches >= 1)
                     resultList.Add(document);
                 stopwatch.Stop();
                 Log.Debug("Timer", String.Format("{0}ms Passed", stopwatch.ElapsedMilliseconds.ToString()));
                 stopwatch.Reset();
             }
-            //if(!allDocs)
-            //for (int i = 0; i < list.Count; i++)
-            //{
-            //        if (resultList[i].DocumentID == resultList[i + 1].DocumentID & resultList[i].ChNumber == resultList[i + 1].ChNumber)
-            //            resultList.Remove(resultList[i + 1]);
-            //}
+    
             list = resultList;
             list.Sort(Document.CompareMatches);
-            list.Reverse();
+         //   list.Reverse();
+            this.documentList = (DocumentList)list;
         }
 
 
