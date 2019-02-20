@@ -4,7 +4,6 @@ using Android.Support.V7.App;
 using Android.Runtime;
 using Android.Widget;
 using SQLite;
-//using Android.Graphics;
 using System.IO;
 using Android.Support.V4.Content;
 using Android.Content.PM;
@@ -30,6 +29,7 @@ namespace ConfessionSearchDBApp.Main
         List<KeyValuePair<string, string>> files, documents;
         List<KeyValuePair<int, String>> types;
         Intent intent;
+        string header = "";
         string shareList = "", newLine = "\r\n";
         SearchFragmentActivity searchFragmentActivity;
         DocumentList documentList, resultList = new DocumentList();
@@ -73,13 +73,12 @@ base.OnCreate(savedInstanceState);
                 }  // We have permission, go ahead and use the camera.
                 using (var conn = new SQLite.SQLiteConnection(dbPath))
                 {
-                    var cmd2= new SQLite.SQLiteCommand(conn); 
-                    var cmd = new SQLite.SQLiteCommand(conn); var cmd1 = new SQLite.SQLiteCommand(conn);
-                    cmd1.CommandText = "select * from DocumentType";
-                    cmd.CommandText = "select * from DocumentTitle";
-                    var docTypes = cmd1.ExecuteQuery<DocumentType>();
+                  //  var cmd2= new SQLite.SQLiteCommand(conn); 
+                    var cmd = new SQLite.SQLiteCommand(conn); //var cmd1 = new SQLite.SQLiteCommand(conn);
+                    cmd.CommandText = "select * from DocumentType";
+                    var docTypes = cmd.ExecuteQuery<DocumentType>();
+                    cmd.CommandText = "select * from DocumentTitle"; 
                     var r = cmd.ExecuteQuery<DocumentTitle>();
-
                     List<string> items = new List<string>();
                     items.Add("All");
                     foreach (var item in docTypes)
@@ -96,7 +95,9 @@ base.OnCreate(savedInstanceState);
                     adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
                     spinner2.ItemSelected += Spinner2_ItemSelected;
                     spinner2.Adapter = adapter;
-                    //searchView.QueryTextSubmit += Search_QueryTextSubmit;
+                    SearchView search = FindViewById<SearchView>(Resource.Id.searchView1);
+                    search.SetImeOptions(Android.Views.InputMethods.ImeAction.Go);
+                    search.QueryTextSubmit += Search_QueryTextSubmit;
 
                 }
             }
@@ -124,6 +125,7 @@ base.OnCreate(savedInstanceState);
             stringField = formatter;
             return stringField;
         }
+        //Add to main app
         //Spinner Selection Statements
         //34 Lines of code
         private void Spinner1_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
@@ -161,6 +163,7 @@ base.OnCreate(savedInstanceState);
                 Toast.MakeText(this, type, ToastLength.Short).Show();
             }
         }
+      //Add or modify in existing app
         //42 lines of code
         [Java.Interop.Export("SearchType")]
         public void SearchType(View view)
@@ -197,14 +200,16 @@ base.OnCreate(savedInstanceState);
             else if (radio == FindViewById<RadioButton>(Resource.Id.viewAllRadio))
             {
                 text.Text = "Read";
-                if (!creedOpen)
-                {
-                    searchView.SetIconifiedByDefault(true);
-                    searchView.Enabled = false;
+                searchView.Enabled = false;
+                //if (!creedOpen)
+                //{
+                //    searchView.SetIconifiedByDefault(true);
+                //    searchView.Enabled = false;
 
-                }
+                //}
             }
         }
+        #region Add To Main App
         //SQL Queries
         public string TableAccess(string var1)
         {
@@ -213,15 +218,16 @@ base.OnCreate(savedInstanceState);
         }
         public string LayoutString(string var1)
         {
-            string var2 = string.Format("Select documenttype.*,documenttitle.* from documenttitle natural join documenttype where documenttitle.documenttypeid= documenttype.documenttypeid and documenttype.DocumentTypeName='{0}'",var1);
+            string var2 = string.Format("Select documenttype.*,documenttitle.* from documenttitle natural join documenttype where documenttitle.documenttypeid= documenttype.documenttypeid and documenttype.DocumentTypeName='{0}'", var1);
 
             return var2;
         }
         public string DataTableAccess(string var1)
         {
-            string var2 = string.Format("Select Documenttitle.documentName, document.documentid,documenttitle.documentid, document.DocIndexNum, "+"document.chname, document.chText, document.chproofs,document.ChTags,"+                " document.ChMatches from documentTitle natural join document where document.DocumentID=DocumentTitle.DocumentID {0}", var1);
+            string var2 = string.Format("Select Documenttitle.documentName, document.documentid,documenttitle.documentid, document.DocIndexNum, " + "document.chname, document.chText, document.chproofs,document.ChTags," + " document.ChMatches from documentTitle natural join document where document.DocumentID=DocumentTitle.DocumentID {0}", var1);
             return var2;
-        }
+        } 
+        #endregion
         private void Search_QueryTextSubmit(object sender, SearchView.QueryTextSubmitEventArgs e)
         {
             recurCall++;
@@ -231,12 +237,14 @@ base.OnCreate(savedInstanceState);
                 Search(query);
             }
         }
+        //Add to original app
         private void Spinner2_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
         {
             Spinner spinner = (Spinner)sender;
             fileName = String.Format("{0}", spinner.GetItemAtPosition(e.Position));
             Toast.MakeText(this, fileName, ToastLength.Long).Show();
         }
+        //Modify Existing Code on Main App
         //207 Lines of Code
         private void Search(string query)
         {
@@ -244,7 +252,7 @@ base.OnCreate(savedInstanceState);
             bool truncate = false;
             Log.Info("Search()", String.Format("Search Begins" + ""));
             searchFragmentActivity = new SearchFragmentActivity();
-            RadioButton radio = FindViewById<RadioButton>(Resource.Id.viewAllRadio);
+           // RadioButton radio = FindViewById<RadioButton>(Resource.Id.viewAllRadio);
             using (var conn = new SQLite.SQLiteConnection(dbPath))
             {
                 var cmd = new SQLite.SQLiteCommand(conn); var searchStr = new SQLite.SQLiteCommand(conn);
@@ -269,8 +277,6 @@ base.OnCreate(savedInstanceState);
                     if (searchAll)
                     {
                         fileString = "select * from Documenttitle";
-                      //  accessString = DataTableAccess("");
-
                     }
                     else
                     {
@@ -354,7 +360,7 @@ base.OnCreate(savedInstanceState);
                 }
                 if (FindViewById<CheckBox>(Resource.Id.truncateCheck).Checked)
                     truncate = true;
-                if (radio.Checked != true && query != "" && FindViewById<RadioButton>(Resource.Id.topicRadio).Checked)
+                if (viewRadio.Checked != true && query != "" && FindViewById<RadioButton>(Resource.Id.topicRadio).Checked)
                 {
                         if (FindViewById<RadioButton>(Resource.Id.topicRadio).Checked)
                         {
@@ -448,7 +454,7 @@ base.OnCreate(savedInstanceState);
             }
         }
 
-
+        //Modify existing methods in original app
         public void FilterResults(DocumentList list, bool truncate, bool answers, bool proofs, bool allDocs, string searchTerm)
         {
             DocumentList resultList = new DocumentList();
@@ -491,18 +497,19 @@ base.OnCreate(savedInstanceState);
 
 
         ////Search By Number
-        public void FilterResults(List<Document> list, bool truncate, bool answers, bool proofs, bool allDocs, int searchTerm)
+        public void FilterResults(DocumentList list, bool truncate, bool answers, bool proofs, bool allDocs, int searchTerm)
         {
-            List<Document> resultList = new List<Document>();
+            DocumentList resultList = new DocumentList();
             foreach (Document document in list)
                 if (document.ChNumber == searchTerm)
                     resultList.Add(document);
 
             list = resultList;
             list.Sort();
+            this.documentList = list;
             
         }
-
+        //Add to Main app
         public class DocumentTitle
         {
             [PrimaryKey, AutoIncrement]

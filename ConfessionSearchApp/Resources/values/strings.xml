@@ -8,20 +8,18 @@
       </string-array>
   <string name="confession">Confession</string>
   <string name="creed">Creed</string>
-  <string name="catechism_help">Confession/Catechism Pages:</string>
+  <string name="catechism_help">Catechism Searches Only:</string>
   <string name="catechismPgh">
-   To search by topic, hit the topic option.\n
- To search by question/chapter number, hit the question or chapter option.\n
- To search without proofs, hit the No Proofs checkbox\n
+  
  
   </string>
 
   <string name="Search">Search</string>
   <string name="View_Button">View</string>
   <string name="confessionPgh">To exclude answers from results, hit the No Answers Checkbox under Search Options</string>
-  <string name="creedPgh">Creeds aren\'t searchable, select a creed and hit view</string>
+  <string name="creedPgh">Hit the home button to go back home</string>
   <string name="confession_help">Catechism Page only:</string>
-  <string name="other_pgh">Select a document from the dropdown list to search or view</string>
+  <string name="other_pgh">Select a document from the dropdown list to search in or hit search all documents to search all documents</string>
     <string name="catechism">Catechism</string>
   <string-array name="confession_list">
     <item>Westminster Confession of Faith 1646</item>

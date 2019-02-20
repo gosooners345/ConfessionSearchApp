@@ -202,7 +202,7 @@ namespace ConfessionSearchDBApp
                 proofBox.Text = resultProofs;
                 docTitleBox.Text = listTitles;
 
-                chNumbBox.Text = string.Format("Chapter {0}: {1}", resultID.ToString(), resultTitle);
+                chNumbBox.Text = string.Format(" {0}: {1}", resultID.ToString(), resultTitle);
                 matchView.Text = string.Format("Matches: {0}", resultMatch);
                 shareList = docTitleBox.Text + newLine + chNumbBox.Text + newLine + chapterBox.Text + newLine + "Proofs" + newLine + proofBox.Text;
                 TextView[] views = new TextView[5];
