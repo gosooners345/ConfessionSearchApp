@@ -338,29 +338,34 @@ namespace ConfessionSearchApp
                     }
 
                 }
+                //Doctype=3
                 if (catechismOpen)
                 {
                     if (searchAll)
                     {
-                        fileString = TableAccess("and documenttype.DocumentTypeName='CATECHISM'");
+                        fileString = TableAccess(" documenttitle.DocumentTypeID=3");
+                        docCount = 3;
                     }
                     else
-                        fileString = TableAccess(String.Format(" and documenttype.DocumentTypeName='CATECHISM' and DocumentName='{0}' ", fileName));
+                        fileString = TableAccess(String.Format(" documenttitle.DocumentTypeID=3 and DocumentName='{0}' ", fileName));
                 }
+                //DocType = 2
                 if (confessionOpen)
                 {
                     if (searchAll)
-                        fileString = TableAccess("and documenttype.DocumentTypeName='CONFESSION' ");
+                    { fileString = TableAccess(" documenttitle.DocumentTypeID=2' "); docCount = 2; }
+
                     else
-                        fileString = TableAccess(String.Format(" and documenttype.DocumentTypeName='CONFESSION' and DocumentName='{0}'  ", fileName));
+                        fileString = TableAccess(String.Format(" documenttitle.DocumentTypeID=2 and DocumentName='{0}'  ", fileName));
 
                 }
+                //DocType=1
                 if (creedOpen)
                 {
                     if (searchAll)
-                        fileString = TableAccess("and documenttype.DocumentTypeName='CREED' ");
+                    { fileString = TableAccess(" documenttitle.DocumentTypeID=1 "); docCount = 1; }
                     else
-                        fileString = TableAccess(string.Format("and documenttype.DocumentTypeName='CREED' and DocumentName='{0}' ", fileName));
+                        fileString = TableAccess(string.Format(" documenttitle.DocumentTypeID=1 and DocumentName='{0}' ", fileName));
                 }
                 //Proofs enabled
                 if (proofCheck.Checked)
@@ -384,14 +389,16 @@ namespace ConfessionSearchApp
                 //Add Entries to DocumentList
                 for (int x = 0; x < searchFields.Count; x++)
                 {
+                    
                     DocumentTitle docTitle = new DocumentTitle();
                     docTitle.DocumentID = searchFields[x].DocumentID;
+                    
                     for (int y = 0; y < r.Count; y++)
                         if (!r[y].DocumentID.Equals(docTitle.DocumentID))
                         {
                             foreach (DocumentTitle doc in r)
                                 if (doc.DocumentID == docTitle.DocumentID)
-                                { docTitle.Title = doc.Title; }
+                                { docTitle.Title = doc.Title; docTitle.DocumentTypeID = doc.DocumentTypeID; }
                                 else
                                     continue;
                         }
@@ -399,17 +406,22 @@ namespace ConfessionSearchApp
                         {
                             docTitle.Title = r[y].CompareIDs(docTitle.DocumentID);
                         }
-                    searchFields[x].DocumentName = docTitle.Title;
-                    Document document = new Document();
-                    document.ChName = searchFields[x].ChName;
-                    document.DocDetailID = searchFields[x].DocDetailID;
-                    document.DocumentText = Formatter(searchFields[x].DocumentText);
-                    document.DocumentName = searchFields[x].DocumentName;
-                    document.ChNumber = searchFields[x].ChNumber;
-                    document.ChProofs = Formatter(searchFields[x].ChProofs);
-                    document.Tags = searchFields[x].Tags;
-                    documentList.Add(document);
+                    if (docTitle.Title == fileName | searchAll==true & docTitle.DocumentTypeID==docCount | searchAll & allOpen)
 
+                    {
+                        searchFields[x].DocumentName = docTitle.Title;
+                        Document document = new Document();
+                        document.ChName = searchFields[x].ChName;
+                        document.DocDetailID = searchFields[x].DocDetailID;
+                        document.DocumentText = Formatter(searchFields[x].DocumentText);
+                        document.DocumentName = searchFields[x].DocumentName;
+                        document.ChNumber = searchFields[x].ChNumber;
+                        document.ChProofs = Formatter(searchFields[x].ChProofs);
+                        document.Tags = searchFields[x].Tags;
+                        documentList.Add(document);
+                    }
+                    else
+                        continue;
                 }
                 if (FindViewById<CheckBox>(Resource.Id.truncateCheck).Checked)
                     truncate = true;
@@ -690,7 +702,7 @@ namespace ConfessionSearchApp
             [Column("DocumentName")]
             public string Title { get; set; }
             [Column("DocumentTypeID")]
-            private int DocumentTypeID { get; set; }
+            public int DocumentTypeID { get; set; }
             public int CompareTo(DocumentTitle compareDocument)
             {
                 return this.DocumentID.CompareTo(this.DocumentID);
@@ -784,7 +796,12 @@ namespace ConfessionSearchApp
         //SQL Queries
         public string TableAccess(string var1)
         {
-            string var2 = String.Format("Select documenttype.*,documenttitle.* from documenttitle natural join documenttype where documenttitle.documenttypeid= documenttype.documenttypeid {0} ", var1);
+            string var2 = "";
+            if (var1 != "")
+                 var2 = String.Format("Select documenttitle.* from documenttitle where {0}", var1);
+            else
+             var2="Select documenttype.*,documenttitle.* from documenttitle natural join documenttype where documenttitle.documenttypeid= documenttype.documenttypeid";
+            //
             return var2;
         }
         public string LayoutString(string var1)
