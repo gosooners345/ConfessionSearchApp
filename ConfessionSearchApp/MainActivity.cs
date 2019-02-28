@@ -35,7 +35,7 @@ namespace ConfessionSearchApp
     public class MainActivity : AppCompatActivity
     {
         public static System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
-        public int recurCall = 0;
+        public int recurCall = 0,recurCall2=0;
         string shareList = "";
         string type = "";
         string newLine = "\r\n";
@@ -66,12 +66,13 @@ namespace ConfessionSearchApp
             permissions[1] = Manifest.Permission.ReadExternalStorage;
 
             // Set our view from the "main" layout resource
-           
+
             Spinner spinner1 = FindViewById<Spinner>(Resource.Id.spinner1), spinner2 = FindViewById<Spinner>(Resource.Id.spinner2);
-            ActivityCompat.RequestPermissions(this, permissions, 1);
+            //ActivityCompat.RequestPermissions(this, permissions, 1);
 
             if (ContextCompat.CheckSelfPermission(this, Manifest.Permission.WriteExternalStorage) == (int)Permission.Granted)
             {
+
                 if (!File.Exists(dbPath))
                 {
                     using (BinaryReader br = new BinaryReader(Android.App.Application.Context.Assets.Open(dbName)))
@@ -86,69 +87,74 @@ namespace ConfessionSearchApp
                             }
                         }
                     }
-                }  // We have permission, go ahead and use the camera.
-                using (var conn = new SQLite.SQLiteConnection(dbPath))
-                {
-                    //  var cmd2= new SQLite.SQLiteCommand(conn); 
-                    var cmd = new SQLite.SQLiteCommand(conn); //var cmd1 = new SQLite.SQLiteCommand(conn);
-                    cmd.CommandText = "select * from DocumentType";
-                    var docTypes = cmd.ExecuteQuery<DocumentType>();
-                    cmd.CommandText = "select * from DocumentTitle";
-                    var r = cmd.ExecuteQuery<DocumentTitle>();
-                    List<string> items = new List<string>();
-                    items.Add("All");
-                    foreach (var item in docTypes)
-                        items.Add(item.DocumentTypeName);
-                    var adapter1 = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleSpinnerItem, items);
-                    adapter1.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
-                    spinner1.ItemSelected += Spinner1_ItemSelected;
-                    spinner1.Adapter = adapter1;
 
-                    items = new List<string>();
-                    foreach (var item in r)
-                        items.Add(item.Title);
-                    var adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleSpinnerItem, items);
-                    adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
-                    spinner2.ItemSelected += Spinner2_ItemSelected;
-                    spinner2.Adapter = adapter;
-                    search.SetImeOptions(Android.Views.InputMethods.ImeAction.Go);
-                    search.QueryTextSubmit += Search_QueryTextSubmit;
-                    FindViewById(Resource.Id.helpButton).Click += delegate { SetContentView(Resource.Layout.main);
-                                            creedOpen = false; catechismOpen = false; confessionOpen = false; helpOpen = true;
-                       // SetContentView(Resource.Layout.main);
-                        FindViewById<TextView>(Resource.Id.appTitle).Text = "Help Page";
-                        FindViewById<TextView>(Resource.Id.searchByLabel).Text = GetString(Resource.String.catechism_help);
-                        FindViewById<TextView>(Resource.Id.catechismPgh).Text = "Hitting the No Answers Checkbox will remove answers from your search results, '\n"
-   + "thus affecting the overall search results on the page.\n"
- + " Hit the No proofs checkbox to exclude proofs from the search results\n";
-                        FindViewById<TextView>(Resource.Id.confessionHelp).Text = GetString(Resource.String.confession_help);
-                        FindViewById<TextView>(Resource.Id.confessionPgh).Text = GetString(Resource.String.confessionPgh);
-                        FindViewById<TextView>(Resource.Id.creedHelp).Text = "Creed Help:";
-                        FindViewById<TextView>(Resource.Id.creedPgh).Text = GetString(Resource.String.creedPgh);
-                                            FindViewById<TextView>(Resource.Id.otherStuff).Text = "Other Stuff:";
-                        FindViewById<TextView>(Resource.Id.otherPgh).Text = GetString(Resource.String.other_pgh);
-                        FindViewById<TextView>(Resource.Id.sourceTV).Text = "All documents listed below are public domain, the websites below helped me with collecting them. \n A big thanks for inspiration for this app came from this website." +
-
-                        "\n\nApostle's Creed: https://reformed.org/documents/apostles_creed.html " +
-                       "\n1618 Belgic Confession: https://reformed.org/documents/BelgicConfession.html " +
-                       "\n1646 Westminster Confession of Faith: https://reformed.org/documents/wcf_with_proofs/index.html" +
-                       "\n1689 London Baptist Confession of Faith: https://reformed.org/documents/baptist_1689.html" +
-                       "\n1658 Savoy Declaration of Faith and Order: https://reformed.org/documents/Savoy_Declaration/index.html" +
-                       "\nWestminster Shorter Catechism: https://reformed.org/documents/wsc/index.html" +
-                       " \nWestminster Larger Catechism: https://reformed.org/documents/wlc_w_proofs/index.html " +
-                       "\nHeidelberg Catechism: https://reformed.org/documents/heidelberg.html " +
-                       "\nNicean Creed: https://reformed.org/documents/nicene.html " +
-                        "\nAthanasian Creed: https://reformed.org/documents/athanasian.html  ";
-                        
-                        FindViewById(Resource.Id.floatingActionButton).Click += delegate { this.Recreate(); }; };
                 }
+                
+                    using (var conn = new SQLite.SQLiteConnection(dbPath))
+                    {
+                        var cmd = new SQLite.SQLiteCommand(conn);
+                        cmd.CommandText = "select * from DocumentType";
+                        var docTypes = cmd.ExecuteQuery<DocumentType>();
+                        cmd.CommandText = "select * from DocumentTitle";
+                        var r = cmd.ExecuteQuery<DocumentTitle>();
+                        List<string> items = new List<string>();
+                        items.Add("All");
+                        foreach (var item in docTypes)
+                            items.Add(item.DocumentTypeName);
+                        var adapter1 = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleSpinnerItem, items);
+                        adapter1.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+                        spinner1.ItemSelected += Spinner1_ItemSelected;
+                        spinner1.Adapter = adapter1;
+
+                        items = new List<string>();
+                        foreach (var item in r)
+                            items.Add(item.Title);
+                        var adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleSpinnerItem, items);
+                        adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+                        spinner2.ItemSelected += Spinner2_ItemSelected;
+                        spinner2.Adapter = adapter;
+                        search.SetImeOptions(Android.Views.InputMethods.ImeAction.Go);
+                        search.QueryTextSubmit += Search_QueryTextSubmit;
+                        FindViewById(Resource.Id.helpButton).Click += delegate
+                        {
+                            SetContentView(Resource.Layout.main);
+                            creedOpen = false; catechismOpen = false; confessionOpen = false; helpOpen = true;
+                            // SetContentView(Resource.Layout.main);
+                            FindViewById<TextView>(Resource.Id.appTitle).Text = "Help Page";
+                            FindViewById<TextView>(Resource.Id.searchByLabel).Text = GetString(Resource.String.catechism_help);
+                            FindViewById<TextView>(Resource.Id.catechismPgh).Text = "Hitting the No Answers Checkbox will remove answers from your search results, '\n"
+       + "thus affecting the overall search results on the page.\n"
+     + " Hit the No proofs checkbox to exclude proofs from the search results\n";
+                            FindViewById<TextView>(Resource.Id.confessionHelp).Text = GetString(Resource.String.confession_help);
+                            FindViewById<TextView>(Resource.Id.confessionPgh).Text = GetString(Resource.String.confessionPgh);
+                            FindViewById<TextView>(Resource.Id.creedHelp).Text = "Creed Help:";
+                            FindViewById<TextView>(Resource.Id.creedPgh).Text = GetString(Resource.String.creedPgh);
+                            FindViewById<TextView>(Resource.Id.otherStuff).Text = "Other Stuff:";
+                            FindViewById<TextView>(Resource.Id.otherPgh).Text = GetString(Resource.String.other_pgh);
+                            FindViewById<TextView>(Resource.Id.sourceTV).Text = "All documents listed below are public domain, the websites below helped me with collecting them. \n A big thanks for inspiration for this app came from this website." +
+
+                            "\n\nApostle's Creed: https://reformed.org/documents/apostles_creed.html " +
+                           "\n1618 Belgic Confession: https://reformed.org/documents/BelgicConfession.html " +
+                           "\n1646 Westminster Confession of Faith: https://reformed.org/documents/wcf_with_proofs/index.html" +
+                           "\n1689 London Baptist Confession of Faith: https://reformed.org/documents/baptist_1689.html" +
+                           "\n1658 Savoy Declaration of Faith and Order: https://reformed.org/documents/Savoy_Declaration/index.html" +
+                           "\nWestminster Shorter Catechism: https://reformed.org/documents/wsc/index.html" +
+                           " \nWestminster Larger Catechism: https://reformed.org/documents/wlc_w_proofs/index.html " +
+                           "\nHeidelberg Catechism: https://reformed.org/documents/heidelberg.html " +
+                           "\nNicean Creed: https://reformed.org/documents/nicene.html " +
+                            "\nAthanasian Creed: https://reformed.org/documents/athanasian.html  ";
+
+                            FindViewById(Resource.Id.floatingActionButton).Click += delegate { this.Recreate(); };
+                        };
+                    }
+                }
+                else
+                {
+                    ActivityCompat.RequestPermissions(this, permissions, 1); this.Recreate();
+                }
+                FindViewById<FloatingActionButton>(Resource.Id.searchFAB).Click += delegate { Search(FindViewById<SearchView>(Resource.Id.searchView1).Query); };
             }
-            else
-            {
-                ActivityCompat.RequestPermissions(this, permissions, 1); this.Recreate();
-            }
-            FindViewById<FloatingActionButton>(Resource.Id.searchFAB).Click += delegate { Search(FindViewById<SearchView>(Resource.Id.searchView1).Query); };
-        }
+        
         [Java.Interop.Export("Help")]
         private void HelpLayout(View view)
         {
@@ -505,7 +511,7 @@ namespace ConfessionSearchApp
                         docTitleBox.Text = document.DocumentName;
                         chapterBox.Text = document.DocumentText;
                         if (chapterBox.Text.Contains("Question"))
-                        { header = "Question: "; chNumbBox.Text = string.Format("{0} {1}: {2}", header, document.ChNumber.ToString(), document.ChName); }
+                        { header = "Question "; chNumbBox.Text = string.Format("{0} {1}: {2}", header, document.ChNumber.ToString(), document.ChName); }
                         else if (chapterBox.Text.Contains("I."))
                         { header = "Chapter"; chNumbBox.Text = string.Format("{0} {1}: {2}", header, document.ChNumber.ToString(), document.ChName); }
                         else
@@ -569,7 +575,7 @@ namespace ConfessionSearchApp
                     cmd.CommandText = "select * from DocumentTitle";
                 else
                 {
-                    cmd.CommandText = LayoutString(type.ToUpper()); //"Select documenttype.*,documenttitle.* from documenttitle natural join documenttype where documenttitle.documenttypeid= documenttype.documenttypeid and documenttype.DocumentTypeName='CATECHISM' ";
+                    cmd.CommandText = LayoutString(type.ToUpper()); 
                 }
                 var r = cmd.ExecuteQuery<DocumentTitle>();
                 List<string> items = new List<string>();
@@ -586,7 +592,7 @@ namespace ConfessionSearchApp
                     case "CATECHISM": this.allOpen = false;header = "Question "; this.confessionOpen = false; this.catechismOpen = true; this.creedOpen = false; this.helpOpen = false; break;
                     case "CREED": allOpen = false; creedOpen = true; catechismOpen = false; confessionOpen = false; helpOpen = false; break;
                 }
-               // Toast.MakeText(this, type, ToastLength.Short).Show();
+              
             }
         }
         private void Spinner2_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
@@ -714,7 +720,6 @@ namespace ConfessionSearchApp
                 else
                     return "";
             }
-            // public int ArtistId { get; set; }
         }
         public class Document
         {
@@ -801,7 +806,7 @@ namespace ConfessionSearchApp
                  var2 = String.Format("Select documenttitle.* from documenttitle where {0}", var1);
             else
              var2="Select documenttype.*,documenttitle.* from documenttitle natural join documenttype where documenttitle.documenttypeid= documenttype.documenttypeid";
-            //
+           
             return var2;
         }
         public string LayoutString(string var1)

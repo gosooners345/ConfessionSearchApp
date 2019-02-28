@@ -10,15 +10,17 @@ namespace DBFormatApp
     class DBFormatter
     {
         static StreamReader fileIn;
-        static string fileName, filerpt;
+        static string fileName, filerpt,file;
         static StreamWriter fileOut;
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
             Console.WriteLine("Type File Name Here:");
-            fileName = Console.ReadLine();
+            file = Console.ReadLine();
+            fileName = file+".txt";
+            
             Console.WriteLine("Opening Files");
-            filerpt =  fileName+"_DBIN.txt";
+            filerpt =  file+"_DBIN.txt";
             OpenFiles();
             ParseText();
             CloseText();
@@ -53,7 +55,7 @@ namespace DBFormatApp
         {
             string textBlock = "",  word = "", sentence = "", assembly = "",question="",answer="",trash="";
             string[] words, pieces; Char ch;int docDetail, docID, QIDNumber;string text, title, proofs, tags;
-            docDetail = 306;
+            docDetail =570 ;
             pieces = fileIn.ReadLine().Split(',');
             docID = Int32.Parse(pieces[1]);
             //fileOut.WriteLine(pieces[0]);
@@ -66,7 +68,7 @@ namespace DBFormatApp
                 sentence = (docID.ToString() + "~" + docDetail.ToString() + "~" + words[1] + "~" + words[4] + "~" + text + "~" + words[5] + "~"+words[7]+"~");
                 fileOut.WriteLine(sentence);
                 docDetail++;
-                #region MyRegion
+                #region WCF Formatting
                 //assembly = "";
                 //for (int i = 0; i < words.Length; i++)
                 //{
