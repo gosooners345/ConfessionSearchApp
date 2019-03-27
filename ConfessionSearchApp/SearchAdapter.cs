@@ -171,7 +171,7 @@ namespace ConfessionSearchApp
             proofBox.Text = resultProofs;
             docTitleBox.Text = listTitles;
             if (resultChapter.Contains("Question"))
-            { header = "Question: "; chNumbBox.Text = string.Format("{0} {1}: {2}", header, resultID.ToString(), resultTitle); }
+            { header = "Question "; chNumbBox.Text = string.Format("{0} {1}: {2}", header, resultID.ToString(), resultTitle); }
             else if (resultChapter.Contains("I."))
             { header = "Chapter"; chNumbBox.Text = string.Format("{0} {1}: {2}", header, resultID.ToString(), resultTitle); }
             else

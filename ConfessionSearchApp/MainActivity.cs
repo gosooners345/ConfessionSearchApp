@@ -41,7 +41,7 @@ namespace ConfessionSearchApp
         string newLine = "\r\n";
         string header = "";
         string dbName = "confessionSearchDB.db";
-        string dbPath = Path.Combine(Android.OS.Environment.ExternalStorageDirectory.ToString(),
+        string dbPath = Path.Combine(Android.OS.Environment.ExternalStorageDirectory.ToString(),//+"/confessionSearchApp/data/",
            "confessionSearchDB.db");
         private static bool menuOpen;
         private bool allOpen, confessionOpen, catechismOpen, creedOpen, helpOpen;
@@ -72,7 +72,7 @@ namespace ConfessionSearchApp
 
             if (ContextCompat.CheckSelfPermission(this, Manifest.Permission.WriteExternalStorage) == (int)Permission.Granted)
             {
-
+                //Stream file = this.Assets.Open("confessionSearchDB.db");
                 if (!File.Exists(dbPath))
                 {
                     using (BinaryReader br = new BinaryReader(Android.App.Application.Context.Assets.Open(dbName)))
@@ -312,6 +312,7 @@ namespace ConfessionSearchApp
             {
                 var cmd = new SQLite.SQLiteCommand(conn); var searchStr = new SQLite.SQLiteCommand(conn);
                 bool proofs = true, answers = true, searchAll = false, viewDocs = false;
+                
                 CheckBox answerCheck = FindViewById<CheckBox>(Resource.Id.AnswerBox), proofCheck = FindViewById<CheckBox>(Resource.Id.proofBox),
             searchCheck = FindViewById<CheckBox>(Resource.Id.searchAllCheckBox);
                 RadioButton viewRadio = FindViewById<RadioButton>(Resource.Id.viewAllRadio);

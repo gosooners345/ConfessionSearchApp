@@ -55,7 +55,7 @@ namespace DBFormatApp
         {
             string textBlock = "",  word = "", sentence = "", assembly = "",question="",answer="",trash="";
             string[] words, pieces; Char ch;int docDetail, docID, QIDNumber;string text, title, proofs, tags;
-            docDetail =570 ;
+            docDetail =688 ;
             pieces = fileIn.ReadLine().Split(',');
             docID = Int32.Parse(pieces[1]);
             //fileOut.WriteLine(pieces[0]);
@@ -63,9 +63,11 @@ namespace DBFormatApp
             {
                 textBlock = fileIn.ReadLine();
                 words = textBlock.Split('~');
-                trash = words[0] + words[6];
-                text ="Question:|"+ words[2] + "||" +"Answer:|"+ words[3];
-                sentence = (docID.ToString() + "~" + docDetail.ToString() + "~" + words[1] + "~" + words[4] + "~" + text + "~" + words[5] + "~"+words[7]);
+                trash = words[0] + words[5];
+                text = words[3];
+                //trash = words[0] + words[6];
+                //text ="Question:|"+ words[2] + "||" +"Answer:|"+ words[3];
+                 sentence = (docID.ToString() + "~" + docDetail.ToString() + "~" + words[1] + "~" + words[2] + "~" +words[3]+ "~" + words[4] + "~"+words[6]);
                 fileOut.WriteLine(sentence);
                 docDetail++;
                 #region WCF Formatting
