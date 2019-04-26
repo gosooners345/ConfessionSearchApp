@@ -63,7 +63,7 @@
     <Compile Include="SearchAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\confessionSearchDB.db">
+    <AndroidAsset Include="Assets\confessionSearchDB2.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </AndroidAsset>
     <None Include="Resources\AboutResources.txt" />

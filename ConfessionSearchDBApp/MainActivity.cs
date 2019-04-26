@@ -36,9 +36,9 @@ namespace ConfessionSearchDBApp.Main
         Stopwatch stopwatch = new Stopwatch();
         private bool confessionOpen, catechismOpen, creedOpen, helpOpen, allOpen;
         string type = "";
-        string dbName = "confessionSearchDB.db";
+        string dbName = "confessionSearchDB2.db";
         string dbPath = Path.Combine(Android.OS.Environment.ExternalStorageDirectory.ToString(),
-           "confessionSearchDB.db");
+           "confessionSearchDB2.db");
         protected override void OnCreate(Bundle savedInstanceState)
         {
             //base.OnCreate();
@@ -213,7 +213,8 @@ base.OnCreate(savedInstanceState);
         //SQL Queries
         public string TableAccess(string var1)
         {
-            string var2 = String.Format("Select documenttype.*,documenttitle.* from documenttitle natural join documenttype where documenttitle.documenttypeid= documenttype.documenttypeid {0} ", var1);
+            string var2 = String.Format("Select * from DocumentTableList {0}",var1);
+                //"Select documenttype.*,documenttitle.* from documenttitle natural join documenttype where documenttitle.documenttypeid= documenttype.documenttypeid {0} ", var1);
             return var2;
         }
         public string LayoutString(string var1)
@@ -222,11 +223,14 @@ base.OnCreate(savedInstanceState);
 
             return var2;
         }
-        public string DataTableAccess(string var1)
-        {
-            string var2 = string.Format("Select Documenttitle.documentName, document.documentid,documenttitle.documentid, document.DocIndexNum, " + "document.chname, document.chText, document.chproofs,document.ChTags," + " document.ChMatches from documentTitle natural join document where document.DocumentID=DocumentTitle.DocumentID {0}", var1);
-            return var2;
-        } 
+        //public string DataTableAccess(string var1)
+        //{
+        //   // string var2 = string.Format("Select Documenttitle.documentName, document.documentid,documenttitle.documentid, document.DocIndexNum, "
+        //     //   + "document.chname, document.chText, document.chproofs,document.ChTags,"
+        //       // + " document.ChMatches from documentTitle natural join document where document.DocumentID=DocumentTitle.DocumentID {0}", var1);
+        //       string var2 = string.Format()
+        //    return var2;
+        //} 
         #endregion
         private void Search_QueryTextSubmit(object sender, SearchView.QueryTextSubmitEventArgs e)
         {
@@ -265,22 +269,22 @@ base.OnCreate(savedInstanceState);
                 spinner2.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(Spinner2_ItemSelected);
                
                 string fileString = "", accessString = "";
-                accessString = DataTableAccess("");
+                accessString = TableAccess("");
                 if (searchCheck.Checked)
                     searchAll = true;
                 else
-                { searchAll = false; accessString = DataTableAccess(string.Format(" and documenttitle.documentname = '{0}' ", fileName));
+                { searchAll = false; accessString = TableAccess(string.Format(" where documentname = '{0}' ", fileName));
                 }
                 //Data filters
                 if (allOpen)
                 {
                     if (searchAll)
                     {
-                        fileString = "select * from Documenttitle";
+                        fileString = TableAccess("");//"select * from Documenttitlelist";
                     }
                     else
                     {
-                        fileString = String.Format("select * from Documenttitle where Documenttitle.DocumentName='{0}'", fileName);
+                        fileString = TableAccess(string.Format("Where Documentname='{0}'", fileName));//String.Format("select * from DocumentTableList where DocumentName='{0}'", fileName);
 
                     }
 
@@ -289,25 +293,25 @@ base.OnCreate(savedInstanceState);
                 {
                     if (searchAll)
                     {
-                        fileString = TableAccess("and documenttype.DocumentTypeName='CATECHISM'");
+                        fileString = TableAccess("Where documentTypeName='CATECHISM'"); //"and DocumentTypeName='CATECHISM'");
                     }
                     else
-                        fileString = TableAccess(String.Format(" and documenttype.DocumentTypeName='CATECHISM' and DocumentName='{0}' ", fileName));
+                        fileString = TableAccess(String.Format("where DocumentTypeName='CATECHISM' and DocumentName='{0}' ", fileName));
                 }
                 if (confessionOpen)
                 {
                     if (searchAll)
-                        fileString = TableAccess("and documenttype.DocumentTypeName='CONFESSION' ");
+                        fileString = TableAccess("where DocumentTypeName='CONFESSION' ");
                     else
-                        fileString = TableAccess(String.Format(" and documenttype.DocumentTypeName='CONFESSION' and DocumentName='{0}'  ", fileName));
+                        fileString = TableAccess(String.Format("where DocumentTypeName='CONFESSION' and DocumentName='{0}'  ", fileName));
 
                 }
                 if (creedOpen)
                 {
                     if (searchAll)
-                        fileString = TableAccess("and documenttype.DocumentTypeName='CREED' ");
+                        fileString = TableAccess("where DocumentTypeName='CREED' ");
                     else
-                        fileString = TableAccess(string.Format("and documenttype.DocumentTypeName='CREED' and DocumentName='{0}' ", fileName));
+                        fileString = TableAccess(string.Format("where DocumentTypeName='CREED' and DocumentName='{0}' ", fileName));
                 }
                 //Proofs enabled
                 if (proofCheck.Checked)

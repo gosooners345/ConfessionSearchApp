@@ -67,7 +67,7 @@ namespace DBFormatApp
                 text = words[3];
                 //trash = words[0] + words[6];
                 //text ="Question:|"+ words[2] + "||" +"Answer:|"+ words[3];
-                 sentence = (docID.ToString() + "~" + docDetail.ToString() + "~" + words[1] + "~" + words[2] + "~" +words[3]+ "~" + words[4] + "~"+words[6]);
+                 sentence = (docDetail.ToString() + "~" + words[1] + "~" + words[2] + "~" +words[3]+ "~" + words[4] + "~"+words[6]);
                 fileOut.WriteLine(sentence);
                 docDetail++;
                 #region WCF Formatting

@@ -180,43 +180,47 @@ namespace ConfessionSearchDBApp
         //Displays everything
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            // If the document type is Confession the code below will execute
-           
-                //Variable Declaration
-                string resultChapter = Arguments.GetString(CHAPTER, "");
-                string resultProofs = Arguments.GetString(PROOFS, "");
-                string listTitles = Arguments.GetString(DOCTITLE, "");
-                string resultTitle = Arguments.GetString(TITLE, "");
-                int resultMatch = Arguments.GetInt(matchNumb, -1);
-                bool resultBool = Arguments.GetBoolean(truncated, false);
-                int resultID = Arguments.GetInt(number, 0);
-                View view = inflater.Inflate(Resource.Layout.confession_results, container, false);
-                TextView chapterBox = (TextView)view.FindViewById<TextView>(Resource.Id.chapterText);
-                TextView proofBox = (TextView)view.FindViewById<TextView>(Resource.Id.proofText);
-                TextView chNumbBox = (TextView)view.FindViewById<TextView>(Resource.Id.confessionChLabel);
-                TextView docTitleBox = (TextView)view.FindViewById<TextView>(Resource.Id.documentTitleLabel);
-                TextView matchView = (TextView)view.FindViewById<TextView>(Resource.Id.matchView);
-                TextView proofView = (TextView)view.FindViewById<TextView>(Resource.Id.proofLabel);
-                //Variable Assignment
-                chapterBox.Text = resultChapter;
-                proofBox.Text = resultProofs;
-                docTitleBox.Text = listTitles;
+            string header = "";// Arguments.GetString(HEADER, "");
+            string resultChapter = Arguments.GetString(CHAPTER, "");
+            string resultProofs = Arguments.GetString(PROOFS, "");
+            string listTitles = Arguments.GetString(DOCTITLE, "");
+            string resultTitle = Arguments.GetString(TITLE, "");
+            int resultMatch = Arguments.GetInt(matchNumb, -1);
+            bool resultBool = Arguments.GetBoolean(truncated, false);
+            int resultID = Arguments.GetInt(number, 0);
+            View view = inflater.Inflate(Resource.Layout.confession_results, container, false);
+            TextView chapterBox = (TextView)view.FindViewById<TextView>(Resource.Id.chapterText);
+            TextView proofBox = (TextView)view.FindViewById<TextView>(Resource.Id.proofText);
+            TextView chNumbBox = (TextView)view.FindViewById<TextView>(Resource.Id.confessionChLabel);
+            TextView docTitleBox = (TextView)view.FindViewById<TextView>(Resource.Id.documentTitleLabel);
+            TextView matchView = (TextView)view.FindViewById<TextView>(Resource.Id.matchView);
+            TextView proofView = (TextView)view.FindViewById<TextView>(Resource.Id.proofLabel);
+            //Variable Assignment
+            chapterBox.Text = resultChapter;
+            proofBox.Text = resultProofs;
+            docTitleBox.Text = listTitles;
+            if (resultChapter.Contains("Question"))
+            { header = "Question "; chNumbBox.Text = string.Format("{0} {1}: {2}", header, resultID.ToString(), resultTitle); }
+            else if (resultChapter.Contains("I."))
+            { header = "Chapter"; chNumbBox.Text = string.Format("{0} {1}: {2}", header, resultID.ToString(), resultTitle); }
+            else
+            {
+                chNumbBox.Text = string.Format("{0} ", resultTitle);
+            }
+            matchView.Text = string.Format("Matches: {0}", resultMatch);
+            shareList = docTitleBox.Text + newLine + chNumbBox.Text + newLine + chapterBox.Text + newLine + "Proofs" + newLine + proofBox.Text;
+            TextView[] views = new TextView[5];
+            views[0] = chapterBox; views[1] = proofBox; views[2] = chNumbBox;
+            views[3] = docTitleBox; views[4] = matchView;
+            ChangeColor(true, views, Android.Graphics.Color.Black);
+            matchView.SetTextIsSelectable(false);
+            ChangeColor(proofView, false, Android.Graphics.Color.Black);
+            FloatingActionButton fab = view.FindViewById<FloatingActionButton>(Resource.Id.shareActionButton);
+            ChangeColor(fab, Android.Graphics.Color.Black);
+            fab.Click += ShareContent;
+            return view;
 
-                chNumbBox.Text = string.Format(" {0}: {1}", resultID.ToString(), resultTitle);
-                matchView.Text = string.Format("Matches: {0}", resultMatch);
-                shareList = docTitleBox.Text + newLine + chNumbBox.Text + newLine + chapterBox.Text + newLine + "Proofs" + newLine + proofBox.Text;
-                TextView[] views = new TextView[5];
-                views[0] = chapterBox; views[1] = proofBox; views[2] = chNumbBox;
-                views[3] = docTitleBox; views[4] = matchView;
-                ChangeColor(true, views, Android.Graphics.Color.Black);
-                matchView.SetTextIsSelectable(false);
-                ChangeColor(proofView, false, Android.Graphics.Color.Black);
-                FloatingActionButton fab = view.FindViewById<FloatingActionButton>(Resource.Id.shareActionButton);
-                ChangeColor(fab, Android.Graphics.Color.Black);
-                fab.Click += ShareContent;
-                return view;
 
-            
         }
         //Color changes on display
         public void ChangeColor(TextView view, bool selectable, Android.Graphics.Color color)

@@ -72,7 +72,7 @@ namespace ConfessionSearchApp
 
             if (ContextCompat.CheckSelfPermission(this, Manifest.Permission.WriteExternalStorage) == (int)Permission.Granted)
             {
-                //Stream file = this.Assets.Open("confessionSearchDB.db");
+               
                 if (!File.Exists(dbPath))
                 {
                     using (BinaryReader br = new BinaryReader(Android.App.Application.Context.Assets.Open(dbName)))
