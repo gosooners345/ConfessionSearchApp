@@ -75,15 +75,16 @@ namespace ConfessionSearchApp
                
                 if (!File.Exists(dbPath))
                 {
-                    using (BinaryReader br = new BinaryReader(Android.App.Application.Context.Assets.Open(dbName)))
+                    
+                    using (BinaryReader binreader = new BinaryReader(Android.App.Application.Context.Assets.Open(dbName)))
                     {
-                        using (BinaryWriter bw = new BinaryWriter(new FileStream(dbPath, FileMode.Create)))
+                        using (BinaryWriter binwriter = new BinaryWriter(new FileStream(dbPath, FileMode.Create)))
                         {
                             byte[] buffer = new byte[2048];
                             int len = 0;
-                            while ((len = br.Read(buffer, 0, buffer.Length)) > 0)
+                            while ((len = binreader.Read(buffer, 0, buffer.Length)) > 0)
                             {
-                                bw.Write(buffer, 0, len);
+                                binwriter.Write(buffer, 0, len);
                             }
                         }
                     }
@@ -226,25 +227,45 @@ namespace ConfessionSearchApp
             stopwatch.Reset();
             stopwatch.Start();
             Log.Debug("Timer", "Timer Started");
+            Log.Info("Counter", String.Format("{0} elements", searchTerm.Split(' ').Length.ToString()));
+
+            //Allows for searching in documents for phrases
             Regex regex = new Regex(searchTerm, RegexOptions.IgnoreCase);
             Log.Info("Filter Results", "Filtering has begun");
             foreach (Document document in documentList)
             {
-                string[] searchEntries = new string[4];
-                searchEntries[0] = document.ChName;
-                searchEntries[1] = document.DocumentText;
-                searchEntries[2] = document.ChProofs;
-                searchEntries[3] = document.Tags;
-
-                foreach (string word in searchEntries) //this[i].Split(' '))
+                int nothere = 0;
+                List<string> searchEntries = new List<string>();
+                searchEntries.Add(document.ChName);
+                searchEntries.Add(document.DocumentText);
+                searchEntries.Add(document.ChProofs);
+                searchEntries.Add(document.Tags);
+               
+     
+                foreach (string word in searchEntries) 
                 {
-                    string[] pieces = word.Split(' ');
-                    foreach (string chunks in pieces)
-                        if (regex.IsMatch(chunks))
+                    //DEBUGGED Search Errors. Allows for phrases to be searched now
+                    if (searchTerm.Split(' ').Length > 1)
+                    {
+                        if (regex.IsMatch(word))
+                        {
                             document.Matches++;
+                        }
+                                         }
+                    // Single word searches
 
+                    else
+                    {
+                        string[] pieces = word.Split(' ');
+                        foreach (string chunks in pieces)
+                        {
+                            if (regex.IsMatch(chunks))
+                                document.Matches++;
+                        }
+                    }
+                    //Filtering for the list
                 }
-                if (document.Matches >= 1)
+                if (document.Matches >0)
                 { resultList.Add(document);
                     if (!answers)
                     {
@@ -263,8 +284,6 @@ namespace ConfessionSearchApp
                        document.DocumentText= GetBetween(document.ChProofs, document.ChProofs.Substring(0), searchTerm);
 
                     }
-                    
-
                 }
                 stopwatch.Stop();
                 Log.Debug("Timer", String.Format("{0}ms Passed", stopwatch.ElapsedMilliseconds.ToString()));
@@ -308,6 +327,7 @@ namespace ConfessionSearchApp
             searchFragmentActivity = new SearchFragmentActivity();
 
             #endregion
+
             using (var conn = new SQLite.SQLiteConnection(dbPath))
             {
                 var cmd = new SQLite.SQLiteCommand(conn); var searchStr = new SQLite.SQLiteCommand(conn);
@@ -538,7 +558,7 @@ namespace ConfessionSearchApp
 
             Toast.MakeText(this, String.Format("Search Completed for {0}" + "\r\n" + "{1} ms Passed", query, stopwatch.ElapsedMilliseconds.ToString()), ToastLength.Long).Show();
         }
-
+        //For truncating strings
         public string GetBetween(string strSource, string strStart, string strEnd)
         {
             int Start, End;
@@ -578,9 +598,9 @@ namespace ConfessionSearchApp
                 {
                     cmd.CommandText = LayoutString(type.ToUpper()); 
                 }
-                var r = cmd.ExecuteQuery<DocumentTitle>();
+                var docList = cmd.ExecuteQuery<DocumentTitle>();
                 List<string> items = new List<string>();
-                foreach (var item in r)
+                foreach (var item in docList)
                     items.Add(item.Title);
                 var adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleSpinnerItem, items);
                 adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
@@ -600,10 +620,12 @@ namespace ConfessionSearchApp
         {
             Spinner spinner = (Spinner)sender;
             fileName = String.Format("{0}", spinner.GetItemAtPosition(e.Position));
-            //Toast.MakeText(this, fileName, ToastLength.Long).Show();
+           
         }
         //Return to home page
         [Java.Interop.Export("Home")]
+
+        //Home methods
         public void Home(View view)
         {
             Home();
@@ -702,6 +724,7 @@ namespace ConfessionSearchApp
                 view.SetTextIsSelectable(selectable);
             }
         }
+        //class in DB
         public class DocumentTitle
         {
             [PrimaryKey, AutoIncrement]
@@ -714,6 +737,8 @@ namespace ConfessionSearchApp
             {
                 return this.DocumentID.CompareTo(this.DocumentID);
             }
+
+            //ID numbers
             public string CompareIDs(int id1)
             {
                 if (id1 == this.DocumentID)
@@ -722,6 +747,7 @@ namespace ConfessionSearchApp
                     return "";
             }
         }
+        //Main document class
         public class Document
         {
             [PrimaryKey, AutoIncrement]
@@ -773,6 +799,7 @@ namespace ConfessionSearchApp
             // public this[int ]
 
         }
+        //Type of document
         public class DocumentType
         {
             [PrimaryKey, AutoIncrement]
@@ -782,6 +809,7 @@ namespace ConfessionSearchApp
             public string DocumentTypeName { get; set; }
 
         }
+        //Document list class
         public class DocumentList : List<Document>
         {
             string title = "";
